@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <url>
+  <loc>https://brigaplan.ai/</loc>
+  <lastmod>2026-11-01</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/en/</loc>
+  <lastmod>2026-11-01</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/zh/</loc>
+  <lastmod>2026-11-01</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/"/>
+ </url>
+</urlset>
