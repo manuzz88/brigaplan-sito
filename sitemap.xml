@@ -24,4 +24,52 @@
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/"/>
  </url>
+ <url>
+  <loc>https://brigaplan.ai/privacy.html</loc>
+  <lastmod>2026-11-01</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/privacy.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/privacy.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/privacy.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/privacy.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/en/privacy.html</loc>
+  <lastmod>2026-11-01</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/privacy.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/privacy.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/privacy.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/privacy.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/zh/privacy.html</loc>
+  <lastmod>2026-11-01</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/privacy.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/privacy.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/privacy.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/privacy.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/partner.html</loc>
+  <lastmod>2026-11-01</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/partner.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/en/partner.html</loc>
+  <lastmod>2026-11-01</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/partner.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/zh/partner.html</loc>
+  <lastmod>2026-11-01</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/partner.html"/>
+ </url>
 </urlset>
