@@ -372,9 +372,11 @@ section[id] { scroll-margin-top: 12px; }
 .reel-title { display: grid; gap: 10px; padding: 18px 16px 22px; background: var(--band); }
 .reel-title .eyebrow { color: var(--overlay-muted); }
 .reel-title h1 { color: var(--overlay-fg); font-size: clamp(1.9rem, 1rem + 3.4vw, 3.6rem); max-width: 15em; }
+.reel-sub { color: var(--overlay-fg); font-size: clamp(1rem, .92rem + .45vw, 1.3rem); line-height: 1.4; max-width: 32em; }
 @media (min-width: 720px) {
   .reel-title { position: absolute; left: 0; right: 0; bottom: 0; padding: 18% clamp(24px, 3.5vw, 44px) clamp(22px, 3vw, 40px); background: linear-gradient(to top, var(--scrim) 0%, var(--scrim-mid) 55%, transparent 100%); pointer-events: none; }
   .reel-title h1 { max-width: 13em; text-shadow: 0 2px 18px var(--scrim-mid); }
+  .reel-sub { text-shadow: 0 1px 10px var(--scrim-mid); }
 }
 .reel figcaption { font-size: .875rem; color: var(--muted); max-width: 40rem; }
 .reel figcaption b { color: var(--ink); }
@@ -423,7 +425,8 @@ section[id] { scroll-margin-top: 12px; }
         <span class="reel-tag">Esempi · trattoria, bar, mensa</span>
         <div class="reel-title">
           <p class="eyebrow">Cucine e bar professionali, progettati con l'IA</p>
-          <h1 id="titolo">La cucina del tuo locale, progettata in pochi minuti.</h1>
+          <h1 id="titolo">Il tuo arredo professionale, progettato in pochi minuti.</h1>
+          <p class="reel-sub">Cucine e bar per hotel, ristoranti, mense, ospedali e molto altro.</p>
         </div>
         <button type="button" class="reel-btn" id="reel-btn" aria-pressed="false">Pausa</button>
       </div>
