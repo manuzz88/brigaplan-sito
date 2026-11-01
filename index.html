@@ -11,6 +11,10 @@
 <meta property="og:image" content="https://brigaplan.ai/media/brigaplan_esempi_poster.jpg">
 <meta property="og:url" content="https://brigaplan.ai/">
 <link rel="canonical" href="https://brigaplan.ai/">
+<link rel="alternate" hreflang="it" href="https://brigaplan.ai/">
+<link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/">
+<link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/">
+<link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/">
 <meta name="theme-color" content="#14212A">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect x='1.5' y='1.5' width='23' height='23' fill='%23fff' stroke='%2314212A' stroke-width='2.2'/%3E%3Cpath d='M1.5 11H13V24.5M13 7V1.5' fill='none' stroke='%2314212A' stroke-width='1.6'/%3E%3Crect x='16' y='15' width='6' height='6' fill='%23CF4E1B'/%3E%3C/svg%3E">
 <style>
@@ -121,6 +125,19 @@ section[id] { scroll-margin-top: 12px; }
 .nav a { text-decoration: none; color: var(--muted); }
 .nav a:hover { color: var(--ink); }
 @media (max-width: 920px) { .nav { display: none; } }
+.top-azioni { display: flex; align-items: center; gap: 12px; }
+.lingue { display: flex; gap: 2px; font-family: var(--f-mono); font-size: .75rem; letter-spacing: .06em; }
+.lingue a { text-decoration: none; color: var(--muted); padding: 6px 7px; border-radius: 3px; }
+.lingue a:hover { color: var(--ink); }
+.lingue a[aria-current="page"] { color: var(--ink); background: var(--paper-2); }
+.lingue a, .top-azioni .btn { white-space: nowrap; }
+@media (max-width: 440px) {
+  .top .wrap { gap: 8px; }
+  .top-azioni { gap: 6px; }
+  .lingue a { padding: 5px 4px; }
+  .top-azioni .btn-sm { padding: 8px 10px; }
+  .top .logo { font-size: 1.2rem; gap: 8px; }
+}
 
 /* Pulsanti */
 .btn {
@@ -382,6 +399,12 @@ section[id] { scroll-margin-top: 12px; }
 .reel figcaption b { color: var(--ink); }
 .sheet-wrap { max-width: 880px; }
 .reel { order: -1; width: min(100%, calc(72vh * 16 / 9)); justify-self: center; }
+
+/* Correzioni comuni a tutte le lingue (1/11/2026) */
+@media (max-width: 640px) { .compare tbody th, .compare td.old, .compare td.new { width: auto; } }
+.foot .logo { gap: 0; }
+.nav a { white-space: nowrap; }
+@media (max-width: 1100px) { .nav { display: none; } }
 </style>
 </head>
 <body>
@@ -400,7 +423,14 @@ section[id] { scroll-margin-top: 12px; }
       <a href="#per-chi">Per chi</a>
       <a href="#domande">Domande</a>
     </nav>
-    <a class="btn btn-primary btn-sm" href="#prova">Prova gratis</a>
+    <div class="top-azioni">
+      <nav class="lingue" aria-label="Lingua">
+        <a href="/" lang="it" hreflang="it" aria-current="page">IT</a>
+        <a href="/en/" lang="en" hreflang="en">EN</a>
+        <a href="/zh/" lang="zh-Hans" hreflang="zh-Hans">中文</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="#prova">Prova gratis</a>
+    </div>
   </div>
 </header>
 

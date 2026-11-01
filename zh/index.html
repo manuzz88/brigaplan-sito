@@ -1,0 +1,906 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brigaplan · 用 AI 设计商用厨房和吧台</title>
+<meta name="description" content="上传平面图或描述您的店面，Brigaplan 免费为您生成商用厨房或吧台的预览方案。之后可以做设计方案和施工图，再由您所在地区的合作安装商负责安装。">
+<meta property="og:title" content="Brigaplan · 用 AI 设计商用厨房和吧台">
+<meta property="og:description" content="从店面平面图到完整设计方案。几分钟拿到免费预览方案。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://brigaplan.ai/media/brigaplan_esempi_poster.jpg">
+<meta property="og:url" content="https://brigaplan.ai/zh/">
+<link rel="canonical" href="https://brigaplan.ai/zh/">
+<link rel="alternate" hreflang="it" href="https://brigaplan.ai/">
+<link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/">
+<link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/">
+<link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/">
+<meta name="theme-color" content="#14212A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect x='1.5' y='1.5' width='23' height='23' fill='%23fff' stroke='%2314212A' stroke-width='2.2'/%3E%3Cpath d='M1.5 11H13V24.5M13 7V1.5' fill='none' stroke='%2314212A' stroke-width='1.6'/%3E%3Crect x='16' y='15' width='6' height='6' fill='%23CF4E1B'/%3E%3C/svg%3E">
+<style>
+@import url("/fonts/fonts.css");
+[hidden] { display: none !important; }
+img, video { max-width: 100%; }
+/* Layout: foglio tecnico. Testo a sinistra, la tavola della cucina come elemento forte, una banda scura per il problema. */
+:root {
+  --paper: #F1F4F3;
+  --paper-2: #E6ECEB;
+  --sheet: #FBFCFC;
+  --ink: #14212A;
+  --muted: #55646D;
+  --line: #C8D1D4;
+  --line-strong: #9AA7AE;
+  --accent: #CF4E1B;
+  --accent-deep: #A93E12;
+  --on-accent: #FFFFFF;
+  --blue: #2A68AE;
+  --focus: #2A68AE;
+  --shadow: rgba(20, 33, 42, .35);
+  --band: #14212A;
+  --band-fg: #E7ECEE;
+  --band-muted: #A2B2BA;
+  --band-line: #2D3D46;
+  --band-accent: #FF7A45;
+  --z-hot: #F6DCCD;
+  --z-cold: #D3EAEE;
+  --z-prep: #DCE9D4;
+  --z-wash: #D5E1EF;
+  --z-pass: #EFE6CB;
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+  --f-body: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", monospace;
+  --maxw: 1180px;
+  --overlay-bg: rgba(14, 21, 25, .72);
+  --overlay-fg: #EEF2F3;
+  --overlay-muted: #C3CED3;
+  --scrim: rgba(10, 16, 20, .86);
+  --scrim-mid: rgba(10, 16, 20, .55);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0E1519; --paper-2: #131C21; --sheet: #121C21; --ink: #E4EAEC; --muted: #93A3AA;
+    --line: #2A3840; --line-strong: #46565F; --accent: #FF7440; --accent-deep: #FF9468; --on-accent: #1A0E08;
+    --blue: #6FA8E6; --focus: #6FA8E6; --shadow: rgba(0, 0, 0, .6);
+    --band: #172229; --band-fg: #E4EAEC; --band-muted: #94A5AD; --band-line: #2E3E47; --band-accent: #FF7440;
+    --z-hot: #4A2A1D; --z-cold: #163A3F; --z-prep: #22392A; --z-wash: #1C3048; --z-pass: #3B3420;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0E1519; --paper-2: #131C21; --sheet: #121C21; --ink: #E4EAEC; --muted: #93A3AA;
+  --line: #2A3840; --line-strong: #46565F; --accent: #FF7440; --accent-deep: #FF9468; --on-accent: #1A0E08;
+  --blue: #6FA8E6; --focus: #6FA8E6; --shadow: rgba(0, 0, 0, .6);
+  --band: #172229; --band-fg: #E4EAEC; --band-muted: #94A5AD; --band-line: #2E3E47; --band-accent: #FF7440;
+  --z-hot: #4A2A1D; --z-cold: #163A3F; --z-prep: #22392A; --z-wash: #1C3048; --z-pass: #3B3420;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--f-body); font-size: 1.0625rem; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { font-family: var(--f-display); font-stretch: 112%; line-height: 1.08; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.15rem, 1.2rem + 4vw, 4rem); font-weight: 800; line-height: 1.02; }
+h2 { font-size: clamp(1.65rem, 1.1rem + 2.2vw, 2.6rem); font-weight: 780; }
+h3 { font-size: 1.125rem; font-weight: 700; font-stretch: 104%; letter-spacing: 0; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+section[id] { scroll-margin-top: 12px; }
+
+.wrap {
+  max-width: var(--maxw); margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+@media (min-width: 720px) {
+  .wrap {
+    padding-left: max(32px, env(safe-area-inset-left, 0px));
+    padding-right: max(32px, env(safe-area-inset-right, 0px));
+  }
+}
+.sec { padding-block: clamp(56px, 7vw, 104px); display: grid; gap: clamp(28px, 4vw, 48px); }
+.sec-head { display: grid; gap: 14px; max-width: 46rem; }
+.eyebrow { font-family: var(--f-mono); font-size: .75rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.sec-lead { font-size: 1.125rem; color: var(--muted); max-width: 40rem; }
+.alt { background: var(--paper-2); }
+
+/* Avviso di pagina di prova */
+.notice { background: var(--ink); color: var(--paper); font-family: var(--f-mono); font-size: .75rem; letter-spacing: .04em; }
+.notice .wrap { padding-block: 8px; }
+
+/* Testata */
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 18px; }
+.logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--f-display); font-stretch: 118%; font-size: 1.35rem; font-weight: 500; letter-spacing: -.01em; }
+.logo b { font-weight: 850; color: var(--accent); }
+.logo svg { width: 26px; height: 26px; flex: none; }
+.lm-wall, .lm-line { fill: none; stroke: var(--ink); stroke-width: 2.2; }
+.lm-line { stroke-width: 1.4; }
+.lm-acc { fill: var(--accent); }
+.nav { display: flex; gap: 22px; font-size: .9375rem; }
+.nav a { text-decoration: none; color: var(--muted); }
+.nav a:hover { color: var(--ink); }
+@media (max-width: 920px) { .nav { display: none; } }
+.top-azioni { display: flex; align-items: center; gap: 12px; }
+.lingue { display: flex; gap: 2px; font-family: var(--f-mono); font-size: .75rem; letter-spacing: .06em; }
+.lingue a { text-decoration: none; color: var(--muted); padding: 6px 7px; border-radius: 3px; }
+.lingue a:hover { color: var(--ink); }
+.lingue a[aria-current="page"] { color: var(--ink); background: var(--paper-2); }
+.lingue a, .top-azioni .btn { white-space: nowrap; }
+@media (max-width: 440px) {
+  .top .wrap { gap: 8px; }
+  .top-azioni { gap: 6px; }
+  .lingue a { padding: 5px 4px; }
+  .top-azioni .btn-sm { padding: 8px 10px; }
+  .top .logo { font-size: 1.2rem; gap: 8px; }
+}
+
+/* Pulsanti */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 48px; padding: 12px 20px; border-radius: 4px; border: 1.5px solid transparent;
+  font-family: var(--f-body); font-weight: 600; font-size: 1rem; line-height: 1.2; text-decoration: none; cursor: pointer;
+  transition: background-color .15s, color .15s, border-color .15s;
+}
+.btn-primary { background: var(--accent); color: var(--on-accent); }
+.btn-primary:hover { background: var(--accent-deep); }
+.btn-ghost { border-color: var(--ink); color: var(--ink); background: transparent; }
+.btn-ghost:hover { background: var(--ink); color: var(--paper); }
+.btn-sm { min-height: 40px; padding: 8px 14px; font-size: .9375rem; }
+
+/* Apertura */
+.hero .wrap {
+  display: grid; grid-template-columns: minmax(0, 1fr); align-items: start;
+  gap: clamp(32px, 5vw, 64px);
+  padding-block: clamp(20px, 4vw, 56px) clamp(56px, 7vw, 96px);
+}
+.hero-text { display: grid; gap: 22px; align-content: start; }
+.hero-body { display: grid; gap: 22px; align-content: start; min-width: 0; }
+@media (min-width: 1000px) {
+  .hero-body { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 64px; row-gap: 26px; }
+  .hero-body .why { padding-top: 0; border-top: 0; }
+}
+.lead { font-size: clamp(1.125rem, 1rem + .5vw, 1.3rem); line-height: 1.5; max-width: 34rem; }
+.why { font-size: 1rem; color: var(--muted); max-width: 34rem; padding-top: 18px; border-top: 1px solid var(--line); }
+.why-k { font-family: var(--f-mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-right: 8px; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.for { font-size: .875rem; color: var(--muted); }
+
+/* Tavola di esempio */
+.sheet {
+  margin: 0; min-width: 0; display: grid; background: var(--sheet);
+  border: 1px solid var(--line); border-radius: 4px;
+  box-shadow: 0 22px 44px -30px var(--shadow);
+}
+.sheet-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+.ex { font-family: var(--f-mono); font-size: .75rem; color: var(--muted); letter-spacing: .02em; }
+.ex b { display: inline-block; padding: 2px 6px; margin-right: 8px; border: 1px solid var(--line-strong); border-radius: 3px; font-weight: 600; font-size: .6875rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); }
+.levels { display: inline-flex; gap: 3px; padding: 3px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); }
+.levels button { font: 600 .8125rem/1 var(--f-body); min-height: 36px; padding: 9px 12px; border: 0; border-radius: 3px; background: transparent; color: var(--muted); cursor: pointer; }
+.levels button:hover { color: var(--ink); }
+.levels button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.plan-box { padding: 10px 8px 2px; }
+.plan { display: block; width: 100%; height: auto; max-width: 100%; }
+.cap { padding: 6px 16px 14px; font-size: .9375rem; min-height: 4.4em; }
+.cap b { font-weight: 700; }
+.cartiglio { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0; border-top: 1px solid var(--line); }
+.cartiglio div { padding: 10px 12px; border-right: 1px solid var(--line); min-width: 0; }
+.cartiglio div:last-child { border-right: 0; }
+.cartiglio dt { font-family: var(--f-mono); font-size: .6875rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.cartiglio dd { margin: 2px 0 0; font-size: .875rem; font-weight: 600; line-height: 1.3; }
+@media (max-width: 560px) {
+  .cartiglio { grid-template-columns: 1fr 1fr; }
+  .cartiglio div:nth-child(2) { border-right: 0; }
+  .cartiglio div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+}
+.legenda { list-style: none; margin: 0; padding: 12px 16px 14px; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(6, auto); grid-auto-flow: column; gap: 4px 16px; font-size: .8125rem; color: var(--muted); }
+.legenda li { display: flex; gap: 8px; min-width: 0; }
+.legenda .k { font-family: var(--f-mono); font-weight: 600; color: var(--ink); min-width: 1.5em; }
+.imp-key { display: none; flex-wrap: wrap; gap: 6px 16px; padding: 0 16px 16px; font-size: .8125rem; color: var(--muted); }
+.sheet[data-level="esecutivo"] .imp-key { display: flex; }
+.imp-key span { display: inline-flex; align-items: center; gap: 6px; }
+.imp-key i { font-style: normal; font-family: var(--f-mono); font-weight: 700; font-size: .6875rem; width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid currentColor; display: inline-grid; place-items: center; }
+.ik-e { color: var(--ink); } .ik-a { color: var(--blue); } .ik-g { color: var(--accent); } .ik-s { color: var(--muted); }
+
+/* Disegno SVG */
+.plan .grid-line { fill: none; stroke: var(--line); stroke-width: .5; }
+.plan .z-hot { fill: var(--z-hot); } .plan .z-cold { fill: var(--z-cold); } .plan .z-prep { fill: var(--z-prep); }
+.plan .z-wash { fill: var(--z-wash); } .plan .z-pass { fill: var(--z-pass); }
+.plan .wall { fill: var(--ink); }
+.plan .opening { fill: var(--sheet); }
+.plan .glass { fill: none; stroke: var(--ink); stroke-width: 1; }
+.plan .leaf { fill: none; stroke: var(--ink); stroke-width: 1.6; }
+.plan .swing { fill: none; stroke: var(--ink); stroke-width: .8; stroke-dasharray: 3 3; opacity: .7; }
+.plan .eq { fill: var(--sheet); stroke: var(--ink); stroke-width: 1.3; }
+.plan .eq-in { fill: none; stroke: var(--ink); stroke-width: .8; opacity: .7; }
+.plan .hood { fill: none; stroke: var(--ink); stroke-width: 1; stroke-dasharray: 8 4 2 4; opacity: .75; }
+.plan .zl { font-family: var(--f-mono); font-size: 13px; font-weight: 600; letter-spacing: 1.5px; fill: var(--ink); opacity: .82; }
+.plan .tagc { fill: var(--sheet); stroke: var(--ink); stroke-width: 1; }
+.plan .tagt { font-family: var(--f-mono); font-size: 11px; font-weight: 600; fill: var(--ink); text-anchor: middle; }
+.plan .flow { fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.plan .clean { stroke: var(--accent); stroke-dasharray: 7 5; }
+.plan .dirty { stroke: var(--blue); stroke-dasharray: 2 4; }
+.plan .mk-clean { fill: var(--accent); } .plan .mk-dirty { fill: var(--blue); }
+.plan .fl-l { font-family: var(--f-mono); font-size: 11px; font-weight: 600; letter-spacing: 1px; }
+.plan .clean-t { fill: var(--accent); } .plan .dirty-t { fill: var(--blue); } .plan .sala-t { fill: var(--muted); text-anchor: middle; }
+.plan .dim { fill: none; stroke: var(--ink); stroke-width: .8; }
+.plan .tick { fill: none; stroke: var(--ink); stroke-width: 1.6; }
+.plan .dim-t { font-family: var(--f-mono); font-size: 11.5px; font-weight: 600; fill: var(--ink); text-anchor: middle; }
+.plan .hood-t { font-family: var(--f-mono); font-size: 10px; font-weight: 600; letter-spacing: .8px; fill: var(--ink); }
+.plan .imp circle { fill: var(--sheet); stroke-width: 1.4; }
+.plan .imp text { font-family: var(--f-mono); font-size: 8.5px; font-weight: 700; text-anchor: middle; }
+.plan .imp-e circle { stroke: var(--ink); } .plan .imp-e text { fill: var(--ink); }
+.plan .imp-a circle { stroke: var(--blue); } .plan .imp-a text { fill: var(--blue); }
+.plan .imp-g circle { stroke: var(--accent); } .plan .imp-g text { fill: var(--accent); }
+.plan .imp-s circle { stroke: var(--muted); } .plan .imp-s text { fill: var(--muted); }
+.plan .layer { opacity: 0; transition: opacity .4s ease; }
+.sheet[data-level="progetto"] .layer-quote,
+.sheet[data-level="esecutivo"] .layer-quote,
+.sheet[data-level="esecutivo"] .layer-imp { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .plan .flow { animation: march 1.6s linear infinite; }
+  @keyframes march { to { stroke-dashoffset: -24; } }
+}
+
+/* Il problema */
+.band { background: var(--band); color: var(--band-fg); }
+.band .eyebrow, .band .sec-lead { color: var(--band-muted); }
+.loop { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 28px; }
+.loop li { display: grid; gap: 8px; align-content: start; padding-top: 18px; border-top: 1px solid var(--band-line); padding-bottom: 20px; }
+.loop .n { font-family: var(--f-mono); font-size: .8125rem; font-weight: 600; color: var(--band-accent); }
+.loop p { color: var(--band-muted); font-size: .96875rem; }
+@media (max-width: 900px) { .loop { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .loop { grid-template-columns: 1fr; } }
+.loop-back { display: flex; gap: 12px; align-items: flex-start; font-size: 1rem; color: var(--band-fg); max-width: 44rem; }
+.loop-back svg { flex: none; width: 22px; height: 22px; margin-top: 2px; }
+.loop-back path { fill: none; stroke: var(--band-accent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.losers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 28px; }
+.losers > div { display: grid; gap: 6px; align-content: start; padding-top: 16px; border-top: 1px solid var(--band-line); }
+.losers p { color: var(--band-muted); font-size: .96875rem; }
+@media (max-width: 760px) { .losers { grid-template-columns: 1fr; } }
+.punch { font-family: var(--f-display); font-stretch: 108%; font-weight: 700; font-size: clamp(1.2rem, 1rem + 1vw, 1.55rem); line-height: 1.3; max-width: 42rem; text-wrap: balance; }
+
+/* Confronto */
+.compare { width: 100%; border-collapse: collapse; font-size: 1rem; }
+.compare th, .compare td { text-align: left; vertical-align: top; padding: 16px 16px 16px 0; border-bottom: 1px solid var(--line); }
+.compare thead th { font-family: var(--f-mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 500; padding-bottom: 10px; border-bottom-color: var(--ink); }
+.compare thead th.us { color: var(--accent); font-weight: 600; }
+.compare tbody th { font-weight: 600; width: 22%; }
+.compare td.old { color: var(--muted); width: 36%; }
+.compare td.new { font-weight: 600; width: 42%; }
+@media (max-width: 640px) {
+  .compare, .compare tbody { display: block; }
+  .compare thead { display: none; }
+  .compare tr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 4px 16px; padding-block: 14px; border-bottom: 1px solid var(--line); }
+  .compare th, .compare td { padding: 0; border: 0; width: auto; }
+  .compare tbody th { grid-column: 1 / -1; font-family: var(--f-mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 4px; }
+  .compare td { font-size: .9375rem; }
+  .compare td::before { content: attr(data-l); display: block; font-family: var(--f-mono); font-size: .6875rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 2px; }
+  .compare td.new::before { color: var(--accent); }
+}
+
+/* Come funziona */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
+.steps li { display: grid; gap: 10px; align-content: start; padding-top: 18px; border-top: 2px solid var(--ink); }
+.steps .n { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-family: var(--f-mono); font-size: .8125rem; color: var(--muted); }
+.steps p { color: var(--muted); font-size: .96875rem; }
+.pill { font-family: var(--f-mono); font-size: .6875rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 3px 7px; border-radius: 3px; border: 1px solid var(--line-strong); color: var(--muted); }
+.pill.free { border-color: var(--accent); color: var(--accent); }
+@media (max-width: 980px) { .steps { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .steps { grid-template-columns: 1fr; } }
+
+/* Cosa si paga */
+.tiers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.tier { background: var(--sheet); border: 1px solid var(--line); border-radius: 4px; padding: 24px; display: grid; gap: 14px; align-content: start; }
+.tier.free { border: 1.5px solid var(--ink); }
+.tier-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.tier h3 { font-size: 1.375rem; }
+.price { font-family: var(--f-mono); font-size: .8125rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.tier.free .price { color: var(--accent); }
+.tier ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.tier li { padding-left: 18px; position: relative; font-size: .96875rem; }
+.tier li::before { content: ""; position: absolute; left: 0; top: .72em; width: 8px; height: 1.5px; background: var(--ink); }
+.tier .who { font-size: .875rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 12px; }
+@media (max-width: 900px) { .tiers { grid-template-columns: 1fr; } }
+.thesis { display: flex; gap: 14px; align-items: flex-start; max-width: 50rem; font-family: var(--f-display); font-stretch: 106%; font-weight: 650; font-size: clamp(1.15rem, 1rem + .7vw, 1.4rem); line-height: 1.35; }
+.thesis svg { flex: none; width: 28px; height: 28px; margin-top: 1px; }
+.thesis path { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Per chi */
+.who-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
+.who-grid > div { display: grid; gap: 8px; align-content: start; padding-top: 18px; border-top: 2px solid var(--ink); }
+.who-grid p { color: var(--muted); font-size: .96875rem; }
+@media (max-width: 1000px) { .who-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .who-grid { grid-template-columns: 1fr; } }
+.partner { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline; padding: 18px 20px; border: 1px dashed var(--line-strong); border-radius: 4px; }
+.partner strong { font-family: var(--f-display); font-stretch: 106%; font-size: 1.0625rem; }
+.partner span { color: var(--muted); }
+
+/* Fiducia */
+.trust { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: start; }
+@media (max-width: 900px) { .trust { grid-template-columns: 1fr; } }
+.points { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 28px; }
+.points > div { display: grid; gap: 6px; align-content: start; padding-top: 14px; border-top: 1px solid var(--line-strong); }
+.points p { color: var(--muted); font-size: .96875rem; }
+@media (max-width: 560px) { .points { grid-template-columns: 1fr; } }
+.money { background: var(--sheet); border: 1.5px solid var(--ink); border-radius: 4px; padding: 24px; display: grid; gap: 12px; }
+.money p { font-size: 1rem; }
+.money .small { color: var(--muted); font-size: .875rem; }
+
+/* Domande */
+.faq { display: grid; max-width: 50rem; border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; padding: 18px 44px 18px 0; font-weight: 600; font-size: 1.0625rem; position: relative; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 6px; top: 12px; font-family: var(--f-mono); font-size: 1.5rem; font-weight: 400; color: var(--accent); transition: transform .2s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding: 0 0 20px; color: var(--muted); max-width: 42rem; }
+
+/* Prova */
+.prova-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
+@media (max-width: 900px) { .prova-grid { grid-template-columns: 1fr; } }
+.prova-text { display: grid; gap: 18px; align-content: start; }
+.gets { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.gets li { padding-left: 18px; position: relative; }
+.gets li::before { content: ""; position: absolute; left: 0; top: .72em; width: 8px; height: 1.5px; background: var(--accent); }
+.form { background: var(--sheet); border: 1px solid var(--line); border-radius: 4px; padding: clamp(18px, 3vw, 28px); display: grid; gap: 18px; min-width: 0; }
+.form fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.form legend, .lbl { display: block; padding: 0; font-weight: 600; font-size: .9375rem; margin-bottom: 8px; }
+.seg { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 3px; padding: 3px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); }
+.seg input { position: absolute; opacity: 0; pointer-events: none; }
+.seg label { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 42px; padding: 6px 8px; border-radius: 3px; font-weight: 600; font-size: .9375rem; cursor: pointer; color: var(--muted); }
+.seg input:checked + label { background: var(--ink); color: var(--paper); }
+.seg input:focus-visible + label { outline: 3px solid var(--focus); outline-offset: 2px; }
+.field { display: grid; gap: 6px; min-width: 0; }
+.field label { font-weight: 600; font-size: .9375rem; }
+.form input[type="number"], .form select, .form textarea {
+  width: 100%; min-height: 46px; padding: 11px 12px; font: inherit; font-size: 1rem; color: var(--ink);
+  background: var(--paper); border: 1px solid var(--line-strong); border-radius: 4px;
+}
+.form textarea { min-height: 96px; resize: vertical; }
+.row2 { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 12px; }
+@media (max-width: 420px) { .row2 { grid-template-columns: 1fr; } }
+.drop { display: grid; place-items: center; text-align: center; gap: 4px; padding: 26px 16px; border: 1.5px dashed var(--line-strong); border-radius: 4px; background: var(--paper); cursor: pointer; }
+.drop:hover, .drop.over { border-color: var(--accent); }
+.drop:focus-within { outline: 3px solid var(--focus); outline-offset: 2px; }
+.drop strong { font-size: 1rem; }
+.drop span { font-size: .875rem; color: var(--muted); }
+.drop .file { color: var(--ink); font-weight: 600; word-break: break-all; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.esito { padding: 14px 16px; border-radius: 4px; background: var(--paper); border: 1px solid var(--line-strong); font-size: .9375rem; }
+.small { font-size: .8125rem; color: var(--muted); }
+
+/* Piede */
+.foot { border-top: 1px solid var(--line); }
+.foot .wrap { padding-block: 36px 48px; display: grid; gap: 12px; font-size: .875rem; color: var(--muted); }
+.foot .logo { font-size: 1.15rem; color: var(--ink); }
+
+/* Video di apertura */
+.reel { margin: 0; display: grid; gap: 12px; min-width: 0; align-content: start; }
+.reel-box { position: relative; max-width: 100%; border-radius: 4px; overflow: hidden; background: var(--band); box-shadow: 0 22px 44px -30px var(--shadow); }
+.reel video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.reel-tag, .reel-btn { position: absolute; font-family: var(--f-mono); font-size: .6875rem; letter-spacing: .06em; text-transform: uppercase; border-radius: 3px; background: var(--overlay-bg); color: var(--overlay-fg); }
+.reel-tag { left: 10px; top: 10px; padding: 4px 8px; }
+.reel-btn { right: 10px; top: 10px; padding: 7px 10px; border: 0; cursor: pointer; min-height: 32px; }
+.reel-title { display: grid; gap: 10px; padding: 18px 16px 22px; background: var(--band); }
+.reel-title .eyebrow { color: var(--overlay-muted); }
+.reel-title h1 { color: var(--overlay-fg); font-size: clamp(1.9rem, 1rem + 3.4vw, 3.6rem); max-width: 15em; }
+.reel-sub { color: var(--overlay-fg); font-size: clamp(1rem, .92rem + .45vw, 1.3rem); line-height: 1.4; max-width: 32em; }
+@media (min-width: 720px) {
+  .reel-title { position: absolute; left: 0; right: 0; bottom: 0; padding: 18% clamp(24px, 3.5vw, 44px) clamp(22px, 3vw, 40px); background: linear-gradient(to top, var(--scrim) 0%, var(--scrim-mid) 55%, transparent 100%); pointer-events: none; }
+  .reel-title h1 { max-width: 13em; text-shadow: 0 2px 18px var(--scrim-mid); }
+  .reel-sub { text-shadow: 0 1px 10px var(--scrim-mid); }
+}
+.reel figcaption { font-size: .875rem; color: var(--muted); max-width: 40rem; }
+.reel figcaption b { color: var(--ink); }
+.sheet-wrap { max-width: 880px; }
+.reel { order: -1; width: min(100%, calc(72vh * 16 / 9)); justify-self: center; }
+/* Versione cinese: font CJK di sistema (vedi :root), niente spaziature negative né caratteri allargati, interlinea più ampia per gli ideogrammi. */
+body { line-height: 1.7; }
+h1, h2, h3 { font-stretch: 100%; letter-spacing: 0; line-height: 1.3; }
+h1 { line-height: 1.25; }
+h1, h2 { font-weight: 700; }
+h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su punteggiatura e spazi, non a metà parola */
+.lead { line-height: 1.65; }
+.punch, .thesis { font-stretch: 100%; line-height: 1.5; }
+.partner strong { font-stretch: 100%; }
+.eyebrow, .why-k, .notice, .ex b, .cartiglio dt, .compare thead th, .pill, .price, .reel-tag, .reel-btn { letter-spacing: .04em; }
+@media (max-width: 640px) { .compare tbody th, .compare td::before { letter-spacing: .04em; } }
+.plan .zl { letter-spacing: 1px; }
+.plan .fl-l, .plan .hood-t { letter-spacing: .5px; }
+/* Correzione (c'è anche nella pagina italiana): sotto 640px le larghezze 22/36/42% della tabella vincevano su width:auto e stringevano le celle. */
+@media (max-width: 640px) { .compare tbody th, .compare td.old, .compare td.new { width: auto; } }
+/* Correzione (c'è anche nella pagina italiana): nel piede il logo è solo testo, e il gap del flex staccava "Briga" da "plan". */
+.foot .logo { gap: 0; }
+
+/* Correzioni comuni a tutte le lingue (1/11/2026) */
+.nav a { white-space: nowrap; }
+@media (max-width: 1100px) { .nav { display: none; } }
+</style>
+</head>
+<body>
+<div class="notice"><div class="wrap">Brigaplan 即将上线 · 服务尚未开通</div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Brigaplan，回到页面顶部">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><rect class="lm-wall" x="1.5" y="1.5" width="23" height="23"/><path class="lm-line" d="M1.5 11H13V24.5M13 7V1.5"/><rect class="lm-acc" x="16" y="15" width="6" height="6"/></svg>
+      <span>Briga<b>plan</b></span>
+    </a>
+    <nav class="nav" aria-label="页面栏目">
+      <a href="#problema">问题所在</a>
+      <a href="#come-funziona">使用流程</a>
+      <a href="#cosa-si-paga">收费方式</a>
+      <a href="#per-chi">适用对象</a>
+      <a href="#domande">常见问题</a>
+    </nav>
+    <div class="top-azioni">
+      <nav class="lingue" aria-label="语言">
+        <a href="/" lang="it" hreflang="it">IT</a>
+        <a href="/en/" lang="en" hreflang="en">EN</a>
+        <a href="/zh/" lang="zh-Hans" hreflang="zh-Hans" aria-current="page">中文</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="#prova">免费试用</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="titolo">
+  <div class="wrap">
+    <div class="hero-text">
+      <div class="hero-body">
+      <p class="lead">上传店面平面图，或者用文字描述您的店。免费获得预览方案：平面布局、3D 模型和费用估算。觉得合适，再做完整的设计方案，由您所在地区的安装商负责安装。</p>
+      <p class="why"><span class="why-k">为什么</span>现在每家供应商都要从头免费做一遍设计，而客户常常最后不买，或者拿着方案去找别家。大家都在浪费时间和金钱。用 Brigaplan，在购买设备之前，把设计一次做好。</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#prova">用您的店面试一试</a>
+        <a class="btn btn-ghost" href="#come-funziona">使用流程</a>
+      </div>
+      <p class="for">适合餐厅、酒店和酒吧老板 · 建筑师和设计师 · 经销商和代理商</p>
+      </div>
+    </div>
+
+    <figure class="reel" aria-labelledby="reel-cap">
+      <div class="reel-box">
+        <video id="reel" src="/media/brigaplan_esempi.mp4?v=2" poster="/media/brigaplan_esempi_poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="视频：三个案例，一家意式餐馆、一家酒吧和一个企业食堂。每个案例都从平面图变成 3D 设计方案。"></video>
+        <span class="reel-tag">案例 · 意式餐馆、酒吧、食堂</span>
+        <div class="reel-title">
+          <p class="eyebrow">用 AI 设计商用厨房和吧台</p>
+          <h1 id="titolo">您的厨房和吧台，几分钟出设计方案。</h1>
+          <p class="reel-sub">适用于酒店、餐厅、食堂、医院等各类场所的厨房和吧台。</p>
+        </div>
+        <button type="button" class="reel-btn" id="reel-btn" aria-pressed="false">暂停</button>
+      </div>
+      <figcaption id="reel-cap"><b>从平面图到完整设计方案。</b>平面图、3D 模型和动画都由我们自己的设计引擎生成，设备尺寸取自厂家的技术参数表。照片级效果图属于付费设计方案的内容。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band" id="problema" aria-labelledby="t-problema">
+  <div class="wrap sec">
+    <div class="sec-head">
+      <p class="eyebrow">问题所在</p>
+      <h2 id="t-problema">现在的厨房设计，做了一遍又一遍，最后还常常白送。</h2>
+      <p class="sec-lead">开新店或翻新餐厅、酒吧、酒店的老板，几乎都要走一遍同样的流程。</p>
+    </div>
+    <ol class="loop">
+      <li><span class="n">1</span><h3>找好几家供应商做设计</h3><p>每家都派自己的技术员来量尺寸，画出各自的厨房方案。</p></li>
+      <li><span class="n">2</span><h3>改一次，就重来一遍</h3><p>每次改主意，方案都要重做。几个星期就这样过去了。</p></li>
+      <li><span class="n">3</span><h3>报价没法比较</h3><p>设备不同，尺寸不同，价格也不同。客户不知道该信谁。</p></li>
+      <li><span class="n">4</span><h3>最后常常没买</h3><p>或者拿着这份方案去找另一家供应商，让对方报个更低的价。</p></li>
+    </ol>
+    <p class="loop-back"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4.5h4.5"/></svg><span>供应商白干一场，客户耽误了几个星期，然后换一家再从头来一遍。</span></p>
+    <div class="sec-head"><p class="eyebrow">谁在吃亏</p></div>
+    <div class="losers">
+      <div><h3>客户</h3><p>一直在等，比较几份互不相同的方案，最后手里没有一份属于自己的设计，就得做决定。</p></div>
+      <div><h3>供应商</h3><p>白送大量设计工时，有时自己做的方案还落到了竞争对手手里。</p></div>
+      <div><h3>建筑师和设计师</h3><p>到处找各个品牌的参数表、尺寸和 CAD 图块，每次修改都要等供应商。</p></div>
+    </div>
+    <p class="punch">到头来，这些白做的设计成本都会算进价格里，最后由所有人买单。</p>
+  </div>
+</section>
+
+<section id="soluzione" aria-labelledby="t-soluzione">
+  <div class="wrap sec">
+    <div class="sec-head">
+      <p class="eyebrow">有什么不同</p>
+      <h2 id="t-soluzione">买设备之前，把设计一次做好。</h2>
+      <p class="sec-lead">Brigaplan 把设计和销售分开。做设计的人靠设计收费，买设备的人带着清楚的方案去找供应商。</p>
+    </div>
+    <table class="compare">
+      <thead><tr><th scope="col"><span class="sr-only">项目</span></th><th scope="col">现在</th><th scope="col" class="us">用 Brigaplan</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">第一步</th><td class="old" data-l="现在">打电话找供应商，等他们上门量尺寸</td><td class="new" data-l="用 Brigaplan">几分钟拿到免费预览方案</td></tr>
+        <tr><th scope="row">设计方案</th><td class="old" data-l="现在">每家供应商各做一份，每次修改都要重做</td><td class="new" data-l="用 Brigaplan">只有一份，跟着您的选择调整</td></tr>
+        <tr><th scope="row">报价</th><td class="old" data-l="现在">基于不同的厨房方案，很难比较</td><td class="new" data-l="用 Brigaplan">基于同一份方案，可以直接比较</td></tr>
+        <tr><th scope="row">谁为设计付费</th><td class="old" data-l="现在">表面上没人付，实际上算进了价格</td><td class="new" data-l="用 Brigaplan">您自己，只付一次，而且只在决定继续时才付</td></tr>
+        <tr><th scope="row">供应商</th><td class="old" data-l="现在">免费干活，不知道能不能成交</td><td class="new" data-l="用 Brigaplan">接到的客户已经带着现成的方案</td></tr>
+        <tr><th scope="row">如果向合作安装商购买</th><td class="old" data-l="现在">设计费仍是一笔隐藏成本</td><td class="new" data-l="用 Brigaplan">设计费从订单金额中扣除</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="alt" id="come-funziona" aria-labelledby="t-come">
+  <div class="wrap sec">
+    <div class="sec-head">
+      <p class="eyebrow">使用流程</p>
+      <h2 id="t-come">从平面图到安装，只需四步。</h2>
+    </div>
+    <ol class="steps">
+      <li><span class="n">1</span><h3>上传平面图，或描述您的店面</h3><p>DXF、DWG 或 PDF 文件都可以。没有平面图？我们会问您尺寸、门窗位置，以及餐厅区在哪里。</p></li>
+      <li><span class="n">2</span><h3>说说您的需求</h3><p>店铺类型、座位数、菜单，以及现有设备中哪些想保留。</p></li>
+      <li><span class="n">3 <span class="pill free">免费</span></span><h3>收到预览方案</h3><p>带功能分区和操作台的平面图、可以用手指旋转的 3D 模型、费用估算。几分钟就好。</p></li>
+      <li><span class="n">4 <span class="pill">付费</span></span><h3>满意再继续</h3><p>标注尺寸的设计方案、由设计师签字的施工图，再由您所在地区的合作安装商负责安装。</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="cosa-si-paga" aria-labelledby="t-paga">
+  <div class="wrap sec">
+    <div class="sec-head">
+      <p class="eyebrow">收费方式</p>
+      <h2 id="t-paga">预览方案免费。设计方案收费，费用可从订单中扣除。</h2>
+      <p class="sec-lead">同一个项目，三种深度。点图纸上方的按钮试试：这就是视频里的厨房。</p>
+    </div>
+    <div class="sheet-wrap">
+      <figure class="sheet" id="tavola" data-level="anteprima" aria-labelledby="tavola-cap">
+      <div class="sheet-head">
+        <p class="ex"><b>示例</b>意式餐馆，80 个座位</p>
+        <div class="levels" role="group" aria-label="图纸深度">
+          <button type="button" data-set="anteprima" aria-pressed="true">预览方案</button>
+          <button type="button" data-set="progetto" aria-pressed="false">设计方案</button>
+          <button type="button" data-set="esecutivo" aria-pressed="false">施工图</button>
+        </div>
+      </div>
+      <div class="plan-box">
+        <svg class="plan" viewBox="0 0 668 470" role="img" aria-label="意式餐馆厨房示例平面图：冷藏区、切配区、烹饪区、洗碗区和出餐口，食材和脏餐具各走各的路线">
+<defs><pattern id="griglia" width="18" height="18" patternUnits="userSpaceOnUse"><path class="grid-line" d="M18 0H0V18"/></pattern><marker id="mk-clean" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="mk-clean" d="M0 0L10 5L0 10Z"/></marker><marker id="mk-dirty" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="mk-dirty" d="M0 0L10 5L0 10Z"/></marker></defs>
+<rect x="0" y="0" width="668" height="470" fill="url(#griglia)"/>
+<rect class="z-cold" x="69.0" y="51.0" width="143.4" height="90.0"/>
+<rect class="z-prep" x="212.4" y="51.0" width="195.6" height="174.0"/>
+<rect class="z-hot" x="408.0" y="51.0" width="213.0" height="96.0"/>
+<rect class="z-wash" x="69.0" y="297.0" width="189.0" height="90.0"/>
+<rect class="z-pass" x="441.0" y="297.0" width="180.0" height="90.0"/>
+<path class="wall" fill-rule="evenodd" d="M51.0 33.0H639.0V405.0H51.0Z M69.0 51.0H621.0V387.0H69.0Z"/>
+<rect class="opening" x="51.0" y="141.0" width="18.0" height="54.0"/>
+<rect class="opening" x="267.0" y="387.0" width="48.0" height="18.0"/>
+<rect class="opening" x="295.8" y="33.0" width="88.8" height="18.0"/>
+<path class="glass" d="M295.8 45.0L384.6 45.0"/>
+<path class="glass" d="M295.8 39.0L384.6 39.0"/>
+<path class="leaf" d="M69.0 141.0L123.0 141.0"/>
+<path class="swing" d="M123.0 141.0A54.0 54.0 0 0 1 69.0 195.0"/>
+<path class="leaf" d="M315.0 387.0L315.0 339.0"/>
+<path class="swing" d="M315.0 339.0A48.0 48.0 0 0 0 267.0 387.0"/>
+<rect class="eq" x="69.0" y="51.0" width="96.0" height="78.0"/>
+<rect class="eq-in" x="75.0" y="57.0" width="84.0" height="66.0"/>
+<rect class="eq" x="165.0" y="51.0" width="47.4" height="50.4"/>
+<rect class="eq-in" x="169.8" y="55.8" width="37.8" height="40.8"/>
+<rect class="eq" x="212.4" y="51.0" width="195.6" height="42.0"/>
+<rect class="eq-in" x="221.4" y="63.0" width="60.0" height="18.0"/>
+<rect class="eq-in" x="326.4" y="60.0" width="36.0" height="27.0" rx="3"/>
+<rect class="eq" x="231.0" y="153.0" width="144.0" height="54.0"/>
+<path class="eq-in" d="M231.0 180.0L375.0 180.0"/>
+<rect class="eq" x="408.0" y="51.0" width="51.0" height="50.5"/>
+<rect class="eq-in" x="412.8" y="57.0" width="41.4" height="39.6"/>
+<rect class="eq" x="459.0" y="51.0" width="162.0" height="54.0"/>
+<rect class="eq-in" x="466.2" y="63.5" width="14.2" height="28.9"/>
+<rect class="eq-in" x="485.8" y="58.3" width="26.6" height="39.5"/>
+<rect class="eq-in" x="587.8" y="58.3" width="17.2" height="39.5"/>
+<circle class="eq-in" cx="528.5" cy="78.0" r="7.2"/>
+<circle class="eq-in" cx="550.1" cy="78.0" r="7.2"/>
+<circle class="eq-in" cx="571.6" cy="78.0" r="7.2"/>
+<rect class="hood" x="402.0" y="51.0" width="219.0" height="69.0"/>
+<rect class="eq" x="69.0" y="342.0" width="60.0" height="45.0"/>
+<rect class="eq" x="129.0" y="342.0" width="38.1" height="45.0"/>
+<rect class="eq-in" x="133.2" y="346.2" width="29.7" height="36.6"/>
+<rect class="eq" x="167.1" y="342.0" width="90.9" height="45.0"/>
+<rect class="eq-in" x="174.0" y="351.0" width="36.0" height="27.0" rx="3"/>
+<circle class="eq-in" cx="236.7" cy="364.5" r="7.5"/>
+<rect class="hood" x="120.0" y="327.0" width="56.1" height="60.0"/>
+<rect class="eq" x="441.0" y="339.0" width="180.0" height="48.0"/>
+<rect class="eq-in" x="477.0" y="346.2" width="108.0" height="33.0"/>
+<circle class="tagc" cx="165.0" cy="129.0" r="8.5"/><text class="tagt" x="165.0" y="129.0" dy=".36em">1</text>
+<circle class="tagc" cx="212.4" cy="101.4" r="8.5"/><text class="tagt" x="212.4" y="101.4" dy=".36em">2</text>
+<circle class="tagc" cx="291.0" cy="93.0" r="8.5"/><text class="tagt" x="291.0" y="93.0" dy=".36em">3</text>
+<circle class="tagc" cx="375.0" cy="207.0" r="8.5"/><text class="tagt" x="375.0" y="207.0" dy=".36em">4</text>
+<circle class="tagc" cx="414.0" cy="101.5" r="8.5"/><text class="tagt" x="414.0" y="101.5" dy=".36em">5</text>
+<circle class="tagc" cx="473.4" cy="105.0" r="8.5"/><text class="tagt" x="473.4" y="105.0" dy=".36em">6</text>
+<circle class="tagc" cx="499.2" cy="105.0" r="8.5"/><text class="tagt" x="499.2" y="105.0" dy=".36em">7</text>
+<circle class="tagc" cx="550.2" cy="105.0" r="8.5"/><text class="tagt" x="550.2" y="105.0" dy=".36em">8</text>
+<circle class="tagc" cx="596.4" cy="105.0" r="8.5"/><text class="tagt" x="596.4" y="105.0" dy=".36em">9</text>
+<circle class="tagc" cx="148.1" cy="342.0" r="8.5"/><text class="tagt" x="148.1" y="342.0" dy=".36em">10</text>
+<circle class="tagc" cx="213.0" cy="342.0" r="8.5"/><text class="tagt" x="213.0" y="342.0" dy=".36em">11</text>
+<circle class="tagc" cx="465.0" cy="339.0" r="8.5"/><text class="tagt" x="465.0" y="339.0" dy=".36em">12</text>
+<text class="zl" x="84.0" y="90.0">冷藏区</text>
+<text class="zl" x="231.0" y="220.0">切配区</text>
+<text class="zl" x="420.0" y="136.2">烹饪区</text>
+<text class="zl" x="78.0" y="316.2">洗碗区</text>
+<text class="zl" x="450.0" y="316.2">出餐口</text>
+<path class="flow clean" d="M23.4 168.0L114.0 168.0L114.0 136.2" marker-end="url(#mk-clean)"/>
+<path class="flow clean" d="M132.0 136.2L132.0 246.0L543.0 246.0L543.0 118.2" marker-end="url(#mk-clean)"/>
+<path class="flow clean" d="M564.0 118.2L564.0 330.0" marker-end="url(#mk-clean)"/>
+<path class="flow clean" d="M432.0 318.0L306.0 318.0L306.0 438.0" marker-end="url(#mk-clean)"/>
+<path class="flow dirty" d="M279.0 438.0L279.0 312.0L266.4 312.0" marker-end="url(#mk-dirty)"/>
+<text class="fl-l clean-t" x="3.0" y="159.0">进货</text>
+<text class="fl-l clean-t" x="144.0" y="240.0">洁净</text>
+<text class="fl-l clean-t" x="571.8" y="225.0">出菜</text>
+<text class="fl-l dirty-t" x="204.0" y="307.2">脏餐具</text>
+<text class="fl-l sala-t" x="292.2" y="456.0">餐厅</text>
+<g class="layer layer-quote"><path class="dim" d="M69.0 12.0H621.0M69.0 4.0V20.0M621.0 4.0V20.0"/><path class="tick" d="M65.0 16.0L73.0 8.0M617.0 16.0L625.0 8.0"/><text class="dim-t" x="345.0" y="7.0">9.20</text><path class="dim" d="M657.0 387.0V51.0M649.0 387.0H665.0M649.0 51.0H665.0"/><path class="tick" d="M653.0 391.0L661.0 383.0M653.0 55.0L661.0 47.0"/><text class="dim-t" x="652.0" y="219.0" transform="rotate(-90 652.0 219.0)">5.60</text><path class="dim" d="M507.0 339.0V105.0M499.0 339.0H515.0M499.0 105.0H515.0"/><path class="tick" d="M503.0 343.0L511.0 335.0M503.0 109.0L511.0 101.0"/><text class="dim-t" x="502.0" y="222.0" transform="rotate(-90 502.0 222.0)">3.90</text></g>
+<g class="layer layer-imp"><text class="hood-t" x="420.0" y="157.2">排烟罩 EN 16282</text><g class="imp imp-e"><circle cx="117.0" cy="42.0" r="7"/><text x="117.0" y="42.0" dy=".36em">电</text></g><g class="imp imp-e"><circle cx="189.0" cy="42.0" r="7"/><text x="189.0" y="42.0" dy=".36em">电</text></g><g class="imp imp-a"><circle cx="337.8" cy="42.0" r="7"/><text x="337.8" y="42.0" dy=".36em">水</text></g><g class="imp imp-s"><circle cx="351.0" cy="42.0" r="7"/><text x="351.0" y="42.0" dy=".36em">排</text></g><g class="imp imp-e"><circle cx="420.0" cy="42.0" r="7"/><text x="420.0" y="42.0" dy=".36em">电</text></g><g class="imp imp-a"><circle cx="433.2" cy="42.0" r="7"/><text x="433.2" y="42.0" dy=".36em">水</text></g><g class="imp imp-s"><circle cx="446.4" cy="42.0" r="7"/><text x="446.4" y="42.0" dy=".36em">排</text></g><g class="imp imp-e"><circle cx="473.4" cy="42.0" r="7"/><text x="473.4" y="42.0" dy=".36em">电</text></g><g class="imp imp-e"><circle cx="499.2" cy="42.0" r="7"/><text x="499.2" y="42.0" dy=".36em">电</text></g><g class="imp imp-g"><circle cx="550.2" cy="42.0" r="7"/><text x="550.2" y="42.0" dy=".36em">气</text></g><g class="imp imp-a"><circle cx="589.8" cy="42.0" r="7"/><text x="589.8" y="42.0" dy=".36em">水</text></g><g class="imp imp-s"><circle cx="603.0" cy="42.0" r="7"/><text x="603.0" y="42.0" dy=".36em">排</text></g><g class="imp imp-e"><circle cx="135.0" cy="396.0" r="7"/><text x="135.0" y="396.0" dy=".36em">电</text></g><g class="imp imp-a"><circle cx="148.2" cy="396.0" r="7"/><text x="148.2" y="396.0" dy=".36em">水</text></g><g class="imp imp-s"><circle cx="161.4" cy="396.0" r="7"/><text x="161.4" y="396.0" dy=".36em">排</text></g><g class="imp imp-a"><circle cx="186.0" cy="396.0" r="7"/><text x="186.0" y="396.0" dy=".36em">水</text></g><g class="imp imp-s"><circle cx="199.2" cy="396.0" r="7"/><text x="199.2" y="396.0" dy=".36em">排</text></g><g class="imp imp-e"><circle cx="507.0" cy="396.0" r="7"/><text x="507.0" y="396.0" dy=".36em">电</text></g></g>
+</svg>
+      </div>
+      <figcaption class="cap" id="tavola-cap" aria-live="polite"><b>免费。</b>由 AI 几分钟完成：功能分区、操作台、动线和费用估算。用来看清大致效果。真正施工还需要设计方案和施工图。</figcaption>
+      <dl class="cartiglio">
+        <div><dt>图纸</dt><dd id="c-tavola">预览方案</dd></div>
+        <div><dt>比例</dt><dd id="c-scala">不标尺寸</dd></div>
+        <div><dt>设备</dt><dd id="c-attr">通用设备，不含品牌</dd></div>
+        <div><dt>费用</dt><dd id="c-stima">4万–6万欧元</dd></div>
+      </dl>
+      <ol class="legenda" aria-label="图例">
+        <li><span class="k">1</span>冷库</li>
+        <li><span class="k">2</span>急速冷却柜</li>
+        <li><span class="k">3</span>带水槽操作台</li>
+        <li><span class="k">4</span>冷藏岛台</li>
+        <li><span class="k">5</span>10 GN 万能蒸烤箱</li>
+        <li><span class="k">6</span>炸炉</li>
+        <li><span class="k">7</span>扒炉</li>
+        <li><span class="k">8</span>燃气灶</li>
+        <li><span class="k">9</span>煮面炉</li>
+        <li><span class="k">10</span>揭盖式洗碗机</li>
+        <li><span class="k">11</span>带水槽脏碟台</li>
+        <li><span class="k">12</span>保温出餐台</li>
+      </ol>
+      <p class="imp-key"><span><i class="ik-e">电</i>电源</span><span><i class="ik-a">水</i>给水</span><span><i class="ik-g">气</i>燃气</span><span><i class="ik-s">排</i>排水</span></p>
+    </figure>
+    </div>
+    <div class="tiers">
+      <div class="tier free">
+        <div class="tier-head"><h3>预览方案</h3><span class="price">免费</span></div>
+        <ul>
+          <li>带功能分区和操作台的平面图，不标尺寸</li>
+          <li>可旋转查看的简化 3D 模型</li>
+          <li>通用设备，例如“10 GN 万能蒸烤箱”</li>
+          <li>费用估算区间</li>
+        </ul>
+        <p class="who">由 AI 几分钟完成。</p>
+      </div>
+      <div class="tier">
+        <div class="tier-head"><h3>设计方案</h3><span class="price">付费</span></div>
+        <ul>
+          <li>PDF 格式的尺寸标注平面图</li>
+          <li>完整 3D 模型和两张效果图</li>
+          <li>选定的品牌和型号</li>
+          <li>参考报价</li>
+        </ul>
+        <p class="who">AI 先出方案，设计师审核。</p>
+      </div>
+      <div class="tier">
+        <div class="tier-head"><h3>施工图（esecutivo）</h3><span class="price">付费</span></div>
+        <ul>
+          <li>DXF 和 DWG 图纸，包括立面图和剖面图</li>
+          <li>电、水、燃气和排水接口，标明功率</li>
+          <li>完整的设备清单</li>
+          <li>合作安装商的正式报价</li>
+        </ul>
+        <p class="who">设计师和您一起跟进，并签字负责。</p>
+      </div>
+    </div>
+    <p class="thesis"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M4 14.5l6.5 6.5L24 7.5"/></svg><span>如果您从合作安装商那里购买设备，设计费会从订单金额中扣除。</span></p>
+  </div>
+</section>
+
+<section class="alt" id="per-chi" aria-labelledby="t-chi">
+  <div class="wrap sec">
+    <div class="sec-head">
+      <p class="eyebrow">适用对象</p>
+      <h2 id="t-chi">适合用厨房、设计厨房、卖厨房的人。</h2>
+    </div>
+    <div class="who-grid">
+      <div><h3>餐厅、酒店和酒吧老板</h3><p>在找供应商之前，就清楚自己需要什么、要占多大地方、大概花多少钱。</p></div>
+      <div><h3>建筑师和室内设计师</h3><p>几分钟就能把厨房放进您的项目，功能分区和动线都已规划好。购买施工图后，您会收到 DXF 文件，可以直接放进自己的图纸。</p></div>
+      <div><h3>厨房设计师</h3><p>马上得到一份初步方案，再用您的经验细化。每次修改少花时间，把精力留给能成交的项目。</p></div>
+      <div><h3>经销商和代理商</h3><p>快速为客户出方案，还可以加上您自己的 logo。不用再把设计工时白白送给最后不买的人。</p></div>
+    </div>
+    <p class="partner"><strong>您是安装商吗？</strong><span>我们正在寻找合作伙伴，每个地区一家或几家。您接到的客户会带着做好的设计方案来。</span></p>
+  </div>
+</section>
+
+<section id="fiducia" aria-labelledby="t-fiducia">
+  <div class="wrap sec">
+    <div class="sec-head">
+      <p class="eyebrow">为什么可以信赖</p>
+      <h2 id="t-fiducia">AI 背后，是真实的尺寸和懂行的人。</h2>
+    </div>
+    <div class="trust">
+      <div class="points">
+        <div><h3>尺寸来自官方参数表</h3><p>设备尺寸全部来自厂家的技术参数表。不凭记忆，也不凭空编造。</p></div>
+        <div><h3>按真实厨房的规矩来</h3><p>洁污路线分开，通道留足宽度，排烟罩符合 EN 16282 标准。</p></div>
+        <div><h3>不只有 AI，还有人</h3><p>设计方案由设计师审核，施工图由设计师签字。</p></div>
+        <div><h3>图纸可直接用于施工</h3><p>施工图以 DXF 和 DWG 格式交付，包括立面图、剖面图和各类接口。</p></div>
+      </div>
+      <div class="money">
+        <p class="eyebrow">我们怎么赚钱</p>
+        <p>预览方案免费，设计方案和施工图收费。</p>
+        <p>我们和合作安装商一起工作，每个地区一家或几家。第一家是伦巴第大区的 Italfrigo。如果您向合作安装商购买设备，对方会付给 Brigaplan 一笔佣金，我们则从您的订单中扣除设计费。</p>
+        <p class="small">我们把这些写在这里，因为您有权在开始之前就知道。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="domande" aria-labelledby="t-domande">
+  <div class="wrap sec">
+    <div class="sec-head">
+      <p class="eyebrow">常见问题</p>
+      <h2 id="t-domande">大家最常问的问题。</h2>
+    </div>
+    <div class="faq">
+      <details><summary>一定要有店面平面图吗？</summary><p>不一定。没有的话，我们会问您几个问题：尺寸、门窗位置，以及餐厅区在哪里。照片或手绘草图也可以，只要上面至少有一个已知尺寸。</p></details>
+      <details><summary>有了预览方案就能直接施工吗？</summary><p>不能。预览方案用来了解空间、设备占地和费用。施工需要设计方案和施工图，并由设计师签字。向卫生局（ASL）和市政府企业服务窗口（SUAP）办手续时，通常还需要一位有执业资格的技术人员。</p></details>
+      <details><summary>为什么预览方案不标尺寸，也没有品牌？</summary><p>因为它是免费的，完全由 AI 自动生成。尺寸、品牌和型号在设计方案阶段才提供，那时会有设计师审核。</p></details>
+      <details><summary>厨房由谁来安装？</summary><p>由您所在地区的合作安装商安装。第一家是伦巴第大区的 Italfrigo。其他大区的合作伙伴我们正在寻找。</p></details>
+      <details><summary>必须向合作安装商购买吗？</summary><p>不是必须的。如果您向合作安装商购买，设计费会从订单中扣除。</p></details>
+      <details><summary>我上传的平面图会怎么处理？</summary><p>严格保密。我们只用它来做您的方案；只有在您决定和某家合作安装商继续合作时，才会把图纸提供给对方。</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="prova" aria-labelledby="t-prova">
+  <div class="wrap sec">
+    <div class="prova-grid">
+      <div class="prova-text">
+        <p class="eyebrow">免费试用</p>
+        <h2 id="t-prova">用您的店面试一试。</h2>
+        <p class="sec-lead">预览方案免费。只需要五分钟；有平面图的话，请准备好。</p>
+        <ul class="gets">
+          <li>带功能分区和操作台的平面图</li>
+          <li>可旋转查看的 3D 模型</li>
+          <li>设备清单，不含品牌</li>
+          <li>费用估算区间</li>
+        </ul>
+        <p class="small">服务尚未开通：目前这个表单不会发送任何内容。</p>
+      </div>
+      <form class="form" id="prova-form" novalidate>
+        <fieldset>
+          <legend>从哪里开始？</legend>
+          <div class="seg">
+            <input type="radio" name="modo" id="modo-pianta" value="pianta" checked><label for="modo-pianta">我有平面图</label>
+            <input type="radio" name="modo" id="modo-descrizione" value="descrizione"><label for="modo-descrizione">我没有平面图</label>
+          </div>
+        </fieldset>
+        <div class="field" id="pannello-pianta">
+          <span class="lbl" id="lbl-pianta">店面平面图</span>
+          <label class="drop" id="drop">
+            <input class="sr-only" type="file" id="pianta" name="pianta" accept=".dxf,.dwg,.pdf" aria-labelledby="lbl-pianta">
+            <strong>把文件拖到这里，或点击选择文件</strong>
+            <span>DXF、DWG 或 PDF</span>
+            <span class="file" id="nome-file" hidden></span>
+          </label>
+        </div>
+        <div class="field" id="pannello-descrizione" hidden>
+          <label for="descrizione">描述您的店面</label>
+          <textarea id="descrizione" name="descrizione" placeholder="例如：店面 120 平方米，厨房在后面，约 35 平方米，有一扇窗户，进货入口在院子里。"></textarea>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="tipo">店铺类型</label>
+            <select id="tipo" name="tipo">
+              <option>餐厅</option>
+              <option>意式小餐馆（trattoria、osteria）</option>
+              <option>披萨店</option>
+              <option>酒吧或咖啡馆</option>
+              <option>酒店</option>
+              <option>甜品店</option>
+              <option>食堂或团餐（catering）</option>
+              <option>其他</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="coperti">座位数</label>
+            <input type="number" id="coperti" name="coperti" min="0" inputmode="numeric" placeholder="80">
+          </div>
+        </div>
+        <div class="field">
+          <label for="obiettivo">您有什么需求？</label>
+          <textarea id="obiettivo" name="obiettivo" placeholder="例如：做鲜意面和烧烤的厨房，菜单 30 道菜。想保留现有的烤箱。"></textarea>
+        </div>
+        <p class="small">您上传的平面图会严格保密。</p>
+        <button class="btn btn-primary" type="submit">免费生成预览方案</button>
+        <p class="esito" id="esito" role="status" hidden></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="logo">Briga<b>plan</b></span>
+    <p>用人工智能设计商用厨房和吧台。</p>
+    <p>合作安装商：Italfrigo（伦巴第大区）。</p>
+    <p>预览方案仅供参考，不是施工图。设计方案和施工图均由设计师审核。</p>
+    <p>服务即将上线。</p>
+    <p>Brigaplan 是 Italfrigo Service S.r.l. 旗下的项目 · Via Serviliano Lattuada 26, Milano · 增值税号 P.IVA 06825390153</p>
+    <p id="privacy"><strong>隐私和 Cookie。</strong>本网站不使用 Cookie 或任何跟踪工具，也不收集个人数据：试用表单不会发送任何内容。出于安全考虑，网站的托管服务会记录访问者的 IP 地址。</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  document.documentElement.lang = "zh-Hans";
+
+
+  var reel = document.getElementById("reel");
+  var reelBtn = document.getElementById("reel-btn");
+  function statoReel() { var fermo = reel.paused; reelBtn.textContent = fermo ? "播放" : "暂停"; reelBtn.setAttribute("aria-pressed", String(fermo)); }
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) { reel.removeAttribute("autoplay"); reel.pause(); }
+  reelBtn.addEventListener("click", function () { if (reel.paused) { var pr = reel.play(); if (pr && pr.catch) pr.catch(function () {}); } else { reel.pause(); } });
+  reel.addEventListener("play", statoReel); reel.addEventListener("pause", statoReel); statoReel();
+
+  var sheet = document.getElementById("tavola");
+  var livelli = {
+    anteprima: { cap: "<b>免费。</b>由 AI 几分钟完成：功能分区、操作台、动线和费用估算。用来看清大致效果。真正施工还需要设计方案和施工图。", tavola: "预览方案", scala: "不标尺寸", attr: "通用设备，不含品牌", stima: "4万–6万欧元" },
+    progetto: { cap: "<b>付费。</b>PDF 格式的尺寸标注平面图、品牌和型号、完整 3D 模型和两张效果图、参考报价。由设计师审核。", tavola: "设计方案", scala: "1:50，标注尺寸", attr: "品牌和型号", stima: "参考报价" },
+    esecutivo: { cap: "<b>付费。</b>DXF 和 DWG 图纸、立面图、剖面图，以及电、水、燃气和排水接口。由设计师全程跟进并签字。", tavola: "施工图", scala: "1:50，DXF 和 DWG", attr: "含接口和功率", stima: "合作安装商报价" }
+  };
+  var bottoni = sheet.querySelectorAll("[data-set]");
+  function mostra(l) {
+    var d = livelli[l];
+    if (!d) return;
+    sheet.setAttribute("data-level", l);
+    bottoni.forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-set") === l)); });
+    document.getElementById("tavola-cap").innerHTML = d.cap;
+    document.getElementById("c-tavola").textContent = d.tavola;
+    document.getElementById("c-scala").textContent = d.scala;
+    document.getElementById("c-attr").textContent = d.attr;
+    document.getElementById("c-stima").textContent = d.stima;
+  }
+  bottoni.forEach(function (b) { b.addEventListener("click", function () { mostra(b.getAttribute("data-set")); }); });
+
+  var form = document.getElementById("prova-form");
+  var pPianta = document.getElementById("pannello-pianta");
+  var pDescr = document.getElementById("pannello-descrizione");
+  function aggiornaModo() {
+    var scelto = form.querySelector('input[name="modo"]:checked');
+    var conPianta = !scelto || scelto.value === "pianta";
+    pPianta.hidden = !conPianta;
+    pDescr.hidden = conPianta;
+  }
+  form.querySelectorAll('input[name="modo"]').forEach(function (r) { r.addEventListener("change", aggiornaModo); });
+  aggiornaModo();
+
+  var file = document.getElementById("pianta");
+  var nome = document.getElementById("nome-file");
+  var drop = document.getElementById("drop");
+  function mostraNome() {
+    if (file.files && file.files.length) { nome.textContent = file.files[0].name; nome.hidden = false; }
+    else { nome.hidden = true; }
+  }
+  file.addEventListener("change", mostraNome);
+  ["dragenter", "dragover"].forEach(function (t) { drop.addEventListener(t, function (e) { e.preventDefault(); drop.classList.add("over"); }); });
+  ["dragleave", "drop"].forEach(function (t) { drop.addEventListener(t, function () { drop.classList.remove("over"); }); });
+  drop.addEventListener("drop", function (e) {
+    e.preventDefault();
+    if (e.dataTransfer && e.dataTransfer.files.length) {
+      try { file.files = e.dataTransfer.files; } catch (err) {}
+      mostraNome();
+    }
+  });
+
+  var esito = document.getElementById("esito");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    esito.textContent = "服务尚未开通，所以我们没有收到任何内容。即将上线：届时您会在这里看到自己的预览方案，包括平面图、3D 模型和费用估算。";
+    esito.hidden = false;
+  });
+})();
+</script>
+
+</body>
+</html>
