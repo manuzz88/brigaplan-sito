@@ -202,3 +202,23 @@ section[id] { scroll-margin-top: 12px; }
 .btn-primary:hover { background: var(--accent-deep); }
 .passi b { color: var(--accent-testo); }
 
+
+/* Guide: tabelle */
+.tabella { overflow-x: auto; border: 1px solid var(--line); border-radius: 4px; }
+.tabella table { border-collapse: collapse; width: 100%; font-size: .9375rem; }
+.tabella th, .tabella td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.tabella th { font-family: var(--f-mono); font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.tabella tr:last-child td { border-bottom: 0; }
+.tabella td:last-child { white-space: nowrap; font-weight: 600; }
+.prosa.guida h2 { margin-top: 10px; }
+
+/* "Come funziona": galleria di anteprime (pianta e 3D) */
+.galleria { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 18px; }
+.scheda { margin: 0; display: grid; gap: 8px; align-content: start; }
+.scheda .coppia { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.scheda img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; border: 1px solid var(--line); border-radius: 4px; display: block; }
+.scheda a + a img { object-fit: cover; background: var(--paper-2); }
+.scheda a { display: block; }
+.scheda figcaption { font-size: .875rem; color: var(--muted); }
+.scheda figcaption strong { color: var(--ink); display: block; }
+
