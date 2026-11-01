@@ -414,7 +414,7 @@ section[id] { scroll-margin-top: 12px; }
   <div class="wrap">
     <a class="logo" href="#" aria-label="Brigaplan, top of page">
       <svg viewBox="0 0 26 26" aria-hidden="true"><rect class="lm-wall" x="1.5" y="1.5" width="23" height="23"/><path class="lm-line" d="M1.5 11H13V24.5M13 7V1.5"/><rect class="lm-acc" x="16" y="15" width="6" height="6"/></svg>
-      <span>Briga<b>plan</b></span>
+      <span translate="no">Briga<b>plan</b></span>
     </a>
     <nav class="nav" aria-label="Sections">
       <a href="#problema">The problem</a>
@@ -424,7 +424,7 @@ section[id] { scroll-margin-top: 12px; }
       <a href="#domande">FAQ</a>
     </nav>
     <div class="top-azioni">
-      <nav class="lingue" aria-label="Language">
+      <nav class="lingue" translate="no" aria-label="Language">
         <a href="/" lang="it" hreflang="it">IT</a>
         <a href="/en/" lang="en" hreflang="en" aria-current="page">EN</a>
         <a href="/zh/" lang="zh-Hans" hreflang="zh-Hans">中文</a>
@@ -458,7 +458,7 @@ section[id] { scroll-margin-top: 12px; }
           <h1 id="titolo">The right space for your brigade, designed in minutes.</h1>
           <p class="reel-sub">Kitchens and bars for hotels, restaurants, canteens, hospitals and much more.</p>
         </div>
-        <button type="button" class="reel-btn" id="reel-btn" aria-pressed="false">Pause</button>
+        <button type="button" class="reel-btn" id="reel-btn" aria-pressed="false" data-txt-riproduci="Play" data-txt-pausa="Pause">Pause</button>
       </div>
       <figcaption id="reel-cap"><b>From floor plan to full design.</b> The floor plan, the 3D model and the animation come from our own design engine, with equipment dimensions taken from the manufacturers' data sheets. Photorealistic renders are part of the paid design.</figcaption>
     </figure>
@@ -641,6 +641,11 @@ section[id] { scroll-margin-top: 12px; }
         <li><span class="k">11</span>Dirty dish table with sink</li>
         <li><span class="k">12</span>Heated pass</li>
       </ol>
+      <template id="livelli-testi">
+        <div data-livello="anteprima"><p data-k="cap"><b>Free.</b> AI makes it in a few minutes: zones, counters, flows and a cost estimate. It shows you the result. To build, you need the design and the construction drawings.</p><span data-k="tavola">Preview</span><span data-k="scala">No dimensions</span><span data-k="attr">Generic, no brands</span><span data-k="stima">€40,000–60,000</span></div>
+        <div data-livello="progetto"><p data-k="cap"><b>Paid.</b> Dimensioned floor plan in PDF, brands and models, full 3D and two renders, indicative quote. A designer checks it.</p><span data-k="tavola">Design</span><span data-k="scala">1:50, dimensioned</span><span data-k="attr">Brands and models</span><span data-k="stima">Indicative quote</span></div>
+        <div data-livello="esecutivo"><p data-k="cap"><b>Paid.</b> Drawings in DXF and DWG, elevations, sections, and electrical, water, gas and drain connections. A designer oversees it and signs it.</p><span data-k="tavola">Construction drawings</span><span data-k="scala">1:50, DXF and DWG</span><span data-k="attr">With connections and power ratings</span><span data-k="stima">Partner's quote</span></div>
+      </template>
       <p class="imp-key"><span><i class="ik-e">E</i>electrical</span><span><i class="ik-a">W</i>water</span><span><i class="ik-g">G</i>gas</span><span><i class="ik-s">D</i>drain</span></p>
     </figure>
     </div>
@@ -776,14 +781,14 @@ section[id] { scroll-margin-top: 12px; }
           <div class="field">
             <label for="tipo">Type of venue</label>
             <select id="tipo" name="tipo">
-              <option>Restaurant</option>
-              <option>Trattoria or bistro</option>
-              <option>Pizzeria</option>
-              <option>Bar or café</option>
-              <option>Hotel</option>
-              <option>Pastry shop</option>
-              <option>Canteen or catering</option>
-              <option>Other</option>
+              <option value="ristorante">Restaurant</option>
+              <option value="trattoria">Trattoria or bistro</option>
+              <option value="pizzeria">Pizzeria</option>
+              <option value="bar">Bar or café</option>
+              <option value="hotel">Hotel</option>
+              <option value="pasticceria">Pastry shop</option>
+              <option value="mensa">Canteen or catering</option>
+              <option value="altro">Other</option>
             </select>
           </div>
           <div class="field">
@@ -797,7 +802,7 @@ section[id] { scroll-margin-top: 12px; }
         </div>
         <p class="small">The floor plans you upload stay confidential.</p>
         <button class="btn btn-primary" type="submit">Create my free preview</button>
-        <p class="esito" id="esito" role="status" hidden></p>
+        <p class="esito" id="esito" role="status" hidden data-txt-messaggio="The service is not live yet, so we have not received anything. We open soon: this is where you will see your preview, with floor plan, 3D and cost estimate."></p>
       </form>
     </div>
   </div>
@@ -806,7 +811,7 @@ section[id] { scroll-margin-top: 12px; }
 
 <footer class="foot">
   <div class="wrap">
-    <span class="logo">Briga<b>plan</b></span>
+    <span class="logo" translate="no">Briga<b>plan</b></span>
     <p>Design of commercial kitchens and bars with artificial intelligence.</p>
     <p>Partner installers: Italfrigo (Lombardy).</p>
     <p>The preview is indicative and is not a set of construction drawings. The design and the construction drawings are checked by a designer.</p>
@@ -818,33 +823,23 @@ section[id] { scroll-margin-top: 12px; }
 
 <script>
 (function () {
-  document.documentElement.lang = "en";
-
-
   var reel = document.getElementById("reel");
   var reelBtn = document.getElementById("reel-btn");
-  function statoReel() { var fermo = reel.paused; reelBtn.textContent = fermo ? "Play" : "Pause"; reelBtn.setAttribute("aria-pressed", String(fermo)); }
+  function statoReel() { var fermo = reel.paused; reelBtn.textContent = fermo ? reelBtn.dataset.txtRiproduci : reelBtn.dataset.txtPausa; reelBtn.setAttribute("aria-pressed", String(fermo)); }
   if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) { reel.removeAttribute("autoplay"); reel.pause(); }
   reelBtn.addEventListener("click", function () { if (reel.paused) { var pr = reel.play(); if (pr && pr.catch) pr.catch(function () {}); } else { reel.pause(); } });
   reel.addEventListener("play", statoReel); reel.addEventListener("pause", statoReel); statoReel();
 
   var sheet = document.getElementById("tavola");
-  var livelli = {
-    anteprima: { cap: "<b>Free.</b> AI makes it in a few minutes: zones, counters, flows and a cost estimate. It shows you the result. To build, you need the design and the construction drawings.", tavola: "Preview", scala: "No dimensions", attr: "Generic, no brands", stima: "€40,000–60,000" },
-    progetto: { cap: "<b>Paid.</b> Dimensioned floor plan in PDF, brands and models, full 3D and two renders, indicative quote. A designer checks it.", tavola: "Design", scala: "1:50, dimensioned", attr: "Brands and models", stima: "Indicative quote" },
-    esecutivo: { cap: "<b>Paid.</b> Drawings in DXF and DWG, elevations, sections, and electrical, water, gas and drain connections. A designer oversees it and signs it.", tavola: "Construction drawings", scala: "1:50, DXF and DWG", attr: "With connections and power ratings", stima: "Partner's quote" }
-  };
+  var testiLivelli = document.getElementById("livelli-testi").content;
   var bottoni = sheet.querySelectorAll("[data-set]");
   function mostra(l) {
-    var d = livelli[l];
+    var d = testiLivelli.querySelector('[data-livello="' + l + '"]');
     if (!d) return;
     sheet.setAttribute("data-level", l);
     bottoni.forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-set") === l)); });
-    document.getElementById("tavola-cap").innerHTML = d.cap;
-    document.getElementById("c-tavola").textContent = d.tavola;
-    document.getElementById("c-scala").textContent = d.scala;
-    document.getElementById("c-attr").textContent = d.attr;
-    document.getElementById("c-stima").textContent = d.stima;
+    document.getElementById("tavola-cap").innerHTML = d.querySelector('[data-k="cap"]').innerHTML;
+    ["tavola", "scala", "attr", "stima"].forEach(function (k) { document.getElementById("c-" + k).textContent = d.querySelector('[data-k="' + k + '"]').textContent; });
   }
   bottoni.forEach(function (b) { b.addEventListener("click", function () { mostra(b.getAttribute("data-set")); }); });
 
@@ -881,7 +876,7 @@ section[id] { scroll-margin-top: 12px; }
   var esito = document.getElementById("esito");
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    esito.textContent = "The service is not live yet, so we have not received anything. We open soon: this is where you will see your preview, with floor plan, 3D and cost estimate.";
+    esito.textContent = esito.dataset.txtMessaggio;
     esito.hidden = false;
   });
 })();

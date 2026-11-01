@@ -46,9 +46,9 @@ img, video { max-width: 100%; }
   --z-prep: #DCE9D4;
   --z-wash: #D5E1EF;
   --z-pass: #EFE6CB;
-  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
-  --f-body: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
-  --f-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", monospace;
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   --maxw: 1180px;
   --overlay-bg: rgba(14, 21, 25, .72);
   --overlay-fg: #EEF2F3;
@@ -399,7 +399,19 @@ section[id] { scroll-margin-top: 12px; }
 .reel figcaption b { color: var(--ink); }
 .sheet-wrap { max-width: 880px; }
 .reel { order: -1; width: min(100%, calc(72vh * 16 / 9)); justify-self: center; }
-/* Versione cinese: font CJK di sistema (vedi :root), niente spaziature negative né caratteri allargati, interlinea più ampia per gli ideogrammi. */
+
+/* Correzioni comuni a tutte le lingue (1/11/2026) */
+@media (max-width: 640px) { .compare tbody th, .compare td.old, .compare td.new { width: auto; } }
+.foot .logo { gap: 0; }
+.nav a { white-space: nowrap; }
+@media (max-width: 1100px) { .nav { display: none; } }
+/* Versione cinese: font CJK di sistema, niente spaziature negative né caratteri allargati, interlinea più ampia per gli ideogrammi.
+   Il programma sito/strumenti/lingue.py lo aggiunge in fondo allo stile della pagina cinese. */
+:root {
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+  --f-body: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", monospace;
+}
 body { line-height: 1.7; }
 h1, h2, h3 { font-stretch: 100%; letter-spacing: 0; line-height: 1.3; }
 h1 { line-height: 1.25; }
@@ -412,14 +424,6 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
 @media (max-width: 640px) { .compare tbody th, .compare td::before { letter-spacing: .04em; } }
 .plan .zl { letter-spacing: 1px; }
 .plan .fl-l, .plan .hood-t { letter-spacing: .5px; }
-/* Correzione (c'è anche nella pagina italiana): sotto 640px le larghezze 22/36/42% della tabella vincevano su width:auto e stringevano le celle. */
-@media (max-width: 640px) { .compare tbody th, .compare td.old, .compare td.new { width: auto; } }
-/* Correzione (c'è anche nella pagina italiana): nel piede il logo è solo testo, e il gap del flex staccava "Briga" da "plan". */
-.foot .logo { gap: 0; }
-
-/* Correzioni comuni a tutte le lingue (1/11/2026) */
-.nav a { white-space: nowrap; }
-@media (max-width: 1100px) { .nav { display: none; } }
 </style>
 </head>
 <body>
@@ -429,7 +433,7 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
   <div class="wrap">
     <a class="logo" href="#" aria-label="Brigaplan，回到页面顶部">
       <svg viewBox="0 0 26 26" aria-hidden="true"><rect class="lm-wall" x="1.5" y="1.5" width="23" height="23"/><path class="lm-line" d="M1.5 11H13V24.5M13 7V1.5"/><rect class="lm-acc" x="16" y="15" width="6" height="6"/></svg>
-      <span>Briga<b>plan</b></span>
+      <span translate="no">Briga<b>plan</b></span>
     </a>
     <nav class="nav" aria-label="页面栏目">
       <a href="#problema">问题所在</a>
@@ -439,7 +443,7 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
       <a href="#domande">常见问题</a>
     </nav>
     <div class="top-azioni">
-      <nav class="lingue" aria-label="语言">
+      <nav class="lingue" translate="no" aria-label="语言">
         <a href="/" lang="it" hreflang="it">IT</a>
         <a href="/en/" lang="en" hreflang="en">EN</a>
         <a href="/zh/" lang="zh-Hans" hreflang="zh-Hans" aria-current="page">中文</a>
@@ -473,7 +477,7 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
           <h1 id="titolo">为您的厨房团队<wbr>打造合适的空间，<wbr>几分钟出设计方案。</h1>
           <p class="reel-sub">适用于酒店、餐厅、食堂、医院等各类场所的厨房和吧台。</p>
         </div>
-        <button type="button" class="reel-btn" id="reel-btn" aria-pressed="false">暂停</button>
+        <button type="button" class="reel-btn" id="reel-btn" aria-pressed="false" data-txt-riproduci="播放" data-txt-pausa="暂停">暂停</button>
       </div>
       <figcaption id="reel-cap"><b>从平面图到完整设计方案。</b>平面图、3D 模型和动画都由我们自己的设计引擎生成，设备尺寸取自厂家的技术参数表。照片级效果图属于付费设计方案的内容。</figcaption>
     </figure>
@@ -656,6 +660,11 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
         <li><span class="k">11</span>带水槽脏碟台</li>
         <li><span class="k">12</span>保温出餐台</li>
       </ol>
+      <template id="livelli-testi">
+        <div data-livello="anteprima"><p data-k="cap"><b>免费。</b>由 AI 几分钟完成：功能分区、操作台、动线和费用估算。用来看清大致效果。真正施工还需要设计方案和施工图。</p><span data-k="tavola">预览方案</span><span data-k="scala">不标尺寸</span><span data-k="attr">通用设备，不含品牌</span><span data-k="stima">4万–6万欧元</span></div>
+        <div data-livello="progetto"><p data-k="cap"><b>付费。</b>PDF 格式的尺寸标注平面图、品牌和型号、完整 3D 模型和两张效果图、参考报价。由设计师审核。</p><span data-k="tavola">设计方案</span><span data-k="scala">1:50，标注尺寸</span><span data-k="attr">品牌和型号</span><span data-k="stima">参考报价</span></div>
+        <div data-livello="esecutivo"><p data-k="cap"><b>付费。</b>DXF 和 DWG 图纸、立面图、剖面图，以及电、水、燃气和排水接口。由设计师全程跟进并签字。</p><span data-k="tavola">施工图</span><span data-k="scala">1:50，DXF 和 DWG</span><span data-k="attr">含接口和功率</span><span data-k="stima">合作安装商报价</span></div>
+      </template>
       <p class="imp-key"><span><i class="ik-e">电</i>电源</span><span><i class="ik-a">水</i>给水</span><span><i class="ik-g">气</i>燃气</span><span><i class="ik-s">排</i>排水</span></p>
     </figure>
     </div>
@@ -681,7 +690,7 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
         <p class="who">AI 先出方案，设计师审核。</p>
       </div>
       <div class="tier">
-        <div class="tier-head"><h3>施工图（esecutivo）</h3><span class="price">付费</span></div>
+        <div class="tier-head"><h3>施工图</h3><span class="price">付费</span></div>
         <ul>
           <li>DXF 和 DWG 图纸，包括立面图和剖面图</li>
           <li>电、水、燃气和排水接口，标明功率</li>
@@ -791,14 +800,14 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
           <div class="field">
             <label for="tipo">店铺类型</label>
             <select id="tipo" name="tipo">
-              <option>餐厅</option>
-              <option>意式小餐馆（trattoria、osteria）</option>
-              <option>披萨店</option>
-              <option>酒吧或咖啡馆</option>
-              <option>酒店</option>
-              <option>甜品店</option>
-              <option>食堂或团餐（catering）</option>
-              <option>其他</option>
+              <option value="ristorante">餐厅</option>
+              <option value="trattoria">意式小餐馆（trattoria、osteria）</option>
+              <option value="pizzeria">披萨店</option>
+              <option value="bar">酒吧或咖啡馆</option>
+              <option value="hotel">酒店</option>
+              <option value="pasticceria">甜品店</option>
+              <option value="mensa">食堂或团餐（catering）</option>
+              <option value="altro">其他</option>
             </select>
           </div>
           <div class="field">
@@ -812,7 +821,7 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
         </div>
         <p class="small">您上传的平面图会严格保密。</p>
         <button class="btn btn-primary" type="submit">免费生成预览方案</button>
-        <p class="esito" id="esito" role="status" hidden></p>
+        <p class="esito" id="esito" role="status" hidden data-txt-messaggio="服务尚未开通，所以我们没有收到任何内容。即将上线：届时您会在这里看到自己的预览方案，包括平面图、3D 模型和费用估算。"></p>
       </form>
     </div>
   </div>
@@ -821,7 +830,7 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
 
 <footer class="foot">
   <div class="wrap">
-    <span class="logo">Briga<b>plan</b></span>
+    <span class="logo" translate="no">Briga<b>plan</b></span>
     <p>用人工智能设计商用厨房和吧台。</p>
     <p>合作安装商：Italfrigo（伦巴第大区）。</p>
     <p>预览方案仅供参考，不是施工图。设计方案和施工图均由设计师审核。</p>
@@ -833,33 +842,23 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
 
 <script>
 (function () {
-  document.documentElement.lang = "zh-Hans";
-
-
   var reel = document.getElementById("reel");
   var reelBtn = document.getElementById("reel-btn");
-  function statoReel() { var fermo = reel.paused; reelBtn.textContent = fermo ? "播放" : "暂停"; reelBtn.setAttribute("aria-pressed", String(fermo)); }
+  function statoReel() { var fermo = reel.paused; reelBtn.textContent = fermo ? reelBtn.dataset.txtRiproduci : reelBtn.dataset.txtPausa; reelBtn.setAttribute("aria-pressed", String(fermo)); }
   if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) { reel.removeAttribute("autoplay"); reel.pause(); }
   reelBtn.addEventListener("click", function () { if (reel.paused) { var pr = reel.play(); if (pr && pr.catch) pr.catch(function () {}); } else { reel.pause(); } });
   reel.addEventListener("play", statoReel); reel.addEventListener("pause", statoReel); statoReel();
 
   var sheet = document.getElementById("tavola");
-  var livelli = {
-    anteprima: { cap: "<b>免费。</b>由 AI 几分钟完成：功能分区、操作台、动线和费用估算。用来看清大致效果。真正施工还需要设计方案和施工图。", tavola: "预览方案", scala: "不标尺寸", attr: "通用设备，不含品牌", stima: "4万–6万欧元" },
-    progetto: { cap: "<b>付费。</b>PDF 格式的尺寸标注平面图、品牌和型号、完整 3D 模型和两张效果图、参考报价。由设计师审核。", tavola: "设计方案", scala: "1:50，标注尺寸", attr: "品牌和型号", stima: "参考报价" },
-    esecutivo: { cap: "<b>付费。</b>DXF 和 DWG 图纸、立面图、剖面图，以及电、水、燃气和排水接口。由设计师全程跟进并签字。", tavola: "施工图", scala: "1:50，DXF 和 DWG", attr: "含接口和功率", stima: "合作安装商报价" }
-  };
+  var testiLivelli = document.getElementById("livelli-testi").content;
   var bottoni = sheet.querySelectorAll("[data-set]");
   function mostra(l) {
-    var d = livelli[l];
+    var d = testiLivelli.querySelector('[data-livello="' + l + '"]');
     if (!d) return;
     sheet.setAttribute("data-level", l);
     bottoni.forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-set") === l)); });
-    document.getElementById("tavola-cap").innerHTML = d.cap;
-    document.getElementById("c-tavola").textContent = d.tavola;
-    document.getElementById("c-scala").textContent = d.scala;
-    document.getElementById("c-attr").textContent = d.attr;
-    document.getElementById("c-stima").textContent = d.stima;
+    document.getElementById("tavola-cap").innerHTML = d.querySelector('[data-k="cap"]').innerHTML;
+    ["tavola", "scala", "attr", "stima"].forEach(function (k) { document.getElementById("c-" + k).textContent = d.querySelector('[data-k="' + k + '"]').textContent; });
   }
   bottoni.forEach(function (b) { b.addEventListener("click", function () { mostra(b.getAttribute("data-set")); }); });
 
@@ -896,7 +895,7 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
   var esito = document.getElementById("esito");
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    esito.textContent = "服务尚未开通，所以我们没有收到任何内容。即将上线：届时您会在这里看到自己的预览方案，包括平面图、3D 模型和费用估算。";
+    esito.textContent = esito.dataset.txtMessaggio;
     esito.hidden = false;
   });
 })();

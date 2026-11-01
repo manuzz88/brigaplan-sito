@@ -18,7 +18,7 @@
 <meta name="theme-color" content="#14212A">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect x='1.5' y='1.5' width='23' height='23' fill='%23fff' stroke='%2314212A' stroke-width='2.2'/%3E%3Cpath d='M1.5 11H13V24.5M13 7V1.5' fill='none' stroke='%2314212A' stroke-width='1.6'/%3E%3Crect x='16' y='15' width='6' height='6' fill='%23CF4E1B'/%3E%3C/svg%3E">
 <style>
-@import url("fonts/fonts.css");
+@import url("/fonts/fonts.css");
 [hidden] { display: none !important; }
 img, video { max-width: 100%; }
 /* Layout: foglio tecnico. Testo a sinistra, la tavola della cucina come elemento forte, una banda scura per il problema. */
@@ -414,7 +414,7 @@ section[id] { scroll-margin-top: 12px; }
   <div class="wrap">
     <a class="logo" href="#" aria-label="Brigaplan, inizio pagina">
       <svg viewBox="0 0 26 26" aria-hidden="true"><rect class="lm-wall" x="1.5" y="1.5" width="23" height="23"/><path class="lm-line" d="M1.5 11H13V24.5M13 7V1.5"/><rect class="lm-acc" x="16" y="15" width="6" height="6"/></svg>
-      <span>Briga<b>plan</b></span>
+      <span translate="no">Briga<b>plan</b></span>
     </a>
     <nav class="nav" aria-label="Sezioni">
       <a href="#problema">Il problema</a>
@@ -424,7 +424,7 @@ section[id] { scroll-margin-top: 12px; }
       <a href="#domande">Domande</a>
     </nav>
     <div class="top-azioni">
-      <nav class="lingue" aria-label="Lingua">
+      <nav class="lingue" translate="no" aria-label="Lingua">
         <a href="/" lang="it" hreflang="it" aria-current="page">IT</a>
         <a href="/en/" lang="en" hreflang="en">EN</a>
         <a href="/zh/" lang="zh-Hans" hreflang="zh-Hans">中文</a>
@@ -451,14 +451,14 @@ section[id] { scroll-margin-top: 12px; }
 
     <figure class="reel" aria-labelledby="reel-cap">
       <div class="reel-box">
-        <video id="reel" src="media/brigaplan_esempi.mp4?v=2" poster="media/brigaplan_esempi_poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Video: tre esempi, una trattoria, un bar e una mensa aziendale. In ognuno la pianta diventa il progetto in 3D."></video>
+        <video id="reel" src="/media/brigaplan_esempi.mp4?v=2" poster="/media/brigaplan_esempi_poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Video: tre esempi, una trattoria, un bar e una mensa aziendale. In ognuno la pianta diventa il progetto in 3D."></video>
         <span class="reel-tag">Esempi · trattoria, bar, mensa</span>
         <div class="reel-title">
           <p class="eyebrow">Cucine e bar professionali, progettati con l'IA</p>
           <h1 id="titolo">Lo spazio giusto per la tua brigata, progettato in pochi minuti.</h1>
           <p class="reel-sub">Cucine e bar per hotel, ristoranti, mense, ospedali e molto altro.</p>
         </div>
-        <button type="button" class="reel-btn" id="reel-btn" aria-pressed="false">Pausa</button>
+        <button type="button" class="reel-btn" id="reel-btn" aria-pressed="false" data-txt-riproduci="Riproduci" data-txt-pausa="Pausa">Pausa</button>
       </div>
       <figcaption id="reel-cap"><b>Dalla pianta al progetto completo.</b> Pianta, 3D e animazione escono dal nostro motore di progettazione, con le misure delle attrezzature prese dalle schede dei produttori. I render fotorealistici fanno parte del progetto a pagamento.</figcaption>
     </figure>
@@ -641,6 +641,11 @@ section[id] { scroll-margin-top: 12px; }
         <li><span class="k">11</span>Tavolo sporco con lavello</li>
         <li><span class="k">12</span>Pass caldo</li>
       </ol>
+      <template id="livelli-testi">
+        <div data-livello="anteprima"><p data-k="cap"><b>Gratis.</b> La fa l'IA in pochi minuti: zone, banchi, flussi e una stima di spesa. Serve a capire il risultato. Per costruire servono progetto ed esecutivo.</p><span data-k="tavola">Anteprima</span><span data-k="scala">Senza quote</span><span data-k="attr">Generiche, senza marche</span><span data-k="stima">40–60 mila €</span></div>
+        <div data-livello="progetto"><p data-k="cap"><b>A pagamento.</b> Pianta quotata in PDF, marche e modelli, 3D completo e due render, preventivo indicativo. La controlla un progettista.</p><span data-k="tavola">Progetto</span><span data-k="scala">1:50, quotata</span><span data-k="attr">Marche e modelli</span><span data-k="stima">Preventivo indicativo</span></div>
+        <div data-livello="esecutivo"><p data-k="cap"><b>A pagamento.</b> Disegni in DXF e DWG, prospetti, sezioni, allacci di luce, acqua, gas e scarichi. Lo segue e lo firma un progettista.</p><span data-k="tavola">Esecutivo</span><span data-k="scala">1:50, DXF e DWG</span><span data-k="attr">Con allacci e potenze</span><span data-k="stima">Preventivo del partner</span></div>
+      </template>
       <p class="imp-key"><span><i class="ik-e">E</i>elettrico</span><span><i class="ik-a">A</i>acqua</span><span><i class="ik-g">G</i>gas</span><span><i class="ik-s">S</i>scarico</span></p>
     </figure>
     </div>
@@ -776,14 +781,14 @@ section[id] { scroll-margin-top: 12px; }
           <div class="field">
             <label for="tipo">Tipo di locale</label>
             <select id="tipo" name="tipo">
-              <option>Ristorante</option>
-              <option>Trattoria o osteria</option>
-              <option>Pizzeria</option>
-              <option>Bar o caffetteria</option>
-              <option>Hotel</option>
-              <option>Pasticceria</option>
-              <option>Mensa o catering</option>
-              <option>Altro</option>
+              <option value="ristorante">Ristorante</option>
+              <option value="trattoria">Trattoria o osteria</option>
+              <option value="pizzeria">Pizzeria</option>
+              <option value="bar">Bar o caffetteria</option>
+              <option value="hotel">Hotel</option>
+              <option value="pasticceria">Pasticceria</option>
+              <option value="mensa">Mensa o catering</option>
+              <option value="altro">Altro</option>
             </select>
           </div>
           <div class="field">
@@ -797,7 +802,7 @@ section[id] { scroll-margin-top: 12px; }
         </div>
         <p class="small">Le piante che carichi restano riservate.</p>
         <button class="btn btn-primary" type="submit">Crea l'anteprima gratis</button>
-        <p class="esito" id="esito" role="status" hidden></p>
+        <p class="esito" id="esito" role="status" hidden data-txt-messaggio="Il servizio non è ancora attivo, quindi non abbiamo ricevuto niente. Apriamo a breve: qui vedrai la tua anteprima, con pianta, 3D e stima di spesa."></p>
       </form>
     </div>
   </div>
@@ -806,7 +811,7 @@ section[id] { scroll-margin-top: 12px; }
 
 <footer class="foot">
   <div class="wrap">
-    <span class="logo">Briga<b>plan</b></span>
+    <span class="logo" translate="no">Briga<b>plan</b></span>
     <p>Progettazione di cucine e bar professionali con l'intelligenza artificiale.</p>
     <p>Installatori partner: Italfrigo (Lombardia).</p>
     <p>L'anteprima è indicativa e non è un progetto esecutivo. Progetto ed esecutivo sono controllati da un progettista.</p>
@@ -818,33 +823,23 @@ section[id] { scroll-margin-top: 12px; }
 
 <script>
 (function () {
-  document.documentElement.lang = "it";
-
-
   var reel = document.getElementById("reel");
   var reelBtn = document.getElementById("reel-btn");
-  function statoReel() { var fermo = reel.paused; reelBtn.textContent = fermo ? "Riproduci" : "Pausa"; reelBtn.setAttribute("aria-pressed", String(fermo)); }
+  function statoReel() { var fermo = reel.paused; reelBtn.textContent = fermo ? reelBtn.dataset.txtRiproduci : reelBtn.dataset.txtPausa; reelBtn.setAttribute("aria-pressed", String(fermo)); }
   if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) { reel.removeAttribute("autoplay"); reel.pause(); }
   reelBtn.addEventListener("click", function () { if (reel.paused) { var pr = reel.play(); if (pr && pr.catch) pr.catch(function () {}); } else { reel.pause(); } });
   reel.addEventListener("play", statoReel); reel.addEventListener("pause", statoReel); statoReel();
 
   var sheet = document.getElementById("tavola");
-  var livelli = {
-    anteprima: { cap: "<b>Gratis.</b> La fa l'IA in pochi minuti: zone, banchi, flussi e una stima di spesa. Serve a capire il risultato. Per costruire servono progetto ed esecutivo.", tavola: "Anteprima", scala: "Senza quote", attr: "Generiche, senza marche", stima: "40–60 mila €" },
-    progetto: { cap: "<b>A pagamento.</b> Pianta quotata in PDF, marche e modelli, 3D completo e due render, preventivo indicativo. La controlla un progettista.", tavola: "Progetto", scala: "1:50, quotata", attr: "Marche e modelli", stima: "Preventivo indicativo" },
-    esecutivo: { cap: "<b>A pagamento.</b> Disegni in DXF e DWG, prospetti, sezioni, allacci di luce, acqua, gas e scarichi. Lo segue e lo firma un progettista.", tavola: "Esecutivo", scala: "1:50, DXF e DWG", attr: "Con allacci e potenze", stima: "Preventivo del partner" }
-  };
+  var testiLivelli = document.getElementById("livelli-testi").content;
   var bottoni = sheet.querySelectorAll("[data-set]");
   function mostra(l) {
-    var d = livelli[l];
+    var d = testiLivelli.querySelector('[data-livello="' + l + '"]');
     if (!d) return;
     sheet.setAttribute("data-level", l);
     bottoni.forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-set") === l)); });
-    document.getElementById("tavola-cap").innerHTML = d.cap;
-    document.getElementById("c-tavola").textContent = d.tavola;
-    document.getElementById("c-scala").textContent = d.scala;
-    document.getElementById("c-attr").textContent = d.attr;
-    document.getElementById("c-stima").textContent = d.stima;
+    document.getElementById("tavola-cap").innerHTML = d.querySelector('[data-k="cap"]').innerHTML;
+    ["tavola", "scala", "attr", "stima"].forEach(function (k) { document.getElementById("c-" + k).textContent = d.querySelector('[data-k="' + k + '"]').textContent; });
   }
   bottoni.forEach(function (b) { b.addEventListener("click", function () { mostra(b.getAttribute("data-set")); }); });
 
@@ -881,7 +876,7 @@ section[id] { scroll-margin-top: 12px; }
   var esito = document.getElementById("esito");
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    esito.textContent = "Il servizio non è ancora attivo, quindi non abbiamo ricevuto niente. Apriamo a breve: qui vedrai la tua anteprima, con pianta, 3D e stima di spesa.";
+    esito.textContent = esito.dataset.txtMessaggio;
     esito.hidden = false;
   });
 })();
