@@ -164,3 +164,41 @@ section[id] { scroll-margin-top: 12px; }
 }
 .nota-lingua { font-size: .875rem; color: var(--muted); border-left: 3px solid var(--line); padding-left: 12px; }
 @media (max-width: 340px) { .top .logo > span { display: none; } }
+
+/* Pagina "Come funziona": esempi con video e livelli */
+.prosa.larga { max-width: 72rem; }
+.prosa.larga > section > p { max-width: 46rem; }
+.esempi { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 22px; }
+.esempio { margin: 0; display: grid; gap: 10px; align-content: start; }
+.esempio video { width: 100%; aspect-ratio: 16 / 9; background: var(--paper-2); border: 1px solid var(--line); border-radius: 4px; display: block; }
+.esempio h3 { font-size: 1.125rem; }
+.esempio p { color: var(--muted); font-size: .9375rem; margin: 0; }
+.zone { list-style: none; padding: 0 !important; display: flex !important; flex-wrap: wrap; gap: 6px !important; }
+.zone li { font-family: var(--f-mono); font-size: .6875rem; letter-spacing: .06em; text-transform: uppercase; border: 1px solid var(--line); border-radius: 3px; padding: 3px 7px; color: var(--muted); }
+.livelli { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 16px; }
+.livello { border: 1px solid var(--line); border-radius: 4px; padding: 18px 20px; display: grid; gap: 10px; align-content: start; background: var(--sheet, transparent); }
+.livello h3 { font-size: 1.125rem; }
+.livello .prezzo { font-family: var(--f-mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-deep, var(--accent)); margin: 0; }
+.livello ul { padding-left: 1.1rem; font-size: .9375rem; }
+.livello .chi { font-size: .875rem; color: var(--muted); margin: 0; }
+.cf-fine { border-top: 1px solid var(--line); padding-top: 24px; }
+
+.small { font-size: .8125rem; color: var(--muted); }
+
+/* Domande frequenti (come nella homepage) */
+.faq { display: grid; border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; padding: 14px 40px 14px 0; font-weight: 600; position: relative; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 6px; top: 8px; font-family: var(--f-mono); font-size: 1.4rem; font-weight: 400; color: var(--accent); transition: transform .2s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding: 0 0 16px; color: var(--muted); margin: 0; }
+
+/* Contrasto WCAG AA nel tema chiaro: testi piccoli in arancione scuro, pulsanti un po' più scuri */
+:root { --accent-testo: var(--accent-deep); --accent-pulsante: #C44917; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --accent-testo: var(--accent); --accent-pulsante: var(--accent); } }
+:root[data-theme="dark"] { --accent-testo: var(--accent); --accent-pulsante: var(--accent); }
+.btn-primary { background: var(--accent-pulsante); }
+.btn-primary:hover { background: var(--accent-deep); }
+.passi b { color: var(--accent-testo); }
+

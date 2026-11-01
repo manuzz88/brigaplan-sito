@@ -5,16 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Brigaplan · 用 AI 设计商用厨房和吧台</title>
 <meta name="description" content="上传平面图或描述您的店面，Brigaplan 免费为您生成商用厨房或吧台的预览方案。之后可以做设计方案和施工图，再由您所在地区的合作安装商负责安装。">
+<meta property="og:site_name" content="Brigaplan">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Brigaplan · 用 AI 设计商用厨房和吧台">
 <meta property="og:description" content="从店面平面图到完整设计方案。几分钟拿到免费预览方案。">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://brigaplan.ai/media/brigaplan_esempi_poster.jpg">
 <meta property="og:url" content="https://brigaplan.ai/zh/">
+<meta property="og:image" content="https://brigaplan.ai/media/brigaplan_esempi_poster.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta property="og:image:alt" content="用 Brigaplan 制作的酒吧 3D 设计方案">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://brigaplan.ai/zh/">
 <link rel="alternate" hreflang="it" href="https://brigaplan.ai/">
 <link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/">
 <link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/">
 <link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Brigaplan", "url": "https://brigaplan.ai/", "email": "info@brigaplan.ai", "parentOrganization": {"@type": "Organization", "name": "Italfrigo Service S.r.l.", "vatID": "IT06825390153", "address": {"@type": "PostalAddress", "streetAddress": "Via Serviliano Lattuada 26", "postalCode": "20135", "addressLocality": "Milano", "addressCountry": "IT"}}}</script>
 <meta name="theme-color" content="#14212A">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect x='1.5' y='1.5' width='23' height='23' fill='%23fff' stroke='%2314212A' stroke-width='2.2'/%3E%3Cpath d='M1.5 11H13V24.5M13 7V1.5' fill='none' stroke='%2314212A' stroke-width='1.6'/%3E%3Crect x='16' y='15' width='6' height='6' fill='%23CF4E1B'/%3E%3C/svg%3E">
 <style>
@@ -407,6 +416,16 @@ section[id] { scroll-margin-top: 12px; }
 .nav a { white-space: nowrap; }
 @media (max-width: 1100px) { .nav { display: none; } }
 @media (max-width: 340px) { .top .logo > span { display: none; } }  /* telefoni molto stretti: resta il simbolo */
+/* Contrasto WCAG AA nel tema chiaro (1/11/2026): testi piccoli in arancione scuro, pulsanti un po' più scuri */
+:root { --accent-testo: var(--accent-deep); --accent-pulsante: #C44917; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --accent-testo: var(--accent); --accent-pulsante: var(--accent); } }
+:root[data-theme="dark"] { --accent-testo: var(--accent); --accent-pulsante: var(--accent); }
+.btn-primary { background: var(--accent-pulsante); }
+.btn-primary:hover { background: var(--accent-deep); }
+.why-k, .pill.free, .tier.free .price, .compare thead th.us, .compare td.new::before { color: var(--accent-testo); }
+.pill.free { border-color: var(--accent-testo); }
+.plan .clean-t, .plan .imp-g text { fill: var(--accent-testo); }
+
 /* Versione cinese: font CJK di sistema, niente spaziature negative né caratteri allargati, interlinea più ampia per gli ideogrammi.
    Il programma sito/strumenti/lingue.py lo aggiunge in fondo allo stile della pagina cinese. */
 :root {
@@ -430,7 +449,7 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
 </style>
 </head>
 <body>
-<div class="notice"><div class="wrap">Brigaplan 即将上线 · 服务尚未开通</div></div>
+<div class="notice" role="region" aria-label="通知"><div class="wrap">Brigaplan 即将上线 · 服务尚未开通</div></div>
 
 <header class="top">
   <div class="wrap">
