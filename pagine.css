@@ -163,3 +163,4 @@ section[id] { scroll-margin-top: 12px; }
   .top .logo { font-size: 1.2rem; gap: 8px; }
 }
 .nota-lingua { font-size: .875rem; color: var(--muted); border-left: 3px solid var(--line); padding-left: 12px; }
+@media (max-width: 340px) { .top .logo > span { display: none; } }
