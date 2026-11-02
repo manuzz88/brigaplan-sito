@@ -118,5 +118,7 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
     <p>Brigaplan 是 Italfrigo Service S.r.l. 旗下的项目 · Via Serviliano Lattuada 26, 20135 Milano · 增值税号和税号 P.IVA e C.F. 06825390153 · 企业登记号 REA MI 1120586 · 认证邮箱（PEC）<span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/zh/privacy.html">隐私与 Cookie</a></p>
   </div>
 </footer>
+<script>/* conteggio anonimo delle visite: niente cookie, niente IP salvati (vedi /privacy.html) */
+try{if(navigator.sendBeacon&&navigator.doNotTrack!=='1'&&!navigator.globalPrivacyControl)navigator.sendBeacon('https://app.brigaplan.ai/api/visita',JSON.stringify({p:location.pathname,l:(document.documentElement.lang||'it').slice(0,2),r:document.referrer}))}catch(e){}</script>
 </body>
 </html>

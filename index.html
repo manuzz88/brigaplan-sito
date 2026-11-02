@@ -815,7 +815,7 @@ section[id] { scroll-margin-top: 12px; }
     <p>L'anteprima è indicativa e non è un progetto esecutivo. Progetto ed esecutivo sono controllati da un progettista.</p>
         <p>Brigaplan è un progetto di Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · P.IVA e C.F. 06825390153 · REA MI 1120586 · PEC <span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/privacy.html">Privacy e cookie</a></p>
     <p>Contatti: <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
-    <p id="privacy"><strong>Privacy e cookie.</strong> Questo sito non usa cookie né strumenti di tracciamento. Il servizio che ospita il sito registra per sicurezza gli indirizzi IP delle visite. Per chi si registra valgono la <a href="/privacy-piattaforma.html">privacy della piattaforma</a> e le <a href="/condizioni.html">condizioni d'uso</a>.</p>
+    <p id="privacy"><strong>Privacy e cookie.</strong> Questo sito non usa cookie né strumenti di tracciamento. Contiamo le visite con un contatore nostro, anonimo: solo i totali per pagina, lingua e provenienza. Il servizio che ospita il sito registra per sicurezza gli indirizzi IP delle visite. Per chi si registra valgono la <a href="/privacy-piattaforma.html">privacy della piattaforma</a> e le <a href="/condizioni.html">condizioni d'uso</a>.</p>
   </div>
 </footer>
 
@@ -844,5 +844,7 @@ section[id] { scroll-margin-top: 12px; }
 })();
 </script>
 
+<script>/* conteggio anonimo delle visite: niente cookie, niente IP salvati (vedi /privacy.html) */
+try{if(navigator.sendBeacon&&navigator.doNotTrack!=='1'&&!navigator.globalPrivacyControl)navigator.sendBeacon('https://app.brigaplan.ai/api/visita',JSON.stringify({p:location.pathname,l:(document.documentElement.lang||'it').slice(0,2),r:document.referrer}))}catch(e){}</script>
 </body>
 </html>

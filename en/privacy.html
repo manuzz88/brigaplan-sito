@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Privacy and cookies · Brigaplan</title>
-<meta name="description" content="How Brigaplan handles visitors' data: no cookies, no tracking, only the technical data recorded by the service that hosts the site.">
+<meta name="description" content="How Brigaplan handles visitors' data: no cookies or tracking, an anonymous count of visits and the technical data recorded by the service that hosts the site.">
 <meta property="og:site_name" content="Brigaplan">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Privacy and cookies · Brigaplan">
-<meta property="og:description" content="How Brigaplan handles visitors' data: no cookies, no tracking, only the technical data recorded by the service that hosts the site.">
+<meta property="og:description" content="How Brigaplan handles visitors' data: no cookies or tracking, an anonymous count of visits and the technical data recorded by the service that hosts the site.">
 <meta property="og:url" content="https://brigaplan.ai/en/privacy.html">
 <meta property="og:image" content="https://brigaplan.ai/media/brigaplan_esempi_poster.jpg">
 <meta property="og:image:width" content="1280">
@@ -58,7 +58,7 @@
   <div class="doc-head">
     <span class="eyebrow">Privacy notice under Article 13 of Regulation (EU) 2016/679</span>
     <h1>Privacy and cookies</h1>
-    <p class="sec-lead">How we handle the data of people who visit this site. In short: no cookies, no analytics, no tracking.</p>
+    <p class="sec-lead">How we handle the data of people who visit this site. In short: no cookies and no tracking; we only count visits, anonymously and in aggregate.</p>
     <p class="nota-lingua">This is a translation. If there is any difference, the Italian version prevails.</p>
   <p class="agg">Version of 2 November 2026</p>
   </div>
@@ -75,24 +75,27 @@
 
     <section aria-labelledby="p-dati">
       <h2 id="p-dati">What data we process today</h2>
-      <p>The site does not use cookies, analytics or advertising tools, and does not load content from other sites: fonts and videos are on our own server.</p>
+      <p>The site does not use cookies or analytics or advertising tools from other companies, and does not load content from other sites: fonts and videos are on our own server.</p>
       <p>If you sign up to the platform, the <a href="/en/privacy-piattaforma.html">platform privacy notice</a> applies.</p>
-      <p>The only processing concerns the technical data of each visit, which the service hosting the site processes automatically to deliver the pages: IP address, date and time, page requested, browser type. We do not keep visit logs and we do not see the IP addresses of visitors.</p>
+      <p>The only processing concerns the technical data of each visit, which the service hosting the site processes automatically to deliver the pages: IP address, date and time, page requested, browser type. We do not keep logs of individual visits.</p>
+      <p>We count visits with our own counter, which runs on the Brigaplan platform (app.brigaplan.ai). When you open a page, your browser sends it only the page, the language and the site you came from. We only store totals by day, page, language and referring site: no cookies, identifiers, IP address or browser type. The IP address is used only for a moment, to block anyone sending too many requests, and is not stored. If your browser asks not to be tracked (Do Not Track or Global Privacy Control), the visit is not counted.</p>
     </section>
 
     <section aria-labelledby="p-perche">
       <h2 id="p-perche">Why, and on what legal basis</h2>
       <p>The technical data are needed to run the site and to protect it from abuse and attacks. The legal basis is the controller's legitimate interest in the security of the service (Article 6(1)(f) of the Regulation). We do not use them to profile you or for any other purpose.</p>
+      <p>Counting visits is also based on legitimate interest: it helps us understand which pages are useful and where visitors come from, so we can improve the site. The totals cannot identify you.</p>
     </section>
 
     <section aria-labelledby="p-chi">
       <h2 id="p-chi">Who processes them for us</h2>
       <p>The site is hosted by DigitalOcean LLC (App Platform service, Frankfurt region, Germany) and reaches visitors through the content delivery network (CDN) used by DigitalOcean, which also has nodes outside the European Union. DigitalOcean processes the technical data as a processor, on our behalf. It is a US company: transfers outside the European Union are covered by the safeguards provided for by the Regulation, such as standard contractual clauses.</p>
+      <p>The visit counter runs on the Brigaplan platform, which is also hosted by DigitalOcean in the Frankfurt region.</p>
     </section>
 
     <section aria-labelledby="p-tempo">
       <h2 id="p-tempo">For how long</h2>
-      <p>We do not keep the technical data of visits. The service hosting the site keeps them only for as long as needed to deliver the pages and protect them from abuse, as described in its <a href="https://www.digitalocean.com/legal/privacy-policy">privacy policy</a>, and then deletes them.</p>
+      <p>We do not keep the technical data of individual visits. The counter totals are deleted after 13 months. The service hosting the site keeps the technical data only for as long as needed to deliver the pages and protect them from abuse, as described in its <a href="https://www.digitalocean.com/legal/privacy-policy">privacy policy</a>, and then deletes them.</p>
     </section>
 
     <section aria-labelledby="p-diritti">
@@ -106,10 +109,6 @@
       <p>None, neither technical nor third-party. That is why the site does not ask for your consent to cookies.</p>
     </section>
 
-    <section aria-labelledby="p-dopo">
-      <h2 id="p-dopo">When the service opens</h2>
-      <p>When you can send floor plans and requests, we will update this page before the form starts collecting any data. You will find what we collect, why, for how long and who we share it with: for example with the partner installer in your area, only if you ask us to.</p>
-    </section>
   </div>
 </main>
 
@@ -121,5 +120,7 @@
     <p>Brigaplan is a project of Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · VAT no. and tax code 06825390153 · REA MI 1120586 · certified email (PEC) <span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/en/privacy.html">Privacy and cookies</a></p>
   </div>
 </footer>
+<script>/* conteggio anonimo delle visite: niente cookie, niente IP salvati (vedi /privacy.html) */
+try{if(navigator.sendBeacon&&navigator.doNotTrack!=='1'&&!navigator.globalPrivacyControl)navigator.sendBeacon('https://app.brigaplan.ai/api/visita',JSON.stringify({p:location.pathname,l:(document.documentElement.lang||'it').slice(0,2),r:document.referrer}))}catch(e){}</script>
 </body>
 </html>

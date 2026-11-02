@@ -835,7 +835,7 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
     <p>预览方案仅供参考，不是施工图。设计方案和施工图均由设计师审核。</p>
         <p>Brigaplan 是 Italfrigo Service S.r.l. 旗下的项目 · Via Serviliano Lattuada 26, 20135 Milano · 增值税号和税号 P.IVA e C.F. 06825390153 · 企业登记号 REA MI 1120586 · 认证邮箱（PEC）<span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/zh/privacy.html">隐私与 Cookie</a></p>
     <p>联系方式：<a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
-    <p id="privacy"><strong>隐私和 Cookie。</strong>本网站不使用 Cookie 或任何跟踪工具。出于安全考虑，网站的托管服务会记录访问者的 IP 地址。注册用户适用<a href="/zh/privacy-piattaforma.html">平台隐私告知</a>和<a href="/zh/condizioni.html">使用条款</a>。</p>
+    <p id="privacy"><strong>隐私和 Cookie。</strong>本网站不使用 Cookie 或任何跟踪工具。我们用自己的匿名计数器统计访问量：只记录按页面、语言和来源网站汇总的总数。出于安全考虑，网站的托管服务会记录访问者的 IP 地址。注册用户适用<a href="/zh/privacy-piattaforma.html">平台隐私告知</a>和<a href="/zh/condizioni.html">使用条款</a>。</p>
   </div>
 </footer>
 
@@ -864,5 +864,7 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
 })();
 </script>
 
+<script>/* conteggio anonimo delle visite: niente cookie, niente IP salvati (vedi /privacy.html) */
+try{if(navigator.sendBeacon&&navigator.doNotTrack!=='1'&&!navigator.globalPrivacyControl)navigator.sendBeacon('https://app.brigaplan.ai/api/visita',JSON.stringify({p:location.pathname,l:(document.documentElement.lang||'it').slice(0,2),r:document.referrer}))}catch(e){}</script>
 </body>
 </html>
