@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>平台隐私 · Brigaplan</title>
+<meta name="description" content="Brigaplan 如何处理注册和使用平台的用户数据：账户、项目、上传的平面图、AI 助手以及设计师审核。">
+<meta property="og:site_name" content="Brigaplan">
+<meta property="og:type" content="website">
+<meta property="og:title" content="平台隐私 · Brigaplan">
+<meta property="og:description" content="Brigaplan 如何处理注册和使用平台的用户数据：账户、项目、上传的平面图、AI 助手以及设计师审核。">
+<meta property="og:url" content="https://brigaplan.ai/zh/privacy-piattaforma.html">
+<meta property="og:image" content="https://brigaplan.ai/media/brigaplan_esempi_poster.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta property="og:image:alt" content="用 Brigaplan 制作的酒吧 3D 设计方案">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://brigaplan.ai/zh/privacy-piattaforma.html">
+<link rel="alternate" hreflang="it" href="https://brigaplan.ai/privacy-piattaforma.html">
+<link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/privacy-piattaforma.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/privacy-piattaforma.html">
+<link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/privacy-piattaforma.html">
+<meta name="theme-color" content="#14212A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect x='1.5' y='1.5' width='23' height='23' fill='%23fff' stroke='%2314212A' stroke-width='2.2'/%3E%3Cpath d='M1.5 11H13V24.5M13 7V1.5' fill='none' stroke='%2314212A' stroke-width='1.4'/%3E%3Crect x='16' y='15' width='6' height='6' fill='%23CF4E1B'/%3E%3C/svg%3E">
+<link rel="preload" href="/fonts/Archivo-100_900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/PublicSans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/pagine.css">
+<style>
+/* Versione cinese: font CJK di sistema, niente spaziature negative né caratteri allargati, interlinea più ampia per gli ideogrammi.
+   Il programma sito/strumenti/lingue.py lo aggiunge in fondo allo stile della pagina cinese. */
+:root {
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+  --f-body: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", monospace;
+}
+body { line-height: 1.7; }
+h1, h2, h3 { font-stretch: 100%; letter-spacing: 0; line-height: 1.3; }
+h1 { line-height: 1.25; }
+h1, h2 { font-weight: 700; }
+h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su punteggiatura e spazi, non a metà parola */
+.lead { line-height: 1.65; }
+.punch, .thesis { font-stretch: 100%; line-height: 1.5; }
+.partner strong { font-stretch: 100%; }
+.eyebrow, .why-k, .notice, .ex b, .cartiglio dt, .compare thead th, .pill, .price, .reel-tag, .reel-btn { letter-spacing: .04em; }
+@media (max-width: 640px) { .compare tbody th, .compare td::before { letter-spacing: .04em; } }
+.plan .zl { letter-spacing: 1px; }
+.plan .fl-l, .plan .hood-t { letter-spacing: .5px; }
+@media (max-width: 360px) { h1, h2, .for { word-break: normal; } }  /* schermi molto stretti: si va a capo anche tra gli ideogrammi */
+</style>
+</head>
+<body>
+<div class="notice" role="region" aria-label="通知"><div class="wrap">Brigaplan 试运行中 · 目前只能凭邀请码注册</div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/zh/" aria-label="Brigaplan，返回首页">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><rect class="lm-wall" x="1.5" y="1.5" width="23" height="23"/><path class="lm-line" d="M1.5 11H13V24.5M13 7V1.5"/><rect class="lm-acc" x="16" y="15" width="6" height="6"/></svg>
+      <span translate="no">Briga<b>plan</b></span>
+    </a>
+    <nav class="nav" aria-label="页面栏目">
+      <a href="/zh/#come-funziona">使用流程</a>
+      <a href="/zh/#cosa-si-paga">收费方式</a>
+      <a href="/zh/partner.html">合作安装商</a>
+    </nav>
+    <div class="top-azioni">
+      <nav class="lingue" translate="no" aria-label="语言">
+        <a href="/privacy-piattaforma.html" lang="it" hreflang="it">IT</a>
+        <a href="/en/privacy-piattaforma.html" lang="en" hreflang="en">EN</a>
+        <a href="/zh/privacy-piattaforma.html" lang="zh-Hans" hreflang="zh-Hans" aria-current="page">中文</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="/zh/#prova">免费试用</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap doc">
+  <div class="doc-head">
+    <span class="eyebrow">根据欧盟第 2016/679 号条例第 13 条和第 14 条提供的隐私告知</span>
+    <h1>平台隐私</h1>
+    <p class="sec-lead">我们如何处理注册和使用 Brigaplan 平台的用户数据：账户、项目、上传的平面图以及与助手的对话。如果您只是访问网站，适用<a href="/zh/privacy.html">网站隐私告知</a>。</p>
+    <p class="nota-lingua">本页为译文，如有出入，以意大利语版本为准。</p>
+  <p class="agg">第 1 版 · 2026 年 11 月 2 日</p>
+  </div>
+
+  <div class="prosa">
+    <section aria-labelledby="pp-titolare">
+      <h2 id="pp-titolare">谁是数据控制者</h2>
+      <dl>
+        <dt>控制者</dt><dd>Italfrigo Service S.r.l.，Via Serviliano Lattuada 26, 20135 Milano · 增值税号和税号 P.IVA e C.F. 06825390153 · 企业登记号 REA MI 1120586</dd>
+        <dt>联系方式</dt><dd><a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a> · 认证邮箱（PEC）<span translate="no">italfrigo@pec.italfrigo.com</span></dd>
+      </dl>
+      <p>Brigaplan 是 Italfrigo Service S.r.l. 旗下的项目。</p>
+    </section>
+
+    <section aria-labelledby="pp-dati">
+      <h2 id="pp-dati">我们处理哪些数据</h2>
+      <ul>
+        <li><strong>账户：</strong>电子邮箱、姓名、账户类型（个人或专业）和身份、国家、城市和语言。专业用户还包括公司名称和增值税号。我们还会保存您接受的隐私告知的日期和版本，以及您最后一次登录的日期。</li>
+        <li><strong>密码：</strong>我们只保存加密后的密码（Argon2），所以连我们也无法读取。</li>
+        <li><strong>使用 Google 登录：</strong>如果您选择“使用 Google 登录”，Google 会向我们提供您的姓名、电子邮箱以及识别您 Google 账户的代码。我们不会获得您的 Google 密码。</li>
+        <li><strong>项目：</strong>项目名称、店面类型、城市、座位数、您的需求，以及您上传的平面图和文件。</li>
+        <li><strong>与助手的对话：</strong>您写给助手的消息、助手的回复以及它准备的预览方案（平面图、3D、检查结果）。</li>
+        <li><strong>技术数据：</strong>为了限制登录尝试次数，我们只在内存中使用您的 IP 地址几分钟，不会保存。托管平台的服务会按照<a href="/zh/privacy.html">网站隐私告知</a>中的说明记录访问的技术数据。</li>
+      </ul>
+      <p>平面图可能包含其他人的数据，例如图签中设计师的姓名。请只在您有权上传时才上传：我们只把它们用于您的项目。</p>
+    </section>
+
+    <section aria-labelledby="pp-perche">
+      <h2 id="pp-perche">目的和法律依据</h2>
+      <ul>
+        <li><strong>为您提供服务</strong>（账户、项目、预览方案、确认和通知邮件）：这是履行您注册时接受的合同所必需的（条例第 6 条第 1 款 b 项）。没有电子邮箱、密码和账户类型，我们无法开通账户。</li>
+        <li><strong>保护平台</strong>免受滥用和未经授权的访问：控制者的正当利益（第 6 条第 1 款 f 项）。</li>
+        <li><strong>遵守法律</strong>，例如配合主管机关的要求，或在开通付款后履行税务义务：法定义务（第 6 条第 1 款 c 项）。</li>
+      </ul>
+      <p>我们不会把您的数据用于广告，不会出售，也不会在没有单独同意的情况下给您发送新闻通讯。</p>
+    </section>
+
+    <section aria-labelledby="pp-ia">
+      <h2 id="pp-ia">AI 助手和设计师审核</h2>
+      <p>预览方案由人工智能助手（Anthropic 的 Claude 模型）与我们的设计引擎共同准备，设计引擎负责检查尺寸和规范。</p>
+      <p>在您看到之前，每份预览方案都由我们团队的一名设计师审核，设计师可以查看项目、上传的文件以及与助手的对话。预览方案仅供参考：我们不会做出对您产生法律效力的自动化决定。</p>
+    </section>
+
+    <section aria-labelledby="pp-chi">
+      <h2 id="pp-chi">谁代我们处理数据</h2>
+      <p>我们把以下供应商作为处理者，并通过合同要求他们只代表我们使用数据：</p>
+      <ul>
+        <li><strong>DigitalOcean LLC：</strong>平台的服务器、数据库和文件，位于法兰克福区域（德国）。</li>
+        <li><strong>Anthropic：</strong>接收与助手对话的消息以及准备预览方案所需的项目数据。根据其条款，通常会在 30 天内删除这些数据，规定的情形除外（例如违反其使用政策或法律义务），并且不得用这些数据训练其模型。</li>
+        <li><strong>邮件发送服务：</strong> <span translate="no">[DA DEFINIRE: nome del servizio e paese dei server]</span>.</li>
+        <li><strong>Google：</strong>仅在您选择“使用 Google 登录”时用于确认您的身份。这部分同时适用<a href="https://policies.google.com/privacy">Google 的隐私政策</a>。</li>
+        <li><strong>Zoho Corporation：</strong>如果您给我们写信，由它管理 info@brigaplan.ai 邮箱，服务器位于欧盟。</li>
+      </ul>
+      <p>其中部分供应商的总部在美国或在美国处理数据：向欧盟以外的传输受条例规定的保障措施约束，例如标准合同条款。</p>
+      <p>只有在您要求时，我们才会与安装商、经销商或其他合作伙伴共享您的项目，而且只与您选择的对象共享。</p>
+    </section>
+
+    <section aria-labelledby="pp-tempo">
+      <h2 id="pp-tempo">保存多久</h2>
+      <ul>
+        <li><strong>账户、项目、文件和对话：</strong>保存到账户关闭为止。账户关闭后，我们会在 30 天内删除。数据库备份会在之后 7 天内被覆盖。</li>
+        <li><strong>从未确认的账户：</strong>30 天后删除。</li>
+        <li><strong>不活跃的账户：</strong>连续 24 个月没有登录时我们会给您写信；如果您在 30 天内没有回复，我们会删除账户。</li>
+        <li><strong>法律要求我们保存的数据</strong>，例如发票：按法律规定的期限保存，通常为 10 年。</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="pp-cookie">
+      <h2 id="pp-cookie">Cookie</h2>
+      <p>平台只使用两个技术性 Cookie，这是正常运行所必需的，因此不需要您的同意：</p>
+      <ul>
+        <li><strong translate="no">bp_sessione</strong>：登录后保持您的账户登录状态。有效期 30 天。</li>
+        <li><strong translate="no">lingua</strong>：记住您选择的语言。有效期 1 年。</li>
+      </ul>
+      <p>没有统计、广告或画像类 Cookie。</p>
+    </section>
+
+    <section aria-labelledby="pp-sicurezza">
+      <h2 id="pp-sicurezza">我们如何保护数据</h2>
+      <p>加密连接（HTTPS）、加密密码、文件和平面图只有您和授权的团队成员可以查看、限制登录尝试次数，以及在您修改密码时关闭其他会话。</p>
+    </section>
+
+    <section aria-labelledby="pp-diritti">
+      <h2 id="pp-diritti">您的权利</h2>
+      <p>您可以随时要求访问、更正或删除您的数据，限制处理或提出反对，以及以可读格式获取您的数据（可携带权），这些权利规定在条例第 15 至 22 条。您可以在自己的控制台中操作，也可以写信到 <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a>。我们会在一个月内答复。</p>
+      <p>如果您认为处理不当，可以向意大利个人数据保护局（Garante per la protezione dei dati personali）投诉（<a href="https://www.garanteprivacy.it">garanteprivacy.it</a>）。</p>
+    </section>
+
+    <section aria-labelledby="pp-altro">
+      <h2 id="pp-altro">其他须知</h2>
+      <ul>
+        <li>本平台面向成年人，适用于从事本行业或准备在本行业开业的人。</li>
+        <li>如果我们对本告知做出重要修改，会先通过邮件通知您。您接受的版本会一直记录在您的账户中。</li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="logo"><span translate="no">Briga<b>plan</b></span></span>
+    <p>用人工智能设计商用厨房和吧台。</p>
+    <p>合作安装商：Italfrigo（伦巴第大区）。<a href="/zh/partner.html">成为合作伙伴</a></p>
+    <p>Brigaplan 是 Italfrigo Service S.r.l. 旗下的项目 · Via Serviliano Lattuada 26, 20135 Milano · 增值税号和税号 P.IVA e C.F. 06825390153 · 企业登记号 REA MI 1120586 · 认证邮箱（PEC）<span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/zh/privacy.html">隐私与 Cookie</a></p>
+  </div>
+</footer>
+</body>
+</html>

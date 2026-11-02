@@ -332,6 +332,15 @@ section[id] { scroll-margin-top: 12px; }
 .partner strong { font-family: var(--f-display); font-stretch: 106%; font-size: 1.0625rem; }
 .partner span { color: var(--muted); }
 .partner a { font-weight: 600; color: var(--accent-deep); }
+.accedi { font-size: .9375rem; font-weight: 600; color: var(--ink); text-decoration: none; white-space: nowrap; }
+.accedi:hover { text-decoration: underline; }
+.inizia { align-content: start; }
+.inizia-t { font-family: var(--f-display); font-stretch: 106%; font-size: 1.25rem; line-height: 1.3; margin: 0; }
+.inizia .btn { justify-self: start; }
+.tier .costi { font-size: .875rem; line-height: 1.5; color: var(--muted); margin: 0; }
+@media (max-width: 440px) { .accedi { font-size: .8125rem; } .top .wrap { gap: 6px; } .top-azioni { gap: 5px; } .top .lingue a { padding: 5px 3px; } .top .logo { font-size: 1.1rem; } }
+@media (max-width: 380px) { .top .logo > span { display: none; } }  /* sui telefoni stretti resta il simbolo: il nome è nel video e nel piede */
+@media (max-width: 340px) { .top-azioni .btn-sm { padding: 7px 6px; font-size: .8125rem; } .top .lingue a { padding: 4px 2px; } .accedi { font-size: .75rem; } }
 .altri-esempi { margin-top: 18px; font-weight: 600; }
 .altri-esempi a { color: var(--accent-testo, var(--accent-deep)); }
 
@@ -454,7 +463,7 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
 </style>
 </head>
 <body>
-<div class="notice" role="region" aria-label="通知"><div class="wrap">Brigaplan 即将上线 · 服务尚未开通</div></div>
+<div class="notice" role="region" aria-label="通知"><div class="wrap">Brigaplan 试运行中 · 目前只能凭邀请码注册</div></div>
 
 <header class="top">
   <div class="wrap">
@@ -475,7 +484,8 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
         <a href="/en/" lang="en" hreflang="en">EN</a>
         <a href="/zh/" lang="zh-Hans" hreflang="zh-Hans" aria-current="page">中文</a>
       </nav>
-      <a class="btn btn-primary btn-sm" href="#prova">免费试用</a>
+      <a class="accedi" href="https://app.brigaplan.ai/accedi?lingua=zh">登录</a>
+      <a class="btn btn-primary btn-sm" href="https://app.brigaplan.ai/registrati?lingua=zh">免费试用</a>
     </div>
   </div>
 </header>
@@ -488,7 +498,7 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
       <p class="lead">上传店面平面图，或者用文字描述您的店。免费获得预览方案：平面布局、3D 模型和费用估算。觉得合适，再做完整的设计方案，由您所在地区的安装商负责安装。</p>
       <p class="why"><span class="why-k">为什么</span>现在每家供应商都要从头免费做一遍设计，而客户常常最后不买，或者拿着方案去找别家。大家都在浪费时间和金钱。用 Brigaplan，在购买设备之前，把设计一次做好。</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#prova">用您的店面试一试</a>
+        <a class="btn btn-primary" href="https://app.brigaplan.ai/registrati?lingua=zh">用您的店面试一试</a>
         <a class="btn btn-ghost" href="#come-funziona">使用流程</a>
       </div>
       <p class="for">适合餐厅、酒店和酒吧老板 · 建筑师和设计师 · 经销商和代理商</p>
@@ -667,7 +677,7 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
 <g class="layer layer-imp"><text class="hood-t" x="420.0" y="157.2">排烟罩 EN 16282</text><g class="imp imp-e"><circle cx="117.0" cy="42.0" r="7"/><text x="117.0" y="42.0" dy=".36em">电</text></g><g class="imp imp-e"><circle cx="189.0" cy="42.0" r="7"/><text x="189.0" y="42.0" dy=".36em">电</text></g><g class="imp imp-a"><circle cx="337.8" cy="42.0" r="7"/><text x="337.8" y="42.0" dy=".36em">水</text></g><g class="imp imp-s"><circle cx="351.0" cy="42.0" r="7"/><text x="351.0" y="42.0" dy=".36em">排</text></g><g class="imp imp-e"><circle cx="420.0" cy="42.0" r="7"/><text x="420.0" y="42.0" dy=".36em">电</text></g><g class="imp imp-a"><circle cx="433.2" cy="42.0" r="7"/><text x="433.2" y="42.0" dy=".36em">水</text></g><g class="imp imp-s"><circle cx="446.4" cy="42.0" r="7"/><text x="446.4" y="42.0" dy=".36em">排</text></g><g class="imp imp-e"><circle cx="473.4" cy="42.0" r="7"/><text x="473.4" y="42.0" dy=".36em">电</text></g><g class="imp imp-e"><circle cx="499.2" cy="42.0" r="7"/><text x="499.2" y="42.0" dy=".36em">电</text></g><g class="imp imp-g"><circle cx="550.2" cy="42.0" r="7"/><text x="550.2" y="42.0" dy=".36em">气</text></g><g class="imp imp-a"><circle cx="589.8" cy="42.0" r="7"/><text x="589.8" y="42.0" dy=".36em">水</text></g><g class="imp imp-s"><circle cx="603.0" cy="42.0" r="7"/><text x="603.0" y="42.0" dy=".36em">排</text></g><g class="imp imp-e"><circle cx="135.0" cy="396.0" r="7"/><text x="135.0" y="396.0" dy=".36em">电</text></g><g class="imp imp-a"><circle cx="148.2" cy="396.0" r="7"/><text x="148.2" y="396.0" dy=".36em">水</text></g><g class="imp imp-s"><circle cx="161.4" cy="396.0" r="7"/><text x="161.4" y="396.0" dy=".36em">排</text></g><g class="imp imp-a"><circle cx="186.0" cy="396.0" r="7"/><text x="186.0" y="396.0" dy=".36em">水</text></g><g class="imp imp-s"><circle cx="199.2" cy="396.0" r="7"/><text x="199.2" y="396.0" dy=".36em">排</text></g><g class="imp imp-e"><circle cx="507.0" cy="396.0" r="7"/><text x="507.0" y="396.0" dy=".36em">电</text></g></g>
 </svg>
       </div>
-      <figcaption class="cap" id="tavola-cap" aria-live="polite"><b>免费。</b>由 AI 几分钟完成：功能分区、操作台、动线和费用估算。用来看清大致效果。真正施工还需要设计方案和施工图。</figcaption>
+      <figcaption class="cap" id="tavola-cap" aria-live="polite"><b>免费。</b>AI 几分钟生成，再由设计师审核：功能分区、操作台、动线和费用估算。用来看清大致效果。真正施工还需要设计方案和施工图。</figcaption>
       <dl class="cartiglio">
         <div><dt>图纸</dt><dd id="c-tavola">预览方案</dd></div>
         <div><dt>比例</dt><dd id="c-scala">不标尺寸</dd></div>
@@ -689,7 +699,7 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
         <li><span class="k">12</span>保温出餐台</li>
       </ol>
       <template id="livelli-testi">
-        <div data-livello="anteprima"><p data-k="cap"><b>免费。</b>由 AI 几分钟完成：功能分区、操作台、动线和费用估算。用来看清大致效果。真正施工还需要设计方案和施工图。</p><span data-k="tavola">预览方案</span><span data-k="scala">不标尺寸</span><span data-k="attr">通用设备，不含品牌</span><span data-k="stima">4万–6万欧元</span></div>
+        <div data-livello="anteprima"><p data-k="cap"><b>免费。</b>AI 几分钟生成，再由设计师审核：功能分区、操作台、动线和费用估算。用来看清大致效果。真正施工还需要设计方案和施工图。</p><span data-k="tavola">预览方案</span><span data-k="scala">不标尺寸</span><span data-k="attr">通用设备，不含品牌</span><span data-k="stima">4万–6万欧元</span></div>
         <div data-livello="progetto"><p data-k="cap"><b>付费。</b>PDF 格式的尺寸标注平面图、品牌和型号、完整 3D 模型和两张效果图、参考报价。由设计师审核。</p><span data-k="tavola">设计方案</span><span data-k="scala">1:50，标注尺寸</span><span data-k="attr">品牌和型号</span><span data-k="stima">参考报价</span></div>
         <div data-livello="esecutivo"><p data-k="cap"><b>付费。</b>DXF 和 DWG 图纸、立面图、剖面图，以及电、水、燃气和排水接口。由设计师全程跟进并签字。</p><span data-k="tavola">施工图</span><span data-k="scala">1:50，DXF 和 DWG</span><span data-k="attr">含接口和功率</span><span data-k="stima">合作安装商报价</span></div>
       </template>
@@ -705,30 +715,32 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
           <li>通用设备，例如“10 GN 万能蒸烤箱”</li>
           <li>费用估算区间</li>
         </ul>
-        <p class="who">由 AI 几分钟完成。</p>
+        <p class="who">AI 几分钟生成，设计师审核。</p>
       </div>
       <div class="tier">
-        <div class="tier-head"><h3>设计方案</h3><span class="price">付费</span></div>
+        <div class="tier-head"><h3>设计方案</h3><span class="price">290 欧元起（不含增值税）</span></div>
         <ul>
           <li>PDF 格式的尺寸标注平面图</li>
           <li>完整 3D 模型和两张效果图</li>
           <li>选定的品牌和型号</li>
           <li>参考报价</li>
         </ul>
+        <p class="costi">60 个座位以内或酒吧 290 欧元，150 个座位以内 490 欧元，更大规模以及食堂、宴会 890 欧元起。含增值税：353.80 欧元、597.80 欧元、1,085.80 欧元起。包含 3 轮修改。</p>
         <p class="who">AI 先出方案，设计师审核。</p>
       </div>
       <div class="tier">
-        <div class="tier-head"><h3>施工图</h3><span class="price">付费</span></div>
+        <div class="tier-head"><h3>施工图</h3><span class="price">690 欧元起（不含增值税）</span></div>
         <ul>
           <li>DXF 和 DWG 图纸，包括立面图和剖面图</li>
           <li>电、水、燃气和排水接口，标明功率</li>
           <li>完整的设备清单</li>
           <li>合作安装商的正式报价</li>
         </ul>
+        <p class="costi">60 个座位以内或酒吧 690 欧元，150 个座位以内 1,190 欧元，更大规模另行报价。含增值税：841.80 欧元和 1,451.80 欧元。如果您从合作安装商那里购买设备，则免费。</p>
         <p class="who">设计师和您一起跟进，并签字负责。</p>
       </div>
     </div>
-    <p class="thesis"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M4 14.5l6.5 6.5L24 7.5"/></svg><span>如果您从合作安装商那里购买设备，设计费会从订单金额中扣除。</span></p>
+    <p class="thesis"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M4 14.5l6.5 6.5L24 7.5"/></svg><span>如果您从合作安装商那里购买设备，设计费会从订单金额中扣除，施工图免费。</span></p>
   </div>
 </section>
 
@@ -780,7 +792,7 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
     <div class="faq">
       <details><summary>一定要有店面平面图吗？</summary><p>不一定。没有的话，我们会问您几个问题：尺寸、门窗位置，以及餐厅区在哪里。照片或手绘草图也可以，只要上面至少有一个已知尺寸。</p></details>
       <details><summary>有了预览方案就能直接施工吗？</summary><p>不能。预览方案用来了解空间、设备占地和费用。施工需要设计方案和施工图，并由设计师签字。向卫生局（ASL）和市政府企业服务窗口（SUAP）办手续时，通常还需要一位有执业资格的技术人员。</p></details>
-      <details><summary>为什么预览方案不标尺寸，也没有品牌？</summary><p>因为它是免费的，完全由 AI 自动生成。尺寸、品牌和型号在设计方案阶段才提供，那时会有设计师审核。</p></details>
+      <details><summary>为什么预览方案不标尺寸，也没有品牌？</summary><p>因为它是免费的，用来看清大致效果：由 AI 生成，再由设计师审核。尺寸、品牌和型号在付费的设计方案中提供。</p></details>
       <details><summary>厨房由谁来安装？</summary><p>由您所在地区的合作安装商安装。第一家是伦巴第大区的 Italfrigo。其他大区的合作伙伴我们正在寻找。</p></details>
       <details><summary>必须向合作安装商购买吗？</summary><p>不是必须的。如果您向合作安装商购买，设计费会从订单中扣除。</p></details>
       <details><summary>我上传的平面图会怎么处理？</summary><p>严格保密。我们只用它来做您的方案；只有在您决定和某家合作安装商继续合作时，才会把图纸提供给对方。</p></details>
@@ -801,56 +813,15 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
           <li>设备清单，不含品牌</li>
           <li>费用估算区间</li>
         </ul>
-        <p class="small">服务尚未开通：目前这个表单不会发送任何内容。</p>
+        <p class="small">注册只需一分钟。在您看到之前，每份预览方案都由设计师审核。</p>
       </div>
-      <form class="form" id="prova-form" novalidate>
-        <fieldset>
-          <legend>从哪里开始？</legend>
-          <div class="seg">
-            <input type="radio" name="modo" id="modo-pianta" value="pianta" checked><label for="modo-pianta">我有平面图</label>
-            <input type="radio" name="modo" id="modo-descrizione" value="descrizione"><label for="modo-descrizione">我没有平面图</label>
-          </div>
-        </fieldset>
-        <div class="field" id="pannello-pianta">
-          <span class="lbl" id="lbl-pianta">店面平面图</span>
-          <label class="drop" id="drop">
-            <input class="sr-only" type="file" id="pianta" name="pianta" accept=".dxf,.dwg,.pdf" aria-labelledby="lbl-pianta">
-            <strong>把文件拖到这里，或点击选择文件</strong>
-            <span>DXF、DWG 或 PDF</span>
-            <span class="file" id="nome-file" hidden></span>
-          </label>
-        </div>
-        <div class="field" id="pannello-descrizione" hidden>
-          <label for="descrizione">描述您的店面</label>
-          <textarea id="descrizione" name="descrizione" placeholder="例如：店面 120 平方米，厨房在后面，约 35 平方米，有一扇窗户，进货入口在院子里。"></textarea>
-        </div>
-        <div class="row2">
-          <div class="field">
-            <label for="tipo">店面类型</label>
-            <select id="tipo" name="tipo">
-              <option value="ristorante">餐厅</option>
-              <option value="trattoria">意式小餐馆（trattoria、osteria）</option>
-              <option value="pizzeria">披萨店</option>
-              <option value="bar">酒吧或咖啡馆</option>
-              <option value="hotel">酒店</option>
-              <option value="pasticceria">甜品店</option>
-              <option value="mensa">食堂或团餐（catering）</option>
-              <option value="altro">其他</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="coperti">座位数</label>
-            <input type="number" id="coperti" name="coperti" min="0" inputmode="numeric" placeholder="80">
-          </div>
-        </div>
-        <div class="field">
-          <label for="obiettivo">您有什么需求？</label>
-          <textarea id="obiettivo" name="obiettivo" placeholder="例如：做鲜意面和烧烤的厨房，菜单 30 道菜。想保留现有的烤箱。"></textarea>
-        </div>
+      <div class="form inizia">
+        <p class="inizia-t">创建免费账户，上传平面图，获取预览方案。</p>
+        <a class="btn btn-primary" href="https://app.brigaplan.ai/registrati?lingua=zh">免费生成预览方案</a>
+        <p class="small">已有账户？<a href="https://app.brigaplan.ai/accedi?lingua=zh">登录</a></p>
         <p class="small">您上传的平面图会严格保密。</p>
-        <button class="btn btn-primary" type="submit">免费生成预览方案</button>
-        <p class="esito" id="esito" role="status" hidden data-txt-messaggio="服务尚未开通，所以我们没有收到任何内容。即将上线：届时您会在这里看到自己的预览方案，包括平面图、3D 模型和费用估算。"></p>
-      </form>
+        <p class="small">目前仅限受邀用户使用：邀请码由 Italfrigo 发给您。如果您想试用 Brigaplan，请发邮件至 <a href="mailto:info@brigaplan.ai">info@brigaplan.ai</a>。</p>
+      </div>
     </div>
   </div>
 </section>
@@ -862,10 +833,9 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
     <p>用人工智能设计商用厨房和吧台。</p>
     <p>合作安装商：Italfrigo（伦巴第大区）。<a href="/zh/partner.html">成为合作伙伴</a></p>
     <p>预览方案仅供参考，不是施工图。设计方案和施工图均由设计师审核。</p>
-    <p>服务即将上线。</p>
-    <p>Brigaplan 是 Italfrigo Service S.r.l. 旗下的项目 · Via Serviliano Lattuada 26, 20135 Milano · 增值税号和税号 P.IVA e C.F. 06825390153 · 企业登记号 REA MI 1120586 · 认证邮箱（PEC）<span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/zh/privacy.html">隐私与 Cookie</a></p>
+        <p>Brigaplan 是 Italfrigo Service S.r.l. 旗下的项目 · Via Serviliano Lattuada 26, 20135 Milano · 增值税号和税号 P.IVA e C.F. 06825390153 · 企业登记号 REA MI 1120586 · 认证邮箱（PEC）<span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/zh/privacy.html">隐私与 Cookie</a></p>
     <p>联系方式：<a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
-    <p id="privacy"><strong>隐私和 Cookie。</strong>本网站不使用 Cookie 或任何跟踪工具，也不收集个人数据：试用表单不会发送任何内容。出于安全考虑，网站的托管服务会记录访问者的 IP 地址。</p>
+    <p id="privacy"><strong>隐私和 Cookie。</strong>本网站不使用 Cookie 或任何跟踪工具。出于安全考虑，网站的托管服务会记录访问者的 IP 地址。注册用户适用<a href="/zh/privacy-piattaforma.html">平台隐私告知</a>和<a href="/zh/condizioni.html">使用条款</a>。</p>
   </div>
 </footer>
 
@@ -891,42 +861,6 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
   }
   bottoni.forEach(function (b) { b.addEventListener("click", function () { mostra(b.getAttribute("data-set")); }); });
 
-  var form = document.getElementById("prova-form");
-  var pPianta = document.getElementById("pannello-pianta");
-  var pDescr = document.getElementById("pannello-descrizione");
-  function aggiornaModo() {
-    var scelto = form.querySelector('input[name="modo"]:checked');
-    var conPianta = !scelto || scelto.value === "pianta";
-    pPianta.hidden = !conPianta;
-    pDescr.hidden = conPianta;
-  }
-  form.querySelectorAll('input[name="modo"]').forEach(function (r) { r.addEventListener("change", aggiornaModo); });
-  aggiornaModo();
-
-  var file = document.getElementById("pianta");
-  var nome = document.getElementById("nome-file");
-  var drop = document.getElementById("drop");
-  function mostraNome() {
-    if (file.files && file.files.length) { nome.textContent = file.files[0].name; nome.hidden = false; }
-    else { nome.hidden = true; }
-  }
-  file.addEventListener("change", mostraNome);
-  ["dragenter", "dragover"].forEach(function (t) { drop.addEventListener(t, function (e) { e.preventDefault(); drop.classList.add("over"); }); });
-  ["dragleave", "drop"].forEach(function (t) { drop.addEventListener(t, function () { drop.classList.remove("over"); }); });
-  drop.addEventListener("drop", function (e) {
-    e.preventDefault();
-    if (e.dataTransfer && e.dataTransfer.files.length) {
-      try { file.files = e.dataTransfer.files; } catch (err) {}
-      mostraNome();
-    }
-  });
-
-  var esito = document.getElementById("esito");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    esito.textContent = esito.dataset.txtMessaggio;
-    esito.hidden = false;
-  });
 })();
 </script>
 
