@@ -249,6 +249,13 @@ img, video { display: block; height: auto; }
 .inizia { border: 1.5px solid var(--rule); padding: 22px; display: grid; gap: 14px; }
 .inizia a:not(.btn) { font-weight: 600; }
 
+/* conversazione con l'assistente (come la chat della piattaforma) */
+.chat { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; align-content: start; }
+.msg { padding: 10px 14px; max-width: 92%; border: 1px solid var(--line); background: var(--paper); line-height: 1.5; }
+.msg .chi { display: block; font-size: .8125rem; font-weight: 650; color: var(--muted); margin-bottom: 3px; }
+.msg.cliente { background: var(--paper-2); border-color: var(--paper-2); justify-self: end; }
+.msg.assistente { justify-self: start; border-left: 2px solid var(--ink); }
+
 /* piede */
 .foot { border-top: 1px solid var(--rule); }
 .foot .wrap { padding-block: 40px 56px; display: grid; gap: 10px; font-size: .875rem; color: var(--muted); }
@@ -288,9 +295,9 @@ img, video { display: block; height: auto; }
 <section class="hero" aria-labelledby="titolo">
   <div class="wrap">
     <div class="riga">
-      <h1 id="titolo">The right space for your brigade, designed in minutes.</h1>
+      <h1 id="titolo">You don't need to be in the trade.</h1>
       <div class="destra">
-        <p class="lead">Upload the floor plan or describe the space. Get a free preview with a floor plan, 3D and a cost estimate. If you like it, move on to the full design and to an installer in your area.</p>
+        <p class="lead">Describe your place as you would to a consultant: Brigaplan takes care of the design. Our engine works out sizes, equipment, rules and the cost estimate, and a designer checks everything before you see it.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="https://app.brigaplan.ai/registrati?lingua=en">Try it on your space</a>
           <a class="btn btn-ghost" href="#come-funziona">How it works</a>
@@ -298,7 +305,7 @@ img, video { display: block; height: auto; }
       </div>
     </div>
     <figure class="reel">
-      <video id="reel" src="/media/brigaplan_video_en.mp4?v=3" poster="/media/brigaplan_video_poster_en.jpg?v=3" autoplay muted loop playsinline preload="auto" aria-label="Video: four examples, a restaurant, a hotel, a central production kitchen and a café bar. In each one the drawing draws itself, becomes the rendered plan and then the 3D design."></video>
+      <video id="reel" src="/media/brigaplan_video_en.mp4?v=4" poster="/media/brigaplan_video_poster_en.jpg?v=4" autoplay muted loop playsinline preload="auto" aria-label="Video: a conversation with the assistant on the Brigaplan platform, then four examples: a restaurant, a hotel, a central production kitchen and a café bar. In each one the drawing draws itself, becomes the rendered plan and then the 3D design."></video>
       <button type="button" class="reel-btn" id="reel-btn" aria-pressed="false" data-txt-riproduci="Play" data-txt-pausa="Pause">Pause</button>
     </figure>
     <div class="fatti">
@@ -309,6 +316,27 @@ img, video { display: block; height: auto; }
     </div>
     <p class="didascalia"><b>From floor plan to full design.</b> The floor plan, the 3D model and the animation come from our own design engine, with equipment dimensions taken from the manufacturers' data sheets. Photorealistic renders are part of the paid design.</p>
     <p class="for">For restaurant, hotel and bar owners · architects and designers · dealers and sales agents</p>
+  </div>
+</section>
+
+<section class="parte" id="consulente" aria-labelledby="t-consulente">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="t-consulente">Talk as you would to a consultant. Brigaplan prepares the design.</h2>
+      <p class="sec-lead">Kitchen design software is made for people who are already in the trade: a person does the drawing. With Brigaplan you say what you want, the assistant asks the right questions and the engine draws the kitchen with real sizes and rules.</p>
+    </div>
+    <div class="due">
+      <ol class="chat" aria-label="Sample conversation with the assistant">
+        <li class="msg cliente"><span class="chi">You</span>I'm opening an 80-seat trattoria in Milan, Lombard cuisine. I'm sending you the floor plan.</li>
+        <li class="msg assistente"><span class="chi">Brigaplan assistant</span>I've read your floor plan: a 9.20 x 5.60 m kitchen, an 80 cm door to the dining room and a 90 cm delivery door.<br>Before I draw the free preview, I need a few answers:<br>1. How often do you get deliveries?<br>2. Do you cook with gas or electric?<br>3. A flue up to the roof, or activated-carbon hoods?<br>4. Fridges with built-in or remote motors?<br>If you're not sure about something, I'll pick a sensible starting value and mark it as "to confirm".</li>
+        <li class="msg cliente"><span class="chi">You</span>Deliveries three times a week, gas burners, hood ducted to the roof, fridges with built-in compressor.</li>
+        <li class="msg assistente"><span class="chi">Brigaplan assistant</span>Version 1 of your free preview is ready, with no errors. One of our designers is checking it now. Once it's approved, you'll get an email.</li>
+      </ol>
+      <figure style="margin:0;display:grid;gap:10px">
+        <img class="tavola-img" src="/media/tavola_anteprima_en.jpg?v=3" alt="The result: the trattoria preview, a plan without dimensions with zones, counters and flows" width="1600" height="900" loading="lazy">
+        <figcaption class="didascalia"><b>The result.</b> The trattoria preview: a plan with zones, counters and flows, 3D and a cost estimate. A designer checks it before it reaches you.</figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
@@ -349,6 +377,7 @@ img, video { display: block; height: auto; }
       <div class="colonna prima">
         <h3>Today</h3>
         <dl>
+          <div><dt>Do you need experience?</dt><dd>Yes: drawing the kitchen takes a designer or the supplier's technician</dd></div>
           <div><dt>The first step</dt><dd>You call suppliers and wait for a site visit</dd></div>
           <div><dt>The design</dt><dd>One per supplier, redone after every change</dd></div>
           <div><dt>The quotes</dt><dd>For different kitchens, hard to compare</dd></div>
@@ -360,6 +389,7 @@ img, video { display: block; height: auto; }
       <div class="colonna dopo">
         <h3>With Brigaplan</h3>
         <dl>
+          <div><dt>Do you need experience?</dt><dd>No: you just need to know what you want. The assistant asks you the right questions</dd></div>
           <div><dt>The first step</dt><dd>A free preview in a few minutes</dd></div>
           <div><dt>The design</dt><dd>Just one, and it follows your choices</dd></div>
           <div><dt>The quotes</dt><dd>For the same design, so you can compare them</dd></div>

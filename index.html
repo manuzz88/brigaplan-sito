@@ -249,6 +249,13 @@ img, video { display: block; height: auto; }
 .inizia { border: 1.5px solid var(--rule); padding: 22px; display: grid; gap: 14px; }
 .inizia a:not(.btn) { font-weight: 600; }
 
+/* conversazione con l'assistente (come la chat della piattaforma) */
+.chat { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; align-content: start; }
+.msg { padding: 10px 14px; max-width: 92%; border: 1px solid var(--line); background: var(--paper); line-height: 1.5; }
+.msg .chi { display: block; font-size: .8125rem; font-weight: 650; color: var(--muted); margin-bottom: 3px; }
+.msg.cliente { background: var(--paper-2); border-color: var(--paper-2); justify-self: end; }
+.msg.assistente { justify-self: start; border-left: 2px solid var(--ink); }
+
 /* piede */
 .foot { border-top: 1px solid var(--rule); }
 .foot .wrap { padding-block: 40px 56px; display: grid; gap: 10px; font-size: .875rem; color: var(--muted); }
@@ -288,9 +295,9 @@ img, video { display: block; height: auto; }
 <section class="hero" aria-labelledby="titolo">
   <div class="wrap">
     <div class="riga">
-      <h1 id="titolo">Lo spazio giusto per la tua brigata, progettato in pochi minuti.</h1>
+      <h1 id="titolo">Non serve essere del mestiere.</h1>
       <div class="destra">
-        <p class="lead">Carica la pianta o descrivi il locale. Ricevi gratis un'anteprima con pianta, 3D e stima di spesa. Se ti convince, passi al progetto completo e all'installatore della tua zona.</p>
+        <p class="lead">Racconta il tuo locale come a un consulente: al progetto pensa Brigaplan. Misure, attrezzature, regole e stima di spesa le calcola il nostro motore, e un progettista controlla tutto prima che tu lo veda.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="https://app.brigaplan.ai/registrati?lingua=it">Prova con il tuo locale</a>
           <a class="btn btn-ghost" href="#come-funziona">Come funziona</a>
@@ -298,7 +305,7 @@ img, video { display: block; height: auto; }
       </div>
     </div>
     <figure class="reel">
-      <video id="reel" src="/media/brigaplan_video.mp4?v=3" poster="/media/brigaplan_video_poster.jpg?v=3" autoplay muted loop playsinline preload="auto" aria-label="Video: quattro esempi, un ristorante, un hotel, un centro di cottura e un bar. Per ognuno la tavola si disegna, diventa la pianta renderizzata e poi il progetto in 3D."></video>
+      <video id="reel" src="/media/brigaplan_video.mp4?v=4" poster="/media/brigaplan_video_poster.jpg?v=4" autoplay muted loop playsinline preload="auto" aria-label="Video: una conversazione con l'assistente nella piattaforma Brigaplan, poi quattro esempi, un ristorante, un hotel, un centro di cottura e un bar. Per ognuno la tavola si disegna, diventa la pianta renderizzata e poi il progetto in 3D."></video>
       <button type="button" class="reel-btn" id="reel-btn" aria-pressed="false" data-txt-riproduci="Riproduci" data-txt-pausa="Pausa">Pausa</button>
     </figure>
     <div class="fatti">
@@ -309,6 +316,27 @@ img, video { display: block; height: auto; }
     </div>
     <p class="didascalia"><b>Dalla pianta al progetto completo.</b> Pianta, 3D e animazione escono dal nostro motore di progettazione, con le misure delle attrezzature prese dalle schede dei produttori. I render fotorealistici fanno parte del progetto a pagamento.</p>
     <p class="for">Per ristoratori, albergatori e bar · architetti e progettisti · rivenditori e agenti</p>
+  </div>
+</section>
+
+<section class="parte" id="consulente" aria-labelledby="t-consulente">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="t-consulente">Parli come con un consulente. Il progetto lo prepara Brigaplan.</h2>
+      <p class="sec-lead">I programmi per progettare cucine sono fatti per chi è già del mestiere: lì disegna una persona. Con Brigaplan racconti cosa vuoi, l'assistente ti fa le domande giuste e il motore disegna la cucina con misure e regole vere.</p>
+    </div>
+    <div class="due">
+      <ol class="chat" aria-label="Esempio di conversazione con l'assistente">
+        <li class="msg cliente"><span class="chi">Tu</span>Apro una trattoria da 80 coperti a Milano, cucina lombarda. Ti mando la pianta del locale.</li>
+        <li class="msg assistente"><span class="chi">Assistente Brigaplan</span>Ho ricevuto la pianta: cucina di 9,20 x 5,60 m, porta verso la sala da 80 cm, porta di servizio da 90 cm.<br>Prima di disegnare mi servono poche risposte:<br>1. Ogni quanti giorni arrivano le consegne?<br>2. La cucina va a gas o elettrica?<br>3. Canna fumaria fino al tetto o filtri a carboni?<br>4. Frigo con il motore incorporato o remoto?<br>Se qualcosa non lo sa, uso valori standard e Le dico quali ho scelto.</li>
+        <li class="msg cliente"><span class="chi">Tu</span>Consegne tre volte a settimana, fuochi a gas, cappa sul tetto, frigo con il motore a bordo.</li>
+        <li class="msg assistente"><span class="chi">Assistente Brigaplan</span>La versione 1 dell'anteprima è pronta, senza errori. Ora la controlla un nostro progettista: appena la approva Le arriva un'email.</li>
+      </ol>
+      <figure style="margin:0;display:grid;gap:10px">
+        <img class="tavola-img" src="/media/tavola_anteprima.jpg?v=3" alt="Il risultato: l'anteprima della trattoria, pianta senza quote con zone, banchi e percorsi" width="1600" height="900" loading="lazy">
+        <figcaption class="didascalia"><b>Il risultato.</b> L'anteprima della trattoria: pianta con zone, banchi e percorsi, 3D e stima di spesa. Un progettista la controlla prima che arrivi a te.</figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
@@ -349,6 +377,7 @@ img, video { display: block; height: auto; }
       <div class="colonna prima">
         <h3>Oggi</h3>
         <dl>
+          <div><dt>Ti serve esperienza?</dt><dd>Sì: per disegnare la cucina serve un progettista o il tecnico del fornitore</dd></div>
           <div><dt>Il primo passo</dt><dd>Chiami i fornitori e aspetti il sopralluogo</dd></div>
           <div><dt>Il progetto</dt><dd>Uno per fornitore, rifatto a ogni modifica</dd></div>
           <div><dt>I preventivi</dt><dd>Su cucine diverse, difficili da confrontare</dd></div>
@@ -360,6 +389,7 @@ img, video { display: block; height: auto; }
       <div class="colonna dopo">
         <h3>Con Brigaplan</h3>
         <dl>
+          <div><dt>Ti serve esperienza?</dt><dd>No: basta sapere cosa vuoi. Le domande giuste te le fa l'assistente</dd></div>
           <div><dt>Il primo passo</dt><dd>Un'anteprima gratis in pochi minuti</dd></div>
           <div><dt>Il progetto</dt><dd>Uno solo, che segue le tue scelte</dd></div>
           <div><dt>I preventivi</dt><dd>Sullo stesso progetto, quindi confrontabili</dd></div>

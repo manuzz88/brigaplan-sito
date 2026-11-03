@@ -249,6 +249,13 @@ img, video { display: block; height: auto; }
 .inizia { border: 1.5px solid var(--rule); padding: 22px; display: grid; gap: 14px; }
 .inizia a:not(.btn) { font-weight: 600; }
 
+/* conversazione con l'assistente (come la chat della piattaforma) */
+.chat { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; align-content: start; }
+.msg { padding: 10px 14px; max-width: 92%; border: 1px solid var(--line); background: var(--paper); line-height: 1.5; }
+.msg .chi { display: block; font-size: .8125rem; font-weight: 650; color: var(--muted); margin-bottom: 3px; }
+.msg.cliente { background: var(--paper-2); border-color: var(--paper-2); justify-self: end; }
+.msg.assistente { justify-self: start; border-left: 2px solid var(--ink); }
+
 /* piede */
 .foot { border-top: 1px solid var(--rule); }
 .foot .wrap { padding-block: 40px 56px; display: grid; gap: 10px; font-size: .875rem; color: var(--muted); }
@@ -309,9 +316,9 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
 <section class="hero" aria-labelledby="titolo">
   <div class="wrap">
     <div class="riga">
-      <h1 id="titolo">为您的厨房团队<wbr>打造合适的空间，<wbr>几分钟出设计方案。</h1>
+      <h1 id="titolo">不必是行内人。</h1>
       <div class="destra">
-        <p class="lead">上传店面平面图，或者用文字描述您的店。免费获得预览方案：平面布局、3D 模型和费用估算。觉得合适，再做完整的设计方案，由您所在地区的安装商负责安装。</p>
+        <p class="lead">像跟顾问聊天一样介绍您的店，设计交给 Brigaplan。尺寸、设备、规范和费用估算由我们的引擎计算，您看到之前还会有设计师全部检查一遍。</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="https://app.brigaplan.ai/registrati?lingua=zh">用您的店面试一试</a>
           <a class="btn btn-ghost" href="#come-funziona">使用流程</a>
@@ -319,7 +326,7 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
       </div>
     </div>
     <figure class="reel">
-      <video id="reel" src="/media/brigaplan_video_zh.mp4?v=3" poster="/media/brigaplan_video_poster_zh.jpg?v=3" autoplay muted loop playsinline preload="auto" aria-label="视频：四个案例，一家餐馆、一家酒店、一个中央厨房和一家咖啡酒吧。每个案例的图纸自动绘出，变成渲染平面图，再变成 3D 设计方案。"></video>
+      <video id="reel" src="/media/brigaplan_video_zh.mp4?v=4" poster="/media/brigaplan_video_poster_zh.jpg?v=4" autoplay muted loop playsinline preload="auto" aria-label="视频：先是在 Brigaplan 平台上和助手的一段对话，然后是四个案例：一家餐馆、一家酒店、一个中央厨房和一家咖啡酒吧。每个案例的图纸自动绘出，变成渲染平面图，再变成 3D 设计方案。"></video>
       <button type="button" class="reel-btn" id="reel-btn" aria-pressed="false" data-txt-riproduci="播放" data-txt-pausa="暂停">暂停</button>
     </figure>
     <div class="fatti">
@@ -330,6 +337,27 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
     </div>
     <p class="didascalia"><b>从平面图到完整设计方案。</b>平面图、3D 模型和动画都由我们自己的设计引擎生成，设备尺寸取自厂家的技术参数表。照片级效果图属于付费设计方案的内容。</p>
     <p class="for">适合餐厅、酒店和酒吧老板 · 建筑师和设计师 · 经销商和代理商</p>
+  </div>
+</section>
+
+<section class="parte" id="consulente" aria-labelledby="t-consulente">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="t-consulente">像跟顾问聊天一样说出需求，设计由 Brigaplan 来做。</h2>
+      <p class="sec-lead">厨房设计软件是给行内人用的：要由人来画图。用 Brigaplan，您只要说出想要什么，助手会问对的问题，引擎按真实的尺寸和规范画出厨房。</p>
+    </div>
+    <div class="due">
+      <ol class="chat" aria-label="与助手的对话示例">
+        <li class="msg cliente"><span class="chi">您</span>我在米兰开一家80座的意式小馆，做伦巴第菜。发给你店面的平面图。</li>
+        <li class="msg assistente"><span class="chi">Brigaplan 助手</span>我已经看了您的平面图：厨房 9.20 × 5.60 m，朝餐厅的门宽 0.80 m，左边的进货门宽 0.90 m。<br>开始设计前想请您确认几件事：<br>1. 几天送一次货？<br>2. 灶具用燃气还是全电？<br>3. 排烟有通到屋顶的烟道，还是用活性炭排烟罩？<br>4. 冷柜的压缩机是自带，还是远程集中？<br>有的问题暂时不知道也没关系，我会按常用的标准先定下来。</li>
+        <li class="msg cliente"><span class="chi">您</span>每周送货三次，燃气炉灶，排烟管道通到屋顶，冰箱用自带压缩机的。</li>
+        <li class="msg assistente"><span class="chi">Brigaplan 助手</span>第 1 版免费预览方案已经做好，没有错误。现在由我们的设计师检查，通过后您会收到邮件。</li>
+      </ol>
+      <figure style="margin:0;display:grid;gap:10px">
+        <img class="tavola-img" src="/media/tavola_anteprima_zh.jpg?v=3" alt="结果：意式餐馆的预览方案，不标尺寸的平面图，含功能区、操作台和动线" width="1600" height="900" loading="lazy">
+        <figcaption class="didascalia"><b>结果。</b>意式餐馆的预览方案：标出功能区、操作台和动线的平面图、3D 模型和费用估算。在交给您之前由设计师检查。</figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
@@ -370,6 +398,7 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
       <div class="colonna prima">
         <h3>现在</h3>
         <dl>
+          <div><dt>需要经验吗？</dt><dd>需要：画厨房要靠设计师或供应商的技术人员</dd></div>
           <div><dt>第一步</dt><dd>打电话找供应商，等他们上门量尺寸</dd></div>
           <div><dt>设计方案</dt><dd>每家供应商各做一份，每次修改都要重做</dd></div>
           <div><dt>报价</dt><dd>基于不同的厨房方案，很难比较</dd></div>
@@ -381,6 +410,7 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
       <div class="colonna dopo">
         <h3>用 Brigaplan</h3>
         <dl>
+          <div><dt>需要经验吗？</dt><dd>不需要：只要知道自己想要什么。对的问题由助手来问</dd></div>
           <div><dt>第一步</dt><dd>几分钟拿到免费预览方案</dd></div>
           <div><dt>设计方案</dt><dd>只有一份，跟着您的选择调整</dd></div>
           <div><dt>报价</dt><dd>基于同一份方案，可以直接比较</dd></div>
