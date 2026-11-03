@@ -24,422 +24,236 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/">
 <link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Brigaplan", "url": "https://brigaplan.ai/", "email": "info@brigaplan.ai", "parentOrganization": {"@type": "Organization", "name": "Italfrigo Service S.r.l.", "vatID": "IT06825390153", "address": {"@type": "PostalAddress", "streetAddress": "Via Serviliano Lattuada 26", "postalCode": "20135", "addressLocality": "Milano", "addressCountry": "IT"}}}</script>
-<meta name="theme-color" content="#14212A">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect x='1.5' y='1.5' width='23' height='23' fill='%23fff' stroke='%2314212A' stroke-width='2.2'/%3E%3Cpath d='M1.5 11H13V24.5M13 7V1.5' fill='none' stroke='%2314212A' stroke-width='1.6'/%3E%3Crect x='16' y='15' width='6' height='6' fill='%23CF4E1B'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#FAFAF8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect x='1.5' y='1.5' width='23' height='23' fill='%23fff' stroke='%2316191C' stroke-width='2.2'/%3E%3Cpath d='M1.5 11H13V24.5M13 7V1.5' fill='none' stroke='%2316191C' stroke-width='1.6'/%3E%3Crect x='16' y='15' width='6' height='6' fill='%23A63A1F'/%3E%3C/svg%3E">
 <link rel="preload" href="/fonts/Archivo-100_900-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/PublicSans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/media/brigaplan_esempi_poster.jpg" as="image" fetchpriority="high">
 <style>
 @import url("/fonts/fonts.css");
 [hidden] { display: none !important; }
 img, video { max-width: 100%; }
-/* Layout: foglio tecnico. Testo a sinistra, la tavola della cucina come elemento forte, una banda scura per il problema. */
+/* Stile Brigaplan (proposta 3 con i dettagli della 1, approvato da Manuel il 3/11/2026; regole in sito/STILE_BRIGAPLAN.md).
+   Una colonna larga su carta, filetti neri sottili fra le parti, il video grande in apertura, il cartiglio della tavola
+   come riquadro per i dati importanti. Un solo carattere, Archivo. Solo tema chiaro, sempre. */
 :root {
-  --paper: #F1F4F3;
-  --paper-2: #E6ECEB;
-  --sheet: #FBFCFC;
-  --ink: #14212A;
-  --muted: #55646D;
-  --line: #C8D1D4;
-  --line-strong: #9AA7AE;
-  --accent: #CF4E1B;
-  --accent-deep: #A93E12;
+  --paper: #FAFAF8;
+  --paper-2: #F0F1EF;
+  --sheet: #FAFAF8;
+  --ink: #16191C;
+  --muted: #5B6369;
+  --rule: #16191C;
+  --line: #D4D7D8;
+  --accent: #A63A1F;
+  --accent-deep: #86301A;
   --on-accent: #FFFFFF;
-  --blue: #2A68AE;
-  --focus: #2A68AE;
-  --shadow: rgba(20, 33, 42, .35);
-  --band: #14212A;
-  --band-fg: #E7ECEE;
-  --band-muted: #A2B2BA;
-  --band-line: #2D3D46;
-  --band-accent: #FF7A45;
-  --z-hot: #F6DCCD;
-  --z-cold: #D3EAEE;
-  --z-prep: #DCE9D4;
-  --z-wash: #D5E1EF;
-  --z-pass: #EFE6CB;
   --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
-  --f-body: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --f-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --f-body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "Archivo", "Helvetica Neue", Arial, sans-serif;
   --maxw: 1180px;
-  --overlay-bg: rgba(14, 21, 25, .72);
-  --overlay-fg: #EEF2F3;
-  --overlay-muted: #C3CED3;
-  --scrim: rgba(10, 16, 20, .86);
-  --scrim-mid: rgba(10, 16, 20, .55);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --paper: #0E1519; --paper-2: #131C21; --sheet: #121C21; --ink: #E4EAEC; --muted: #93A3AA;
-    --line: #2A3840; --line-strong: #46565F; --accent: #FF7440; --accent-deep: #FF9468; --on-accent: #1A0E08;
-    --blue: #6FA8E6; --focus: #6FA8E6; --shadow: rgba(0, 0, 0, .6);
-    --band: #172229; --band-fg: #E4EAEC; --band-muted: #94A5AD; --band-line: #2E3E47; --band-accent: #FF7440;
-    --z-hot: #4A2A1D; --z-cold: #163A3F; --z-prep: #22392A; --z-wash: #1C3048; --z-pass: #3B3420;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --paper: #0E1519; --paper-2: #131C21; --sheet: #121C21; --ink: #E4EAEC; --muted: #93A3AA;
-  --line: #2A3840; --line-strong: #46565F; --accent: #FF7440; --accent-deep: #FF9468; --on-accent: #1A0E08;
-  --blue: #6FA8E6; --focus: #6FA8E6; --shadow: rgba(0, 0, 0, .6);
-  --band: #172229; --band-fg: #E4EAEC; --band-muted: #94A5AD; --band-line: #2E3E47; --band-accent: #FF7440;
-  --z-hot: #4A2A1D; --z-cold: #163A3F; --z-prep: #22392A; --z-wash: #1C3048; --z-pass: #3B3420;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
-body {
-  margin: 0; background: var(--paper); color: var(--ink);
-  font-family: var(--f-body); font-size: 1.0625rem; line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-h1, h2, h3 { font-family: var(--f-display); font-stretch: 112%; line-height: 1.08; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
-h1 { font-size: clamp(2.15rem, 1.2rem + 4vw, 4rem); font-weight: 800; line-height: 1.02; }
-h2 { font-size: clamp(1.65rem, 1.1rem + 2.2vw, 2.6rem); font-weight: 780; }
-h3 { font-size: 1.125rem; font-weight: 700; font-stretch: 104%; letter-spacing: 0; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 1.0625rem; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { font-family: var(--f-display); margin: 0; text-wrap: balance; line-height: 1.04; }
+h1 { font-size: clamp(2.3rem, 1.2rem + 4.6vw, 4.6rem); font-weight: 760; font-stretch: 76%; letter-spacing: -0.012em; line-height: 0.98; }
+h2 { font-size: clamp(1.8rem, 1.1rem + 2.6vw, 3rem); font-weight: 740; font-stretch: 78%; letter-spacing: -0.008em; }
+h3 { font-size: 1.15rem; font-weight: 680; font-stretch: 88%; line-height: 1.2; }
 p { margin: 0; }
 a { color: inherit; }
-:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 section[id] { scroll-margin-top: 12px; }
+img, video { display: block; height: auto; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-.wrap {
-  max-width: var(--maxw); margin-inline: auto;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-@media (min-width: 720px) {
-  .wrap {
-    padding-left: max(32px, env(safe-area-inset-left, 0px));
-    padding-right: max(32px, env(safe-area-inset-right, 0px));
-  }
-}
-.sec { padding-block: clamp(56px, 7vw, 104px); display: grid; gap: clamp(28px, 4vw, 48px); }
-.sec-head { display: grid; gap: 14px; max-width: 46rem; }
-.eyebrow { font-family: var(--f-mono); font-size: .75rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-.sec-lead { font-size: 1.125rem; color: var(--muted); max-width: 40rem; }
-.alt { background: var(--paper-2); }
+.wrap { max-width: var(--maxw); margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+@media (min-width: 720px) { .wrap { padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); } }
 
-/* Avviso di pagina di prova */
-.notice { background: var(--ink); color: var(--paper); font-family: var(--f-mono); font-size: .75rem; letter-spacing: .04em; }
+/* fascia "in prova" */
+.notice { background: var(--accent); color: var(--on-accent); font-size: .875rem; font-weight: 500; }
 .notice .wrap { padding-block: 8px; }
 
-/* Testata */
-.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 18px; }
-.logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--f-display); font-stretch: 118%; font-size: 1.35rem; font-weight: 500; letter-spacing: -.01em; }
+/* testata */
+.top { border-bottom: 1px solid var(--rule); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 16px; }
+.logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--f-display); font-size: 1.35rem; font-weight: 500; font-stretch: 112%; letter-spacing: -.01em; white-space: nowrap; }
 .logo b { font-weight: 850; color: var(--accent); }
 .logo svg { width: 26px; height: 26px; flex: none; }
 .lm-wall, .lm-line { fill: none; stroke: var(--ink); stroke-width: 2.2; }
 .lm-line { stroke-width: 1.4; }
 .lm-acc { fill: var(--accent); }
-.nav { display: flex; gap: 22px; font-size: .9375rem; }
-.nav a { text-decoration: none; color: var(--muted); }
+.nav { display: flex; gap: 24px; font-size: .9375rem; }
+.nav a { text-decoration: none; color: var(--muted); white-space: nowrap; }
 .nav a:hover { color: var(--ink); }
-@media (max-width: 920px) { .nav { display: none; } }
-.top-azioni { display: flex; align-items: center; gap: 12px; }
-.lingue { display: flex; gap: 2px; font-family: var(--f-mono); font-size: .75rem; letter-spacing: .06em; }
-.lingue a { text-decoration: none; color: var(--muted); padding: 6px 7px; border-radius: 3px; }
+@media (max-width: 960px) { .nav { display: none; } }
+.top-azioni { display: flex; align-items: center; gap: 14px; font-size: .9375rem; }
+.lingue { display: flex; gap: 2px; font-size: .8125rem; font-weight: 600; }
+.lingue a { text-decoration: none; color: var(--muted); padding: 5px 6px; white-space: nowrap; }
 .lingue a:hover { color: var(--ink); }
-.lingue a[aria-current="page"] { color: var(--ink); background: var(--paper-2); }
-.lingue a, .top-azioni .btn { white-space: nowrap; }
-@media (max-width: 440px) {
-  .top .wrap { gap: 8px; }
-  .top-azioni { gap: 6px; }
-  .lingue a { padding: 5px 4px; }
-  .top-azioni .btn-sm { padding: 8px 10px; }
-  .top .logo { font-size: 1.2rem; gap: 8px; }
-}
+.lingue a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -1.5px 0 var(--ink); }
+.accedi { text-decoration: none; font-weight: 600; white-space: nowrap; }
+@media (max-width: 520px) { .accedi { display: none; } .lingue a { padding: 5px 4px; } .top .wrap { gap: 8px; } .top-azioni { gap: 8px; } .logo { font-size: 1.2rem; gap: 8px; } }
+@media (max-width: 340px) { .top .logo > span { display: none; } }
 
-/* Pulsanti */
-.btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  min-height: 48px; padding: 12px 20px; border-radius: 4px; border: 1.5px solid transparent;
-  font-family: var(--f-body); font-weight: 600; font-size: 1rem; line-height: 1.2; text-decoration: none; cursor: pointer;
-  transition: background-color .15s, color .15s, border-color .15s;
-}
-.btn-primary { background: var(--accent); color: var(--on-accent); }
-.btn-primary:hover { background: var(--accent-deep); }
-.btn-ghost { border-color: var(--ink); color: var(--ink); background: transparent; }
+/* pulsanti */
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 20px; border-radius: 3px;
+  border: 1.5px solid var(--ink); font: 600 1rem/1.2 var(--f-body); text-decoration: none; cursor: pointer; white-space: nowrap;
+  transition: background-color .15s, color .15s, border-color .15s; }
+.btn-primary { background: var(--ink); color: var(--paper); }
+.btn-primary:hover { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.btn-ghost { background: transparent; color: var(--ink); }
 .btn-ghost:hover { background: var(--ink); color: var(--paper); }
 .btn-sm { min-height: 40px; padding: 8px 14px; font-size: .9375rem; }
 
-/* Apertura */
-.hero .wrap {
-  display: grid; grid-template-columns: minmax(0, 1fr); align-items: start;
-  gap: clamp(32px, 5vw, 64px);
-  padding-block: clamp(20px, 4vw, 56px) clamp(56px, 7vw, 96px);
-}
-.hero-text { display: grid; gap: 22px; align-content: start; }
-.hero-body { display: grid; gap: 22px; align-content: start; min-width: 0; }
-@media (min-width: 1000px) {
-  .hero-body { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 64px; row-gap: 26px; }
-  .hero-body .why { padding-top: 0; border-top: 0; }
-}
-.lead { font-size: clamp(1.125rem, 1rem + .5vw, 1.3rem); line-height: 1.5; max-width: 34rem; }
-.why { font-size: 1rem; color: var(--muted); max-width: 34rem; padding-top: 18px; border-top: 1px solid var(--line); }
-.why-k { font-family: var(--f-mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-right: 8px; }
-.cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
-.for { font-size: .875rem; color: var(--muted); }
+/* parti della pagina */
+.parte { border-top: 1px solid var(--rule); }
+.parte > .wrap { padding-block: clamp(48px, 7vw, 96px); display: grid; gap: clamp(28px, 4vw, 48px); }
+.alt { background: var(--paper-2); }
+.sec-head { display: grid; gap: 14px; max-width: 46rem; }
+.sec-lead { font-size: 1.125rem; color: var(--muted); max-width: 40rem; }
+.due { display: grid; gap: clamp(28px, 4vw, 56px); }
+@media (min-width: 900px) { .due { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: start; } }
 
-/* Tavola di esempio */
-.sheet {
-  margin: 0; min-width: 0; display: grid; background: var(--sheet);
-  border: 1px solid var(--line); border-radius: 4px;
-  box-shadow: 0 22px 44px -30px var(--shadow);
+/* apertura */
+.hero .wrap { display: grid; gap: clamp(24px, 3.5vw, 40px); padding-block: clamp(28px, 5vw, 64px) clamp(48px, 7vw, 88px); }
+.hero .riga { display: grid; gap: 22px; }
+@media (min-width: 900px) { .hero .riga { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: end; gap: 56px; } }
+.lead { font-size: clamp(1.1rem, 1rem + .4vw, 1.25rem); line-height: 1.5; max-width: 34rem; }
+.hero .destra { display: grid; gap: 20px; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.for { font-size: .9375rem; color: var(--muted); }
+.reel { position: relative; margin: 0; background: var(--sheet); border: 1px solid var(--rule); }
+.reel video { width: 100%; aspect-ratio: 16 / 9; }
+.reel-btn { position: absolute; right: 10px; top: 10px; font: 600 .8125rem/1 var(--f-body); padding: 8px 11px; border: 1px solid var(--ink); background: rgba(250, 250, 248, .92); color: var(--ink); cursor: pointer; border-radius: 2px; }
+.didascalia { font-size: .9375rem; color: var(--muted); max-width: 60rem; }
+.didascalia b { color: var(--ink); font-weight: 650; }
+
+/* cartiglio: il riquadro dei dati importanti, come quello della tavola */
+.fatti { display: grid; grid-template-columns: minmax(0, 1fr); border: 1px solid var(--rule); }
+.fatti > div { padding: 14px 18px; display: grid; gap: 3px; align-content: start; }
+.fatti > div + div { border-top: 1px solid var(--rule); }
+.fatti .marchio { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+.fatti .marchio svg { width: 22px; height: 22px; flex: none; }
+.fatti b { font-size: 1.1rem; font-weight: 700; font-stretch: 84%; }
+.fatti span { font-size: .9375rem; color: var(--muted); }
+@media (min-width: 760px) {
+  .fatti { grid-template-columns: minmax(0, .8fr) repeat(3, minmax(0, 1fr)); }
+  .fatti > div + div { border-top: 0; border-left: 1px solid var(--rule); }
 }
-.sheet-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; padding: 12px 14px; border-bottom: 1px solid var(--line); }
-.ex { font-family: var(--f-mono); font-size: .75rem; color: var(--muted); letter-spacing: .02em; }
-.ex b { display: inline-block; padding: 2px 6px; margin-right: 8px; border: 1px solid var(--line-strong); border-radius: 3px; font-weight: 600; font-size: .6875rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); }
-.levels { display: inline-flex; gap: 3px; padding: 3px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); }
-.levels button { font: 600 .8125rem/1 var(--f-body); min-height: 36px; padding: 9px 12px; border: 0; border-radius: 3px; background: transparent; color: var(--muted); cursor: pointer; }
-.levels button:hover { color: var(--ink); }
+
+/* il problema */
+.giro { list-style: none; margin: 0; padding: 0; counter-reset: giro; border-top: 1px solid var(--rule); }
+.giro li { display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); column-gap: 12px; row-gap: 4px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.giro li::before { counter-increment: giro; content: counter(giro); grid-row: span 2; font-size: 1.6rem; font-weight: 700; font-stretch: 76%; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; }
+.giro p, .losers p { color: var(--muted); }
+.loop-back { border-left: 2px solid var(--accent); padding: 2px 0 2px 16px; max-width: 46rem; }
+.losers { display: grid; grid-template-columns: minmax(0, 1fr); border-top: 1px solid var(--rule); }
+.losers > div { padding: 18px 0; display: grid; gap: 6px; border-bottom: 1px solid var(--line); }
+@media (min-width: 760px) {
+  .losers { grid-template-columns: repeat(3, minmax(0, 1fr)); border-bottom: 1px solid var(--line); }
+  .losers > div { border-bottom: 0; padding: 18px 20px 18px 0; }
+  .losers > div + div { border-left: 1px solid var(--line); padding-left: 20px; }
+}
+.punch { font-size: clamp(1.3rem, 1rem + 1.2vw, 1.9rem); font-weight: 650; font-stretch: 84%; line-height: 1.2; max-width: 40rem; text-wrap: balance; }
+
+/* cosa cambia */
+.colonne { display: grid; gap: 14px; }
+@media (min-width: 760px) { .colonne { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; } }
+.colonna { padding: 22px 24px; display: grid; gap: 16px; align-content: start; }
+.colonna.prima { background: var(--paper-2); }
+.colonna.dopo { border: 1.5px solid var(--rule); }
+.colonna h3 { font-size: 1.25rem; }
+.colonna.dopo h3 { color: var(--accent); }
+.colonna dl { margin: 0; display: grid; gap: 14px; }
+.colonna dt { font-size: .8125rem; color: var(--muted); font-weight: 600; }
+.colonna dd { margin: 0; font-size: 1.0625rem; line-height: 1.4; }
+.colonna.prima dd { color: var(--muted); }
+
+/* come funziona */
+.steps { list-style: none; margin: 0; padding: 0; counter-reset: passo; border-top: 1px solid var(--rule); }
+.steps li { display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); column-gap: 12px; row-gap: 6px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.steps li::before { counter-increment: passo; content: counter(passo); grid-row: span 3; font-size: 1.6rem; font-weight: 700; font-stretch: 76%; line-height: 1; font-variant-numeric: tabular-nums; }
+.steps p { color: var(--muted); }
+.pill { justify-self: start; font-size: .75rem; font-weight: 650; letter-spacing: .02em; padding: 2px 8px; border: 1px solid var(--rule); }
+.pill.free { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.tavola-img { background: var(--sheet); border: 1px solid var(--rule); width: 100%; }
+.altri-esempi a { font-weight: 600; text-underline-offset: 3px; }
+
+/* cosa si paga */
+.sheet { margin: 0; border: 1px solid var(--rule); background: var(--sheet); }
+.sheet-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 16px; padding: 12px 16px; border-bottom: 1px solid var(--rule); }
+.ex { font-size: .9375rem; }
+.ex b { font-weight: 700; margin-right: 6px; }
+.levels { display: flex; border: 1px solid var(--rule); }
+.levels button { font: 600 .875rem/1 var(--f-body); padding: 9px 14px; border: 0; background: transparent; color: var(--ink); cursor: pointer; }
+.levels button + button { border-left: 1px solid var(--rule); }
 .levels button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
-.plan-box { padding: 10px 8px 2px; }
-.plan { display: block; width: 100%; height: auto; max-width: 100%; }
-.cap { padding: 6px 16px 14px; font-size: .9375rem; min-height: 4.4em; }
-.cap b { font-weight: 700; }
-.cartiglio { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0; border-top: 1px solid var(--line); }
-.cartiglio div { padding: 10px 12px; border-right: 1px solid var(--line); min-width: 0; }
-.cartiglio div:last-child { border-right: 0; }
-.cartiglio dt { font-family: var(--f-mono); font-size: .6875rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-.cartiglio dd { margin: 2px 0 0; font-size: .875rem; font-weight: 600; line-height: 1.3; }
-@media (max-width: 560px) {
-  .cartiglio { grid-template-columns: 1fr 1fr; }
-  .cartiglio div:nth-child(2) { border-right: 0; }
-  .cartiglio div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+.sheet .tavola { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.sheet .cap { padding: 14px 16px; border-top: 1px solid var(--rule); font-size: .9375rem; }
+.cartiglio { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--rule); }
+.cartiglio > div { padding: 10px 16px; display: grid; gap: 2px; border-bottom: 1px solid var(--rule); }
+.cartiglio > div:nth-child(odd) { border-right: 1px solid var(--rule); }
+.cartiglio > div:nth-last-child(-n+2) { border-bottom: 0; }
+.cartiglio dt { font-size: .75rem; color: var(--muted); font-weight: 600; }
+.cartiglio dd { margin: 0; font-weight: 650; font-size: .9375rem; }
+@media (min-width: 760px) {
+  .cartiglio { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .cartiglio > div { border-bottom: 0; border-right: 1px solid var(--rule); }
+  .cartiglio > div:last-child { border-right: 0; }
 }
-.legenda { list-style: none; margin: 0; padding: 12px 16px 14px; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(6, auto); grid-auto-flow: column; gap: 4px 16px; font-size: .8125rem; color: var(--muted); }
-.legenda li { display: flex; gap: 8px; min-width: 0; }
-.legenda .k { font-family: var(--f-mono); font-weight: 600; color: var(--ink); min-width: 1.5em; }
-.imp-key { display: none; flex-wrap: wrap; gap: 6px 16px; padding: 0 16px 16px; font-size: .8125rem; color: var(--muted); }
-.sheet[data-level="esecutivo"] .imp-key { display: flex; }
-.imp-key span { display: inline-flex; align-items: center; gap: 6px; }
-.imp-key i { font-style: normal; font-family: var(--f-mono); font-weight: 700; font-size: .6875rem; width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid currentColor; display: inline-grid; place-items: center; }
-.ik-e { color: var(--ink); } .ik-a { color: var(--blue); } .ik-g { color: var(--accent); } .ik-s { color: var(--muted); }
-
-/* Disegno SVG */
-.plan .grid-line { fill: none; stroke: var(--line); stroke-width: .5; }
-.plan .z-hot { fill: var(--z-hot); } .plan .z-cold { fill: var(--z-cold); } .plan .z-prep { fill: var(--z-prep); }
-.plan .z-wash { fill: var(--z-wash); } .plan .z-pass { fill: var(--z-pass); }
-.plan .wall { fill: var(--ink); }
-.plan .opening { fill: var(--sheet); }
-.plan .glass { fill: none; stroke: var(--ink); stroke-width: 1; }
-.plan .leaf { fill: none; stroke: var(--ink); stroke-width: 1.6; }
-.plan .swing { fill: none; stroke: var(--ink); stroke-width: .8; stroke-dasharray: 3 3; opacity: .7; }
-.plan .eq { fill: var(--sheet); stroke: var(--ink); stroke-width: 1.3; }
-.plan .eq-in { fill: none; stroke: var(--ink); stroke-width: .8; opacity: .7; }
-.plan .hood { fill: none; stroke: var(--ink); stroke-width: 1; stroke-dasharray: 8 4 2 4; opacity: .75; }
-.plan .zl { font-family: var(--f-mono); font-size: 13px; font-weight: 600; letter-spacing: 1.5px; fill: var(--ink); opacity: .82; }
-.plan .tagc { fill: var(--sheet); stroke: var(--ink); stroke-width: 1; }
-.plan .tagt { font-family: var(--f-mono); font-size: 11px; font-weight: 600; fill: var(--ink); text-anchor: middle; }
-.plan .flow { fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
-.plan .clean { stroke: var(--accent); stroke-dasharray: 7 5; }
-.plan .dirty { stroke: var(--blue); stroke-dasharray: 2 4; }
-.plan .mk-clean { fill: var(--accent); } .plan .mk-dirty { fill: var(--blue); }
-.plan .fl-l { font-family: var(--f-mono); font-size: 11px; font-weight: 600; letter-spacing: 1px; }
-.plan .clean-t { fill: var(--accent); } .plan .dirty-t { fill: var(--blue); } .plan .sala-t { fill: var(--muted); text-anchor: middle; }
-.plan .dim { fill: none; stroke: var(--ink); stroke-width: .8; }
-.plan .tick { fill: none; stroke: var(--ink); stroke-width: 1.6; }
-.plan .dim-t { font-family: var(--f-mono); font-size: 11.5px; font-weight: 600; fill: var(--ink); text-anchor: middle; }
-.plan .hood-t { font-family: var(--f-mono); font-size: 10px; font-weight: 600; letter-spacing: .8px; fill: var(--ink); }
-.plan .imp circle { fill: var(--sheet); stroke-width: 1.4; }
-.plan .imp text { font-family: var(--f-mono); font-size: 8.5px; font-weight: 700; text-anchor: middle; }
-.plan .imp-e circle { stroke: var(--ink); } .plan .imp-e text { fill: var(--ink); }
-.plan .imp-a circle { stroke: var(--blue); } .plan .imp-a text { fill: var(--blue); }
-.plan .imp-g circle { stroke: var(--accent); } .plan .imp-g text { fill: var(--accent); }
-.plan .imp-s circle { stroke: var(--muted); } .plan .imp-s text { fill: var(--muted); }
-.plan .layer { opacity: 0; transition: opacity .4s ease; }
-.sheet[data-level="progetto"] .layer-quote,
-.sheet[data-level="esecutivo"] .layer-quote,
-.sheet[data-level="esecutivo"] .layer-imp { opacity: 1; }
-@media (prefers-reduced-motion: no-preference) {
-  .plan .flow { animation: march 1.6s linear infinite; }
-  @keyframes march { to { stroke-dashoffset: -24; } }
-}
-
-/* Il problema */
-.band { background: var(--band); color: var(--band-fg); }
-.band .eyebrow, .band .sec-lead { color: var(--band-muted); }
-.loop { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 28px; }
-.loop li { display: grid; gap: 8px; align-content: start; padding-top: 18px; border-top: 1px solid var(--band-line); padding-bottom: 20px; }
-.loop .n { font-family: var(--f-mono); font-size: .8125rem; font-weight: 600; color: var(--band-accent); }
-.loop p { color: var(--band-muted); font-size: .96875rem; }
-@media (max-width: 900px) { .loop { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px) { .loop { grid-template-columns: 1fr; } }
-.loop-back { display: flex; gap: 12px; align-items: flex-start; font-size: 1rem; color: var(--band-fg); max-width: 44rem; }
-.loop-back svg { flex: none; width: 22px; height: 22px; margin-top: 2px; }
-.loop-back path { fill: none; stroke: var(--band-accent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.losers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 28px; }
-.losers > div { display: grid; gap: 6px; align-content: start; padding-top: 16px; border-top: 1px solid var(--band-line); }
-.losers p { color: var(--band-muted); font-size: .96875rem; }
-@media (max-width: 760px) { .losers { grid-template-columns: 1fr; } }
-.punch { font-family: var(--f-display); font-stretch: 108%; font-weight: 700; font-size: clamp(1.2rem, 1rem + 1vw, 1.55rem); line-height: 1.3; max-width: 42rem; text-wrap: balance; }
-
-/* Confronto */
-.compare { width: 100%; border-collapse: collapse; font-size: 1rem; }
-.compare th, .compare td { text-align: left; vertical-align: top; padding: 16px 16px 16px 0; border-bottom: 1px solid var(--line); }
-.compare thead th { font-family: var(--f-mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 500; padding-bottom: 10px; border-bottom-color: var(--ink); }
-.compare thead th.us { color: var(--accent); font-weight: 600; }
-.compare tbody th { font-weight: 600; width: 22%; }
-.compare td.old { color: var(--muted); width: 36%; }
-.compare td.new { font-weight: 600; width: 42%; }
-@media (max-width: 640px) {
-  .compare, .compare tbody { display: block; }
-  .compare thead { display: none; }
-  .compare tr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 4px 16px; padding-block: 14px; border-bottom: 1px solid var(--line); }
-  .compare th, .compare td { padding: 0; border: 0; width: auto; }
-  .compare tbody th { grid-column: 1 / -1; font-family: var(--f-mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 4px; }
-  .compare td { font-size: .9375rem; }
-  .compare td::before { content: attr(data-l); display: block; font-family: var(--f-mono); font-size: .6875rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 2px; }
-  .compare td.new::before { color: var(--accent); }
-}
-
-/* Come funziona */
-.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
-.steps li { display: grid; gap: 10px; align-content: start; padding-top: 18px; border-top: 2px solid var(--ink); }
-.steps .n { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-family: var(--f-mono); font-size: .8125rem; color: var(--muted); }
-.steps p { color: var(--muted); font-size: .96875rem; }
-.pill { font-family: var(--f-mono); font-size: .6875rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 3px 7px; border-radius: 3px; border: 1px solid var(--line-strong); color: var(--muted); }
-.pill.free { border-color: var(--accent); color: var(--accent); }
-@media (max-width: 980px) { .steps { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px) { .steps { grid-template-columns: 1fr; } }
-
-/* Cosa si paga */
-.tiers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-.tier { background: var(--sheet); border: 1px solid var(--line); border-radius: 4px; padding: 24px; display: grid; gap: 14px; align-content: start; }
-.tier.free { border: 1.5px solid var(--ink); }
-.tier-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
-.tier h3 { font-size: 1.375rem; }
-.price { font-family: var(--f-mono); font-size: .8125rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.tiers { display: grid; grid-template-columns: minmax(0, 1fr); border: 1px solid var(--rule); }
+.tier { padding: 22px 22px 24px; display: grid; gap: 12px; align-content: start; }
+.tier + .tier { border-top: 1px solid var(--rule); }
+@media (min-width: 900px) { .tiers { grid-template-columns: repeat(3, minmax(0, 1fr)); } .tier + .tier { border-top: 0; border-left: 1px solid var(--rule); } }
+.tier-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.price { font-weight: 700; font-stretch: 84%; font-size: 1.15rem; white-space: nowrap; }
 .tier.free .price { color: var(--accent); }
-.tier ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
-.tier li { padding-left: 18px; position: relative; font-size: .96875rem; }
-.tier li::before { content: ""; position: absolute; left: 0; top: .72em; width: 8px; height: 1.5px; background: var(--ink); }
-.tier .who { font-size: .875rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 12px; }
-@media (max-width: 900px) { .tiers { grid-template-columns: 1fr; } }
-.thesis { display: flex; gap: 14px; align-items: flex-start; max-width: 50rem; font-family: var(--f-display); font-stretch: 106%; font-weight: 650; font-size: clamp(1.15rem, 1rem + .7vw, 1.4rem); line-height: 1.35; }
-.thesis svg { flex: none; width: 28px; height: 28px; margin-top: 1px; }
-.thesis path { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.tier ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+.tier .costi, .tier .who { font-size: .875rem; color: var(--muted); }
+.thesis { border-left: 2px solid var(--accent); padding: 2px 0 2px 16px; font-size: 1.125rem; font-weight: 600; max-width: 46rem; }
 
-/* Per chi */
-.who-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
-.who-grid > div { display: grid; gap: 8px; align-content: start; padding-top: 18px; border-top: 2px solid var(--ink); }
-.who-grid p { color: var(--muted); font-size: .96875rem; }
-@media (max-width: 1000px) { .who-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px) { .who-grid { grid-template-columns: 1fr; } }
-.partner { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline; padding: 18px 20px; border: 1px dashed var(--line-strong); border-radius: 4px; }
-.partner strong { font-family: var(--f-display); font-stretch: 106%; font-size: 1.0625rem; }
-.partner span { color: var(--muted); }
-.partner a { font-weight: 600; color: var(--accent-deep); }
-.accedi { font-size: .9375rem; font-weight: 600; color: var(--ink); text-decoration: none; white-space: nowrap; }
-.accedi:hover { text-decoration: underline; }
-.inizia { align-content: start; }
-.inizia-t { font-family: var(--f-display); font-stretch: 106%; font-size: 1.25rem; line-height: 1.3; margin: 0; }
-.inizia .btn { justify-self: start; }
-.tier .costi { font-size: .875rem; line-height: 1.5; color: var(--muted); margin: 0; }
-@media (max-width: 440px) { .accedi { font-size: .8125rem; } .top .wrap { gap: 6px; } .top-azioni { gap: 5px; } .top .lingue a { padding: 5px 3px; } .top .logo { font-size: 1.1rem; } }
-@media (max-width: 380px) { .top .logo > span { display: none; } }  /* sui telefoni stretti resta il simbolo: il nome è nel video e nel piede */
-@media (max-width: 340px) { .top-azioni .btn-sm { padding: 7px 6px; font-size: .8125rem; } .top .lingue a { padding: 4px 2px; } .accedi { font-size: .75rem; } }
-.altri-esempi { margin-top: 18px; font-weight: 600; }
-.altri-esempi a { color: var(--accent-testo, var(--accent-deep)); }
+/* per chi, fiducia */
+.who-grid, .points { display: grid; grid-template-columns: minmax(0, 1fr); border-top: 1px solid var(--rule); }
+.who-grid > div, .points > div { padding: 20px 0; display: grid; gap: 6px; border-bottom: 1px solid var(--line); }
+.who-grid p, .points p { color: var(--muted); }
+@media (min-width: 760px) {
+  .who-grid, .points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .who-grid > div:nth-child(odd), .points > div:nth-child(odd) { padding-right: 24px; border-right: 1px solid var(--line); }
+  .who-grid > div:nth-child(even), .points > div:nth-child(even) { padding-left: 24px; }
+}
+.partner { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; padding: 16px 18px; border: 1px solid var(--rule); }
+.partner a { font-weight: 650; }
+.trust { display: grid; gap: 28px; }
+@media (min-width: 900px) { .trust { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); align-items: start; } }
+.money { border: 1px solid var(--rule); }
+.money > * { padding: 14px 18px; }
+.money h3 { border-bottom: 1px solid var(--rule); }
+.money p + p { padding-top: 0; }
+.small { font-size: .875rem; color: var(--muted); }
 
-/* Fiducia */
-.trust { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: start; }
-@media (max-width: 900px) { .trust { grid-template-columns: 1fr; } }
-.points { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 28px; }
-.points > div { display: grid; gap: 6px; align-content: start; padding-top: 14px; border-top: 1px solid var(--line-strong); }
-.points p { color: var(--muted); font-size: .96875rem; }
-@media (max-width: 560px) { .points { grid-template-columns: 1fr; } }
-.money { background: var(--sheet); border: 1.5px solid var(--ink); border-radius: 4px; padding: 24px; display: grid; gap: 12px; }
-.money p { font-size: 1rem; }
-.money .small { color: var(--muted); font-size: .875rem; }
-
-/* Domande */
-.faq { display: grid; max-width: 50rem; border-top: 1px solid var(--line); }
+/* domande */
+.faq { border-top: 1px solid var(--rule); max-width: 52rem; }
 .faq details { border-bottom: 1px solid var(--line); }
-.faq summary { list-style: none; cursor: pointer; padding: 18px 44px 18px 0; font-weight: 600; font-size: 1.0625rem; position: relative; }
+.faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; font-weight: 650; font-stretch: 92%; font-size: 1.0625rem; }
 .faq summary::-webkit-details-marker { display: none; }
-.faq summary::after { content: "+"; position: absolute; right: 6px; top: 12px; font-family: var(--f-mono); font-size: 1.5rem; font-weight: 400; color: var(--accent); transition: transform .2s; }
-.faq details[open] summary::after { transform: rotate(45deg); }
-.faq details p { padding: 0 0 20px; color: var(--muted); max-width: 42rem; }
+.faq summary::after { content: "+"; font-weight: 500; color: var(--accent); font-size: 1.3rem; line-height: 1; }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { padding: 0 0 18px; color: var(--muted); max-width: 44rem; }
 
-/* Prova */
-.prova-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
-@media (max-width: 900px) { .prova-grid { grid-template-columns: 1fr; } }
-.prova-text { display: grid; gap: 18px; align-content: start; }
-.gets { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
-.gets li { padding-left: 18px; position: relative; }
-.gets li::before { content: ""; position: absolute; left: 0; top: .72em; width: 8px; height: 1.5px; background: var(--accent); }
-.form { background: var(--sheet); border: 1px solid var(--line); border-radius: 4px; padding: clamp(18px, 3vw, 28px); display: grid; gap: 18px; min-width: 0; }
-.form fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
-.form legend, .lbl { display: block; padding: 0; font-weight: 600; font-size: .9375rem; margin-bottom: 8px; }
-.seg { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 3px; padding: 3px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); }
-.seg input { position: absolute; opacity: 0; pointer-events: none; }
-.seg label { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 42px; padding: 6px 8px; border-radius: 3px; font-weight: 600; font-size: .9375rem; cursor: pointer; color: var(--muted); }
-.seg input:checked + label { background: var(--ink); color: var(--paper); }
-.seg input:focus-visible + label { outline: 3px solid var(--focus); outline-offset: 2px; }
-.field { display: grid; gap: 6px; min-width: 0; }
-.field label { font-weight: 600; font-size: .9375rem; }
-.form input[type="number"], .form select, .form textarea {
-  width: 100%; min-height: 46px; padding: 11px 12px; font: inherit; font-size: 1rem; color: var(--ink);
-  background: var(--paper); border: 1px solid var(--line-strong); border-radius: 4px;
-}
-.form textarea { min-height: 96px; resize: vertical; }
-.row2 { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 12px; }
-@media (max-width: 420px) { .row2 { grid-template-columns: 1fr; } }
-.drop { display: grid; place-items: center; text-align: center; gap: 4px; padding: 26px 16px; border: 1.5px dashed var(--line-strong); border-radius: 4px; background: var(--paper); cursor: pointer; }
-.drop:hover, .drop.over { border-color: var(--accent); }
-.drop:focus-within { outline: 3px solid var(--focus); outline-offset: 2px; }
-.drop strong { font-size: 1rem; }
-.drop span { font-size: .875rem; color: var(--muted); }
-.drop .file { color: var(--ink); font-weight: 600; word-break: break-all; }
-.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-.esito { padding: 14px 16px; border-radius: 4px; background: var(--paper); border: 1px solid var(--line-strong); font-size: .9375rem; }
-.small { font-size: .8125rem; color: var(--muted); }
+/* prova */
+.prova-grid { display: grid; gap: 28px; }
+@media (min-width: 900px) { .prova-grid { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); align-items: start; gap: 56px; } }
+.prova-text { display: grid; gap: 16px; }
+.gets { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+.inizia { border: 1.5px solid var(--rule); padding: 22px; display: grid; gap: 14px; }
+.inizia a:not(.btn) { font-weight: 600; }
 
-/* Piede */
-.foot { border-top: 1px solid var(--line); }
-.foot .wrap { padding-block: 36px 48px; display: grid; gap: 12px; font-size: .875rem; color: var(--muted); }
-.foot .logo { font-size: 1.15rem; color: var(--ink); }
-
-/* Video di apertura */
-.reel { margin: 0; display: grid; gap: 12px; min-width: 0; align-content: start; }
-.reel-box { position: relative; max-width: 100%; border-radius: 4px; overflow: hidden; background: var(--band); box-shadow: 0 22px 44px -30px var(--shadow); }
-.reel video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
-.reel-tag, .reel-btn { position: absolute; font-family: var(--f-mono); font-size: .6875rem; letter-spacing: .06em; text-transform: uppercase; border-radius: 3px; background: var(--overlay-bg); color: var(--overlay-fg); }
-.reel-tag { left: 10px; top: 10px; padding: 4px 8px; }
-.reel-btn { right: 10px; top: 10px; padding: 7px 10px; border: 0; cursor: pointer; min-height: 32px; }
-.reel-title { display: grid; gap: 10px; padding: 18px 16px 22px; background: var(--band); }
-.reel-title .eyebrow { color: var(--overlay-muted); }
-.reel-title h1 { color: var(--overlay-fg); font-size: clamp(1.9rem, 1rem + 3.4vw, 3.6rem); max-width: 15em; }
-.reel-sub { color: var(--overlay-fg); font-size: clamp(1rem, .92rem + .45vw, 1.3rem); line-height: 1.4; max-width: 32em; }
-@media (min-width: 720px) {
-  .reel-title { position: absolute; left: 0; right: 0; bottom: 0; padding: 18% clamp(24px, 3.5vw, 44px) clamp(22px, 3vw, 40px); background: linear-gradient(to top, var(--scrim) 0%, var(--scrim-mid) 55%, transparent 100%); pointer-events: none; }
-  .reel-title h1 { max-width: 13em; text-shadow: 0 2px 18px var(--scrim-mid); }
-  .reel-sub { text-shadow: 0 1px 10px var(--scrim-mid); }
-}
-.reel figcaption { font-size: .875rem; color: var(--muted); max-width: 40rem; }
-.reel figcaption b { color: var(--ink); }
-.sheet-wrap { max-width: 880px; }
-.reel { order: -1; width: min(100%, calc(72vh * 16 / 9)); justify-self: center; }
-
-/* Correzioni comuni a tutte le lingue (1/11/2026) */
-@media (max-width: 640px) { .compare tbody th, .compare td.old, .compare td.new { width: auto; } }
-.foot .logo { gap: 0; }
-.nav a { white-space: nowrap; }
-@media (max-width: 1100px) { .nav { display: none; } }
-@media (max-width: 340px) { .top .logo > span { display: none; } }  /* telefoni molto stretti: resta il simbolo */
-/* Contrasto WCAG AA nel tema chiaro (1/11/2026): testi piccoli in arancione scuro, pulsanti un po' più scuri */
-:root { --accent-testo: var(--accent-deep); --accent-pulsante: #C44917; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --accent-testo: var(--accent); --accent-pulsante: var(--accent); } }
-:root[data-theme="dark"] { --accent-testo: var(--accent); --accent-pulsante: var(--accent); }
-.btn-primary { background: var(--accent-pulsante); }
-.btn-primary:hover { background: var(--accent-deep); }
-.why-k, .pill.free, .tier.free .price, .compare thead th.us, .compare td.new::before { color: var(--accent-testo); }
-.pill.free { border-color: var(--accent-testo); }
-.plan .clean-t, .plan .imp-g text { fill: var(--accent-testo); }
-
+/* piede */
+.foot { border-top: 1px solid var(--rule); }
+.foot .wrap { padding-block: 40px 56px; display: grid; gap: 10px; font-size: .875rem; color: var(--muted); }
+.foot .logo { color: var(--ink); font-size: 1.15rem; gap: 0; }
+.foot strong { color: var(--ink); }
 </style>
 </head>
 <body>
@@ -473,104 +287,117 @@ section[id] { scroll-margin-top: 12px; }
 <main>
 <section class="hero" aria-labelledby="titolo">
   <div class="wrap">
-    <div class="hero-text">
-      <div class="hero-body">
-      <p class="lead">Carica la pianta o descrivi il locale. Ricevi gratis un'anteprima con pianta, 3D e stima di spesa. Se ti convince, passi al progetto completo e all'installatore della tua zona.</p>
-      <p class="why"><span class="why-k">Perché</span>Oggi ogni fornitore rifà il progetto da capo, gratis, e spesso il cliente non compra o lo porta a un altro. Perdono tempo e soldi tutti. Con Brigaplan il progetto si fa una volta, bene, prima di comprare.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="https://app.brigaplan.ai/registrati?lingua=it">Prova con il tuo locale</a>
-        <a class="btn btn-ghost" href="#come-funziona">Come funziona</a>
-      </div>
-      <p class="for">Per ristoratori, albergatori e bar · architetti e progettisti · rivenditori e agenti</p>
+    <div class="riga">
+      <h1 id="titolo">Lo spazio giusto per la tua brigata, progettato in pochi minuti.</h1>
+      <div class="destra">
+        <p class="lead">Carica la pianta o descrivi il locale. Ricevi gratis un'anteprima con pianta, 3D e stima di spesa. Se ti convince, passi al progetto completo e all'installatore della tua zona.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://app.brigaplan.ai/registrati?lingua=it">Prova con il tuo locale</a>
+          <a class="btn btn-ghost" href="#come-funziona">Come funziona</a>
+        </div>
       </div>
     </div>
-
-    <figure class="reel" aria-labelledby="reel-cap">
-      <div class="reel-box">
-        <video id="reel" src="/media/brigaplan_esempi.mp4?v=2" poster="/media/brigaplan_esempi_poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Video: tre esempi, una trattoria, un bar e una mensa aziendale. In ognuno la pianta diventa il progetto in 3D."></video>
-        <span class="reel-tag">Esempi · trattoria, bar, mensa</span>
-        <div class="reel-title">
-          <p class="eyebrow">Cucine e bar professionali, progettati con l'IA</p>
-          <h1 id="titolo">Lo spazio giusto per la tua brigata, progettato in pochi minuti.</h1>
-          <p class="reel-sub">Cucine e bar per hotel, ristoranti, mense, ospedali e molto altro.</p>
-        </div>
-        <button type="button" class="reel-btn" id="reel-btn" aria-pressed="false" data-txt-riproduci="Riproduci" data-txt-pausa="Pausa">Pausa</button>
-      </div>
-      <figcaption id="reel-cap"><b>Dalla pianta al progetto completo.</b> Pianta, 3D e animazione escono dal nostro motore di progettazione, con le misure delle attrezzature prese dalle schede dei produttori. I render fotorealistici fanno parte del progetto a pagamento.</figcaption>
+    <figure class="reel">
+      <video id="reel" src="/media/brigaplan_video.mp4?v=1" poster="/media/brigaplan_video_poster.jpg?v=1" autoplay muted loop playsinline preload="auto" aria-label="Video: la tavola di una trattoria di esempio si disegna, diventa la pianta renderizzata e poi il progetto in 3D."></video>
+      <button type="button" class="reel-btn" id="reel-btn" aria-pressed="false" data-txt-riproduci="Riproduci" data-txt-pausa="Pausa">Pausa</button>
     </figure>
+    <div class="fatti">
+      <div class="marchio"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="lm-wall" x="1.5" y="1.5" width="23" height="23"/><path class="lm-line" d="M1.5 11H13V24.5M13 7V1.5"/><rect class="lm-acc" x="16" y="15" width="6" height="6"/></svg><span translate="no" style="color:inherit;font-size:1rem">Brigaplan</span></div>
+      <div><b>Anteprima gratis</b><span>Pianta, 3D e stima di spesa in pochi minuti</span></div>
+      <div><b>Controllata da un progettista</b><span>Prima che arrivi a te</span></div>
+      <div><b>Installatore della tua zona</b><span>Il primo partner è Italfrigo, in Lombardia</span></div>
+    </div>
+    <p class="didascalia"><b>Dalla pianta al progetto completo.</b> Pianta, 3D e animazione escono dal nostro motore di progettazione, con le misure delle attrezzature prese dalle schede dei produttori. I render fotorealistici fanno parte del progetto a pagamento.</p>
+    <p class="for">Per ristoratori, albergatori e bar · architetti e progettisti · rivenditori e agenti</p>
   </div>
 </section>
 
-<section class="band" id="problema" aria-labelledby="t-problema">
-  <div class="wrap sec">
-    <div class="sec-head">
-      <p class="eyebrow">Il problema</p>
-      <h2 id="t-problema">Oggi il progetto di una cucina si fa, si rifà e spesso si regala.</h2>
-      <p class="sec-lead">Chi apre o rinnova un ristorante, un bar o un hotel fa quasi sempre lo stesso giro.</p>
+<section class="parte alt" id="problema" aria-labelledby="t-problema">
+  <div class="wrap">
+    <div class="due">
+      <div class="sec-head">
+        <h2 id="t-problema">Oggi il progetto di una cucina si fa, si rifà e spesso si regala.</h2>
+        <p class="sec-lead">Chi apre o rinnova un ristorante, un bar o un hotel fa quasi sempre lo stesso giro.</p>
+      </div>
+      <ol class="giro">
+        <li><h3>Chiede il progetto a più fornitori</h3><p>Ognuno manda il suo tecnico, prende le misure e disegna la sua cucina.</p></li>
+        <li><h3>Ogni modifica, un nuovo giro</h3><p>Il progetto si rifà a ogni cambio di idea. Passano settimane.</p></li>
+        <li><h3>Preventivi che non si confrontano</h3><p>Macchine diverse, misure diverse, prezzi diversi. Il cliente non sa chi ha ragione.</p></li>
+        <li><h3>E spesso non compra</h3><p>Oppure porta il progetto a un altro fornitore per farsi fare un prezzo più basso.</p></li>
+      </ol>
     </div>
-    <ol class="loop">
-      <li><span class="n">1</span><h3>Chiede il progetto a più fornitori</h3><p>Ognuno manda il suo tecnico, prende le misure e disegna la sua cucina.</p></li>
-      <li><span class="n">2</span><h3>Ogni modifica, un nuovo giro</h3><p>Il progetto si rifà a ogni cambio di idea. Passano settimane.</p></li>
-      <li><span class="n">3</span><h3>Preventivi che non si confrontano</h3><p>Macchine diverse, misure diverse, prezzi diversi. Il cliente non sa chi ha ragione.</p></li>
-      <li><span class="n">4</span><h3>E spesso non compra</h3><p>Oppure porta il progetto a un altro fornitore per farsi fare un prezzo più basso.</p></li>
-    </ol>
-    <p class="loop-back"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4.5h4.5"/></svg><span>Il fornitore ha lavorato gratis, il cliente ha perso settimane e il giro ricomincia con un altro.</span></p>
-    <div class="sec-head"><p class="eyebrow">Chi ci perde</p></div>
-    <div class="losers">
-      <div><h3>Il cliente</h3><p>Aspetta, confronta proposte diverse tra loro e decide senza un progetto suo.</p></div>
-      <div><h3>Il fornitore</h3><p>Regala ore di progettazione. A volte il suo lavoro finisce in mano alla concorrenza.</p></div>
-      <div><h3>Architetti e progettisti</h3><p>Rincorrono schede, misure e blocchi CAD di ogni marca, e aspettano il fornitore a ogni revisione.</p></div>
+    <p class="loop-back">Il fornitore ha lavorato gratis, il cliente ha perso settimane e il giro ricomincia con un altro.</p>
+    <div style="display:grid;gap:14px">
+      <h3>Chi ci perde</h3>
+      <div class="losers">
+        <div><h3>Il cliente</h3><p>Aspetta, confronta proposte diverse tra loro e decide senza un progetto suo.</p></div>
+        <div><h3>Il fornitore</h3><p>Regala ore di progettazione. A volte il suo lavoro finisce in mano alla concorrenza.</p></div>
+        <div><h3>Architetti e progettisti</h3><p>Rincorrono schede, misure e blocchi CAD di ogni marca, e aspettano il fornitore a ogni revisione.</p></div>
+      </div>
     </div>
     <p class="punch">Alla fine il costo dei progetti persi finisce nei prezzi, e lo pagano tutti.</p>
   </div>
 </section>
 
-<section id="soluzione" aria-labelledby="t-soluzione">
-  <div class="wrap sec">
+<section class="parte" id="soluzione" aria-labelledby="t-soluzione">
+  <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Cosa cambia</p>
       <h2 id="t-soluzione">Il progetto si fa una volta, bene, prima di comprare.</h2>
       <p class="sec-lead">Brigaplan separa il progetto dalla vendita. Chi progetta viene pagato per progettare, e chi compra arriva dal fornitore con le idee chiare.</p>
     </div>
-    <table class="compare">
-      <thead><tr><th scope="col"><span class="sr-only">Cosa</span></th><th scope="col">Oggi</th><th scope="col" class="us">Con Brigaplan</th></tr></thead>
-      <tbody>
-        <tr><th scope="row">Il primo passo</th><td class="old" data-l="Oggi">Chiami i fornitori e aspetti il sopralluogo</td><td class="new" data-l="Con Brigaplan">Un'anteprima gratis in pochi minuti</td></tr>
-        <tr><th scope="row">Il progetto</th><td class="old" data-l="Oggi">Uno per fornitore, rifatto a ogni modifica</td><td class="new" data-l="Con Brigaplan">Uno solo, che segue le tue scelte</td></tr>
-        <tr><th scope="row">I preventivi</th><td class="old" data-l="Oggi">Su cucine diverse, difficili da confrontare</td><td class="new" data-l="Con Brigaplan">Sullo stesso progetto, quindi confrontabili</td></tr>
-        <tr><th scope="row">Chi paga il progetto</th><td class="old" data-l="Oggi">Nessuno, in apparenza. In realtà finisce nei prezzi</td><td class="new" data-l="Con Brigaplan">Tu, una volta sola, e solo se vai avanti</td></tr>
-        <tr><th scope="row">Il fornitore</th><td class="old" data-l="Oggi">Lavora gratis senza sapere se vende</td><td class="new" data-l="Con Brigaplan">Riceve clienti con un progetto pronto</td></tr>
-        <tr><th scope="row">Se compri da un partner</th><td class="old" data-l="Oggi">Il progetto resta un costo nascosto</td><td class="new" data-l="Con Brigaplan">Il costo del progetto ti viene scalato dall'ordine</td></tr>
-      </tbody>
-    </table>
+    <div class="colonne">
+      <div class="colonna prima">
+        <h3>Oggi</h3>
+        <dl>
+          <div><dt>Il primo passo</dt><dd>Chiami i fornitori e aspetti il sopralluogo</dd></div>
+          <div><dt>Il progetto</dt><dd>Uno per fornitore, rifatto a ogni modifica</dd></div>
+          <div><dt>I preventivi</dt><dd>Su cucine diverse, difficili da confrontare</dd></div>
+          <div><dt>Chi paga il progetto</dt><dd>Nessuno, in apparenza. In realtà finisce nei prezzi</dd></div>
+          <div><dt>Il fornitore</dt><dd>Lavora gratis senza sapere se vende</dd></div>
+          <div><dt>Se compri da un partner</dt><dd>Il progetto resta un costo nascosto</dd></div>
+        </dl>
+      </div>
+      <div class="colonna dopo">
+        <h3>Con Brigaplan</h3>
+        <dl>
+          <div><dt>Il primo passo</dt><dd>Un'anteprima gratis in pochi minuti</dd></div>
+          <div><dt>Il progetto</dt><dd>Uno solo, che segue le tue scelte</dd></div>
+          <div><dt>I preventivi</dt><dd>Sullo stesso progetto, quindi confrontabili</dd></div>
+          <div><dt>Chi paga il progetto</dt><dd>Tu, una volta sola, e solo se vai avanti</dd></div>
+          <div><dt>Il fornitore</dt><dd>Riceve clienti con un progetto pronto</dd></div>
+          <div><dt>Se compri da un partner</dt><dd>Il costo del progetto ti viene scalato dall'ordine</dd></div>
+        </dl>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="alt" id="come-funziona" aria-labelledby="t-come">
-  <div class="wrap sec">
-    <div class="sec-head">
-      <p class="eyebrow">Come funziona</p>
-      <h2 id="t-come">Dalla pianta all'installatore, in quattro passi.</h2>
+<section class="parte alt" id="come-funziona" aria-labelledby="t-come">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="t-come">Dalla pianta all'installatore, in quattro passi.</h2></div>
+    <div class="due">
+      <ol class="steps">
+        <li><h3>Carica la pianta o descrivi il locale</h3><p>Va bene un DXF o DWG, oppure un PDF. Non hai la pianta? Ti chiediamo misure, porte, finestre e dove sta la sala.</p></li>
+        <li><h3>Di' cosa vuoi ottenere</h3><p>Tipo di locale, coperti, menu, e cosa vuoi tenere dell'attrezzatura che hai già.</p></li>
+        <li><span class="pill free">Gratis</span><h3>Ricevi l'anteprima</h3><p>Pianta con zone e banchi, 3D da girare con il dito, stima di spesa. In pochi minuti.</p></li>
+        <li><span class="pill">A pagamento</span><h3>Vai avanti solo se ti convince</h3><p>Progetto quotato, esecutivo firmato da un progettista, montaggio con l'installatore partner della tua zona.</p></li>
+      </ol>
+      <figure style="margin:0;display:grid;gap:10px">
+        <img class="tavola-img" src="/media/tavola_anteprima.jpg?v=1" alt="Anteprima di una trattoria di esempio: pianta senza quote con zone, banchi e percorsi" width="1600" height="900" loading="lazy">
+        <figcaption class="didascalia">L'anteprima: pianta con zone e banchi, senza quote e senza marche.</figcaption>
+      </figure>
     </div>
-    <ol class="steps">
-      <li><span class="n">1</span><h3>Carica la pianta o descrivi il locale</h3><p>Va bene un DXF o DWG, oppure un PDF. Non hai la pianta? Ti chiediamo misure, porte, finestre e dove sta la sala.</p></li>
-      <li><span class="n">2</span><h3>Di' cosa vuoi ottenere</h3><p>Tipo di locale, coperti, menu, e cosa vuoi tenere dell'attrezzatura che hai già.</p></li>
-      <li><span class="n">3 <span class="pill free">Gratis</span></span><h3>Ricevi l'anteprima</h3><p>Pianta con zone e banchi, 3D da girare con il dito, stima di spesa. In pochi minuti.</p></li>
-      <li><span class="n">4 <span class="pill">A pagamento</span></span><h3>Vai avanti solo se ti convince</h3><p>Progetto quotato, esecutivo firmato da un progettista, montaggio con l'installatore partner della tua zona.</p></li>
-    </ol>
     <p class="altri-esempi"><a href="/come-funziona.html">Guarda gli esempi: cinque cucine, dalla pianta al 3D</a></p>
   </div>
 </section>
 
-<section id="cosa-si-paga" aria-labelledby="t-paga">
-  <div class="wrap sec">
+<section class="parte" id="cosa-si-paga" aria-labelledby="t-paga">
+  <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Cosa si paga</p>
       <h2 id="t-paga">L'anteprima è gratis. Il progetto si paga, e si scala dall'ordine.</h2>
-      <p class="sec-lead">Tre livelli di dettaglio sullo stesso progetto. Prova i pulsanti sulla pianta: è la stessa cucina del video.</p>
+      <p class="sec-lead">Tre livelli di dettaglio sullo stesso progetto. Prova i pulsanti sulla tavola: è la stessa cucina del video.</p>
     </div>
-    <div class="sheet-wrap">
-      <figure class="sheet" id="tavola" data-level="anteprima" aria-labelledby="tavola-cap">
+    <figure class="sheet" id="tavola">
       <div class="sheet-head">
         <p class="ex"><b>Esempio</b>Trattoria, 80 coperti</p>
         <div class="levels" role="group" aria-label="Livello di dettaglio">
@@ -579,84 +406,7 @@ section[id] { scroll-margin-top: 12px; }
           <button type="button" data-set="esecutivo" aria-pressed="false">Esecutivo</button>
         </div>
       </div>
-      <div class="plan-box">
-        <svg class="plan" viewBox="0 0 668 470" role="img" aria-label="Pianta di esempio di una cucina da trattoria con le zone freddo, preparazione, cottura, lavaggio e pass, e i percorsi separati del cibo e dei piatti sporchi">
-<defs><pattern id="griglia" width="18" height="18" patternUnits="userSpaceOnUse"><path class="grid-line" d="M18 0H0V18"/></pattern><marker id="mk-clean" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="mk-clean" d="M0 0L10 5L0 10Z"/></marker><marker id="mk-dirty" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="mk-dirty" d="M0 0L10 5L0 10Z"/></marker></defs>
-<rect x="0" y="0" width="668" height="470" fill="url(#griglia)"/>
-<rect class="z-cold" x="69.0" y="51.0" width="143.4" height="90.0"/>
-<rect class="z-prep" x="212.4" y="51.0" width="195.6" height="174.0"/>
-<rect class="z-hot" x="408.0" y="51.0" width="213.0" height="96.0"/>
-<rect class="z-wash" x="69.0" y="297.0" width="189.0" height="90.0"/>
-<rect class="z-pass" x="441.0" y="297.0" width="180.0" height="90.0"/>
-<path class="wall" fill-rule="evenodd" d="M51.0 33.0H639.0V405.0H51.0Z M69.0 51.0H621.0V387.0H69.0Z"/>
-<rect class="opening" x="51.0" y="141.0" width="18.0" height="54.0"/>
-<rect class="opening" x="267.0" y="387.0" width="48.0" height="18.0"/>
-<rect class="opening" x="295.8" y="33.0" width="88.8" height="18.0"/>
-<path class="glass" d="M295.8 45.0L384.6 45.0"/>
-<path class="glass" d="M295.8 39.0L384.6 39.0"/>
-<path class="leaf" d="M69.0 141.0L123.0 141.0"/>
-<path class="swing" d="M123.0 141.0A54.0 54.0 0 0 1 69.0 195.0"/>
-<path class="leaf" d="M315.0 387.0L315.0 339.0"/>
-<path class="swing" d="M315.0 339.0A48.0 48.0 0 0 0 267.0 387.0"/>
-<rect class="eq" x="69.0" y="51.0" width="96.0" height="78.0"/>
-<rect class="eq-in" x="75.0" y="57.0" width="84.0" height="66.0"/>
-<rect class="eq" x="165.0" y="51.0" width="47.4" height="50.4"/>
-<rect class="eq-in" x="169.8" y="55.8" width="37.8" height="40.8"/>
-<rect class="eq" x="212.4" y="51.0" width="195.6" height="42.0"/>
-<rect class="eq-in" x="221.4" y="63.0" width="60.0" height="18.0"/>
-<rect class="eq-in" x="326.4" y="60.0" width="36.0" height="27.0" rx="3"/>
-<rect class="eq" x="231.0" y="153.0" width="144.0" height="54.0"/>
-<path class="eq-in" d="M231.0 180.0L375.0 180.0"/>
-<rect class="eq" x="408.0" y="51.0" width="51.0" height="50.5"/>
-<rect class="eq-in" x="412.8" y="57.0" width="41.4" height="39.6"/>
-<rect class="eq" x="459.0" y="51.0" width="162.0" height="54.0"/>
-<rect class="eq-in" x="466.2" y="63.5" width="14.2" height="28.9"/>
-<rect class="eq-in" x="485.8" y="58.3" width="26.6" height="39.5"/>
-<rect class="eq-in" x="587.8" y="58.3" width="17.2" height="39.5"/>
-<circle class="eq-in" cx="528.5" cy="78.0" r="7.2"/>
-<circle class="eq-in" cx="550.1" cy="78.0" r="7.2"/>
-<circle class="eq-in" cx="571.6" cy="78.0" r="7.2"/>
-<rect class="hood" x="402.0" y="51.0" width="219.0" height="69.0"/>
-<rect class="eq" x="69.0" y="342.0" width="60.0" height="45.0"/>
-<rect class="eq" x="129.0" y="342.0" width="38.1" height="45.0"/>
-<rect class="eq-in" x="133.2" y="346.2" width="29.7" height="36.6"/>
-<rect class="eq" x="167.1" y="342.0" width="90.9" height="45.0"/>
-<rect class="eq-in" x="174.0" y="351.0" width="36.0" height="27.0" rx="3"/>
-<circle class="eq-in" cx="236.7" cy="364.5" r="7.5"/>
-<rect class="hood" x="120.0" y="327.0" width="56.1" height="60.0"/>
-<rect class="eq" x="441.0" y="339.0" width="180.0" height="48.0"/>
-<rect class="eq-in" x="477.0" y="346.2" width="108.0" height="33.0"/>
-<circle class="tagc" cx="165.0" cy="129.0" r="8.5"/><text class="tagt" x="165.0" y="129.0" dy=".36em">1</text>
-<circle class="tagc" cx="212.4" cy="101.4" r="8.5"/><text class="tagt" x="212.4" y="101.4" dy=".36em">2</text>
-<circle class="tagc" cx="291.0" cy="93.0" r="8.5"/><text class="tagt" x="291.0" y="93.0" dy=".36em">3</text>
-<circle class="tagc" cx="375.0" cy="207.0" r="8.5"/><text class="tagt" x="375.0" y="207.0" dy=".36em">4</text>
-<circle class="tagc" cx="414.0" cy="101.5" r="8.5"/><text class="tagt" x="414.0" y="101.5" dy=".36em">5</text>
-<circle class="tagc" cx="473.4" cy="105.0" r="8.5"/><text class="tagt" x="473.4" y="105.0" dy=".36em">6</text>
-<circle class="tagc" cx="499.2" cy="105.0" r="8.5"/><text class="tagt" x="499.2" y="105.0" dy=".36em">7</text>
-<circle class="tagc" cx="550.2" cy="105.0" r="8.5"/><text class="tagt" x="550.2" y="105.0" dy=".36em">8</text>
-<circle class="tagc" cx="596.4" cy="105.0" r="8.5"/><text class="tagt" x="596.4" y="105.0" dy=".36em">9</text>
-<circle class="tagc" cx="148.1" cy="342.0" r="8.5"/><text class="tagt" x="148.1" y="342.0" dy=".36em">10</text>
-<circle class="tagc" cx="213.0" cy="342.0" r="8.5"/><text class="tagt" x="213.0" y="342.0" dy=".36em">11</text>
-<circle class="tagc" cx="465.0" cy="339.0" r="8.5"/><text class="tagt" x="465.0" y="339.0" dy=".36em">12</text>
-<text class="zl" x="84.0" y="90.0">FREDDO</text>
-<text class="zl" x="231.0" y="216.6">PREPARAZIONE</text>
-<text class="zl" x="420.0" y="136.2">COTTURA</text>
-<text class="zl" x="78.0" y="316.2">LAVAGGIO</text>
-<text class="zl" x="450.0" y="316.2">PASS</text>
-<path class="flow clean" d="M23.4 168.0L114.0 168.0L114.0 136.2" marker-end="url(#mk-clean)"/>
-<path class="flow clean" d="M132.0 136.2L132.0 246.0L543.0 246.0L543.0 118.2" marker-end="url(#mk-clean)"/>
-<path class="flow clean" d="M564.0 118.2L564.0 330.0" marker-end="url(#mk-clean)"/>
-<path class="flow clean" d="M432.0 318.0L306.0 318.0L306.0 438.0" marker-end="url(#mk-clean)"/>
-<path class="flow dirty" d="M279.0 438.0L279.0 312.0L266.4 312.0" marker-end="url(#mk-dirty)"/>
-<text class="fl-l clean-t" x="3.0" y="159.0">MERCI</text>
-<text class="fl-l clean-t" x="144.0" y="240.0">PULITO</text>
-<text class="fl-l clean-t" x="571.8" y="225.0">PIATTI</text>
-<text class="fl-l dirty-t" x="204.0" y="307.2">SPORCO</text>
-<text class="fl-l sala-t" x="292.2" y="456.0">SALA</text>
-<g class="layer layer-quote"><path class="dim" d="M69.0 12.0H621.0M69.0 4.0V20.0M621.0 4.0V20.0"/><path class="tick" d="M65.0 16.0L73.0 8.0M617.0 16.0L625.0 8.0"/><text class="dim-t" x="345.0" y="7.0">9,20</text><path class="dim" d="M657.0 387.0V51.0M649.0 387.0H665.0M649.0 51.0H665.0"/><path class="tick" d="M653.0 391.0L661.0 383.0M653.0 55.0L661.0 47.0"/><text class="dim-t" x="652.0" y="219.0" transform="rotate(-90 652.0 219.0)">5,60</text><path class="dim" d="M507.0 339.0V105.0M499.0 339.0H515.0M499.0 105.0H515.0"/><path class="tick" d="M503.0 343.0L511.0 335.0M503.0 109.0L511.0 101.0"/><text class="dim-t" x="502.0" y="222.0" transform="rotate(-90 502.0 222.0)">3,90</text></g>
-<g class="layer layer-imp"><text class="hood-t" x="420.0" y="157.2">CAPPA EN 16282</text><g class="imp imp-e"><circle cx="117.0" cy="42.0" r="7"/><text x="117.0" y="42.0" dy=".36em">E</text></g><g class="imp imp-e"><circle cx="189.0" cy="42.0" r="7"/><text x="189.0" y="42.0" dy=".36em">E</text></g><g class="imp imp-a"><circle cx="337.8" cy="42.0" r="7"/><text x="337.8" y="42.0" dy=".36em">A</text></g><g class="imp imp-s"><circle cx="351.0" cy="42.0" r="7"/><text x="351.0" y="42.0" dy=".36em">S</text></g><g class="imp imp-e"><circle cx="420.0" cy="42.0" r="7"/><text x="420.0" y="42.0" dy=".36em">E</text></g><g class="imp imp-a"><circle cx="433.2" cy="42.0" r="7"/><text x="433.2" y="42.0" dy=".36em">A</text></g><g class="imp imp-s"><circle cx="446.4" cy="42.0" r="7"/><text x="446.4" y="42.0" dy=".36em">S</text></g><g class="imp imp-e"><circle cx="473.4" cy="42.0" r="7"/><text x="473.4" y="42.0" dy=".36em">E</text></g><g class="imp imp-e"><circle cx="499.2" cy="42.0" r="7"/><text x="499.2" y="42.0" dy=".36em">E</text></g><g class="imp imp-g"><circle cx="550.2" cy="42.0" r="7"/><text x="550.2" y="42.0" dy=".36em">G</text></g><g class="imp imp-a"><circle cx="589.8" cy="42.0" r="7"/><text x="589.8" y="42.0" dy=".36em">A</text></g><g class="imp imp-s"><circle cx="603.0" cy="42.0" r="7"/><text x="603.0" y="42.0" dy=".36em">S</text></g><g class="imp imp-e"><circle cx="135.0" cy="396.0" r="7"/><text x="135.0" y="396.0" dy=".36em">E</text></g><g class="imp imp-a"><circle cx="148.2" cy="396.0" r="7"/><text x="148.2" y="396.0" dy=".36em">A</text></g><g class="imp imp-s"><circle cx="161.4" cy="396.0" r="7"/><text x="161.4" y="396.0" dy=".36em">S</text></g><g class="imp imp-a"><circle cx="186.0" cy="396.0" r="7"/><text x="186.0" y="396.0" dy=".36em">A</text></g><g class="imp imp-s"><circle cx="199.2" cy="396.0" r="7"/><text x="199.2" y="396.0" dy=".36em">S</text></g><g class="imp imp-e"><circle cx="507.0" cy="396.0" r="7"/><text x="507.0" y="396.0" dy=".36em">E</text></g></g>
-</svg>
-      </div>
+      <img class="tavola" id="tavola-img" src="/media/tavola_anteprima.jpg?v=1" alt="Tavola della trattoria di esempio: anteprima senza quote" width="1600" height="900" loading="lazy">
       <figcaption class="cap" id="tavola-cap" aria-live="polite"><b>Gratis.</b> La prepara l'IA in pochi minuti e la controlla un progettista: zone, banchi, flussi e una stima di spesa. Serve a capire il risultato. Per costruire servono progetto ed esecutivo.</figcaption>
       <dl class="cartiglio">
         <div><dt>Tavola</dt><dd id="c-tavola">Anteprima</dd></div>
@@ -664,28 +414,12 @@ section[id] { scroll-margin-top: 12px; }
         <div><dt>Attrezzature</dt><dd id="c-attr">Generiche, senza marche</dd></div>
         <div><dt>Spesa</dt><dd id="c-stima">40–60 mila €</dd></div>
       </dl>
-      <ol class="legenda" aria-label="Legenda">
-        <li><span class="k">1</span>Cella frigorifera</li>
-        <li><span class="k">2</span>Abbattitore</li>
-        <li><span class="k">3</span>Banco con lavello</li>
-        <li><span class="k">4</span>Isola refrigerata</li>
-        <li><span class="k">5</span>Forno misto 10 GN</li>
-        <li><span class="k">6</span>Friggitrice</li>
-        <li><span class="k">7</span>Fry-top</li>
-        <li><span class="k">8</span>Fuochi a gas</li>
-        <li><span class="k">9</span>Cuocipasta</li>
-        <li><span class="k">10</span>Lavastoviglie a capotta</li>
-        <li><span class="k">11</span>Tavolo sporco con lavello</li>
-        <li><span class="k">12</span>Pass caldo</li>
-      </ol>
-      <template id="livelli-testi">
-        <div data-livello="anteprima"><p data-k="cap"><b>Gratis.</b> La prepara l'IA in pochi minuti e la controlla un progettista: zone, banchi, flussi e una stima di spesa. Serve a capire il risultato. Per costruire servono progetto ed esecutivo.</p><span data-k="tavola">Anteprima</span><span data-k="scala">Senza quote</span><span data-k="attr">Generiche, senza marche</span><span data-k="stima">40–60 mila €</span></div>
-        <div data-livello="progetto"><p data-k="cap"><b>A pagamento.</b> Pianta quotata in PDF, marche e modelli, 3D completo e due render, preventivo indicativo. La controlla un progettista.</p><span data-k="tavola">Progetto</span><span data-k="scala">1:50, quotata</span><span data-k="attr">Marche e modelli</span><span data-k="stima">Preventivo indicativo</span></div>
-        <div data-livello="esecutivo"><p data-k="cap"><b>A pagamento.</b> Disegni in DXF e DWG, prospetti, sezioni, allacci di luce, acqua, gas e scarichi. Lo segue e lo firma un progettista.</p><span data-k="tavola">Esecutivo</span><span data-k="scala">1:50, DXF e DWG</span><span data-k="attr">Con allacci e potenze</span><span data-k="stima">Preventivo del partner</span></div>
-      </template>
-      <p class="imp-key"><span><i class="ik-e">E</i>elettrico</span><span><i class="ik-a">A</i>acqua</span><span><i class="ik-g">G</i>gas</span><span><i class="ik-s">S</i>scarico</span></p>
     </figure>
-    </div>
+    <template id="livelli-testi">
+      <div data-livello="anteprima"><img data-k="img" src="/media/tavola_anteprima.jpg?v=1" alt="Tavola della trattoria di esempio: anteprima senza quote"><p data-k="cap"><b>Gratis.</b> La prepara l'IA in pochi minuti e la controlla un progettista: zone, banchi, flussi e una stima di spesa. Serve a capire il risultato. Per costruire servono progetto ed esecutivo.</p><span data-k="tavola">Anteprima</span><span data-k="scala">Senza quote</span><span data-k="attr">Generiche, senza marche</span><span data-k="stima">40–60 mila €</span></div>
+      <div data-livello="progetto"><img data-k="img" src="/media/tavola_progetto.jpg?v=1" alt="Tavola della trattoria di esempio: pianta di progetto con le quote esterne"><p data-k="cap"><b>A pagamento.</b> Pianta quotata in PDF, marche e modelli, 3D completo e due render, preventivo indicativo. La controlla un progettista.</p><span data-k="tavola">Progetto</span><span data-k="scala">1:50, quotata</span><span data-k="attr">Marche e modelli</span><span data-k="stima">Preventivo indicativo</span></div>
+      <div data-livello="esecutivo"><img data-k="img" src="/media/tavola_esecutivo.jpg?v=1" alt="Tavola della trattoria di esempio: esecutivo con le quote interne, i pensili e le cappe"><p data-k="cap"><b>A pagamento.</b> Disegni in DXF e DWG, prospetti, sezioni, allacci di luce, acqua, gas e scarichi. Lo segue e lo firma un progettista.</p><span data-k="tavola">Esecutivo</span><span data-k="scala">1:50, DXF e DWG</span><span data-k="attr">Con allacci e potenze</span><span data-k="stima">Preventivo del partner</span></div>
+    </template>
     <div class="tiers">
       <div class="tier free">
         <div class="tier-head"><h3>Anteprima</h3><span class="price">Gratis</span></div>
@@ -720,16 +454,13 @@ section[id] { scroll-margin-top: 12px; }
         <p class="who">Un progettista lo segue con te e lo firma.</p>
       </div>
     </div>
-    <p class="thesis"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M4 14.5l6.5 6.5L24 7.5"/></svg><span>Se compri le attrezzature da un installatore partner, il costo del progetto ti viene scalato dall'ordine e l'esecutivo è gratis.</span></p>
+    <p class="thesis">Se compri le attrezzature da un installatore partner, il costo del progetto ti viene scalato dall'ordine e l'esecutivo è gratis.</p>
   </div>
 </section>
 
-<section class="alt" id="per-chi" aria-labelledby="t-chi">
-  <div class="wrap sec">
-    <div class="sec-head">
-      <p class="eyebrow">Per chi</p>
-      <h2 id="t-chi">Per chi la cucina la usa, la disegna o la vende.</h2>
-    </div>
+<section class="parte alt" id="per-chi" aria-labelledby="t-chi">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="t-chi">Per chi la cucina la usa, la disegna o la vende.</h2></div>
     <div class="who-grid">
       <div><h3>Ristoratori, albergatori, bar</h3><p>Prima di chiamare un fornitore sai cosa ti serve, quanto spazio occupa e quanto può costare.</p></div>
       <div><h3>Architetti e interior designer</h3><p>La cucina dentro il tuo progetto, in pochi minuti, con zone e flussi già impostati. Con l'esecutivo ricevi il DXF da mettere nelle tue tavole.</p></div>
@@ -740,12 +471,9 @@ section[id] { scroll-margin-top: 12px; }
   </div>
 </section>
 
-<section id="fiducia" aria-labelledby="t-fiducia">
-  <div class="wrap sec">
-    <div class="sec-head">
-      <p class="eyebrow">Perché fidarsi</p>
-      <h2 id="t-fiducia">Dietro l'IA ci sono misure vere e gente del mestiere.</h2>
-    </div>
+<section class="parte" id="fiducia" aria-labelledby="t-fiducia">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="t-fiducia">Dietro l'IA ci sono misure vere e gente del mestiere.</h2></div>
     <div class="trust">
       <div class="points">
         <div><h3>Misure dalle schede ufficiali</h3><p>Le misure delle attrezzature vengono dalle schede dei produttori. Mai a memoria, mai inventate.</p></div>
@@ -754,7 +482,7 @@ section[id] { scroll-margin-top: 12px; }
         <div><h3>Disegni pronti per il cantiere</h3><p>L'esecutivo esce in DXF e DWG, con prospetti, sezioni e allacci.</p></div>
       </div>
       <div class="money">
-        <p class="eyebrow">Come guadagniamo</p>
+        <h3>Come guadagniamo</h3>
         <p>L'anteprima è gratis. Progetto ed esecutivo si pagano.</p>
         <p>Lavoriamo con installatori partner, uno o più per zona. Il primo è Italfrigo, in Lombardia. Se compri da un partner, lui riconosce un compenso a Brigaplan e a te scaliamo il costo del progetto.</p>
         <p class="small">Lo scriviamo qui perché è giusto che tu lo sappia prima di iniziare.</p>
@@ -763,12 +491,9 @@ section[id] { scroll-margin-top: 12px; }
   </div>
 </section>
 
-<section class="alt" id="domande" aria-labelledby="t-domande">
-  <div class="wrap sec">
-    <div class="sec-head">
-      <p class="eyebrow">Domande</p>
-      <h2 id="t-domande">Le domande che ci fanno di più.</h2>
-    </div>
+<section class="parte alt" id="domande" aria-labelledby="t-domande">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="t-domande">Le domande che ci fanno di più.</h2></div>
     <div class="faq">
       <details><summary>Mi serve per forza la pianta del locale?</summary><p>No. Se non ce l'hai, ti facciamo qualche domanda: misure, porte, finestre e dove sta la sala. Va bene anche una foto o uno schizzo, purché ci sia almeno una misura nota.</p></details>
       <details><summary>L'anteprima basta per costruire la cucina?</summary><p>No. Serve a capire spazi, ingombri e costi. Per costruire servono il progetto e l'esecutivo, firmati da un progettista. Per le pratiche ASL e SUAP di solito serve anche un tecnico abilitato.</p></details>
@@ -780,11 +505,10 @@ section[id] { scroll-margin-top: 12px; }
   </div>
 </section>
 
-<section id="prova" aria-labelledby="t-prova">
-  <div class="wrap sec">
+<section class="parte" id="prova" aria-labelledby="t-prova">
+  <div class="wrap">
     <div class="prova-grid">
       <div class="prova-text">
-        <p class="eyebrow">Prova</p>
         <h2 id="t-prova">Prova con il tuo locale.</h2>
         <p class="sec-lead">L'anteprima è gratis. Ti servono cinque minuti e, se ce l'hai, la pianta.</p>
         <ul class="gets">
@@ -795,7 +519,7 @@ section[id] { scroll-margin-top: 12px; }
         </ul>
         <p class="small">Ti registri in un minuto. Prima che tu la veda, ogni anteprima la controlla un progettista.</p>
       </div>
-      <div class="form inizia">
+      <div class="inizia">
         <p class="inizia-t">Crea il tuo account gratuito, carica la pianta e ricevi l'anteprima.</p>
         <a class="btn btn-primary" href="https://app.brigaplan.ai/registrati?lingua=it">Crea l'anteprima gratis</a>
         <p class="small">Hai già un account? <a href="https://app.brigaplan.ai/accedi?lingua=it">Accedi</a></p>
@@ -813,7 +537,7 @@ section[id] { scroll-margin-top: 12px; }
     <p>Progettazione di cucine e bar professionali con l'intelligenza artificiale.</p>
     <p>Installatori partner: Italfrigo (Lombardia). <a href="/partner.html">Diventa partner</a></p>
     <p>L'anteprima è indicativa e non è un progetto esecutivo. Progetto ed esecutivo sono controllati da un progettista.</p>
-        <p>Brigaplan è un progetto di Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · P.IVA e C.F. 06825390153 · REA MI 1120586 · Capitale sociale 46.800,00 € i.v. · PEC <span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/privacy.html">Privacy e cookie</a></p>
+    <p>Brigaplan è un progetto di Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · P.IVA e C.F. 06825390153 · REA MI 1120586 · Capitale sociale 46.800,00 € i.v. · PEC <span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/privacy.html">Privacy e cookie</a></p>
     <p>Contatti: <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
     <p id="privacy"><strong>Privacy e cookie.</strong> Questo sito non usa cookie né strumenti di tracciamento. Contiamo le visite con un contatore nostro, anonimo: solo i totali per pagina, lingua e provenienza. Il servizio che ospita il sito registra per sicurezza gli indirizzi IP delle visite. Per chi si registra valgono la <a href="/privacy-piattaforma.html">privacy della piattaforma</a> e le <a href="/condizioni.html">condizioni d'uso</a>.</p>
   </div>
@@ -831,16 +555,17 @@ section[id] { scroll-margin-top: 12px; }
   var sheet = document.getElementById("tavola");
   var testiLivelli = document.getElementById("livelli-testi").content;
   var bottoni = sheet.querySelectorAll("[data-set]");
+  var img = document.getElementById("tavola-img");
   function mostra(l) {
     var d = testiLivelli.querySelector('[data-livello="' + l + '"]');
     if (!d) return;
-    sheet.setAttribute("data-level", l);
     bottoni.forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-set") === l)); });
+    var nuova = d.querySelector('[data-k="img"]');
+    img.src = nuova.getAttribute("src"); img.alt = nuova.getAttribute("alt");
     document.getElementById("tavola-cap").innerHTML = d.querySelector('[data-k="cap"]').innerHTML;
     ["tavola", "scala", "attr", "stima"].forEach(function (k) { document.getElementById("c-" + k).textContent = d.querySelector('[data-k="' + k + '"]').textContent; });
   }
   bottoni.forEach(function (b) { b.addEventListener("click", function () { mostra(b.getAttribute("data-set")); }); });
-
 })();
 </script>
 

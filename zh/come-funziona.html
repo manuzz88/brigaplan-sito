@@ -23,8 +23,8 @@
 <link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/come-funziona.html">
 <link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/come-funziona.html">
 <link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/come-funziona.html">
-<meta name="theme-color" content="#14212A">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect x='1.5' y='1.5' width='23' height='23' fill='%23fff' stroke='%2314212A' stroke-width='2.2'/%3E%3Cpath d='M1.5 11H13V24.5M13 7V1.5' fill='none' stroke='%2314212A' stroke-width='1.4'/%3E%3Crect x='16' y='15' width='6' height='6' fill='%23CF4E1B'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#FAFAF8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect x='1.5' y='1.5' width='23' height='23' fill='%23fff' stroke='%2316191C' stroke-width='2.2'/%3E%3Cpath d='M1.5 11H13V24.5M13 7V1.5' fill='none' stroke='%2316191C' stroke-width='1.4'/%3E%3Crect x='16' y='15' width='6' height='6' fill='%23A63A1F'/%3E%3C/svg%3E">
 <link rel="preload" href="/fonts/Archivo-100_900-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/PublicSans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/pagine.css">
@@ -33,16 +33,17 @@
    Il programma sito/strumenti/lingue.py lo aggiunge in fondo allo stile della pagina cinese. */
 :root {
   --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
-  --f-body: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
-  --f-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", monospace;
+  --f-body: "Archivo", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+  --f-mono: "Archivo", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
 }
 body { line-height: 1.7; }
 h1, h2, h3 { font-stretch: 100%; letter-spacing: 0; line-height: 1.3; }
-h1 { line-height: 1.25; }
+h1 { line-height: 1.25; font-size: clamp(2rem, 1.1rem + 3.4vw, 3.6rem); } /* più piccolo: gli ideogrammi sono larghi e il 。 finale non deve andare a capo da solo */
 h1, h2 { font-weight: 700; }
 h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su punteggiatura e spazi, non a metà parola */
 .lead { line-height: 1.65; }
 .punch, .thesis { font-stretch: 100%; line-height: 1.5; }
+h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-stretch: 100%; }
 .partner strong { font-stretch: 100%; }
 .eyebrow, .why-k, .notice, .ex b, .cartiglio dt, .compare thead th, .pill, .price, .reel-tag, .reel-btn { letter-spacing: .04em; }
 @media (max-width: 640px) { .compare tbody th, .compare td::before { letter-spacing: .04em; } }
@@ -96,10 +97,10 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
 
     <section aria-labelledby="cf-esempi">
       <h2 id="cf-esempi">五个案例</h2>
-      <p>每个视频都从平面图开始，以 3D 设计方案结束。平面图、3D 模型和动画都由我们自己的设计引擎生成，设备尺寸取自厂家的技术参数表。</p>
+      <p>五个案例的 3D 设计方案。平面图和 3D 都由我们的设计引擎生成，设备尺寸取自厂家的技术资料。</p>
       <div class="esempi">
         <figure class="esempio">
-          <video src="/media/trattoria_zh.mp4" poster="/media/trattoria_poster.jpg" muted loop playsinline preload="none" controls aria-label="视频：意式餐馆的平面图变成 3D 设计方案。"></video>
+          <img src="/media/trattoria_poster.jpg" alt="示例意式餐馆的 3D 设计方案" width="1280" height="720" loading="lazy">
           <figcaption>
             <h3>意式餐馆，80 个座位</h3>
             <p>9.20 × 5.60 米的厨房，分为冷藏区、切配区、烹饪区、洗碗区和出餐口。洁净动线和脏污动线互不交叉。</p>
@@ -107,7 +108,7 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
           </figcaption>
         </figure>
         <figure class="esempio">
-          <video src="/media/bar_zh.mp4" poster="/media/bar_poster.jpg" muted loop playsinline preload="none" controls aria-label="视频：酒吧的平面图变成 3D 设计方案。"></video>
+          <img src="/media/bar_poster.jpg" alt="示例咖啡酒吧的 3D 设计方案" width="1280" height="720" loading="lazy">
           <figcaption>
             <h3>咖啡酒吧，22 个座位</h3>
             <p>5.7 米吧台，设有鸡尾酒与杯具区和咖啡区。后场是切配、洗碗和储藏，用餐区有 22 个座位。</p>
@@ -115,7 +116,7 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
           </figcaption>
         </figure>
         <figure class="esempio">
-          <video src="/media/mensa_zh.mp4" poster="/media/mensa_poster.jpg" muted loop playsinline preload="none" controls aria-label="视频：食堂的平面图变成 3D 设计方案。"></video>
+          <img src="/media/mensa_poster.jpg" alt="示例企业食堂的 3D 设计方案" width="1280" height="720" loading="lazy">
           <figcaption>
             <h3>企业食堂，300 份餐</h3>
             <p>收货区、冷库和干货库，蔬菜和肉类加工，烹饪，自助餐线，以及带餐盘回收的洗碗区。</p>
@@ -123,7 +124,7 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
           </figcaption>
         </figure>
         <figure class="esempio">
-          <video src="/media/sushi_zh.mp4" poster="/media/sushi_poster.jpg" muted loop playsinline preload="none" controls aria-label="视频：寿司餐厅的平面图变成 3D 设计方案。"></video>
+          <img src="/media/sushi_poster.jpg" alt="示例寿司餐厅的 3D 设计方案" width="1280" height="720" loading="lazy">
           <figcaption>
             <h3>自助寿司餐厅，120 个座位</h3>
             <p>热厨和寿司制作在一个 7 × 4.5 米的房间里。货物从后门进入，脏餐具从餐厅送回后直接进入洗碗区，不穿过厨房。</p>
@@ -131,7 +132,7 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
           </figcaption>
         </figure>
         <figure class="esempio">
-          <video src="/media/pizzeria_zh.mp4" poster="/media/pizzeria_poster.jpg" muted loop playsinline preload="none" controls aria-label="视频：披萨店的平面图变成 3D 设计方案。"></video>
+          <img src="/media/pizzeria_poster.jpg" alt="示例披萨店的 3D 设计方案" width="1280" height="720" loading="lazy">
           <figcaption>
             <h3>那不勒斯披萨店，80 个座位</h3>
             <p>柴火烤炉配有独立烟道，旁边是冷藏披萨台。长边是和面区和冷藏区，另有炸物和面食灶线，切配区和洗碗区靠近餐厅。</p>
@@ -148,42 +149,36 @@ h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su p
       <div class="galleria">
         <figure class="scheda">
           <div class="coppia">
-            <a href="/media/galleria/e03_pianta.png"><img src="/media/galleria/e03_pianta.png" alt="预览方案平面图：餐厅，120 个座位" loading="lazy" width="1200" height="900"></a>
             <a href="/media/galleria/e03_3d.jpg"><img src="/media/galleria/e03_3d.jpg" alt="预览方案 3D：餐厅，120 个座位" loading="lazy" width="1200" height="750"></a>
           </div>
           <figcaption><strong>餐厅，120 个座位</strong> 10 × 7 米的厨房，晚上分两轮用餐。</figcaption>
         </figure>
         <figure class="scheda">
           <div class="coppia">
-            <a href="/media/galleria/e06_pianta.png"><img src="/media/galleria/e06_pianta.png" alt="预览方案平面图：电烤箱披萨店，60 个座位" loading="lazy" width="1200" height="900"></a>
             <a href="/media/galleria/e06_3d.jpg"><img src="/media/galleria/e06_3d.jpg" alt="预览方案 3D：电烤箱披萨店，60 个座位" loading="lazy" width="1200" height="750"></a>
           </div>
           <figcaption><strong>电烤箱披萨店，60 个座位</strong> 厨房和加工间共 6 × 4.5 米。</figcaption>
         </figure>
         <figure class="scheda">
           <div class="coppia">
-            <a href="/media/galleria/e08_pianta.png"><img src="/media/galleria/e08_pianta.png" alt="预览方案平面图：带厨房的酒吧，60 个座位" loading="lazy" width="1200" height="900"></a>
             <a href="/media/galleria/e08_3d.jpg"><img src="/media/galleria/e08_3d.jpg" alt="预览方案 3D：带厨房的酒吧，60 个座位" loading="lazy" width="1200" height="750"></a>
           </div>
           <figcaption><strong>带厨房的酒吧，60 个座位</strong> 5 × 4 米的厨房，供应快餐午餐。</figcaption>
         </figure>
         <figure class="scheda">
           <div class="coppia">
-            <a href="/media/galleria/e10_pianta.png"><img src="/media/galleria/e10_pianta.png" alt="预览方案平面图：自助寿司餐厅，260 个座位" loading="lazy" width="1200" height="900"></a>
             <a href="/media/galleria/e10_3d.jpg"><img src="/media/galleria/e10_3d.jpg" alt="预览方案 3D：自助寿司餐厅，260 个座位" loading="lazy" width="1200" height="750"></a>
           </div>
           <figcaption><strong>自助寿司餐厅，260 个座位</strong> 10 × 6 米的热厨和寿司区，配有炒锅灶线。</figcaption>
         </figure>
         <figure class="scheda">
           <div class="coppia">
-            <a href="/media/galleria/e12_pianta.png"><img src="/media/galleria/e12_pianta.png" alt="预览方案平面图：走廊式意式餐馆，35 个座位" loading="lazy" width="1200" height="900"></a>
             <a href="/media/galleria/e12_3d.jpg"><img src="/media/galleria/e12_3d.jpg" alt="预览方案 3D：走廊式意式餐馆，35 个座位" loading="lazy" width="1200" height="750"></a>
           </div>
           <figcaption><strong>走廊式意式餐馆，35 个座位</strong> 5 × 3.5 米的狭长厨房。</figcaption>
         </figure>
         <figure class="scheda">
           <div class="coppia">
-            <a href="/media/galleria/e13_pianta.png"><img src="/media/galleria/e13_pianta.png" alt="预览方案平面图：L 形厨房餐厅，100 个座位" loading="lazy" width="1200" height="900"></a>
             <a href="/media/galleria/e13_3d.jpg"><img src="/media/galleria/e13_3d.jpg" alt="预览方案 3D：L 形厨房餐厅，100 个座位" loading="lazy" width="1200" height="750"></a>
           </div>
           <figcaption><strong>L 形厨房餐厅，100 个座位</strong> 8 × 4 米的房间，加上一个 3 × 3 米的洗碗角。</figcaption>
