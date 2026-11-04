@@ -125,6 +125,9 @@ img, video { display: block; height: auto; }
 .for { font-size: .9375rem; color: var(--muted); }
 .reel { position: relative; margin: 0; background: var(--sheet); border: 1px solid var(--rule); }
 .reel video { width: 100%; aspect-ratio: 16 / 9; }
+/* telefono: il video verticale (chat sopra, progetto sotto); computer: quello orizzontale */
+.reel .reel-v { display: none; aspect-ratio: 9 / 16; }
+@media (max-width: 700px) { .reel .reel-o { display: none; } .reel .reel-v { display: block; } }
 /* riserva quando il telefono non lascia partire il video (risparmio energetico): le immagini scorrono da sole */
 .reel .fermi { position: absolute; inset: 0; background: var(--sheet); }
 .reel .fermi img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: fermi 18s infinite; }
@@ -312,8 +315,10 @@ img, video { display: block; height: auto; }
       </div>
     </div>
     <figure class="reel">
-      <video id="reel" src="/media/brigaplan_video.mp4?v=5" poster="/media/brigaplan_video_poster.jpg?v=5" autoplay muted loop playsinline webkit-playsinline preload="auto" aria-label="Video: quattro esempi, un ristorante, un hotel, un centro di cottura e un bar. Per ognuno la tavola si disegna, diventa la pianta renderizzata e poi il progetto in 3D."></video>
-      <template id="reel-fermi"><div class="fermi" aria-hidden="true"><img src="/media/brigaplan_video_fermo1.jpg?v=1" alt="" width="960" height="540"><img src="/media/brigaplan_video_fermo2.jpg?v=1" alt="" width="960" height="540"><img src="/media/brigaplan_video_fermo3.jpg?v=1" alt="" width="960" height="540"><img src="/media/brigaplan_video_fermo4.jpg?v=1" alt="" width="960" height="540"><img src="/media/brigaplan_video_fermo5.jpg?v=1" alt="" width="960" height="540"><img src="/media/brigaplan_video_fermo6.jpg?v=1" alt="" width="960" height="540"></div></template>
+      <video class="reel-o" src="/media/brigaplan_video_o.mp4?v=1" poster="/media/brigaplan_video_o_poster.jpg?v=1" muted loop playsinline webkit-playsinline preload="none" aria-label="Video: la trattoria finita in 3D, poi la conversazione con l'assistente nella piattaforma accanto al progetto che nasce: tavola, pianta renderizzata e 3D. Poi hotel, centro di cottura e bar."></video>
+      <video class="reel-v" src="/media/brigaplan_video_v.mp4?v=1" poster="/media/brigaplan_video_v_poster.jpg?v=1" muted loop playsinline webkit-playsinline preload="none" aria-label="Video: la trattoria finita in 3D, poi la conversazione con l'assistente nella piattaforma accanto al progetto che nasce: tavola, pianta renderizzata e 3D. Poi hotel, centro di cottura e bar."></video>
+      <template id="reel-fermi-o"><div class="fermi" aria-hidden="true"><img src="/media/brigaplan_fermo_o1.jpg?v=1" alt="" width="960" height="540"><img src="/media/brigaplan_fermo_o2.jpg?v=1" alt="" width="960" height="540"><img src="/media/brigaplan_fermo_o3.jpg?v=1" alt="" width="960" height="540"><img src="/media/brigaplan_fermo_o4.jpg?v=1" alt="" width="960" height="540"><img src="/media/brigaplan_fermo_o5.jpg?v=1" alt="" width="960" height="540"><img src="/media/brigaplan_fermo_o6.jpg?v=1" alt="" width="960" height="540"></div></template>
+      <template id="reel-fermi-v"><div class="fermi" aria-hidden="true"><img src="/media/brigaplan_fermo_v1.jpg?v=1" alt="" width="540" height="960"><img src="/media/brigaplan_fermo_v2.jpg?v=1" alt="" width="540" height="960"><img src="/media/brigaplan_fermo_v3.jpg?v=1" alt="" width="540" height="960"><img src="/media/brigaplan_fermo_v4.jpg?v=1" alt="" width="540" height="960"><img src="/media/brigaplan_fermo_v5.jpg?v=1" alt="" width="540" height="960"><img src="/media/brigaplan_fermo_v6.jpg?v=1" alt="" width="540" height="960"></div></template>
       <button type="button" class="reel-btn" id="reel-btn" aria-pressed="false" data-txt-riproduci="Riproduci" data-txt-pausa="Pausa">Pausa</button>
     </figure>
     <div class="fatti">
@@ -583,31 +588,45 @@ img, video { display: block; height: auto; }
 
 <script>
 (function () {
-  var reel = document.getElementById("reel");
   var reelBtn = document.getElementById("reel-btn");
-  // Il video parte da solo, senza audio, anche sul telefono. Se il telefono lo blocca (risparmio energetico),
-  // al suo posto scorrono da sole sei immagini del video; si riprova al primo tocco o scorrimento.
-  var fermatoDaTe = false, fermi = null;
-  reel.muted = true; reel.defaultMuted = true; reel.setAttribute("muted", ""); reel.playsInline = true;
-  function statoReel() { var fermo = reel.paused && !fermi; reelBtn.textContent = fermo ? reelBtn.dataset.txtRiproduci : reelBtn.dataset.txtPausa; reelBtn.setAttribute("aria-pressed", String(fermo)); }
+  // Due video: verticale sul telefono, orizzontale sul computer (si sceglie con la stessa regola del CSS).
+  // Parte da solo, senza audio. Se il telefono lo blocca (risparmio energetico), al suo posto scorrono sei immagini
+  // del video giusto; si riprova al primo tocco o scorrimento.
+  var telefono = window.matchMedia ? window.matchMedia("(max-width: 700px)") : { matches: false };
+  var reel = null, fermatoDaTe = false, fermi = null;
+  function statoReel() { var fermo = (!reel || reel.paused) && !fermi; reelBtn.textContent = fermo ? reelBtn.dataset.txtRiproduci : reelBtn.dataset.txtPausa; reelBtn.setAttribute("aria-pressed", String(fermo)); }
   function mostraFermi() {
-    if (fermi || fermatoDaTe) return;
-    fermi = document.getElementById("reel-fermi").content.firstElementChild.cloneNode(true);
+    if (fermi || fermatoDaTe || !reel) return;
+    fermi = document.getElementById(telefono.matches ? "reel-fermi-v" : "reel-fermi-o").content.firstElementChild.cloneNode(true);
     reel.parentNode.insertBefore(fermi, reelBtn); statoReel();
   }
   function togliFermi() { if (fermi) { fermi.remove(); fermi = null; } statoReel(); }
-  function prova() { var pr = reel.play(); if (pr && pr.then) pr.then(togliFermi, mostraFermi); }
-  prova();
-  setTimeout(function () { if (reel.paused && !fermatoDaTe) mostraFermi(); }, 2500);
+  function prova() { if (!reel) return; var pr = reel.play(); if (pr && pr.then) pr.then(togliFermi, mostraFermi); }
+  function scegli() {
+    var nuovo = document.querySelector(telefono.matches ? ".reel-v" : ".reel-o");
+    if (nuovo === reel) return;
+    if (reel) reel.pause();
+    togliFermi();
+    reel = nuovo;
+    reel.muted = true; reel.defaultMuted = true; reel.setAttribute("muted", ""); reel.playsInline = true; reel.preload = "auto";
+    if (!fermatoDaTe) prova();
+    statoReel();
+  }
+  document.querySelectorAll(".reel video").forEach(function (v) {
+    v.addEventListener("playing", function () { if (v === reel) togliFermi(); });
+    v.addEventListener("play", statoReel); v.addEventListener("pause", statoReel);
+  });
+  scegli();
+  if (telefono.addEventListener) telefono.addEventListener("change", scegli); else if (telefono.addListener) telefono.addListener(scegli);
+  setTimeout(function () { if (reel && reel.paused && !fermatoDaTe) mostraFermi(); }, 2500);
   ["touchstart", "scroll", "keydown"].forEach(function (ev) {
-    window.addEventListener(ev, function () { if (reel.paused && !fermatoDaTe) prova(); }, { once: true, passive: true });
+    window.addEventListener(ev, function () { if (reel && reel.paused && !fermatoDaTe) prova(); }, { once: true, passive: true });
   });
   reelBtn.addEventListener("click", function () {
     if (fermi) { fermatoDaTe = true; togliFermi(); }                 // ferma anche le immagini di riserva
     else if (reel.paused) { fermatoDaTe = false; prova(); }
     else { fermatoDaTe = true; reel.pause(); }
   });
-  reel.addEventListener("playing", togliFermi); reel.addEventListener("play", statoReel); reel.addEventListener("pause", statoReel); statoReel();
 
   var sheet = document.getElementById("tavola");
   var testiLivelli = document.getElementById("livelli-testi").content;
