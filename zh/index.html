@@ -125,7 +125,14 @@ img, video { display: block; height: auto; }
 .for { font-size: .9375rem; color: var(--muted); }
 .reel { position: relative; margin: 0; background: var(--sheet); border: 1px solid var(--rule); }
 .reel video { width: 100%; aspect-ratio: 16 / 9; }
-.reel-btn { position: absolute; right: 10px; top: 10px; font: 600 .8125rem/1 var(--f-body); padding: 8px 11px; border: 1px solid var(--ink); background: rgba(250, 250, 248, .92); color: var(--ink); cursor: pointer; border-radius: 2px; }
+/* riserva quando il telefono non lascia partire il video (risparmio energetico): le immagini scorrono da sole */
+.reel .fermi { position: absolute; inset: 0; background: var(--sheet); }
+.reel .fermi img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: fermi 18s infinite; }
+.reel .fermi img:nth-child(1) { animation-delay: 0s; } .reel .fermi img:nth-child(2) { animation-delay: 3s; }
+.reel .fermi img:nth-child(3) { animation-delay: 6s; } .reel .fermi img:nth-child(4) { animation-delay: 9s; }
+.reel .fermi img:nth-child(5) { animation-delay: 12s; } .reel .fermi img:nth-child(6) { animation-delay: 15s; }
+@keyframes fermi { 0% { opacity: 0; } 3% { opacity: 1; } 17% { opacity: 1; } 20% { opacity: 0; } 100% { opacity: 0; } }
+.reel-btn { position: absolute; z-index: 1; right: 10px; top: 10px; font: 600 .8125rem/1 var(--f-body); padding: 8px 11px; border: 1px solid var(--ink); background: rgba(250, 250, 248, .92); color: var(--ink); cursor: pointer; border-radius: 2px; }
 .didascalia { font-size: .9375rem; color: var(--muted); max-width: 60rem; }
 .didascalia b { color: var(--ink); font-weight: 650; }
 
@@ -326,7 +333,8 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
       </div>
     </div>
     <figure class="reel">
-      <video id="reel" src="/media/brigaplan_video_zh.mp4?v=4" poster="/media/brigaplan_video_poster_zh.jpg?v=4" autoplay muted loop playsinline preload="auto" aria-label="视频：先是在 Brigaplan 平台上和助手的一段对话，然后是四个案例：一家餐馆、一家酒店、一个中央厨房和一家咖啡酒吧。每个案例的图纸自动绘出，变成渲染平面图，再变成 3D 设计方案。"></video>
+      <video id="reel" src="/media/brigaplan_video_zh.mp4?v=5" poster="/media/brigaplan_video_poster_zh.jpg?v=5" autoplay muted loop playsinline webkit-playsinline preload="auto" aria-label="视频：四个案例，一家餐馆、一家酒店、一个中央厨房和一家咖啡酒吧。每个案例的图纸自动绘出，变成渲染平面图，再变成 3D 设计方案。"></video>
+      <template id="reel-fermi"><div class="fermi" aria-hidden="true"><img src="/media/brigaplan_video_fermo1_zh.jpg?v=1" alt="" width="960" height="540"><img src="/media/brigaplan_video_fermo2_zh.jpg?v=1" alt="" width="960" height="540"><img src="/media/brigaplan_video_fermo3_zh.jpg?v=1" alt="" width="960" height="540"><img src="/media/brigaplan_video_fermo4_zh.jpg?v=1" alt="" width="960" height="540"><img src="/media/brigaplan_video_fermo5_zh.jpg?v=1" alt="" width="960" height="540"><img src="/media/brigaplan_video_fermo6_zh.jpg?v=1" alt="" width="960" height="540"></div></template>
       <button type="button" class="reel-btn" id="reel-btn" aria-pressed="false" data-txt-riproduci="播放" data-txt-pausa="暂停">暂停</button>
     </figure>
     <div class="fatti">
@@ -598,10 +606,29 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
 (function () {
   var reel = document.getElementById("reel");
   var reelBtn = document.getElementById("reel-btn");
-  function statoReel() { var fermo = reel.paused; reelBtn.textContent = fermo ? reelBtn.dataset.txtRiproduci : reelBtn.dataset.txtPausa; reelBtn.setAttribute("aria-pressed", String(fermo)); }
-  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) { reel.removeAttribute("autoplay"); reel.pause(); }
-  reelBtn.addEventListener("click", function () { if (reel.paused) { var pr = reel.play(); if (pr && pr.catch) pr.catch(function () {}); } else { reel.pause(); } });
-  reel.addEventListener("play", statoReel); reel.addEventListener("pause", statoReel); statoReel();
+  // Il video parte da solo, senza audio, anche sul telefono. Se il telefono lo blocca (risparmio energetico),
+  // al suo posto scorrono da sole sei immagini del video; si riprova al primo tocco o scorrimento.
+  var fermatoDaTe = false, fermi = null;
+  reel.muted = true; reel.defaultMuted = true; reel.setAttribute("muted", ""); reel.playsInline = true;
+  function statoReel() { var fermo = reel.paused && !fermi; reelBtn.textContent = fermo ? reelBtn.dataset.txtRiproduci : reelBtn.dataset.txtPausa; reelBtn.setAttribute("aria-pressed", String(fermo)); }
+  function mostraFermi() {
+    if (fermi || fermatoDaTe) return;
+    fermi = document.getElementById("reel-fermi").content.firstElementChild.cloneNode(true);
+    reel.parentNode.insertBefore(fermi, reelBtn); statoReel();
+  }
+  function togliFermi() { if (fermi) { fermi.remove(); fermi = null; } statoReel(); }
+  function prova() { var pr = reel.play(); if (pr && pr.then) pr.then(togliFermi, mostraFermi); }
+  prova();
+  setTimeout(function () { if (reel.paused && !fermatoDaTe) mostraFermi(); }, 2500);
+  ["touchstart", "scroll", "keydown"].forEach(function (ev) {
+    window.addEventListener(ev, function () { if (reel.paused && !fermatoDaTe) prova(); }, { once: true, passive: true });
+  });
+  reelBtn.addEventListener("click", function () {
+    if (fermi) { fermatoDaTe = true; togliFermi(); }                 // ferma anche le immagini di riserva
+    else if (reel.paused) { fermatoDaTe = false; prova(); }
+    else { fermatoDaTe = true; reel.pause(); }
+  });
+  reel.addEventListener("playing", togliFermi); reel.addEventListener("play", statoReel); reel.addEventListener("pause", statoReel); statoReel();
 
   var sheet = document.getElementById("tavola");
   var testiLivelli = document.getElementById("livelli-testi").content;
