@@ -60,7 +60,7 @@
     <h1>Platform privacy</h1>
     <p class="sec-lead">How we handle the data of people who sign up and use the Brigaplan platform: account, projects, uploaded floor plans and the conversation with the assistant. If you only visit the site, the <a href="/en/privacy.html">site privacy notice</a> applies.</p>
     <p class="nota-lingua">This is a translation. If there is any difference, the Italian version prevails. If you are a consumer and a sentence is unclear, the meaning most favourable to you applies.</p>
-  <p class="agg">Version 2 of 5 November 2026 · <a href="/en/privacy-piattaforma-v1.html">Previous version</a></p>
+  <p class="agg">Version 3 of 5 November 2026 · <a href="/en/privacy-piattaforma-v2.html">Previous version</a></p>
   </div>
 
   <div class="prosa">
@@ -82,6 +82,7 @@
         <li><strong>Projects:</strong> project name, type of venue, city, covers, what you ask us for and the floor plans and files you upload.</li>
         <li><strong>Conversation with the assistant:</strong> the messages you write to the assistant, its replies and the previews it prepares (floor plan, 3D, checks).</li>
         <li><strong>Full design request:</strong> the level you chose, your notes and, if you give it, your phone number.</li>
+        <li><strong>Connected apps</strong> (for example Claude): which app you connected, the dates and the access codes, stored only as a fingerprint that cannot be read back. See <a href="#pp-claude">Brigaplan inside Claude</a>.</li>
         <li><strong>Technical data:</strong> to limit login attempts we use your IP address only in memory, for a few minutes, without saving it. The service that hosts the platform records the technical data of visits as described in the <a href="/en/privacy.html">site privacy notice</a>.</li>
       </ul>
       <p>Floor plans may contain other people's data, for example the designer's name in the title block. Only upload them if you have the right to do so. We use them for your project and never show them to other users.</p>
@@ -101,9 +102,9 @@
     </section>
 
     <section aria-labelledby="pp-ia">
-      <h2 id="pp-ia">The AI assistant and review by a designer</h2>
+      <h2 id="pp-ia">The AI assistant and verification by a designer</h2>
       <p>The preview is prepared by an artificial intelligence assistant (Claude models by Anthropic) together with our design engine, which checks dimensions and rules.</p>
-      <p>Before you see it, every preview is checked by a designer on our staff, who can see the project, the uploaded files and the conversation with the assistant. The preview is indicative: we do not make automated decisions that have legal effects on you.</p>
+      <p>A designer from our staff checks every preview and can see the project, the uploaded files and the conversation with the assistant. If the engine finds no errors, you see the preview right away as an automatic draft, before it is checked; the designer checks it afterwards and corrects it if needed. The preview is indicative: we do not take automated decisions that have legal effects on you.</p>
     </section>
 
     <section aria-labelledby="pp-migliorare">
@@ -116,6 +117,19 @@
         <li><strong>You can object at any time</strong>, without giving reasons: in your account there is the option "Do not use my projects to improve Brigaplan", or write to <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a>. From then on we no longer use your projects for this purpose and we remove their copies without names; only figures already aggregated (statistics and rules) remain, which no longer concern you.</li>
       </ul>
       <p>We do not use your projects to train artificial intelligence models, and the AI provider may not do so either.</p>
+    </section>
+
+    <section aria-labelledby="pp-claude">
+      <h2 id="pp-claude">Brigaplan inside Claude</h2>
+      <p>You can also use Brigaplan from Claude, Anthropic's assistant, by connecting the Brigaplan connector to your Claude account. In that case:</p>
+      <ul>
+        <li><strong>Access.</strong> You sign in with your Brigaplan account and authorise Claude to see and create your projects. You can revoke the authorisation at any time from the “Connected apps” section of your account. If you change or reset your password, connected apps are disconnected straight away.</li>
+        <li><strong>What we receive.</strong> Only what Claude sends us for the project: the details of the venue and the answers to our assistant's questions, sometimes summarised by Claude. We store them like the messages written on the site. We never see the rest of your conversation with Claude. Floor plans can only be uploaded from our own page, not from the chat.</li>
+        <li><strong>What we send to Claude.</strong> Our assistant's questions, the status of the project, a short description without brands, dimensions or codes, the price range and links to the site. The floor plan and the 3D are shown in a window inside the chat, reduced and watermarked as on the site, through links that are valid for 10 minutes.</li>
+        <li><strong>Who is the controller.</strong> Anthropic is the controller of your conversation with Claude, under its <a href="https://www.anthropic.com/legal/privacy">privacy policy</a>. We are the controller of the data that reaches Brigaplan, as for the rest of the platform, in order to provide the service (Article 6(1)(b) of the Regulation).</li>
+        <li><strong>App access.</strong> For the connected app we store its name, its return addresses and the date it was connected. We store access codes only as a fingerprint that cannot be read back, with their expiry, last use and revocation: an access code is valid for 1 hour, a renewal code for 30 days, and after 90 days at most Claude has to be connected again.</li>
+        <li><strong>In the project</strong> we record that it started in Claude, for statistics and to let our staff know that you are waiting.</li>
+      </ul>
     </section>
 
     <section aria-labelledby="pp-chi">
@@ -150,6 +164,7 @@
         <li><strong>Account, projects, files and conversations:</strong> as long as the account is open. When you close the account, we immediately delete the account, projects, files and conversations from the platform and from the office computer where we prepare the previews. They remain only in the backups, which delete themselves within 14 days. The AI provider deletes the data it has received according to its own rules, normally within 30 days.</li>
         <li><strong>Copies of projects without names</strong>, to improve Brigaplan: as long as the account is open and you do not object; then we remove them. Figures already aggregated (statistics and rules) remain, because they no longer concern you.</li>
         <li><strong>Automatic emails already sent:</strong> we keep them for 90 days, to check that they were delivered.</li>
+        <li><strong>Connected apps:</strong> we delete expired or revoked access codes after 30 days and apps without codes after 90 days; everything is deleted when you close your account.</li>
         <li><strong>Invitations:</strong> we keep the email address of the people we invite until they sign up or, if they do not sign up, until 90 days after the invitation expires.</li>
         <li><strong>Accounts never confirmed:</strong> we delete them after 30 days.</li>
         <li><strong>Inactive accounts:</strong> after 24 months without logins we write to you; if you do not reply within 30 days, we delete the account.</li>

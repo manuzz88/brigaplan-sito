@@ -83,7 +83,7 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
     <h1>平台隐私</h1>
     <p class="sec-lead">我们如何处理注册和使用 Brigaplan 平台的用户数据：账户、项目、上传的平面图以及与助手的对话。如果您只是访问网站，适用<a href="/zh/privacy.html">网站隐私告知</a>。</p>
     <p class="nota-lingua">本页为译文，如有出入，以意大利语版本为准。如果您是消费者，而某句话含义不清，则按对您最有利的含义理解。</p>
-  <p class="agg">第 2 版 · 2026 年 11 月 5 日 · <a href="/zh/privacy-piattaforma-v1.html">上一版</a></p>
+  <p class="agg">第 3 版 · 2026 年 11 月 5 日 · <a href="/zh/privacy-piattaforma-v2.html">上一版</a></p>
   </div>
 
   <div class="prosa">
@@ -105,6 +105,7 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
         <li><strong>项目：</strong>项目名称、店面类型、城市、座位数、您的需求，以及您上传的平面图和文件。</li>
         <li><strong>与助手的对话：</strong>您写给助手的消息、助手的回复以及它准备的预览方案（平面图、3D、检查结果）。</li>
         <li><strong>完整设计方案申请：</strong>您选择的级别、备注，以及您提供的电话号码（如有）。</li>
+        <li><strong>已连接的应用</strong>（例如 Claude）：您连接了哪个应用、相关日期和访问代码，访问代码只以无法还原的指纹形式保存。详见<a href="#pp-claude">在 Claude 中使用 Brigaplan</a>。</li>
         <li><strong>技术数据：</strong>为了限制登录尝试次数，我们只在内存中使用您的 IP 地址几分钟，不会保存。托管平台的服务会按照<a href="/zh/privacy.html">网站隐私告知</a>中的说明记录访问的技术数据。</li>
       </ul>
       <p>平面图可能包含其他人的数据，例如图签中设计师的姓名。请只在您有权上传时才上传。我们把它们用于您的项目，绝不会向其他用户展示。</p>
@@ -126,7 +127,7 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
     <section aria-labelledby="pp-ia">
       <h2 id="pp-ia">AI 助手和设计师审核</h2>
       <p>预览方案由人工智能助手（Anthropic 的 Claude 模型）与我们的设计引擎共同准备，设计引擎负责检查尺寸和规范。</p>
-      <p>在您看到之前，每份预览方案都由我们团队的一名设计师审核，设计师可以查看项目、上传的文件以及与助手的对话。预览方案仅供参考：我们不会做出对您产生法律效力的自动化决定。</p>
+      <p>每个预览方案都由我们团队的设计师审核，设计师可以看到项目、上传的文件以及与助手的对话。如果引擎没有发现错误，您会在审核之前就看到自动草稿；设计师随后审核，必要时进行修改。预览方案仅供参考：我们不会做出对您产生法律效力的自动化决定。</p>
     </section>
 
     <section aria-labelledby="pp-migliorare">
@@ -139,6 +140,19 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
         <li><strong>您可以随时提出反对</strong>，无需说明理由：您的账户中有“不要使用我的项目改进 Brigaplan”选项，或者写信到 <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a>。从那时起，我们不再为此目的使用您的项目，并会删除这些项目去掉姓名的副本；只保留已经汇总的数据（统计和规则），它们已与您无关。</li>
       </ul>
       <p>我们不会用您的项目训练人工智能模型，AI 供应商也不得这样做。</p>
+    </section>
+
+    <section aria-labelledby="pp-claude">
+      <h2 id="pp-claude">在 Claude 中使用 Brigaplan</h2>
+      <p>您也可以在 Anthropic 的助手 Claude 中使用 Brigaplan：只需把 Brigaplan 连接器添加到您的 Claude 账户。在这种情况下：</p>
+      <ul>
+        <li><strong>访问。</strong>您用 Brigaplan 账户登录，并授权 Claude 查看和创建您的项目。您可以随时在账户的“已连接的应用”部分撤销授权。如果您修改或重置密码，已连接的应用会立即断开。</li>
+        <li><strong>我们收到的内容。</strong>只有 Claude 为项目发给我们的内容：店面信息，以及对我们助手提问的回答，有时由 Claude 概括。我们像保存网站上的消息一样保存这些内容。您与 Claude 的其他对话我们看不到。平面图只能通过我们自己的页面上传，不能从聊天中上传。</li>
+        <li><strong>我们发给 Claude 的内容。</strong>我们助手的提问、项目状态、一段不含品牌、尺寸和型号的简短说明、价格区间，以及网站链接。平面图和 3D 在聊天中的一个窗口里显示，与网站上一样经过缩小并带水印，链接有效期为 10 分钟。</li>
+        <li><strong>谁是数据控制者。</strong>您与 Claude 的对话由 Anthropic 作为数据控制者处理，依据其<a href="https://www.anthropic.com/legal/privacy">隐私政策</a>。发送到 Brigaplan 的数据由我们作为数据控制者处理，和平台其他部分一样，用于为您提供服务（条例第 6 条第 1 款 b 项）。</li>
+        <li><strong>应用访问。</strong>对于已连接的应用，我们保存其名称、回调地址和连接日期。访问代码只以无法还原的指纹形式保存，并记录有效期、最后使用时间和撤销情况：访问代码有效期 1 小时，续期代码 30 天，最长 90 天后需要重新连接 Claude。</li>
+        <li><strong>在项目中</strong>我们会记录它来自 Claude，用于统计，并提醒我们的团队您正在等待。</li>
+      </ul>
     </section>
 
     <section aria-labelledby="pp-chi">
@@ -173,6 +187,7 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
         <li><strong>账户、项目、文件和对话：</strong>在账户存续期间保存。您关闭账户后，我们会立即从平台以及准备预览方案的办公室电脑上删除账户、项目、文件和对话。这些数据只会留在备份中，备份会在 14 天内自动删除。AI 供应商会按照其自身规则删除收到的数据，通常在 30 天内。</li>
         <li><strong>去掉姓名的项目副本</strong>（用于改进 Brigaplan）：在账户存续期间且您未提出反对时保存；之后我们会删除。已经汇总的数据（统计和规则）会保留，因为它们已与您无关。</li>
         <li><strong>已发送的自动邮件：</strong>保存 90 天，用于确认邮件已送达。</li>
+        <li><strong>已连接的应用：</strong>过期或已撤销的访问代码在 30 天后删除，没有访问代码的应用在 90 天后删除；关闭账户时全部删除。</li>
         <li><strong>邀请：</strong>受邀人的邮箱地址保存到其注册为止；如果未注册，则保存到邀请过期后 90 天。</li>
         <li><strong>从未确认的账户：</strong>30 天后删除。</li>
         <li><strong>不活跃的账户：</strong>连续 24 个月没有登录时我们会给您写信；如果您在 30 天内没有回复，我们会删除账户。</li>

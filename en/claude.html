@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brigaplan inside Claude · Brigaplan</title>
+<meta name="description" content="How to use Brigaplan inside Claude: what the connector does, how to add it, example requests, data and support.">
+<meta property="og:site_name" content="Brigaplan">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Brigaplan inside Claude · Brigaplan">
+<meta property="og:description" content="How to use Brigaplan inside Claude: what the connector does, how to add it, example requests, data and support.">
+<meta property="og:url" content="https://brigaplan.ai/en/claude.html">
+<meta property="og:image" content="https://brigaplan.ai/media/brigaplan_og.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta property="og:image:alt" content="The 3D design of a trattoria made with Brigaplan">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://brigaplan.ai/en/claude.html">
+<link rel="alternate" hreflang="it" href="https://brigaplan.ai/claude.html">
+<link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/claude.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/claude.html">
+<link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/claude.html">
+<meta name="theme-color" content="#FAFAF8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect x='1.5' y='1.5' width='23' height='23' fill='%23fff' stroke='%2316191C' stroke-width='2.2'/%3E%3Cpath d='M1.5 11H13V24.5M13 7V1.5' fill='none' stroke='%2316191C' stroke-width='1.4'/%3E%3Crect x='16' y='15' width='6' height='6' fill='%23A63A1F'/%3E%3C/svg%3E">
+<link rel="preload" href="/fonts/Archivo-100_900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/PublicSans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/pagine.css">
+</head>
+<body>
+<div class="notice" role="region" aria-label="Notice"><div class="wrap">Brigaplan is in a trial phase · for now you can only join with an invitation code</div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/en/" aria-label="Brigaplan, back to the homepage">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><rect class="lm-wall" x="1.5" y="1.5" width="23" height="23"/><path class="lm-line" d="M1.5 11H13V24.5M13 7V1.5"/><rect class="lm-acc" x="16" y="15" width="6" height="6"/></svg>
+      <span translate="no">Briga<b>plan</b></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="/en/#come-funziona">How it works</a>
+      <a href="/en/#cosa-si-paga">What you pay for</a>
+      <a href="/en/partner.html">Partner installers</a>
+    </nav>
+    <div class="top-azioni">
+      <nav class="lingue" translate="no" aria-label="Language">
+        <a href="/claude.html" lang="it" hreflang="it">IT</a>
+        <a href="/en/claude.html" lang="en" hreflang="en" aria-current="page">EN</a>
+        <a href="/zh/claude.html" lang="zh-Hans" hreflang="zh-Hans">中文</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="/en/#prova">Try it free</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap doc">
+  <!-- BOZZA NON PUBBLICATA (chat sito, 5/11/2026, DECISIONI 42). Va online solo quando il connettore è aperto ai clienti.
+       Da confermare con la chat connettore: indirizzo /mcp, nomi dei menu di Claude, limiti. -->
+  <div class="doc-head">
+    <span class="eyebrow">Connector for Claude</span>
+    <h1>Brigaplan inside Claude</h1>
+    <p class="sec-lead">With the Brigaplan connector you prepare the free preview of a commercial kitchen or bar by talking to Claude, the assistant made by Anthropic. The preview is drawn by the Brigaplan engine and checked by a designer, just as on the site.</p>
+  </div>
+
+  <div class="prosa">
+    <section aria-labelledby="cl-cosa">
+      <h2 id="cl-cosa">What you can do from the chat</h2>
+      <ul>
+        <li><strong>Create a preview:</strong> describe the venue (type, city, seats, square metres) and what you want to achieve.</li>
+        <li><strong>Answer our assistant:</strong> before drawing, it asks for what it needs, for example doors, windows, gas or electric.</li>
+        <li><strong>Upload the floor plan:</strong> Claude gives you a personal link to a page on our site, valid for 7 days: you sign in with your account and upload up to 5 files. Files in the chat do not reach us.</li>
+        <li><strong>See the preview</strong> in a window inside the chat: floor plan with zones and counters, stylized 3D you can rotate and the equipment price range.</li>
+        <li><strong>Open the design on the site</strong>, if you want the full design or a quote.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="cl-sito">
+      <h2 id="cl-sito">What stays on the site</h2>
+      <p>Full design and construction drawings, quotes, payments, downloads and account settings are only on brigaplan.ai. From the chat you cannot pay for or delete anything.</p>
+    </section>
+
+    <section aria-labelledby="cl-come">
+      <h2 id="cl-come">How to add it</h2>
+      <ol>
+        <li>You need a Brigaplan account, which is free. During the trial you also need an invitation code.</li>
+        <li>In Claude, on the web or in the desktop app, open “Customize” › “Connectors”. If Brigaplan is in the list, add it from there; otherwise click “+ Add” › “Add custom connector” and enter the name Brigaplan and the address <span translate="no">https://app.brigaplan.ai/mcp</span>.</li>
+        <li>Claude opens the Brigaplan sign-in page: you sign in with your account and authorise Claude to see and create your projects.</li>
+        <li>To use it in a chat, click “+” at the bottom left, then “Connectors”, and switch Brigaplan on. It also works in the Claude app on your phone. In Team and Enterprise accounts the connector is added by an administrator.</li>
+      </ol>
+      <p>You can disconnect Claude at any time from the “Connected apps” section of your Brigaplan account.</p>
+    </section>
+
+    <section aria-labelledby="cl-esempi">
+      <h2 id="cl-esempi">Example requests</h2>
+      <ul>
+        <li>“I’m opening an 80-seat trattoria in Milan. The kitchen is 9 × 5.5 m, with one door to the dining room. Use Brigaplan to make me a preview of the kitchen.”</li>
+        <li>“With Brigaplan, lay out the bar of a 40-seat venue: a 6-metre counter, espresso machine, glass washer and drinks fridge.”</li>
+        <li>“I run a 100-seat pizzeria with a wood-fired oven: use Brigaplan to prepare a preview of the prep kitchen, with the equipment price range.”</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="cl-limiti">
+      <h2 id="cl-limiti">Good to know</h2>
+      <ul>
+        <li>The free previews of your account apply, as on the site: 2 projects, each with up to 3 versions.</li>
+        <li>The preview is indicative: no dimensions, brands or codes. It is not enough to build from. See <a href="/en/condizioni.html#c-limiti">What a preview is, and what it is not</a>.</li>
+        <li>If the engine finds no errors you see an automatic draft straight away, marked as such; the version checked by a designer comes later. If the engine finds errors, the preview arrives once a designer has fixed it.</li>
+        <li>What Claude writes in its own words is not written by us: what counts is what you see in the Brigaplan window and on the site.</li>
+        <li>Brigaplan is a service of Italfrigo Service S.r.l., which is also a <a href="/en/partner.html">partner installer</a> in Lombardy. You ask for a quote for equipment and installation only if you want to, from the site, and you are not obliged to buy from a partner.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="cl-dati">
+      <h2 id="cl-dati">Your data</h2>
+      <p>We only receive what Claude sends us for the project: the details of the venue and your answers to our assistant. We do not see the rest of your conversation with Claude. Floor plan and 3D are shown in the Brigaplan window, reduced and watermarked. The details are in the <a href="/en/privacy-piattaforma.html#pp-claude">platform privacy notice</a> and in the <a href="/en/condizioni.html#c-claude">terms of use</a>.</p>
+    </section>
+
+    <section aria-labelledby="cl-aiuto">
+      <h2 id="cl-aiuto">Support</h2>
+      <p>For questions or problems with the connector write to <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a>, in Italian or English.</p>
+    </section>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="logo"><span translate="no">Briga<b>plan</b></span></span>
+    <p>Design of commercial kitchens and bars with artificial intelligence.</p>
+    <p>Partner installers: Italfrigo (Lombardy). <a href="/en/partner.html">Become a partner</a></p>
+    <p>Brigaplan is a service of Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · Companies Register of Milano Monza Brianza Lodi no. 06825390153 · REA MI-1120586 · tax code and VAT no. 06825390153 · Share capital €46,800.00 fully paid · certified email (PEC) <span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/en/privacy.html">Privacy and cookies</a></p>
+  </div>
+</footer>
+<script>/* conteggio anonimo delle visite: niente cookie, niente IP salvati (vedi /privacy.html) */
+try{if(navigator.sendBeacon&&navigator.doNotTrack!=='1'&&!navigator.globalPrivacyControl)navigator.sendBeacon('https://app.brigaplan.ai/api/visita',JSON.stringify({p:location.pathname,l:(document.documentElement.lang||'it').slice(0,2),r:document.referrer}))}catch(e){}</script>
+</body>
+</html>

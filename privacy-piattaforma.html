@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Privacy della piattaforma · Brigaplan</title>
-<meta name="description" content="Come Brigaplan tratta i dati di chi si registra e usa la piattaforma: account, progetti, piante caricate, assistente IA e controllo di un progettista.">
+<meta name="description" content="Come Brigaplan tratta i dati di chi si registra e usa la piattaforma: account, progetti, piante caricate, assistente IA e verifica di un progettista.">
 <meta property="og:site_name" content="Brigaplan">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Privacy della piattaforma · Brigaplan">
-<meta property="og:description" content="Come Brigaplan tratta i dati di chi si registra e usa la piattaforma: account, progetti, piante caricate, assistente IA e controllo di un progettista.">
+<meta property="og:description" content="Come Brigaplan tratta i dati di chi si registra e usa la piattaforma: account, progetti, piante caricate, assistente IA e verifica di un progettista.">
 <meta property="og:url" content="https://brigaplan.ai/privacy-piattaforma.html">
 <meta property="og:image" content="https://brigaplan.ai/media/brigaplan_og.jpg">
 <meta property="og:image:width" content="1280">
@@ -59,7 +59,7 @@
     <span class="eyebrow">Informativa ai sensi degli artt. 13 e 14 del Regolamento UE 2016/679</span>
     <h1>Privacy della piattaforma</h1>
     <p class="sec-lead">Come trattiamo i dati di chi si registra e usa la piattaforma Brigaplan: account, progetti, piante caricate e dialogo con l'assistente. Per chi visita solo il sito vale la <a href="/privacy.html">privacy del sito</a>.</p>
-    <p class="agg">Versione 2 del 5 novembre 2026 · <a href="/privacy-piattaforma-v1.html">Versione precedente</a></p>
+    <p class="agg">Versione 3 del 5 novembre 2026 · <a href="/privacy-piattaforma-v2.html">Versione precedente</a></p>
   </div>
 
   <div class="prosa">
@@ -81,6 +81,7 @@
         <li><strong>Progetti:</strong> nome del progetto, tipo di locale, città, coperti, quello che ci chiedi e le piante e i file che carichi.</li>
         <li><strong>Dialogo con l'assistente:</strong> i messaggi che scrivi all'assistente, le sue risposte e le anteprime che prepara (pianta, 3D, verifiche).</li>
         <li><strong>Richiesta del progetto completo:</strong> il livello scelto, le note e, se lo dai, il telefono.</li>
+        <li><strong>App collegate</strong> (per esempio Claude): quale app hai collegato, le date e i codici di accesso, salvati solo come impronta che non si può rileggere. Vedi <a href="#pp-claude">Brigaplan dentro Claude</a>.</li>
         <li><strong>Dati tecnici:</strong> per limitare i tentativi di accesso usiamo l'indirizzo IP solo in memoria, per pochi minuti, senza salvarlo. Il servizio che ospita la piattaforma registra i dati tecnici delle visite come descritto nella <a href="/privacy.html">privacy del sito</a>.</li>
       </ul>
       <p>Le piante possono contenere dati di altre persone, per esempio il nome del progettista nel cartiglio. Caricale solo se hai il diritto di farlo. Le usiamo per il tuo progetto e non le mostriamo mai ad altri utenti.</p>
@@ -100,9 +101,9 @@
     </section>
 
     <section aria-labelledby="pp-ia">
-      <h2 id="pp-ia">L'assistente IA e il controllo di un progettista</h2>
+      <h2 id="pp-ia">L'assistente IA e la verifica di un progettista</h2>
       <p>L'anteprima la prepara un assistente di intelligenza artificiale (modelli Claude di Anthropic) insieme al nostro motore di progettazione, che controlla misure e regole.</p>
-      <p>Prima che tu la veda, ogni anteprima la controlla un progettista del nostro staff, che può vedere il progetto, i file caricati e il dialogo con l'assistente. L'anteprima è indicativa: non prendiamo decisioni automatiche che abbiano effetti giuridici su di te.</p>
+      <p>Ogni anteprima la verifica un progettista del nostro staff, che può vedere il progetto, i file caricati e il dialogo con l'assistente. Se il motore non trova errori, la vedi subito come bozza automatica, prima della verifica; il progettista la verifica dopo e, se serve, la corregge. L'anteprima è indicativa: non prendiamo decisioni automatiche che abbiano effetti giuridici su di te.</p>
     </section>
 
     <section aria-labelledby="pp-migliorare">
@@ -115,6 +116,19 @@
         <li><strong>Puoi opporti quando vuoi</strong>, senza dare motivi: nel tuo account c'è l'opzione "Non usare i miei progetti per migliorare Brigaplan", oppure scrivi a <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a>. Da quel momento non usiamo più i tuoi progetti per questo scopo e togliamo le loro copie senza nome; restano solo i numeri già aggregati (statistiche e regole), che non riguardano più te.</li>
       </ul>
       <p>Non usiamo i tuoi progetti per addestrare modelli di intelligenza artificiale, e il fornitore dell'IA non può farlo.</p>
+    </section>
+
+    <section aria-labelledby="pp-claude">
+      <h2 id="pp-claude">Brigaplan dentro Claude</h2>
+      <p>Puoi usare Brigaplan anche da Claude, l'assistente di Anthropic, collegando il connettore Brigaplan al tuo account Claude. In questo caso:</p>
+      <ul>
+        <li><strong>Accesso.</strong> Entri con il tuo account Brigaplan e autorizzi Claude a vedere e creare i tuoi progetti. Puoi revocare l'autorizzazione quando vuoi dalla sezione «App collegate» del tuo account. Se cambi la password o la recuperi, le app collegate si scollegano subito.</li>
+        <li><strong>Cosa riceviamo.</strong> Solo quello che Claude ci manda per il progetto: i dati del locale e le risposte alle domande del nostro assistente, a volte riassunte da Claude. Li salviamo come i messaggi scritti sul sito. Il resto della conversazione con Claude non lo vediamo. Le piante si caricano solo dalla nostra pagina, non dalla chat.</li>
+        <li><strong>Cosa mandiamo a Claude.</strong> Le domande del nostro assistente, lo stato del progetto, una breve descrizione senza marche, quote né codici, la fascia di prezzo e i link al sito. Pianta e 3D si vedono in una finestra dentro la chat, ridotti e con la filigrana come sul sito, con indirizzi che valgono 10 minuti.</li>
+        <li><strong>Chi è il titolare.</strong> Della conversazione con Claude è titolare Anthropic, secondo la sua <a href="https://www.anthropic.com/legal/privacy">informativa</a>. Dei dati che arrivano a Brigaplan siamo titolari noi, come per il resto della piattaforma, per darti il servizio (art. 6, par. 1, lett. b del Regolamento).</li>
+        <li><strong>Accesso dell'app.</strong> Dell'app collegata salviamo il nome, gli indirizzi di ritorno e la data di collegamento. I codici di accesso li salviamo solo come impronta che non si può rileggere, con scadenza, ultimo uso e revoca: il codice di accesso vale 1 ora, quello di rinnovo 30 giorni, e dopo 90 giorni al massimo Claude va ricollegato.</li>
+        <li><strong>Nel progetto</strong> segniamo che è nato da Claude, per le statistiche e per avvisare lo staff che stai aspettando.</li>
+      </ul>
     </section>
 
     <section aria-labelledby="pp-chi">
@@ -149,6 +163,7 @@
         <li><strong>Account, progetti, file e dialoghi:</strong> finché l'account è aperto. Quando chiudi l'account cancelliamo subito account, progetti, file e dialoghi dalla piattaforma e dal computer dell'ufficio dove prepariamo le anteprime. Restano solo nelle copie di sicurezza, che si cancellano da sole entro 14 giorni. Il fornitore dell'IA cancella i dati che ha ricevuto secondo le sue regole, di norma entro 30 giorni.</li>
         <li><strong>Copie senza nome dei progetti</strong>, per migliorare Brigaplan: finché l'account è aperto e non ti opponi; poi le togliamo. I numeri già aggregati (statistiche e regole) restano, perché non riguardano più te.</li>
         <li><strong>Email automatiche già mandate:</strong> le teniamo 90 giorni, per controllare che siano arrivate.</li>
+        <li><strong>App collegate:</strong> i codici di accesso scaduti o revocati li cancelliamo dopo 30 giorni, le app senza codici dopo 90 giorni; tutto si cancella quando chiudi l'account.</li>
         <li><strong>Inviti:</strong> l'indirizzo email di chi invitiamo lo teniamo fino alla registrazione o, se non si registra, fino a 90 giorni dopo la scadenza dell'invito.</li>
         <li><strong>Account mai confermati:</strong> li cancelliamo dopo 30 giorni.</li>
         <li><strong>Account inattivi:</strong> dopo 24 mesi senza accessi ti scriviamo; se non rispondi entro 30 giorni, cancelliamo l'account.</li>

@@ -252,4 +252,28 @@
   <loc>https://brigaplan.ai/zh/sushi.html</loc>
   <lastmod>2026-11-05</lastmod>
  </url>
+ <url>
+  <loc>https://brigaplan.ai/claude.html</loc>
+  <lastmod>2026-11-05</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/claude.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/en/claude.html</loc>
+  <lastmod>2026-11-05</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/claude.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/zh/claude.html</loc>
+  <lastmod>2026-11-05</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/claude.html"/>
+ </url>
 </urlset>
