@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Platform privacy · Brigaplan</title>
@@ -214,7 +216,6 @@
     <p>Brigaplan is a service of Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · Companies Register of Milano Monza Brianza Lodi no. 06825390153 · REA MI-1120586 · tax code and VAT no. 06825390153 · Share capital €46,800.00 fully paid · certified email (PEC) <span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/en/privacy.html">Privacy and cookies</a></p>
   </div>
 </footer>
-<script>/* conteggio anonimo delle visite: niente cookie, niente IP salvati (vedi /privacy.html) */
-try{if(navigator.sendBeacon&&navigator.doNotTrack!=='1'&&!navigator.globalPrivacyControl)navigator.sendBeacon('https://app.brigaplan.ai/api/visita',JSON.stringify({p:location.pathname,l:(document.documentElement.lang||'it').slice(0,2),r:document.referrer}))}catch(e){}</script>
+<script src="/js/s-1c50f2db9341.js"></script>
 </body>
 </html>

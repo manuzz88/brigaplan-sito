@@ -2,6 +2,8 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Brigaplan dentro Claude · Brigaplan</title>
 <meta name="description" content="Come usare Brigaplan dentro Claude: cosa fa il connettore, come si aggiunge, esempi di richieste, dati e assistenza.">
@@ -44,6 +46,9 @@
       <a href="/partner.html">Installatori partner</a>
     </nav>
     <div class="top-azioni">
+      <details class="menu-tel"><summary>Menu</summary><nav aria-label="Menu"><a href="/come-funziona.html">Come funziona e prezzi</a><a href="/domande.html">Domande</a><a href="/professionisti.html">Professionisti</a><a href="/partner.html">Installatori</a><a href="https://app.brigaplan.ai/accedi?lingua=it">Accedi</a><div class="lingue-menu" translate="no"><a href="/claude.html" lang="it" hreflang="it">IT</a>
+        <a href="/en/claude.html" lang="en" hreflang="en">EN</a>
+        <a href="/zh/claude.html" lang="zh-Hans" hreflang="zh-Hans">中文</a></div></nav></details>
       <nav class="lingue" translate="no" aria-label="Lingua">
         <a href="/claude.html" lang="it" hreflang="it" aria-current="page">IT</a>
         <a href="/en/claude.html" lang="en" hreflang="en">EN</a>
@@ -60,7 +65,7 @@
   <div class="doc-head">
     <span class="eyebrow">Connettore per Claude</span>
     <h1>Brigaplan dentro Claude</h1>
-    <p class="sec-lead">Con il connettore Brigaplan prepari l'anteprima gratuita di una cucina o di un bar professionale parlando con Claude, l'assistente di Anthropic. L'anteprima la disegna il motore di Brigaplan e la verifica un progettista, come sul sito.</p>
+    <p class="sec-lead">Con il connettore Brigaplan prepari l'anteprima gratuita di una cucina o di un bar professionale parlando con Claude, l'assistente di Anthropic. L'anteprima la disegna il motore di Brigaplan, che la controlla con le regole, come sul sito. Se vuoi, dal sito la fai verificare anche da un progettista (servizio a pagamento).</p>
   </div>
 
   <div class="prosa">
@@ -105,9 +110,10 @@
       <ul>
         <li>Valgono le anteprime gratuite del tuo account, come sul sito: 2 progetti, ciascuno con fino a 3 versioni.</li>
         <li>L'anteprima è indicativa: niente quote, marche né codici. Non basta per costruire. Vedi <a href="/condizioni.html#c-limiti">Cosa è, e cosa non è, un'anteprima</a>.</li>
-        <li>Se il motore non trova errori vedi subito una bozza automatica, segnata come tale; la versione verificata da un progettista arriva dopo. Se il motore trova errori, l'anteprima arriva quando un progettista l'ha sistemata.</li>
+        <li>L'anteprima la vedi subito, segnata come «bozza automatica, non verificata da un progettista». Se il motore trova dei problemi te li segnala: l'assistente li corregge gratis e, se non ci riesce, ti propone la verifica di un progettista, che chiedi dal sito.</li>
+        <li><strong>Brigaplan ti dà un layout funzionale delle attrezzature. Per ASL, HACCP, Vigili del fuoco e pratiche edilizie servono il progetto e la firma di un tecnico abilitato scelto da te, e il layout va approvato dai tuoi consulenti. Prima del cantiere, misure e allacci li controlla l'installatore.</strong></li>
         <li>Quello che Claude scrive con parole sue non lo scriviamo noi: fa fede quello che vedi nella finestra di Brigaplan e sul sito.</li>
-        <li>Brigaplan è un servizio di Italfrigo Service S.r.l., che in Lombardia è anche <a href="/partner.html">installatore partner</a>. Il preventivo per attrezzature e montaggio lo chiedi solo se vuoi, dal sito, e non sei obbligato a comprare da un partner.</li>
+        <li>Lavoriamo con <a href="/partner.html">installatori partner</a> per zona: in Lombardia è Italfrigo Service S.r.l., la società che gestisce Brigaplan. Il preventivo per attrezzature e montaggio lo chiedi solo se vuoi, dal sito, e non sei obbligato a comprare da un partner.</li>
       </ul>
     </section>
 
@@ -127,11 +133,11 @@
   <div class="wrap">
     <span class="logo"><span translate="no">Briga<b>plan</b></span></span>
     <p>Progettazione di cucine e bar professionali con l'intelligenza artificiale.</p>
+    <p class="foot-link"><a href="/come-funziona.html">Come funziona e prezzi</a> · <a href="/domande.html">Domande</a> · Guide: <a href="/guide/costo-cucina-professionale.html">quanto costa una cucina</a>, <a href="/guide/regole-cucina-lombardia.html">regole ASL in Lombardia</a>, <a href="/guide/pizzeria-forno-legna.html">pizzeria a legna</a>, <a href="/guide/cucina-sushi-ayce.html">sushi</a> · <a href="/professionisti.html">Professionisti</a> · <a href="/partner.html">Installatori</a> · <a href="/condizioni.html">Condizioni</a> · <a href="/privacy-piattaforma.html">Privacy</a> · <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
     <p>Installatori partner: Italfrigo (Lombardia). <a href="/partner.html">Diventa partner</a></p>
     <p>Brigaplan è un servizio di Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · Registro delle imprese di Milano Monza Brianza Lodi n. 06825390153 · REA MI-1120586 · C.F. e P.IVA 06825390153 · Capitale sociale 46.800,00 € i.v. · PEC <span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/privacy.html">Privacy e cookie</a></p>
   </div>
 </footer>
-<script>/* conteggio anonimo delle visite: niente cookie, niente IP salvati (vedi /privacy.html) */
-try{if(navigator.sendBeacon&&navigator.doNotTrack!=='1'&&!navigator.globalPrivacyControl)navigator.sendBeacon('https://app.brigaplan.ai/api/visita',JSON.stringify({p:location.pathname,l:(document.documentElement.lang||'it').slice(0,2),r:document.referrer}))}catch(e){}</script>
+<script src="/js/s-1c50f2db9341.js"></script>
 </body>
 </html>

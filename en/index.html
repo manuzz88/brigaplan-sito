@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Brigaplan · Commercial kitchens and bars designed with AI</title>
 <meta name="description" content="Upload your floor plan or describe your space: Brigaplan prepares a free preview of your commercial kitchen or bar. Then the design, the construction drawings and a partner installer in your area.">
 <meta property="og:site_name" content="Brigaplan">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Brigaplan · Commercial kitchens and bars designed with AI">
-<meta property="og:description" content="From the floor plan of your venue to the full design. Free preview, checked by a designer.">
+<meta property="og:description" content="From the floor plan of your venue to the full design. Free preview, prepared by AI and checked by the engine.">
 <meta property="og:url" content="https://brigaplan.ai/en/">
 <meta property="og:image" content="https://brigaplan.ai/media/brigaplan_og.jpg">
 <meta property="og:image:width" content="1280">
@@ -88,6 +90,16 @@ img, video { display: block; height: auto; }
 .nav a { text-decoration: none; color: var(--muted); white-space: nowrap; }
 .nav a:hover { color: var(--ink); }
 @media (max-width: 960px) { .nav { display: none; } }
+.top .wrap { position: relative; }
+.menu-tel { display: none; }
+.menu-tel > summary { list-style: none; cursor: pointer; font-weight: 600; font-size: .9375rem; padding: 6px 4px; }
+.menu-tel > summary::-webkit-details-marker { display: none; }
+.menu-tel > nav { position: absolute; left: 12px; right: 12px; top: calc(100% + 6px); z-index: 30; display: grid; gap: 14px; padding: 16px 18px; background: var(--sheet); border: 1px solid var(--rule); }
+.menu-tel .lingue-menu { display: none; gap: 14px; border-top: 1px solid var(--rule); padding-top: 12px; font-weight: 600; }
+@media (max-width: 520px) { .top-azioni > .menu-tel ~ .lingue { display: none; } .menu-tel .lingue-menu { display: flex; } }
+.menu-tel > nav a { text-decoration: none; color: var(--ink); white-space: nowrap; }
+@media (max-width: 960px) { .menu-tel { display: block; } }
+.foot-link a { white-space: nowrap; }
 .top-azioni { display: flex; align-items: center; gap: 14px; font-size: .9375rem; }
 .lingue { display: flex; gap: 2px; font-size: .8125rem; font-weight: 600; }
 .lingue a { text-decoration: none; color: var(--muted); padding: 5px 6px; white-space: nowrap; }
@@ -126,6 +138,8 @@ img, video { display: block; height: auto; }
 .for { font-size: .9375rem; color: var(--muted); }
 .reel { position: relative; margin: 0; background: var(--sheet); border: 1px solid var(--rule); }
 .reel video { width: 100%; aspect-ratio: 16 / 9; }
+.reel img { width: 100%; height: auto; display: block; }
+.reel img.reel-v { max-height: 60svh; object-fit: cover; object-position: top; }
 /* telefono: il video verticale (chat sopra, progetto sotto); computer: quello orizzontale */
 .reel .reel-v { display: none; aspect-ratio: 9 / 16; }
 @media (max-width: 700px) { .reel .reel-o { display: none; } .reel .reel-v { display: block; } }
@@ -291,13 +305,16 @@ img, video { display: block; height: auto; }
       <a href="#domande">FAQ</a>
     </nav>
     <div class="top-azioni">
+      <details class="menu-tel"><summary>Menu</summary><nav aria-label="Menu"><a href="/en/come-funziona.html">How it works and prices</a><a href="/en/domande.html">FAQ</a><a href="/en/professionisti.html">Professionals</a><a href="/en/partner.html">Installers</a><a href="https://app.brigaplan.ai/accedi?lingua=en">Log in</a><div class="lingue-menu" translate="no"><a href="/" lang="it" hreflang="it">IT</a>
+        <a href="/en/" lang="en" hreflang="en">EN</a>
+        <a href="/zh/" lang="zh-Hans" hreflang="zh-Hans">中文</a></div></nav></details>
       <nav class="lingue" translate="no" aria-label="Language">
         <a href="/" lang="it" hreflang="it">IT</a>
         <a href="/en/" lang="en" hreflang="en" aria-current="page">EN</a>
         <a href="/zh/" lang="zh-Hans" hreflang="zh-Hans">中文</a>
       </nav>
       <a class="accedi" href="https://app.brigaplan.ai/accedi?lingua=en">Log in</a>
-      <a class="btn btn-primary btn-sm" href="https://app.brigaplan.ai/registrati?lingua=en">Try it free</a>
+      <a class="btn btn-primary btn-sm" href="#prova">Try it free</a>
     </div>
   </div>
 </header>
@@ -305,31 +322,29 @@ img, video { display: block; height: auto; }
 <main>
 <section class="hero" aria-labelledby="titolo">
   <div class="wrap">
+    <p class="for">For restaurants, pizzerias, bars, hotels and canteens</p>
     <div class="riga">
       <h1 id="titolo">The platform that is revolutionising the design of professional kitchens and spaces for hospitality and foodservice.</h1>
       <div class="destra">
-        <p class="lead">AI prepares a free preview with floor plan, 3D and cost estimate in a few minutes, and a designer checks it.</p>
+        <p class="lead">Upload the floor plan or describe the venue: in a few minutes you get a free preview of your kitchen, with floor plan, 3D and cost estimate. The AI prepares it and the engine, our automatic rule check, checks it. You only pay if you go further.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://app.brigaplan.ai/registrati?lingua=en">Try it on your space</a>
+          <a class="btn btn-primary" href="#prova">Try it on your space</a>
           <a class="btn btn-ghost" href="#come-funziona">How it works</a>
         </div>
+        <p class="small">For now you need an invitation code. Don't have one? <a href="#prova">Ask for it here</a>.</p>
       </div>
     </div>
     <figure class="reel">
-      <video class="reel-o" src="/media/brigaplan_video_o_en.mp4?v=2" poster="/media/brigaplan_video_o_poster_en.jpg?v=2" muted loop playsinline webkit-playsinline preload="none" aria-label="Video: the finished trattoria in 3D, then the conversation with the assistant on the platform next to the design taking shape: drawing and stylized 3D. Then a hotel, a central production kitchen and a café bar."></video>
-      <video class="reel-v" src="/media/brigaplan_video_v_en.mp4?v=2" poster="/media/brigaplan_video_v_poster_en.jpg?v=2" muted loop playsinline webkit-playsinline preload="none" aria-label="Video: the finished trattoria in 3D, then the conversation with the assistant on the platform next to the design taking shape: drawing and stylized 3D. Then a hotel, a central production kitchen and a café bar."></video>
-      <template id="reel-fermi-o"><div class="fermi" aria-hidden="true"><img src="/media/brigaplan_fermo_o1_en.jpg?v=2" alt="" width="960" height="540"><img src="/media/brigaplan_fermo_o2_en.jpg?v=2" alt="" width="960" height="540"><img src="/media/brigaplan_fermo_o3_en.jpg?v=2" alt="" width="960" height="540"><img src="/media/brigaplan_fermo_o4_en.jpg?v=2" alt="" width="960" height="540"><img src="/media/brigaplan_fermo_o5_en.jpg?v=2" alt="" width="960" height="540"><img src="/media/brigaplan_fermo_o6_en.jpg?v=2" alt="" width="960" height="540"></div></template>
-      <template id="reel-fermi-v"><div class="fermi" aria-hidden="true"><img src="/media/brigaplan_fermo_v1_en.jpg?v=2" alt="" width="540" height="960"><img src="/media/brigaplan_fermo_v2_en.jpg?v=2" alt="" width="540" height="960"><img src="/media/brigaplan_fermo_v3_en.jpg?v=2" alt="" width="540" height="960"><img src="/media/brigaplan_fermo_v4_en.jpg?v=2" alt="" width="540" height="960"><img src="/media/brigaplan_fermo_v5_en.jpg?v=2" alt="" width="540" height="960"><img src="/media/brigaplan_fermo_v6_en.jpg?v=2" alt="" width="540" height="960"></div></template>
-      <button type="button" class="reel-btn" id="reel-btn" aria-pressed="false" data-txt-riproduci="Play" data-txt-pausa="Pause">Pause</button>
+      <img class="reel-o" src="/media/brigaplan_video_o_poster_en.jpg?v=2" alt="The example trattoria in 3D. This kitchen came out of a conversation with the assistant." width="1280" height="720">
+      <img class="reel-v" src="/media/brigaplan_video_v_poster_en.jpg?v=2" alt="The example trattoria in 3D. This kitchen came out of a conversation with the assistant." width="720" height="1280">
     </figure>
     <div class="fatti">
-      <div class="marchio"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="lm-wall" x="1.5" y="1.5" width="23" height="23"/><path class="lm-line" d="M1.5 11H13V24.5M13 7V1.5"/><rect class="lm-acc" x="16" y="15" width="6" height="6"/></svg><span translate="no" style="color:inherit;font-size:1rem">Brigaplan</span></div>
-      <div><b>Free preview</b><span>Plan, 3D and cost estimate, checked by a designer</span></div>
-      <div><b>Checked by a designer</b><span>Draft right away, check afterwards</span></div>
-      <div><b>An installer in your area</b><span>The first partner is Italfrigo, in Lombardy</span></div>
+      <div><b>No site visit</b><span>Floor plan or description, from your phone or computer</span></div>
+      <div><b>Free preview</b><span>Floor plan, 3D and cost estimate, checked by the engine</span></div>
+      <div><b>Designer on request</b><span>A check by a person, if you want one</span></div>
+      <div><b>Partner installer</b><span>For now in Lombardy; the design works with any supplier</span></div>
     </div>
-    <p class="didascalia"><b>From floor plan to full design.</b> The floor plan, the 3D model and the animation come from our own design engine, with equipment dimensions taken from the manufacturers' data sheets. Photorealistic renders are a separate service, on request.</p>
-    <p class="for">For restaurant, hotel and bar owners · architects and designers · dealers and sales agents</p>
+    <p class="didascalia"><b>From the floor plan to the full design.</b> The floor plan and 3D come out of our design engine, with equipment dimensions taken from the manufacturers' data sheets.</p>
   </div>
 </section>
 
@@ -337,18 +352,18 @@ img, video { display: block; height: auto; }
   <div class="wrap">
     <div class="sec-head">
       <h2 id="t-consulente">Talk as you would to a consultant. Brigaplan prepares the design.</h2>
-      <p class="sec-lead">Tell us what you want, as you would a consultant: the assistant asks you the right questions and the engine draws the kitchen with real sizes and rules. A designer checks every preview. To build, you will then need the design, the construction drawings and, for permits, a licensed professional.</p>
+      <p class="sec-lead">You describe what you want, as you would to a consultant: the assistant asks the right questions and the engine draws the kitchen with real dimensions and rules. If you want, a designer can also check it (paid service). For permits you then need a design signed by a qualified professional of your choice.</p>
     </div>
     <div class="due">
       <ol class="chat" aria-label="Sample conversation with the assistant">
         <li class="msg cliente"><span class="chi">You</span>I'm opening an 80-seat trattoria in Milan, Lombard cuisine. I'm sending you the floor plan.</li>
-        <li class="msg assistente"><span class="chi">Brigaplan assistant</span>I've read your floor plan: a 9.20 x 5.60 m kitchen, an 80 cm door to the dining room and a 90 cm delivery door.<br>Before I draw the free preview, I need a few answers:<br>1. How often do you get deliveries?<br>2. Do you cook with gas or electric?<br>3. A flue up to the roof, or activated-carbon hoods?<br>4. Fridges with built-in or remote motors?<br>If you're not sure about something, I'll pick a sensible starting value and mark it as "to confirm".</li>
+        <li class="msg assistente"><span class="chi">Brigaplan assistant</span>I have received the floor plan: a 9.20 x 5.60 m kitchen, an 80 cm door to the dining room and a 90 cm service door.<br>Before I draw, I need a few answers:<br>1. How often do deliveries arrive?<br>2. Is the kitchen gas or electric?<br>3. A flue up to the roof or carbon filters?<br>4. Fridges with built-in or remote motors?<br>If you don't know something, I use standard values and tell you which ones I chose.</li>
         <li class="msg cliente"><span class="chi">You</span>Deliveries three times a week, gas burners, hood ducted to the roof, fridges with built-in compressor.</li>
-        <li class="msg assistente"><span class="chi">Brigaplan assistant</span>Version 1 is ready as an automatic draft, with no errors: you can see it right here. One of our designers will check it and we will email you once it is verified.</li>
+        <li class="msg assistente"><span class="chi">Brigaplan assistant</span>Version 1 is ready as an automatic draft: the engine has checked it against the rules, with no errors, and you will find it here alongside. It is a functional equipment layout: for health authority (ASL), HACCP and fire safety (Vigili del fuoco) approvals you need a design signed by a qualified professional of your choice. If you want, one of our designers can check it (paid service).</li>
       </ol>
       <figure style="margin:0;display:grid;gap:10px">
         <img class="tavola-img" src="/media/tavola_anteprima_en.jpg?v=3" alt="The result: the trattoria preview, a plan without dimensions with zones, counters and flows" width="1600" height="900" loading="lazy">
-        <figcaption class="didascalia"><b>The result.</b> The trattoria preview: a plan with zones, counters and flows, 3D and a cost estimate. A designer checks it.</figcaption>
+        <figcaption class="didascalia"><b>The result.</b> The trattoria preview: floor plan with zones, counters and routes, 3D and cost estimate, checked by the engine.</figcaption>
       </figure>
     </div>
   </div>
@@ -402,7 +417,7 @@ img, video { display: block; height: auto; }
       <div class="colonna dopo">
         <h3>With Brigaplan</h3>
         <dl>
-          <div><dt>The first step</dt><dd>A free preview, prepared by AI and checked by a designer</dd></div>
+          <div><dt>The first step</dt><dd>A free preview, prepared by AI and checked by the engine</dd></div>
           <div><dt>The design</dt><dd>Just one, and it follows your choices</dd></div>
           <div><dt>The quotes</dt><dd>For the same design, so you can compare them</dd></div>
           <div><dt>Who pays for the design</dt><dd>You, only once, and only if you go ahead</dd></div>
@@ -421,12 +436,12 @@ img, video { display: block; height: auto; }
       <ol class="steps">
         <li><h3>Upload the floor plan or describe the space</h3><p>A DXF or DWG file works, or a PDF. No floor plan? We ask you for dimensions, doors, windows and where the dining room is.</p></li>
         <li><h3>Tell us what you need</h3><p>Type of venue, covers, menu, and which of your existing equipment you want to keep.</p></li>
-        <li><span class="pill free">Free</span><h3>Get your preview</h3><p>Floor plan with zones and counters, 3D you can rotate with a finger, cost estimate. AI prepares it in a few minutes: if the engine finds no errors you see it right away as a draft, then a designer checks it and we email you.</p></li>
+        <li><span class="pill free">Free</span><h3>Get your preview</h3><p>Floor plan with zones and counters, 3D you can rotate with your finger, cost estimate. The AI makes the draft and the engine checks it against the rules. If you want, a designer can also check it (paid service).</p></li>
         <li><span class="pill">Paid</span><h3>Go ahead only if you like it</h3><p>Dimensioned design, construction drawings overseen by a designer, installation by the partner installer in your area.</p></li>
       </ol>
       <figure style="margin:0;display:grid;gap:10px">
-        <img class="tavola-img" src="/media/tavola_anteprima_en.jpg?v=3" alt="Preview of a sample trattoria: plan without dimensions, with zones, counters and flows" width="1600" height="900" loading="lazy">
-        <figcaption class="didascalia">The preview: a plan with zones and counters, no dimensions and no brands.</figcaption>
+        <img class="tavola-img" src="/media/galleria/e03_3d.jpg" alt="3D of the preview of a 120-seat restaurant" width="1200" height="750" loading="lazy">
+        <figcaption class="didascalia">The 3D of a preview: a 120-seat restaurant.</figcaption>
       </figure>
     </div>
     <p class="altri-esempi"><a href="/en/come-funziona.html">See the examples: five kitchens, from floor plan to 3D</a></p>
@@ -449,7 +464,7 @@ img, video { display: block; height: auto; }
         </div>
       </div>
       <img class="tavola" id="tavola-img" src="/media/tavola_anteprima_en.jpg?v=3" alt="Drawing of the sample trattoria: preview without dimensions" width="1600" height="900" loading="lazy">
-      <figcaption class="cap" id="tavola-cap" aria-live="polite"><b>Free.</b> AI prepares it in a few minutes and a designer checks it: zones, counters, flows and a cost estimate. It shows you the result. To build, you need the design and the construction drawings.</figcaption>
+      <figcaption class="cap" id="tavola-cap" aria-live="polite"><b>Free.</b> The AI prepares it in a few minutes and the engine checks it: zones, counters, flows and a cost estimate. It helps you understand the result. To build, you need the design and the construction drawings.</figcaption>
       <dl class="cartiglio">
         <div><dt>Sheet</dt><dd id="c-tavola">Preview</dd></div>
         <div><dt>Scale</dt><dd id="c-scala">No dimensions</dd></div>
@@ -458,7 +473,7 @@ img, video { display: block; height: auto; }
       </dl>
     </figure>
     <template id="livelli-testi">
-      <div data-livello="anteprima"><img data-k="img" src="/media/tavola_anteprima_en.jpg?v=3" alt="Drawing of the sample trattoria: preview without dimensions"><p data-k="cap"><b>Free.</b> AI prepares it in a few minutes and a designer checks it: zones, counters, flows and a cost estimate. It shows you the result. To build, you need the design and the construction drawings.</p><span data-k="tavola">Preview</span><span data-k="scala">No dimensions</span><span data-k="attr">Generic, no brands</span><span data-k="stima">€40,000–60,000</span></div>
+      <div data-livello="anteprima"><img data-k="img" src="/media/tavola_anteprima_en.jpg?v=3" alt="Drawing of the sample trattoria: preview without dimensions"><p data-k="cap"><b>Free.</b> The AI prepares it in a few minutes and the engine checks it: zones, counters, flows and a cost estimate. It helps you understand the result. To build, you need the design and the construction drawings.</p><span data-k="tavola">Preview</span><span data-k="scala">No dimensions</span><span data-k="attr">Generic, no brands</span><span data-k="stima">€40,000–60,000</span></div>
       <div data-livello="progetto"><img data-k="img" src="/media/tavola_progetto_en.jpg?v=3" alt="Drawing of the sample trattoria: design plan with the outer dimensions"><p data-k="cap"><b>Paid.</b> Dimensioned floor plan in PDF, brands and models, full 3D to rotate online, indicative quote. A designer checks it.</p><span data-k="tavola">Design</span><span data-k="scala">1:50, dimensioned</span><span data-k="attr">Brands and models</span><span data-k="stima">Indicative quote</span></div>
       <div data-livello="esecutivo"><img data-k="img" src="/media/tavola_esecutivo_en.jpg?v=3" alt="Drawing of the sample trattoria: construction drawing with the inner dimensions, wall units and hoods"><p data-k="cap"><b>Paid.</b> Drawings in DXF and DWG, elevations, sections, and electrical, water, gas and drain connections. A designer from our staff works on it with you.</p><span data-k="tavola">Construction drawings</span><span data-k="scala">1:50, DXF and DWG</span><span data-k="attr">With connections and power ratings</span><span data-k="stima">Partner's quote</span></div>
     </template>
@@ -471,7 +486,8 @@ img, video { display: block; height: auto; }
           <li>Generic equipment, for example "10 GN combi oven"</li>
           <li>Cost estimate as a range</li>
         </ul>
-        <p class="who">AI prepares it in a few minutes, a designer checks it.</p>
+        <p class="costi">A designer's check: on request and paid. The price and timing are in the offer.</p>
+        <p class="who">The AI prepares it in a few minutes, the engine checks it.</p>
       </div>
       <div class="tier">
         <div class="tier-head"><h3>Design</h3><span class="price">from €353.80 including VAT</span></div>
@@ -497,19 +513,8 @@ img, video { display: block; height: auto; }
       </div>
     </div>
     <p class="thesis">If you buy the equipment from a partner installer, the cost of the design is deducted from your order and the construction drawings are included in the order.</p>
-  </div>
-</section>
-
-<section class="parte alt" id="per-chi" aria-labelledby="t-chi">
-  <div class="wrap">
-    <div class="sec-head"><h2 id="t-chi">For people who use, design or sell kitchens.</h2></div>
-    <div class="who-grid">
-      <div><h3>Restaurant, hotel and bar owners</h3><p>Before you call a supplier, you know what you need, how much space it takes and what it may cost.</p></div>
-      <div><h3>Architects and interior designers</h3><p>The kitchen inside your project, with zones and flows already set up and checked by a designer. With the construction drawings you get the DXF to put into your own drawings.</p></div>
-      <div><h3>Kitchen designers</h3><p>A first proposal right away, for you to refine with your experience. Fewer hours on each revision, more time for the projects that go ahead.</p></div>
-      <div><h3>Dealers and sales agents</h3><p>Quick proposals for your clients, even with your own logo. Stop giving away hours of design work to people who then don't buy.</p></div>
-    </div>
-    <p class="partner"><strong>Are you an installer?</strong><span>We are looking for partners, one or more per area. You get clients who arrive with a design already done.</span><a href="/en/partner.html">Apply</a></p>
+    <p class="thesis"><strong>Brigaplan gives you a functional equipment layout. For health authority (ASL), HACCP, fire safety (Vigili del fuoco) and building permits you need a design signed by a qualified professional of your choice, and the layout must be approved by your consultants. Before work starts on site, the installer checks dimensions and connections.</strong></p>
+    <p class="cta-row"><a class="btn btn-primary" href="#prova">Create my free preview</a></p>
   </div>
 </section>
 
@@ -519,18 +524,46 @@ img, video { display: block; height: auto; }
     <div class="trust">
       <div class="points">
         <div><h3>Dimensions from official data sheets</h3><p>Equipment dimensions come from the manufacturers' data sheets. Never from memory, never made up.</p></div>
-        <div><h3>Real kitchen rules</h3><p>Separate routes for clean and dirty, aisles wide enough to work in, hoods to the EN 16282 standard.</p></div>
-        <div><h3>People, not just AI</h3><p>A designer from our staff checks every preview, and checks the designs before delivering them to you. The construction drawings are followed with you.</p></div>
+        <div><h3>Real kitchen rules</h3><p>Separate routes for clean and dirty, wide enough passages, hoods to the EN 16282 standard. The engine checks every preview and points out the errors: the assistant fixes them free of charge.</p></div>
+        <div><h3>A designer, if you want one</h3><p>You ask for the check of the preview yourself, for a fee. The full design and the construction drawings are always followed by a designer from our staff.</p></div>
         <div><h3>Drawings to take to the job site</h3><p>Construction drawings come in DXF and DWG, with elevations, sections and connections, to be used after the measurements have been checked on site.</p></div>
       </div>
       <div class="money">
         <h3>How we make money</h3>
         <p>The preview is free. You pay for the design and the construction drawings.</p>
-        <p>Brigaplan is a service of Italfrigo Service S.r.l., which is also the first partner installer in Lombardy: if you buy the equipment from Italfrigo, we earn both from the design and from the sale. Other partner installers, when there are any, will pay us a commission on sales.</p>
+        <p>We work with partner installers by area. In Lombardy the partner is Italfrigo Service S.r.l., the company that runs Brigaplan: if you buy the equipment from it, we earn both from the design and from the sale. Partner installers in other areas, when there are any, will pay us a commission on sales.</p>
         <p>You are not obliged to buy from a partner: the design is yours and you can use it with any supplier you prefer.</p>
         <p class="small">We say it here because you should know before you start.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="parte alt" id="piante" aria-labelledby="t-piante">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="t-piante">Who sees your floor plans</h2><p class="sec-lead">No one on our staff opens your projects unless you ask for a check, the full design or our help: they are processed by the engine and the AI. To check quality, we may look at a sample of previews and the floor plan as you uploaded it, without your profile data; if you object from your account, no one looks at yours.</p></div>
+    <div class="trust">
+      <div class="points">
+        <div><h3>Who sees them</h3><p>You. Someone from our staff only if you ask for a check, the full design or our help, and every opening is logged. For quality, they may look at a sample of previews and the floor plan as you uploaded it, without your profile data, unless you object. We never show them to other users and we do not give them to a partner unless you ask us to.</p></div>
+        <div><h3>Where they are kept</h3><p>On the platform's servers, in Germany. To prepare the preview the AI provider also receives them; it also processes them in the United States under the standard contractual clauses, works only on our behalf and may not use them to train its models.</p></div>
+        <div><h3>How long they stay</h3><p>As long as you keep your account. When you close it we delete them straight away; in backup copies they remain for 14 days at most.</p></div>
+        <div><h3>How to delete them</h3><p>Close your account from the dashboard whenever you want, or write to info@brigaplan.ai. From your account you can also object to the sample check of previews and to the use of projects to improve the service.</p></div>
+      </div>
+    </div>
+    <p class="small">All the details are in the <a href="/en/privacy-piattaforma.html">platform privacy notice</a>.</p>
+  </div>
+</section>
+
+<section class="parte" id="per-chi" aria-labelledby="t-chi">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="t-chi">Work in the trade? There is a page for you.</h2></div>
+    <div class="who-grid">
+      <div><h3>Architects and interior designers</h3><p>The kitchen inside your project, with zones and flows already laid out and checked by the engine. With the construction drawings you get the DXF to put in your own drawings.</p></div>
+      <div><h3>Kitchen designers</h3><p>A first proposal right away, for you to refine with your experience. Fewer hours on each revision, more time for the projects that go ahead.</p></div>
+      <div><h3>Dealers and sales agents</h3><p>Quick proposals for your clients, even with your own logo. Stop giving away hours of design work to people who then don't buy.</p></div>
+    </div>
+    <p class="partner"><strong>Are you a professional?</strong><span>Professional account: your projects and your clients stay yours.</span><a href="/en/professionisti.html">Find out more</a></p>
+    <p class="partner"><strong>Are you an installer?</strong><span>We are looking for partners, one or more per area. You get clients who arrive with a design already done.</span><a href="/en/partner.html">Apply</a></p>
   </div>
 </section>
 
@@ -539,11 +572,11 @@ img, video { display: block; height: auto; }
     <div class="sec-head"><h2 id="t-domande">The questions we get most often.</h2></div>
     <div class="faq">
       <details><summary>Do I need a floor plan of my venue?</summary><p>No. If you don't have one, we ask you a few questions: dimensions, doors, windows and where the dining room is. A photo or a sketch also works, as long as it shows at least one known measurement.</p></details>
-      <details><summary>Is the preview enough to build the kitchen?</summary><p>No. It helps you understand space, equipment footprint and costs. To build, you need the design and the construction drawings, overseen by a designer from our staff. In Italy, the paperwork for the ASL (health authority) and the SUAP (business permits office), and the design of the building services where the law requires it, also need a licensed professional.</p></details>
-      <details><summary>Why does the preview have no dimensions or brands?</summary><p>Because it's free and it shows you the result: AI prepares it and a designer checks it. Dimensions, brands and models come with the paid design.</p></details>
-      <details><summary>Who installs the kitchen?</summary><p>A partner installer in your area. In Lombardy it is Italfrigo Service S.r.l., the same company that runs Brigaplan. We are looking for partners in other regions.</p></details>
+      <details><summary>Is the preview enough to build the kitchen?</summary><p>No. It helps you understand spaces, footprints and costs. To build, you need the design and the construction drawings, which a designer from our staff follows. Brigaplan gives you a functional equipment layout. For health authority (ASL), HACCP, fire safety (Vigili del fuoco) and building permits you need a design signed by a qualified professional of your choice, and the layout must be approved by your consultants. Before work starts on site, the installer checks dimensions and connections.</p></details>
+      <details><summary>Why does the preview have no dimensions or brands?</summary><p>Because it is free and helps you understand the result: the AI prepares it and the engine checks it against the rules. Dimensions, brands and models come with the paid design.</p></details>
+      <details><summary>Who installs the kitchen?</summary><p>A partner installer in your area. In Lombardy it is Italfrigo Service S.r.l., the company that runs Brigaplan. We are looking for partners in other areas.</p></details>
       <details><summary>Do I have to buy from a partner?</summary><p>No. The design is yours and you can use it with any supplier you prefer. If you buy from a partner installer, the cost of the design is deducted from your order.</p></details>
-      <details><summary>What happens to the floor plans I upload?</summary><p>They stay confidential: they are seen by you, the staff working on your project and, to prepare the preview, the AI provider, which works only on our behalf. We share them with a partner only if you ask us to, and we never show them to other users. Projects, without names or contact details, help us improve Brigaplan; you can object at any time from your account.</p></details>
+      <details><summary>What happens to the floor plans I upload?</summary><p>They stay confidential: they are seen by you and, to prepare the preview, by the AI provider, which works only on our behalf. Someone from our staff opens them only if you ask for a check, the full design or our help, and for quality they may look at a sample of previews and the floor plan as you uploaded it, without your profile data, unless you object. We share them with a partner only if you ask us to, and we never show them to other users. Projects, without names or contact details, help us improve Brigaplan; you can object at any time from your account.</p></details>
     </div>
   </div>
 </section>
@@ -560,14 +593,15 @@ img, video { display: block; height: auto; }
           <li>Equipment list, no brands</li>
           <li>Cost estimate as a range</li>
         </ul>
-        <p class="small">With your invitation code, signing up takes a minute. A designer checks every preview.</p>
+        <p class="small">With the invitation code, you sign up in a minute. The AI makes the preview and the engine checks it against the rules.</p>
       </div>
       <div class="inizia">
         <p class="inizia-t">Create your free account, upload the floor plan and get your preview.</p>
-        <a class="btn btn-primary" href="https://app.brigaplan.ai/registrati?lingua=en">Create my free preview</a>
+        <a class="btn btn-primary" href="https://app.brigaplan.ai/registrati?lingua=en">I have the code: sign up</a>
+        <a class="btn btn-ghost" href="mailto:info@brigaplan.ai?subject=Brigaplan%20invitation%20code&amp;body=Type%20of%20venue%3A%0ACity%3A%0ASeats%3A%0AI%20have%20a%20floor%20plan%3A%20yes%20/%20no">Ask for the code</a>
         <p class="small">Already have an account? <a href="https://app.brigaplan.ai/accedi?lingua=en">Log in</a></p>
         <p class="small">The floor plans you upload stay confidential.</p>
-        <p class="small">For now you can only join by invitation: Italfrigo sends you the code. If you would like to try Brigaplan, write to <a href="mailto:info@brigaplan.ai">info@brigaplan.ai</a>.</p>
+        <p class="small">For now Brigaplan is open by invitation, so that we can follow the first venues properly. Don't have the code? Ask for it: tell us the type of venue and the city, and we will send it to you with the sign-up link.</p>
       </div>
     </div>
   </div>
@@ -578,74 +612,17 @@ img, video { display: block; height: auto; }
   <div class="wrap">
     <span class="logo" translate="no">Briga<b>plan</b></span>
     <p>Design of commercial kitchens and bars with artificial intelligence.</p>
+    <p class="foot-link"><a href="/en/come-funziona.html">How it works and prices</a> · <a href="/en/domande.html">FAQ</a> · Guides: <a href="/guide/costo-cucina-professionale.html">how much a kitchen costs</a>, <a href="/guide/regole-cucina-lombardia.html">ASL rules in Lombardy</a>, <a href="/guide/pizzeria-forno-legna.html">wood-fired pizzeria</a>, <a href="/guide/cucina-sushi-ayce.html">sushi</a> · <a href="/en/professionisti.html">Professionals</a> · <a href="/en/partner.html">Installers</a> · <a href="/en/condizioni.html">Terms</a> · <a href="/en/privacy-piattaforma.html">Privacy</a> · <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
     <p>Partner installers: Italfrigo (Lombardy). <a href="/en/partner.html">Become a partner</a></p>
-    <p>The preview is indicative and is not a set of construction drawings. The design and the construction drawings are checked by a designer.</p>
+    <p>The preview is indicative and is not a set of construction drawings. The design and the construction drawings are followed by a designer. Brigaplan gives you a functional equipment layout. For health authority (ASL), HACCP, fire safety (Vigili del fuoco) and building permits you need a design signed by a qualified professional of your choice, and the layout must be approved by your consultants. Before work starts on site, the installer checks dimensions and connections.</p>
     <p>Brigaplan is a service of Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · Companies Register of Milano Monza Brianza Lodi no. 06825390153 · REA MI-1120586 · tax code and VAT no. 06825390153 · Share capital €46,800.00 fully paid · certified email (PEC) <span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/en/privacy.html">Privacy and cookies</a></p>
     <p>Contact: <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
     <p id="privacy"><strong>Privacy and cookies.</strong> This site uses no cookies or tracking tools. We count visits with our own anonymous counter: only totals by page, language and referring site. For security, the service that hosts the site logs the IP addresses of visits. If you sign up, the <a href="/en/privacy-piattaforma.html">platform privacy notice</a> and the <a href="/en/condizioni.html">terms of use</a> apply.</p>
   </div>
 </footer>
 
-<script>
-(function () {
-  var reelBtn = document.getElementById("reel-btn");
-  // Due video: verticale sul telefono, orizzontale sul computer (si sceglie con la stessa regola del CSS).
-  // Parte da solo, senza audio. Se il telefono lo blocca (risparmio energetico), al suo posto scorrono sei immagini
-  // del video giusto; si riprova al primo tocco o scorrimento.
-  var telefono = window.matchMedia ? window.matchMedia("(max-width: 700px)") : { matches: false };
-  var reel = null, fermatoDaTe = false, fermi = null;
-  function statoReel() { var fermo = (!reel || reel.paused) && !fermi; reelBtn.textContent = fermo ? reelBtn.dataset.txtRiproduci : reelBtn.dataset.txtPausa; reelBtn.setAttribute("aria-pressed", String(fermo)); }
-  function mostraFermi() {
-    if (fermi || fermatoDaTe || !reel) return;
-    fermi = document.getElementById(telefono.matches ? "reel-fermi-v" : "reel-fermi-o").content.firstElementChild.cloneNode(true);
-    reel.parentNode.insertBefore(fermi, reelBtn); statoReel();
-  }
-  function togliFermi() { if (fermi) { fermi.remove(); fermi = null; } statoReel(); }
-  function prova() { if (!reel) return; var pr = reel.play(); if (pr && pr.then) pr.then(togliFermi, mostraFermi); }
-  function scegli() {
-    var nuovo = document.querySelector(telefono.matches ? ".reel-v" : ".reel-o");
-    if (nuovo === reel) return;
-    if (reel) reel.pause();
-    togliFermi();
-    reel = nuovo;
-    reel.muted = true; reel.defaultMuted = true; reel.setAttribute("muted", ""); reel.playsInline = true; reel.preload = "auto";
-    if (!fermatoDaTe) prova();
-    statoReel();
-  }
-  document.querySelectorAll(".reel video").forEach(function (v) {
-    v.addEventListener("playing", function () { if (v === reel) togliFermi(); });
-    v.addEventListener("play", statoReel); v.addEventListener("pause", statoReel);
-  });
-  scegli();
-  if (telefono.addEventListener) telefono.addEventListener("change", scegli); else if (telefono.addListener) telefono.addListener(scegli);
-  setTimeout(function () { if (reel && reel.paused && !fermatoDaTe) mostraFermi(); }, 2500);
-  ["touchstart", "scroll", "keydown"].forEach(function (ev) {
-    window.addEventListener(ev, function () { if (reel && reel.paused && !fermatoDaTe) prova(); }, { once: true, passive: true });
-  });
-  reelBtn.addEventListener("click", function () {
-    if (fermi) { fermatoDaTe = true; togliFermi(); }                 // ferma anche le immagini di riserva
-    else if (reel.paused) { fermatoDaTe = false; prova(); }
-    else { fermatoDaTe = true; reel.pause(); }
-  });
+<script src="/js/s-e4129bdbaa54.js"></script>
 
-  var sheet = document.getElementById("tavola");
-  var testiLivelli = document.getElementById("livelli-testi").content;
-  var bottoni = sheet.querySelectorAll("[data-set]");
-  var img = document.getElementById("tavola-img");
-  function mostra(l) {
-    var d = testiLivelli.querySelector('[data-livello="' + l + '"]');
-    if (!d) return;
-    bottoni.forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-set") === l)); });
-    var nuova = d.querySelector('[data-k="img"]');
-    img.src = nuova.getAttribute("src"); img.alt = nuova.getAttribute("alt");
-    document.getElementById("tavola-cap").innerHTML = d.querySelector('[data-k="cap"]').innerHTML;
-    ["tavola", "scala", "attr", "stima"].forEach(function (k) { document.getElementById("c-" + k).textContent = d.querySelector('[data-k="' + k + '"]').textContent; });
-  }
-  bottoni.forEach(function (b) { b.addEventListener("click", function () { mostra(b.getAttribute("data-set")); }); });
-})();
-</script>
-
-<script>/* conteggio anonimo delle visite: niente cookie, niente IP salvati (vedi /privacy.html) */
-try{if(navigator.sendBeacon&&navigator.doNotTrack!=='1'&&!navigator.globalPrivacyControl)navigator.sendBeacon('https://app.brigaplan.ai/api/visita',JSON.stringify({p:location.pathname,l:(document.documentElement.lang||'it').slice(0,2),r:document.referrer}))}catch(e){}</script>
+<script src="/js/s-1c50f2db9341.js"></script>
 </body>
 </html>

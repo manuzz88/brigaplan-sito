@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Brigaplan inside Claude · Brigaplan</title>
 <meta name="description" content="How to use Brigaplan inside Claude: what the connector does, how to add it, example requests, data and support.">
@@ -44,6 +46,9 @@
       <a href="/en/partner.html">Partner installers</a>
     </nav>
     <div class="top-azioni">
+      <details class="menu-tel"><summary>Menu</summary><nav aria-label="Menu"><a href="/en/come-funziona.html">How it works and prices</a><a href="/en/domande.html">FAQ</a><a href="/en/professionisti.html">Professionals</a><a href="/en/partner.html">Installers</a><a href="https://app.brigaplan.ai/accedi?lingua=en">Log in</a><div class="lingue-menu" translate="no"><a href="/claude.html" lang="it" hreflang="it">IT</a>
+        <a href="/en/claude.html" lang="en" hreflang="en">EN</a>
+        <a href="/zh/claude.html" lang="zh-Hans" hreflang="zh-Hans">中文</a></div></nav></details>
       <nav class="lingue" translate="no" aria-label="Language">
         <a href="/claude.html" lang="it" hreflang="it">IT</a>
         <a href="/en/claude.html" lang="en" hreflang="en" aria-current="page">EN</a>
@@ -60,7 +65,7 @@
   <div class="doc-head">
     <span class="eyebrow">Connector for Claude</span>
     <h1>Brigaplan inside Claude</h1>
-    <p class="sec-lead">With the Brigaplan connector you prepare the free preview of a commercial kitchen or bar by talking to Claude, the assistant made by Anthropic. The preview is drawn by the Brigaplan engine and checked by a designer, just as on the site.</p>
+    <p class="sec-lead">With the Brigaplan connector you prepare a free preview of a commercial kitchen or bar by talking to Claude, Anthropic's assistant. The preview is drawn by the Brigaplan engine, which checks it against the rules, just as on the website. If you want, you can also have it checked by a designer from the website (paid service).</p>
   </div>
 
   <div class="prosa">
@@ -105,9 +110,10 @@
       <ul>
         <li>The free previews of your account apply, as on the site: 2 projects, each with up to 3 versions.</li>
         <li>The preview is indicative: no dimensions, brands or codes. It is not enough to build from. See <a href="/en/condizioni.html#c-limiti">What a preview is, and what it is not</a>.</li>
-        <li>If the engine finds no errors you see an automatic draft straight away, marked as such; the version checked by a designer comes later. If the engine finds errors, the preview arrives once a designer has fixed it.</li>
+        <li>You see the preview straight away, labelled “automatic draft, not checked by a designer”. If the engine finds problems it points them out: the assistant fixes them free of charge and, if it cannot, offers you a check by a designer, which you order from the website.</li>
+        <li><strong>Brigaplan gives you a functional equipment layout. For health authority (ASL), HACCP, fire safety (Vigili del fuoco) and building permits you need a design signed by a qualified professional of your choice, and the layout must be approved by your consultants. Before work starts on site, the installer checks dimensions and connections.</strong></li>
         <li>What Claude writes in its own words is not written by us: what counts is what you see in the Brigaplan window and on the site.</li>
-        <li>Brigaplan is a service of Italfrigo Service S.r.l., which is also a <a href="/en/partner.html">partner installer</a> in Lombardy. You ask for a quote for equipment and installation only if you want to, from the site, and you are not obliged to buy from a partner.</li>
+        <li>We work with <a href="/en/partner.html">partner installers</a> by area: in Lombardy it is Italfrigo Service S.r.l., the company that runs Brigaplan. You ask for a quote for equipment and installation only if you want to, from the site, and you are not obliged to buy from a partner.</li>
       </ul>
     </section>
 
@@ -127,11 +133,11 @@
   <div class="wrap">
     <span class="logo"><span translate="no">Briga<b>plan</b></span></span>
     <p>Design of commercial kitchens and bars with artificial intelligence.</p>
+    <p class="foot-link"><a href="/en/come-funziona.html">How it works and prices</a> · <a href="/en/domande.html">FAQ</a> · Guides: <a href="/guide/costo-cucina-professionale.html">how much a kitchen costs</a>, <a href="/guide/regole-cucina-lombardia.html">ASL rules in Lombardy</a>, <a href="/guide/pizzeria-forno-legna.html">wood-fired pizzeria</a>, <a href="/guide/cucina-sushi-ayce.html">sushi</a> · <a href="/en/professionisti.html">Professionals</a> · <a href="/en/partner.html">Installers</a> · <a href="/en/condizioni.html">Terms</a> · <a href="/en/privacy-piattaforma.html">Privacy</a> · <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
     <p>Partner installers: Italfrigo (Lombardy). <a href="/en/partner.html">Become a partner</a></p>
     <p>Brigaplan is a service of Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · Companies Register of Milano Monza Brianza Lodi no. 06825390153 · REA MI-1120586 · tax code and VAT no. 06825390153 · Share capital €46,800.00 fully paid · certified email (PEC) <span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/en/privacy.html">Privacy and cookies</a></p>
   </div>
 </footer>
-<script>/* conteggio anonimo delle visite: niente cookie, niente IP salvati (vedi /privacy.html) */
-try{if(navigator.sendBeacon&&navigator.doNotTrack!=='1'&&!navigator.globalPrivacyControl)navigator.sendBeacon('https://app.brigaplan.ai/api/visita',JSON.stringify({p:location.pathname,l:(document.documentElement.lang||'it').slice(0,2),r:document.referrer}))}catch(e){}</script>
+<script src="/js/s-1c50f2db9341.js"></script>
 </body>
 </html>

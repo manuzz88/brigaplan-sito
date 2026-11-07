@@ -2,6 +2,8 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Privacy e cookie · Brigaplan</title>
 <meta name="description" content="Come Brigaplan tratta i dati di chi visita il sito: niente cookie né tracciamento, un conteggio anonimo delle visite e i dati tecnici registrati dal servizio che ospita il sito.">
@@ -44,6 +46,9 @@
       <a href="/partner.html">Installatori partner</a>
     </nav>
     <div class="top-azioni">
+      <details class="menu-tel"><summary>Menu</summary><nav aria-label="Menu"><a href="/come-funziona.html">Come funziona e prezzi</a><a href="/domande.html">Domande</a><a href="/professionisti.html">Professionisti</a><a href="/partner.html">Installatori</a><a href="https://app.brigaplan.ai/accedi?lingua=it">Accedi</a><div class="lingue-menu" translate="no"><a href="/privacy.html" lang="it" hreflang="it">IT</a>
+        <a href="/en/privacy.html" lang="en" hreflang="en">EN</a>
+        <a href="/zh/privacy.html" lang="zh-Hans" hreflang="zh-Hans">中文</a></div></nav></details>
       <nav class="lingue" translate="no" aria-label="Lingua">
         <a href="/privacy.html" lang="it" hreflang="it" aria-current="page">IT</a>
         <a href="/en/privacy.html" lang="en" hreflang="en">EN</a>
@@ -115,11 +120,11 @@
   <div class="wrap">
     <span class="logo"><span translate="no">Briga<b>plan</b></span></span>
     <p>Progettazione di cucine e bar professionali con l'intelligenza artificiale.</p>
+    <p class="foot-link"><a href="/come-funziona.html">Come funziona e prezzi</a> · <a href="/domande.html">Domande</a> · Guide: <a href="/guide/costo-cucina-professionale.html">quanto costa una cucina</a>, <a href="/guide/regole-cucina-lombardia.html">regole ASL in Lombardia</a>, <a href="/guide/pizzeria-forno-legna.html">pizzeria a legna</a>, <a href="/guide/cucina-sushi-ayce.html">sushi</a> · <a href="/professionisti.html">Professionisti</a> · <a href="/partner.html">Installatori</a> · <a href="/condizioni.html">Condizioni</a> · <a href="/privacy-piattaforma.html">Privacy</a> · <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
     <p>Installatori partner: Italfrigo (Lombardia). <a href="/partner.html">Diventa partner</a></p>
     <p>Brigaplan è un servizio di Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · Registro delle imprese di Milano Monza Brianza Lodi n. 06825390153 · REA MI-1120586 · C.F. e P.IVA 06825390153 · Capitale sociale 46.800,00 € i.v. · PEC <span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/privacy.html">Privacy e cookie</a></p>
   </div>
 </footer>
-<script>/* conteggio anonimo delle visite: niente cookie, niente IP salvati (vedi /privacy.html) */
-try{if(navigator.sendBeacon&&navigator.doNotTrack!=='1'&&!navigator.globalPrivacyControl)navigator.sendBeacon('https://app.brigaplan.ai/api/visita',JSON.stringify({p:location.pathname,l:(document.documentElement.lang||'it').slice(0,2),r:document.referrer}))}catch(e){}</script>
+<script src="/js/s-1c50f2db9341.js"></script>
 </body>
 </html>

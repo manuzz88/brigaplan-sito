@@ -2,13 +2,15 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Brigaplan · Cucine e bar professionali progettati con l'IA</title>
 <meta name="description" content="Carica la pianta o descrivi il locale: Brigaplan ti prepara gratis un'anteprima della tua cucina o del tuo bar professionale. Poi progetto, esecutivo e installatore partner della tua zona.">
 <meta property="og:site_name" content="Brigaplan">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Brigaplan · Cucine e bar professionali progettati con l'IA">
-<meta property="og:description" content="Dalla pianta del locale al progetto completo. Anteprima gratis, verificata da un progettista.">
+<meta property="og:description" content="Dalla pianta del locale al progetto completo. Anteprima gratis, preparata dall'IA e controllata dal motore.">
 <meta property="og:url" content="https://brigaplan.ai/">
 <meta property="og:image" content="https://brigaplan.ai/media/brigaplan_og.jpg">
 <meta property="og:image:width" content="1280">
@@ -88,6 +90,16 @@ img, video { display: block; height: auto; }
 .nav a { text-decoration: none; color: var(--muted); white-space: nowrap; }
 .nav a:hover { color: var(--ink); }
 @media (max-width: 960px) { .nav { display: none; } }
+.top .wrap { position: relative; }
+.menu-tel { display: none; }
+.menu-tel > summary { list-style: none; cursor: pointer; font-weight: 600; font-size: .9375rem; padding: 6px 4px; }
+.menu-tel > summary::-webkit-details-marker { display: none; }
+.menu-tel > nav { position: absolute; left: 12px; right: 12px; top: calc(100% + 6px); z-index: 30; display: grid; gap: 14px; padding: 16px 18px; background: var(--sheet); border: 1px solid var(--rule); }
+.menu-tel .lingue-menu { display: none; gap: 14px; border-top: 1px solid var(--rule); padding-top: 12px; font-weight: 600; }
+@media (max-width: 520px) { .top-azioni > .menu-tel ~ .lingue { display: none; } .menu-tel .lingue-menu { display: flex; } }
+.menu-tel > nav a { text-decoration: none; color: var(--ink); white-space: nowrap; }
+@media (max-width: 960px) { .menu-tel { display: block; } }
+.foot-link a { white-space: nowrap; }
 .top-azioni { display: flex; align-items: center; gap: 14px; font-size: .9375rem; }
 .lingue { display: flex; gap: 2px; font-size: .8125rem; font-weight: 600; }
 .lingue a { text-decoration: none; color: var(--muted); padding: 5px 6px; white-space: nowrap; }
@@ -126,6 +138,8 @@ img, video { display: block; height: auto; }
 .for { font-size: .9375rem; color: var(--muted); }
 .reel { position: relative; margin: 0; background: var(--sheet); border: 1px solid var(--rule); }
 .reel video { width: 100%; aspect-ratio: 16 / 9; }
+.reel img { width: 100%; height: auto; display: block; }
+.reel img.reel-v { max-height: 60svh; object-fit: cover; object-position: top; }
 /* telefono: il video verticale (chat sopra, progetto sotto); computer: quello orizzontale */
 .reel .reel-v { display: none; aspect-ratio: 9 / 16; }
 @media (max-width: 700px) { .reel .reel-o { display: none; } .reel .reel-v { display: block; } }
@@ -291,13 +305,16 @@ img, video { display: block; height: auto; }
       <a href="#domande">Domande</a>
     </nav>
     <div class="top-azioni">
+      <details class="menu-tel"><summary>Menu</summary><nav aria-label="Menu"><a href="/come-funziona.html">Come funziona e prezzi</a><a href="/domande.html">Domande</a><a href="/professionisti.html">Professionisti</a><a href="/partner.html">Installatori</a><a href="https://app.brigaplan.ai/accedi?lingua=it">Accedi</a><div class="lingue-menu" translate="no"><a href="/" lang="it" hreflang="it">IT</a>
+        <a href="/en/" lang="en" hreflang="en">EN</a>
+        <a href="/zh/" lang="zh-Hans" hreflang="zh-Hans">中文</a></div></nav></details>
       <nav class="lingue" translate="no" aria-label="Lingua">
         <a href="/" lang="it" hreflang="it" aria-current="page">IT</a>
         <a href="/en/" lang="en" hreflang="en">EN</a>
         <a href="/zh/" lang="zh-Hans" hreflang="zh-Hans">中文</a>
       </nav>
       <a class="accedi" href="https://app.brigaplan.ai/accedi?lingua=it">Accedi</a>
-      <a class="btn btn-primary btn-sm" href="https://app.brigaplan.ai/registrati?lingua=it">Prova gratis</a>
+      <a class="btn btn-primary btn-sm" href="#prova">Prova gratis</a>
     </div>
   </div>
 </header>
@@ -305,31 +322,29 @@ img, video { display: block; height: auto; }
 <main>
 <section class="hero" aria-labelledby="titolo">
   <div class="wrap">
+    <p class="for">Per ristoranti, pizzerie, bar, hotel e mense</p>
     <div class="riga">
       <h1 id="titolo">La piattaforma che rivoluziona la progettazione di cucine e ambienti professionali per il mondo Horeca.</h1>
       <div class="destra">
-        <p class="lead">L'IA prepara in pochi minuti un'anteprima gratuita con pianta, 3D e stima di spesa, e un progettista la verifica.</p>
+        <p class="lead">Carica la pianta o descrivi il locale: in pochi minuti ricevi gratis l'anteprima della tua cucina, con pianta, 3D e stima di spesa. La prepara l'IA e la controlla il motore, cioè il nostro controllo automatico delle regole. Paghi solo se vai avanti.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://app.brigaplan.ai/registrati?lingua=it">Prova con il tuo locale</a>
+          <a class="btn btn-primary" href="#prova">Prova con il tuo locale</a>
           <a class="btn btn-ghost" href="#come-funziona">Come funziona</a>
         </div>
+        <p class="small">Per ora si entra con un codice d'invito. Non ce l'hai? <a href="#prova">Chiedilo qui</a>.</p>
       </div>
     </div>
     <figure class="reel">
-      <video class="reel-o" src="/media/brigaplan_video_o.mp4?v=2" poster="/media/brigaplan_video_o_poster.jpg?v=2" muted loop playsinline webkit-playsinline preload="none" aria-label="Video: la trattoria finita in 3D, poi la conversazione con l'assistente nella piattaforma accanto al progetto che nasce: tavola e 3D stilizzato. Poi hotel, centro di cottura e bar."></video>
-      <video class="reel-v" src="/media/brigaplan_video_v.mp4?v=2" poster="/media/brigaplan_video_v_poster.jpg?v=2" muted loop playsinline webkit-playsinline preload="none" aria-label="Video: la trattoria finita in 3D, poi la conversazione con l'assistente nella piattaforma accanto al progetto che nasce: tavola e 3D stilizzato. Poi hotel, centro di cottura e bar."></video>
-      <template id="reel-fermi-o"><div class="fermi" aria-hidden="true"><img src="/media/brigaplan_fermo_o1.jpg?v=2" alt="" width="960" height="540"><img src="/media/brigaplan_fermo_o2.jpg?v=2" alt="" width="960" height="540"><img src="/media/brigaplan_fermo_o3.jpg?v=2" alt="" width="960" height="540"><img src="/media/brigaplan_fermo_o4.jpg?v=2" alt="" width="960" height="540"><img src="/media/brigaplan_fermo_o5.jpg?v=2" alt="" width="960" height="540"><img src="/media/brigaplan_fermo_o6.jpg?v=2" alt="" width="960" height="540"></div></template>
-      <template id="reel-fermi-v"><div class="fermi" aria-hidden="true"><img src="/media/brigaplan_fermo_v1.jpg?v=2" alt="" width="540" height="960"><img src="/media/brigaplan_fermo_v2.jpg?v=2" alt="" width="540" height="960"><img src="/media/brigaplan_fermo_v3.jpg?v=2" alt="" width="540" height="960"><img src="/media/brigaplan_fermo_v4.jpg?v=2" alt="" width="540" height="960"><img src="/media/brigaplan_fermo_v5.jpg?v=2" alt="" width="540" height="960"><img src="/media/brigaplan_fermo_v6.jpg?v=2" alt="" width="540" height="960"></div></template>
-      <button type="button" class="reel-btn" id="reel-btn" aria-pressed="false" data-txt-riproduci="Riproduci" data-txt-pausa="Pausa">Pausa</button>
+      <img class="reel-o" src="/media/brigaplan_video_o_poster.jpg?v=2" alt="La trattoria di esempio in 3D. Questa cucina è nata da una conversazione con l'assistente." width="1280" height="720">
+      <img class="reel-v" src="/media/brigaplan_video_v_poster.jpg?v=2" alt="La trattoria di esempio in 3D. Questa cucina è nata da una conversazione con l'assistente." width="720" height="1280">
     </figure>
     <div class="fatti">
-      <div class="marchio"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="lm-wall" x="1.5" y="1.5" width="23" height="23"/><path class="lm-line" d="M1.5 11H13V24.5M13 7V1.5"/><rect class="lm-acc" x="16" y="15" width="6" height="6"/></svg><span translate="no" style="color:inherit;font-size:1rem">Brigaplan</span></div>
-      <div><b>Anteprima gratis</b><span>Pianta, 3D e stima di spesa, verificate da un progettista</span></div>
-      <div><b>Verificata da un progettista</b><span>Bozza subito, verifica dopo</span></div>
-      <div><b>Installatore della tua zona</b><span>Il primo partner è Italfrigo, in Lombardia</span></div>
+      <div><b>Senza sopralluogo</b><span>Pianta o descrizione, dal telefono o dal computer</span></div>
+      <div><b>Anteprima gratis</b><span>Pianta, 3D e stima di spesa, controllate dal motore</span></div>
+      <div><b>Progettista su richiesta</b><span>La verifica di una persona, se la vuoi</span></div>
+      <div><b>Installatore partner</b><span>Per ora in Lombardia; il progetto vale con qualsiasi fornitore</span></div>
     </div>
-    <p class="didascalia"><b>Dalla pianta al progetto completo.</b> Pianta, 3D e animazione escono dal nostro motore di progettazione, con le misure delle attrezzature prese dalle schede dei produttori. I render fotorealistici sono un servizio a parte, su richiesta.</p>
-    <p class="for">Per ristoratori, albergatori e bar · architetti e progettisti · rivenditori e agenti</p>
+    <p class="didascalia"><b>Dalla pianta al progetto completo.</b> Pianta e 3D escono dal nostro motore di progettazione, con le misure delle attrezzature prese dalle schede dei produttori.</p>
   </div>
 </section>
 
@@ -337,18 +352,18 @@ img, video { display: block; height: auto; }
   <div class="wrap">
     <div class="sec-head">
       <h2 id="t-consulente">Parli come con un consulente. Il progetto lo prepara Brigaplan.</h2>
-      <p class="sec-lead">Racconti cosa vuoi, come a un consulente: l'assistente ti fa le domande giuste e il motore disegna la cucina con misure e regole vere. Ogni anteprima la verifica un progettista. Per costruire servono poi progetto, esecutivo e, per le pratiche, un tecnico abilitato.</p>
+      <p class="sec-lead">Racconti cosa vuoi, come a un consulente: l'assistente ti fa le domande giuste e il motore disegna la cucina con misure e regole vere. Se vuoi, la fa verificare anche un progettista (servizio a pagamento). Per le pratiche servono poi il progetto e la firma di un tecnico abilitato scelto da te.</p>
     </div>
     <div class="due">
       <ol class="chat" aria-label="Esempio di conversazione con l'assistente">
         <li class="msg cliente"><span class="chi">Tu</span>Apro una trattoria da 80 coperti a Milano, cucina lombarda. Ti mando la pianta del locale.</li>
-        <li class="msg assistente"><span class="chi">Assistente Brigaplan</span>Ho ricevuto la pianta: cucina di 9,20 x 5,60 m, porta verso la sala da 80 cm, porta di servizio da 90 cm.<br>Prima di disegnare mi servono poche risposte:<br>1. Ogni quanti giorni arrivano le consegne?<br>2. La cucina va a gas o elettrica?<br>3. Canna fumaria fino al tetto o filtri a carboni?<br>4. Frigo con il motore incorporato o remoto?<br>Se qualcosa non lo sa, uso valori standard e Le dico quali ho scelto.</li>
+        <li class="msg assistente"><span class="chi">Assistente Brigaplan</span>Ho ricevuto la pianta: cucina di 9,20 x 5,60 m, porta verso la sala da 80 cm, porta di servizio da 90 cm.<br>Prima di disegnare mi servono poche risposte:<br>1. Ogni quanti giorni arrivano le consegne?<br>2. La cucina va a gas o elettrica?<br>3. Canna fumaria fino al tetto o filtri a carboni?<br>4. Frigo con il motore incorporato o remoto?<br>Se qualcosa non lo sai, uso valori standard e ti dico quali ho scelto.</li>
         <li class="msg cliente"><span class="chi">Tu</span>Consegne tre volte a settimana, fuochi a gas, cappa sul tetto, frigo con il motore a bordo.</li>
-        <li class="msg assistente"><span class="chi">Assistente Brigaplan</span>La versione 1 è pronta come bozza automatica, senza errori: la trova qui accanto. Un nostro progettista la verifica e Le scriviamo quando è verificata.</li>
+        <li class="msg assistente"><span class="chi">Assistente Brigaplan</span>La versione 1 è pronta come bozza automatica: il motore l'ha controllata con le regole, senza errori, e la trovi qui accanto. È un layout funzionale delle attrezzature: per ASL, HACCP e Vigili del fuoco servono il progetto e la firma di un tecnico abilitato scelto da te. Se vuoi, un nostro progettista può verificarlo (a pagamento).</li>
       </ol>
       <figure style="margin:0;display:grid;gap:10px">
         <img class="tavola-img" src="/media/tavola_anteprima.jpg?v=3" alt="Il risultato: l'anteprima della trattoria, pianta senza quote con zone, banchi e percorsi" width="1600" height="900" loading="lazy">
-        <figcaption class="didascalia"><b>Il risultato.</b> L'anteprima della trattoria: pianta con zone, banchi e percorsi, 3D e stima di spesa. Un progettista la verifica.</figcaption>
+        <figcaption class="didascalia"><b>Il risultato.</b> L'anteprima della trattoria: pianta con zone, banchi e percorsi, 3D e stima di spesa, controllate dal motore.</figcaption>
       </figure>
     </div>
   </div>
@@ -402,7 +417,7 @@ img, video { display: block; height: auto; }
       <div class="colonna dopo">
         <h3>Con Brigaplan</h3>
         <dl>
-          <div><dt>Il primo passo</dt><dd>Un'anteprima gratis, preparata dall'IA e verificata da un progettista</dd></div>
+          <div><dt>Il primo passo</dt><dd>Un'anteprima gratis, preparata dall'IA e controllata dal motore</dd></div>
           <div><dt>Il progetto</dt><dd>Uno solo, che segue le tue scelte</dd></div>
           <div><dt>I preventivi</dt><dd>Sullo stesso progetto, quindi confrontabili</dd></div>
           <div><dt>Chi paga il progetto</dt><dd>Tu, una volta sola, e solo se vai avanti</dd></div>
@@ -421,12 +436,12 @@ img, video { display: block; height: auto; }
       <ol class="steps">
         <li><h3>Carica la pianta o descrivi il locale</h3><p>Va bene un DXF o DWG, oppure un PDF. Non hai la pianta? Ti chiediamo misure, porte, finestre e dove sta la sala.</p></li>
         <li><h3>Di' cosa vuoi ottenere</h3><p>Tipo di locale, coperti, menu, e cosa vuoi tenere dell'attrezzatura che hai già.</p></li>
-        <li><span class="pill free">Gratis</span><h3>Ricevi l'anteprima</h3><p>Pianta con zone e banchi, 3D da girare con il dito, stima di spesa. L'IA la prepara in pochi minuti: se il motore non trova errori la vedi subito come bozza, poi un progettista la verifica e ti avvisiamo per email.</p></li>
+        <li><span class="pill free">Gratis</span><h3>Ricevi l'anteprima</h3><p>Pianta con zone e banchi, 3D da girare con il dito, stima di spesa. La bozza la fa l'IA e il motore la controlla con le regole. Se vuoi, la fa verificare anche un progettista (servizio a pagamento).</p></li>
         <li><span class="pill">A pagamento</span><h3>Vai avanti solo se ti convince</h3><p>Progetto quotato, esecutivo seguito da un progettista, montaggio con l'installatore partner della tua zona.</p></li>
       </ol>
       <figure style="margin:0;display:grid;gap:10px">
-        <img class="tavola-img" src="/media/tavola_anteprima.jpg?v=3" alt="Anteprima di una trattoria di esempio: pianta senza quote con zone, banchi e percorsi" width="1600" height="900" loading="lazy">
-        <figcaption class="didascalia">L'anteprima: pianta con zone e banchi, senza quote e senza marche.</figcaption>
+        <img class="tavola-img" src="/media/galleria/e03_3d.jpg" alt="3D dell'anteprima di un ristorante da 120 coperti" width="1200" height="750" loading="lazy">
+        <figcaption class="didascalia">Il 3D di un'anteprima: ristorante da 120 coperti.</figcaption>
       </figure>
     </div>
     <p class="altri-esempi"><a href="/come-funziona.html">Guarda gli esempi: cinque cucine, dalla pianta al 3D</a></p>
@@ -449,7 +464,7 @@ img, video { display: block; height: auto; }
         </div>
       </div>
       <img class="tavola" id="tavola-img" src="/media/tavola_anteprima.jpg?v=3" alt="Tavola della trattoria di esempio: anteprima senza quote" width="1600" height="900" loading="lazy">
-      <figcaption class="cap" id="tavola-cap" aria-live="polite"><b>Gratis.</b> La prepara l'IA in pochi minuti e la verifica un progettista: zone, banchi, flussi e una stima di spesa. Serve a capire il risultato. Per costruire servono progetto ed esecutivo.</figcaption>
+      <figcaption class="cap" id="tavola-cap" aria-live="polite"><b>Gratis.</b> La prepara l'IA in pochi minuti e il motore la controlla: zone, banchi, flussi e una stima di spesa. Serve a capire il risultato. Per costruire servono progetto ed esecutivo.</figcaption>
       <dl class="cartiglio">
         <div><dt>Tavola</dt><dd id="c-tavola">Anteprima</dd></div>
         <div><dt>Scala</dt><dd id="c-scala">Senza quote</dd></div>
@@ -458,7 +473,7 @@ img, video { display: block; height: auto; }
       </dl>
     </figure>
     <template id="livelli-testi">
-      <div data-livello="anteprima"><img data-k="img" src="/media/tavola_anteprima.jpg?v=3" alt="Tavola della trattoria di esempio: anteprima senza quote"><p data-k="cap"><b>Gratis.</b> La prepara l'IA in pochi minuti e la verifica un progettista: zone, banchi, flussi e una stima di spesa. Serve a capire il risultato. Per costruire servono progetto ed esecutivo.</p><span data-k="tavola">Anteprima</span><span data-k="scala">Senza quote</span><span data-k="attr">Generiche, senza marche</span><span data-k="stima">40–60 mila €</span></div>
+      <div data-livello="anteprima"><img data-k="img" src="/media/tavola_anteprima.jpg?v=3" alt="Tavola della trattoria di esempio: anteprima senza quote"><p data-k="cap"><b>Gratis.</b> La prepara l'IA in pochi minuti e il motore la controlla: zone, banchi, flussi e una stima di spesa. Serve a capire il risultato. Per costruire servono progetto ed esecutivo.</p><span data-k="tavola">Anteprima</span><span data-k="scala">Senza quote</span><span data-k="attr">Generiche, senza marche</span><span data-k="stima">40–60 mila €</span></div>
       <div data-livello="progetto"><img data-k="img" src="/media/tavola_progetto.jpg?v=3" alt="Tavola della trattoria di esempio: pianta di progetto con le quote esterne"><p data-k="cap"><b>A pagamento.</b> Pianta quotata in PDF, marche e modelli, 3D completo da girare online, preventivo indicativo. La controlla un progettista.</p><span data-k="tavola">Progetto</span><span data-k="scala">1:50, quotata</span><span data-k="attr">Marche e modelli</span><span data-k="stima">Preventivo indicativo</span></div>
       <div data-livello="esecutivo"><img data-k="img" src="/media/tavola_esecutivo.jpg?v=3" alt="Tavola della trattoria di esempio: esecutivo con le quote interne, i pensili e le cappe"><p data-k="cap"><b>A pagamento.</b> Disegni in DXF e DWG, prospetti, sezioni, allacci di luce, acqua, gas e scarichi. Lo segue con te un progettista del nostro staff.</p><span data-k="tavola">Esecutivo</span><span data-k="scala">1:50, DXF e DWG</span><span data-k="attr">Con allacci e potenze</span><span data-k="stima">Preventivo del partner</span></div>
     </template>
@@ -471,7 +486,8 @@ img, video { display: block; height: auto; }
           <li>Attrezzature generiche, per esempio "forno misto 10 GN"</li>
           <li>Stima di spesa a forbice</li>
         </ul>
-        <p class="who">L'IA la prepara in pochi minuti, un progettista la verifica.</p>
+        <p class="costi">Verifica di un progettista: a richiesta e a pagamento. Il prezzo e i tempi sono nell'offerta.</p>
+        <p class="who">L'IA la prepara in pochi minuti, il motore la controlla.</p>
       </div>
       <div class="tier">
         <div class="tier-head"><h3>Progetto</h3><span class="price">da 353,80 € IVA inclusa</span></div>
@@ -497,19 +513,8 @@ img, video { display: block; height: auto; }
       </div>
     </div>
     <p class="thesis">Se compri le attrezzature da un installatore partner, il costo del progetto ti viene scalato dall'ordine e l'esecutivo è compreso nell'ordine.</p>
-  </div>
-</section>
-
-<section class="parte alt" id="per-chi" aria-labelledby="t-chi">
-  <div class="wrap">
-    <div class="sec-head"><h2 id="t-chi">Per chi la cucina la usa, la disegna o la vende.</h2></div>
-    <div class="who-grid">
-      <div><h3>Ristoratori, albergatori, bar</h3><p>Prima di chiamare un fornitore sai cosa ti serve, quanto spazio occupa e quanto può costare.</p></div>
-      <div><h3>Architetti e interior designer</h3><p>La cucina dentro il tuo progetto, con zone e flussi già impostati e controllati da un progettista. Con l'esecutivo ricevi il DXF da mettere nelle tue tavole.</p></div>
-      <div><h3>Progettisti di cucine</h3><p>Una prima proposta subito, da rifinire con la tua esperienza. Meno ore su ogni revisione, più tempo per i progetti che vanno in porto.</p></div>
-      <div><h3>Rivenditori e agenti</h3><p>Proposte veloci per i tuoi clienti, anche con il tuo logo. Smetti di regalare ore di progettazione a chi poi non compra.</p></div>
-    </div>
-    <p class="partner"><strong>Sei un installatore?</strong><span>Cerchiamo partner, uno o più per zona. Ricevi clienti che arrivano con un progetto già fatto.</span><a href="/partner.html">Candidati</a></p>
+    <p class="thesis"><strong>Brigaplan ti dà un layout funzionale delle attrezzature. Per ASL, HACCP, Vigili del fuoco e pratiche edilizie servono il progetto e la firma di un tecnico abilitato scelto da te, e il layout va approvato dai tuoi consulenti. Prima del cantiere, misure e allacci li controlla l'installatore.</strong></p>
+    <p class="cta-row"><a class="btn btn-primary" href="#prova">Crea l'anteprima gratis</a></p>
   </div>
 </section>
 
@@ -519,18 +524,46 @@ img, video { display: block; height: auto; }
     <div class="trust">
       <div class="points">
         <div><h3>Misure dalle schede ufficiali</h3><p>Le misure delle attrezzature vengono dalle schede dei produttori. Mai a memoria, mai inventate.</p></div>
-        <div><h3>Regole da cucina vera</h3><p>Percorsi separati per pulito e sporco, passaggi abbastanza larghi, cappe secondo la norma EN 16282.</p></div>
-        <div><h3>Persone, oltre all'IA</h3><p>Ogni anteprima la verifica un progettista del nostro staff, e i progetti li controlla prima di consegnarteli. L'esecutivo lo segue con te.</p></div>
+        <div><h3>Regole da cucina vera</h3><p>Percorsi separati per pulito e sporco, passaggi abbastanza larghi, cappe secondo la norma EN 16282. Il motore controlla ogni anteprima e ti segnala gli errori: l'assistente li corregge gratis.</p></div>
+        <div><h3>Un progettista, se lo vuoi</h3><p>La verifica dell'anteprima la chiedi tu, a pagamento. Progetto completo ed esecutivo li segue sempre un progettista del nostro staff.</p></div>
         <div><h3>Disegni da portare in cantiere</h3><p>L'esecutivo esce in DXF e DWG, con prospetti, sezioni e allacci, da usare dopo la verifica delle misure sul posto.</p></div>
       </div>
       <div class="money">
         <h3>Come guadagniamo</h3>
         <p>L'anteprima è gratis. Progetto ed esecutivo si pagano.</p>
-        <p>Brigaplan è un servizio di Italfrigo Service S.r.l., che in Lombardia è anche il primo installatore partner: se compri le attrezzature da Italfrigo, guadagniamo sia dal progetto sia dalla vendita. Gli altri installatori partner, quando ci saranno, ci riconosceranno una provvigione sulle vendite.</p>
+        <p>Lavoriamo con installatori partner per zona. In Lombardia il partner è Italfrigo Service S.r.l., la società che gestisce Brigaplan: se compri le attrezzature da lei, guadagniamo sia dal progetto sia dalla vendita. Gli installatori partner delle altre zone, quando ci saranno, ci riconosceranno una provvigione sulle vendite.</p>
         <p>Non sei obbligato a comprare da un partner: il progetto è tuo e lo puoi usare con il fornitore che preferisci.</p>
         <p class="small">Lo scriviamo qui perché è giusto che tu lo sappia prima di iniziare.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="parte alt" id="piante" aria-labelledby="t-piante">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="t-piante">Chi vede le tue piante</h2><p class="sec-lead">Nessuna persona del nostro staff apre i tuoi progetti se non chiedi la verifica, il progetto completo o il nostro aiuto: li elaborano il motore e l'IA. Per controllare la qualità possiamo guardare a campione alcune anteprime e la pianta come l'hai caricata, senza i dati del tuo profilo; se ti opponi dal tuo account, le tue non le guarda nessuno.</p></div>
+    <div class="trust">
+      <div class="points">
+        <div><h3>Chi le vede</h3><p>Tu. Una persona del nostro staff solo se chiedi la verifica, il progetto completo o il nostro aiuto, e ogni apertura resta registrata. Per la qualità può guardare a campione alcune anteprime e la pianta come l'hai caricata, senza i dati del tuo profilo, se non ti opponi. Non le mostriamo mai ad altri utenti e non le diamo a un partner se non lo chiedi tu.</p></div>
+        <div><h3>Dove stanno</h3><p>Sui server della piattaforma, in Germania. Per preparare l'anteprima le riceve anche il fornitore dell'IA, che le tratta anche negli Stati Uniti con le clausole contrattuali standard, lavora solo per nostro conto e non può usarle per addestrare i suoi modelli.</p></div>
+        <div><h3>Quanto restano</h3><p>Finché tieni l'account. Quando lo chiudi le cancelliamo subito; nelle copie di sicurezza restano al massimo 14 giorni.</p></div>
+        <div><h3>Come si cancellano</h3><p>Chiudi l'account dalla dashboard, quando vuoi, o scrivi a info@brigaplan.ai. Dal tuo account puoi anche opporti al controllo a campione delle anteprime e all'uso dei progetti per migliorare il servizio.</p></div>
+      </div>
+    </div>
+    <p class="small">Tutti i dettagli sono nella <a href="/privacy-piattaforma.html">privacy della piattaforma</a>.</p>
+  </div>
+</section>
+
+<section class="parte" id="per-chi" aria-labelledby="t-chi">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="t-chi">Lavori nel settore? C'è una pagina per te.</h2></div>
+    <div class="who-grid">
+      <div><h3>Architetti e interior designer</h3><p>La cucina dentro il tuo progetto, con zone e flussi già impostati e controllati dal motore. Con l'esecutivo ricevi il DXF da mettere nelle tue tavole.</p></div>
+      <div><h3>Progettisti di cucine</h3><p>Una prima proposta subito, da rifinire con la tua esperienza. Meno ore su ogni revisione, più tempo per i progetti che vanno in porto.</p></div>
+      <div><h3>Rivenditori e agenti</h3><p>Proposte veloci per i tuoi clienti, anche con il tuo logo. Smetti di regalare ore di progettazione a chi poi non compra.</p></div>
+    </div>
+    <p class="partner"><strong>Sei un professionista?</strong><span>Account professionista: i tuoi progetti e i tuoi clienti restano tuoi.</span><a href="/professionisti.html">Scopri di più</a></p>
+    <p class="partner"><strong>Sei un installatore?</strong><span>Cerchiamo partner, uno o più per zona. Ricevi clienti che arrivano con un progetto già fatto.</span><a href="/partner.html">Candidati</a></p>
   </div>
 </section>
 
@@ -539,11 +572,11 @@ img, video { display: block; height: auto; }
     <div class="sec-head"><h2 id="t-domande">Le domande che ci fanno di più.</h2></div>
     <div class="faq">
       <details><summary>Mi serve per forza la pianta del locale?</summary><p>No. Se non ce l'hai, ti facciamo qualche domanda: misure, porte, finestre e dove sta la sala. Va bene anche una foto o uno schizzo, purché ci sia almeno una misura nota.</p></details>
-      <details><summary>L'anteprima basta per costruire la cucina?</summary><p>No. Serve a capire spazi, ingombri e costi. Per costruire servono il progetto e l'esecutivo, che segue un progettista del nostro staff. Per le pratiche ASL e SUAP, e per il progetto degli impianti quando la legge lo richiede, serve anche un tecnico abilitato.</p></details>
-      <details><summary>Perché l'anteprima non ha quote né marche?</summary><p>Perché è gratis e serve a capire il risultato: la prepara l'IA e la verifica un progettista. Quote, marche e modelli arrivano con il progetto a pagamento.</p></details>
-      <details><summary>Chi monta la cucina?</summary><p>Un installatore partner della tua zona. In Lombardia è Italfrigo Service S.r.l., la stessa società che gestisce Brigaplan. Stiamo cercando partner nelle altre regioni.</p></details>
+      <details><summary>L'anteprima basta per costruire la cucina?</summary><p>No. Serve a capire spazi, ingombri e costi. Per costruire servono il progetto e l'esecutivo, che segue un progettista del nostro staff. Brigaplan ti dà un layout funzionale delle attrezzature. Per ASL, HACCP, Vigili del fuoco e pratiche edilizie servono il progetto e la firma di un tecnico abilitato scelto da te, e il layout va approvato dai tuoi consulenti. Prima del cantiere, misure e allacci li controlla l'installatore.</p></details>
+      <details><summary>Perché l'anteprima non ha quote né marche?</summary><p>Perché è gratis e serve a capire il risultato: la prepara l'IA e il motore la controlla con le regole. Quote, marche e modelli arrivano con il progetto a pagamento.</p></details>
+      <details><summary>Chi monta la cucina?</summary><p>Un installatore partner della tua zona. In Lombardia è Italfrigo Service S.r.l., la società che gestisce Brigaplan. Stiamo cercando partner in altre zone.</p></details>
       <details><summary>Devo comprare per forza da un partner?</summary><p>No. Il progetto è tuo e lo puoi usare con il fornitore che preferisci. Se compri da un installatore partner, il costo del progetto ti viene scalato dall'ordine.</p></details>
-      <details><summary>Che fine fanno le piante che carico?</summary><p>Restano riservate: le vedono tu, lo staff che segue il tuo progetto e, per preparare l'anteprima, il fornitore dell'IA, che lavora solo per nostro conto. Le condividiamo con un partner solo se lo chiedi tu e non le mostriamo mai ad altri utenti. I progetti, senza nome e contatti, ci aiutano a migliorare Brigaplan; puoi opporti quando vuoi dal tuo account.</p></details>
+      <details><summary>Che fine fanno le piante che carico?</summary><p>Restano riservate: le vedono tu e, per preparare l'anteprima, il fornitore dell'IA, che lavora solo per nostro conto. Una persona del nostro staff le apre solo se chiedi la verifica, il progetto completo o il nostro aiuto, e per la qualità può guardare a campione alcune anteprime e la pianta come l'hai caricata, senza i dati del tuo profilo, se non ti opponi. Le condividiamo con un partner solo se lo chiedi tu e non le mostriamo mai ad altri utenti. I progetti, senza nome e contatti, ci aiutano a migliorare Brigaplan; puoi opporti quando vuoi dal tuo account.</p></details>
     </div>
   </div>
 </section>
@@ -560,14 +593,15 @@ img, video { display: block; height: auto; }
           <li>Elenco delle attrezzature, senza marche</li>
           <li>Stima di spesa a forbice</li>
         </ul>
-        <p class="small">Con il codice di invito ti registri in un minuto. Ogni anteprima la verifica un progettista.</p>
+        <p class="small">Con il codice di invito ti registri in un minuto. L'anteprima la fa l'IA e il motore la controlla con le regole.</p>
       </div>
       <div class="inizia">
         <p class="inizia-t">Crea il tuo account gratuito, carica la pianta e ricevi l'anteprima.</p>
-        <a class="btn btn-primary" href="https://app.brigaplan.ai/registrati?lingua=it">Crea l'anteprima gratis</a>
+        <a class="btn btn-primary" href="https://app.brigaplan.ai/registrati?lingua=it">Ho il codice: registrati</a>
+        <a class="btn btn-ghost" href="mailto:info@brigaplan.ai?subject=Codice%20d%27invito%20Brigaplan&amp;body=Tipo%20di%20locale%3A%0ACitt%C3%A0%3A%0ACoperti%3A%0AHo%20la%20pianta%3A%20s%C3%AC%20%2F%20no">Chiedi il codice</a>
         <p class="small">Hai già un account? <a href="https://app.brigaplan.ai/accedi?lingua=it">Accedi</a></p>
         <p class="small">Le piante che carichi restano riservate.</p>
-        <p class="small">Per ora si entra solo su invito: il codice te lo manda Italfrigo. Se vuoi provare Brigaplan, scrivi a <a href="mailto:info@brigaplan.ai">info@brigaplan.ai</a>.</p>
+        <p class="small">Per ora Brigaplan si apre su invito, così possiamo seguire bene i primi locali. Non hai il codice? Chiedilo: scrivi tipo di locale e città e te lo mandiamo noi, con il link per registrarti.</p>
       </div>
     </div>
   </div>
@@ -578,74 +612,17 @@ img, video { display: block; height: auto; }
   <div class="wrap">
     <span class="logo" translate="no">Briga<b>plan</b></span>
     <p>Progettazione di cucine e bar professionali con l'intelligenza artificiale.</p>
+    <p class="foot-link"><a href="/come-funziona.html">Come funziona e prezzi</a> · <a href="/domande.html">Domande</a> · Guide: <a href="/guide/costo-cucina-professionale.html">quanto costa una cucina</a>, <a href="/guide/regole-cucina-lombardia.html">regole ASL in Lombardia</a>, <a href="/guide/pizzeria-forno-legna.html">pizzeria a legna</a>, <a href="/guide/cucina-sushi-ayce.html">sushi</a> · <a href="/professionisti.html">Professionisti</a> · <a href="/partner.html">Installatori</a> · <a href="/condizioni.html">Condizioni</a> · <a href="/privacy-piattaforma.html">Privacy</a> · <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
     <p>Installatori partner: Italfrigo (Lombardia). <a href="/partner.html">Diventa partner</a></p>
-    <p>L'anteprima è indicativa e non è un progetto esecutivo. Progetto ed esecutivo sono controllati da un progettista.</p>
+    <p>L'anteprima è indicativa e non è un progetto esecutivo. Progetto ed esecutivo li segue un progettista. Brigaplan ti dà un layout funzionale delle attrezzature. Per ASL, HACCP, Vigili del fuoco e pratiche edilizie servono il progetto e la firma di un tecnico abilitato scelto da te, e il layout va approvato dai tuoi consulenti. Prima del cantiere, misure e allacci li controlla l'installatore.</p>
     <p>Brigaplan è un servizio di Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · Registro delle imprese di Milano Monza Brianza Lodi n. 06825390153 · REA MI-1120586 · C.F. e P.IVA 06825390153 · Capitale sociale 46.800,00 € i.v. · PEC <span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/privacy.html">Privacy e cookie</a></p>
     <p>Contatti: <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
     <p id="privacy"><strong>Privacy e cookie.</strong> Questo sito non usa cookie né strumenti di tracciamento. Contiamo le visite con un contatore nostro, anonimo: solo i totali per pagina, lingua e provenienza. Il servizio che ospita il sito registra per sicurezza gli indirizzi IP delle visite. Per chi si registra valgono la <a href="/privacy-piattaforma.html">privacy della piattaforma</a> e le <a href="/condizioni.html">condizioni d'uso</a>.</p>
   </div>
 </footer>
 
-<script>
-(function () {
-  var reelBtn = document.getElementById("reel-btn");
-  // Due video: verticale sul telefono, orizzontale sul computer (si sceglie con la stessa regola del CSS).
-  // Parte da solo, senza audio. Se il telefono lo blocca (risparmio energetico), al suo posto scorrono sei immagini
-  // del video giusto; si riprova al primo tocco o scorrimento.
-  var telefono = window.matchMedia ? window.matchMedia("(max-width: 700px)") : { matches: false };
-  var reel = null, fermatoDaTe = false, fermi = null;
-  function statoReel() { var fermo = (!reel || reel.paused) && !fermi; reelBtn.textContent = fermo ? reelBtn.dataset.txtRiproduci : reelBtn.dataset.txtPausa; reelBtn.setAttribute("aria-pressed", String(fermo)); }
-  function mostraFermi() {
-    if (fermi || fermatoDaTe || !reel) return;
-    fermi = document.getElementById(telefono.matches ? "reel-fermi-v" : "reel-fermi-o").content.firstElementChild.cloneNode(true);
-    reel.parentNode.insertBefore(fermi, reelBtn); statoReel();
-  }
-  function togliFermi() { if (fermi) { fermi.remove(); fermi = null; } statoReel(); }
-  function prova() { if (!reel) return; var pr = reel.play(); if (pr && pr.then) pr.then(togliFermi, mostraFermi); }
-  function scegli() {
-    var nuovo = document.querySelector(telefono.matches ? ".reel-v" : ".reel-o");
-    if (nuovo === reel) return;
-    if (reel) reel.pause();
-    togliFermi();
-    reel = nuovo;
-    reel.muted = true; reel.defaultMuted = true; reel.setAttribute("muted", ""); reel.playsInline = true; reel.preload = "auto";
-    if (!fermatoDaTe) prova();
-    statoReel();
-  }
-  document.querySelectorAll(".reel video").forEach(function (v) {
-    v.addEventListener("playing", function () { if (v === reel) togliFermi(); });
-    v.addEventListener("play", statoReel); v.addEventListener("pause", statoReel);
-  });
-  scegli();
-  if (telefono.addEventListener) telefono.addEventListener("change", scegli); else if (telefono.addListener) telefono.addListener(scegli);
-  setTimeout(function () { if (reel && reel.paused && !fermatoDaTe) mostraFermi(); }, 2500);
-  ["touchstart", "scroll", "keydown"].forEach(function (ev) {
-    window.addEventListener(ev, function () { if (reel && reel.paused && !fermatoDaTe) prova(); }, { once: true, passive: true });
-  });
-  reelBtn.addEventListener("click", function () {
-    if (fermi) { fermatoDaTe = true; togliFermi(); }                 // ferma anche le immagini di riserva
-    else if (reel.paused) { fermatoDaTe = false; prova(); }
-    else { fermatoDaTe = true; reel.pause(); }
-  });
+<script src="/js/s-e4129bdbaa54.js"></script>
 
-  var sheet = document.getElementById("tavola");
-  var testiLivelli = document.getElementById("livelli-testi").content;
-  var bottoni = sheet.querySelectorAll("[data-set]");
-  var img = document.getElementById("tavola-img");
-  function mostra(l) {
-    var d = testiLivelli.querySelector('[data-livello="' + l + '"]');
-    if (!d) return;
-    bottoni.forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-set") === l)); });
-    var nuova = d.querySelector('[data-k="img"]');
-    img.src = nuova.getAttribute("src"); img.alt = nuova.getAttribute("alt");
-    document.getElementById("tavola-cap").innerHTML = d.querySelector('[data-k="cap"]').innerHTML;
-    ["tavola", "scala", "attr", "stima"].forEach(function (k) { document.getElementById("c-" + k).textContent = d.querySelector('[data-k="' + k + '"]').textContent; });
-  }
-  bottoni.forEach(function (b) { b.addEventListener("click", function () { mostra(b.getAttribute("data-set")); }); });
-})();
-</script>
-
-<script>/* conteggio anonimo delle visite: niente cookie, niente IP salvati (vedi /privacy.html) */
-try{if(navigator.sendBeacon&&navigator.doNotTrack!=='1'&&!navigator.globalPrivacyControl)navigator.sendBeacon('https://app.brigaplan.ai/api/visita',JSON.stringify({p:location.pathname,l:(document.documentElement.lang||'it').slice(0,2),r:document.referrer}))}catch(e){}</script>
+<script src="/js/s-1c50f2db9341.js"></script>
 </body>
 </html>

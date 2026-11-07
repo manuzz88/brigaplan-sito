@@ -2,6 +2,8 @@
 <html lang="zh-Hans">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>常见问题 · Brigaplan</title>
 <meta name="description" content="哪些免费、哪些收费，谁来安装厨房，我们服务哪些地区，以及您的数据和上传的平面图会怎样处理。">
@@ -67,6 +69,9 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
       <a href="/zh/#per-chi">适用对象</a>
     </nav>
     <div class="top-azioni">
+      <details class="menu-tel"><summary>菜单</summary><nav aria-label="菜单"><a href="/zh/come-funziona.html">使用方法和价格</a><a href="/zh/domande.html">常见问题</a><a href="/zh/professionisti.html">专业人士</a><a href="/zh/partner.html">安装商</a><a href="https://app.brigaplan.ai/accedi?lingua=zh">登录</a><div class="lingue-menu" translate="no"><a href="/domande.html" lang="it" hreflang="it">IT</a>
+        <a href="/en/domande.html" lang="en" hreflang="en">EN</a>
+        <a href="/zh/domande.html" lang="zh-Hans" hreflang="zh-Hans">中文</a></div></nav></details>
       <nav class="lingue" translate="no" aria-label="语言">
         <a href="/domande.html" lang="it" hreflang="it">IT</a>
         <a href="/en/domande.html" lang="en" hreflang="en">EN</a>
@@ -88,9 +93,9 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
     <section aria-labelledby="dq-gratis">
       <h2 id="dq-gratis">哪些免费，哪些收费</h2>
       <div class="faq">
-        <details><summary>怎样才能试用？</summary><p>目前 Brigaplan 处于试运行阶段，仅限受邀用户使用：Italfrigo 会把邀请码和注册链接一起发给您。如果您想试用，请发邮件至 <a href="mailto:info@brigaplan.ai">info@brigaplan.ai</a>。</p></details>
-        <details><summary>哪些是免费的？</summary><p>预览方案：带功能分区和操作台、不标尺寸的平面图，简化的 3D 模型，通用设备，以及费用估算区间。由 AI 准备，设计师审核。每个账户可以创建 2 个带免费预览方案的项目，每个项目最多 3 个版本。</p></details>
-        <details><summary>哪些需要付费？</summary><p>设计方案（含标注尺寸的平面图、品牌和型号、可在线旋转的完整 3D 模型）以及施工图（含可带到工地使用的图纸和接口资料）。设计方案含增值税的价格：60 个座位以内或酒吧 353.80 欧元，150 个座位以内 597.80 欧元，更大规模 1,085.80 欧元起，包含 3 轮修改；施工图 841.80 欧元、1,451.80 欧元或另行报价。不含增值税为：设计方案 290 欧元、490 欧元和 890 欧元起，施工图 690 欧元和 1,190 欧元。开始之前您会收到包含价格和时间的报价：只有接受报价才需要付费。</p></details>
+        <details><summary>怎样才能试用？</summary><p>目前需要邀请码才能注册。请写信到 <a href="mailto:info@brigaplan.ai">info@brigaplan.ai</a> 申请，并写明店面类型和城市：我们会把邀请码和注册链接一起发给您。有了邀请码，一分钟就能注册并上传平面图。</p></details>
+        <details><summary>哪些是免费的？</summary><p>预览方案：带功能分区和操作台、不标尺寸的平面图，简化 3D 模型，通用设备和费用估算区间。由 AI 制作，引擎按规则检查。如有需要，也可以请设计师审核：需付费，会先给您报价。每个账户可以创建 2 个带免费预览方案的项目，每个最多 3 个版本。</p></details>
+        <details><summary>哪些需要付费？</summary><p>设计方案（含标注尺寸的平面图、品牌和型号、可在线旋转的完整 3D 模型）以及施工图（含可带到工地使用的图纸和接口资料）。设计方案含增值税的价格：60 个座位以内或酒吧 353.80 欧元，150 个座位以内 597.80 欧元，更大规模 1,085.80 欧元起，包含 3 轮修改；施工图 841.80 欧元、1,451.80 欧元或另行报价。不含增值税为：设计方案 290 欧元、490 欧元和 890 欧元起，施工图 690 欧元和 1,190 欧元。如果您申请设计师审核，也需要付费。开始之前您会收到包含价格和时间的报价：只有接受报价才需要付费。</p></details>
         <details><summary>如果我购买设备，还要付设计费吗？</summary><p>如果您从合作安装商那里购买，设计费会从订单金额中扣除，施工图包含在订单中。</p></details>
         <details><summary>必须向合作安装商购买吗？</summary><p>不是必须的。设计方案归您所有，您可以交给任何您喜欢的供应商。如果您从合作安装商那里购买，设计费会从订单金额中扣除，施工图包含在订单中。</p></details>
       </div>
@@ -99,8 +104,8 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
     <section aria-labelledby="dq-montaggio">
       <h2 id="dq-montaggio">安装和服务地区</h2>
       <div class="faq">
-        <details><summary>厨房由谁来安装？</summary><p>由您所在地区的合作安装商安装。在伦巴第大区是 Italfrigo Service S.r.l.，也就是运营 Brigaplan 的同一家公司。其他大区的合作伙伴我们正在寻找。</p></details>
-        <details><summary>你们服务哪些地区？</summary><p>初期我们承接伦巴第大区的项目，合作伙伴是 Italfrigo。我们正在其他大区寻找安装商：如果您在伦巴第大区以外，请写信给我们，附近有合作伙伴时我们会通知您。</p></details>
+        <details><summary>厨房由谁来安装？</summary><p>由您所在地区的合作安装商安装。在伦巴第大区是运营 Brigaplan 的公司 Italfrigo Service S.r.l.。我们正在其他地区寻找合作伙伴。</p></details>
+        <details><summary>你们服务哪些地区？</summary><p>在意大利各地都可以在线获得预览方案、设计方案和施工图。由合作安装商安装目前只在伦巴第大区提供；在其他地区，您可以把设计方案交给自己选择的供应商。我们正在其他地区寻找安装商：如果您在伦巴第大区以外，请写信给我们，附近有合作伙伴时我们会通知您。</p></details>
         <details><summary>你们检查的规范在哪里都适用吗？</summary><p>设计引擎检查欧盟和意大利的规范，包括伦巴第大区和米兰的规范。在其他地区，当地规范需要请当地专业人员核实。办理审批手续（例如卫生部门和市政审批）通常仍需要有资质的专业人员。</p></details>
       </div>
     </section>
@@ -109,19 +114,20 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
       <h2 id="dq-anteprima">预览方案</h2>
       <div class="faq">
         <details><summary>一定要有店面平面图吗？</summary><p>不一定。没有的话，我们会问您几个问题：尺寸、门窗位置，以及餐厅区在哪里。照片或手绘草图也可以，只要上面至少有一个已知尺寸。</p></details>
+        <details><summary>开始之前最好了解哪些信息？</summary><p>如果有平面图，请准备好。另外，如果您知道的话：烹饪用的能源（燃气、电或两者都用）、可用电力（kW，可在电费单或电表上找到），以及是否已有燃气接口和供气量。如果还不确定，也一样可以获得预览方案。</p></details>
         <details><summary>可以上传哪些文件？</summary><p>DXF、DWG、PDF 或照片，最多 5 个文件，每个不超过 10 MB。</p></details>
-        <details><summary>需要多长时间？</summary><p>助手几分钟就能准备好预览方案。如果引擎没有发现错误，您马上就能看到自动草稿；随后由设计师审核，我们会发邮件通知您。如果有需要调整的地方，准备好后您就能看到。</p></details>
-        <details><summary>有了预览方案就能直接施工吗？</summary><p>不能。预览方案用来了解空间、设备占地和费用。施工需要设计方案和施工图，由我们团队的设计师跟进。向卫生局（ASL）和市政府企业服务窗口（SUAP）办手续，以及法律要求时的水电气等设施设计，还需要一位有执业资格的技术人员。</p></details>
-        <details><summary>为什么预览方案不标尺寸，也没有品牌？</summary><p>因为它是免费的，用来看清大致效果：由 AI 生成，再由设计师审核。尺寸、品牌和型号在付费的设计方案中提供。</p></details>
+        <details><summary>需要多长时间？</summary><p>助手几分钟内完成预览方案，您会立即看到自动草稿。如果引擎发现问题，会向您指出：助手会免费修正；如果修正不了，您可以申请设计师审核。</p></details>
+        <details><summary>有了预览方案就能直接施工吗？</summary><p>不够。预览方案帮助您了解空间、占地和费用。施工需要设计方案和施工图，由我们团队的设计师跟进。Brigaplan 为您提供设备功能布局。办理 ASL（卫生部门）、HACCP、消防（Vigili del fuoco）和建筑审批，需要由您自选的持证技术人员出具并签署的设计方案，布局还需经您的顾问批准。开工前，由安装商核对尺寸和接口。</p></details>
+        <details><summary>为什么预览方案不标尺寸，也没有品牌？</summary><p>因为它是免费的，用来帮助您了解效果：由 AI 制作，引擎按规则检查。尺寸、品牌和型号在付费设计方案中提供。</p></details>
       </div>
     </section>
 
     <section aria-labelledby="dq-dati">
       <h2 id="dq-dati">您的数据和平面图</h2>
       <div class="faq">
-        <details><summary>我上传的平面图会怎么处理？</summary><p>严格保密：只有您本人、跟进您项目的团队成员，以及为准备预览方案而只代表我们工作的 AI 供应商能看到。只有在您要求时，我们才会提供给合作伙伴，也绝不会向其他用户展示。去掉姓名和联系方式的项目会帮助我们改进 Brigaplan；您可以随时在账户中提出反对。您关闭账户后，我们会立即删除；备份中最多保留 14 天。</p></details>
+        <details><summary>我上传的平面图会怎么处理？</summary><p>严格保密：只有您本人，以及为制作预览方案而仅代表我们工作的 AI 服务商能看到。只有在您申请审核、完整设计方案或需要我们帮助时，我们的工作人员才会打开；除非您反对，工作人员可能为检查质量抽样查看部分预览方案和您上传的原样平面图，不显示您的个人资料。只有您提出要求时我们才会与合作伙伴共享，绝不会给其他用户看。去掉姓名和联系方式的项目会帮助我们改进 Brigaplan；您可以随时在账户中提出反对。关闭账户时我们会立即删除；备份副本中最多保留 14 天。</p></details>
         <details><summary>AI 会用我的项目来学习吗？</summary><p>我们不会用它们训练人工智能模型，AI 供应商也不得这样做。我们会在去掉姓名和联系方式后，用它们改进 Brigaplan 的规则和内部范例；您可以随时在账户中提出反对。</p></details>
-        <details><summary>谁能看到我的数据？</summary><p>您本人和 Brigaplan 授权的团队成员。技术供应商（德国的服务器、AI 服务、邮件发送）只代表我们处理这些数据。详情请见<a href="/zh/privacy-piattaforma.html">平台隐私告知</a>。</p></details>
+        <details><summary>谁能看到我的数据？</summary><p>您本人，以及只有在您申请审核、完整设计方案或需要我们帮助时，Brigaplan 的授权工作人员。除非您反对，工作人员可能为检查质量抽样查看部分预览方案和您上传的原样平面图，不显示您的个人资料。技术服务商（德国服务器、AI 服务、邮件发送）只代表我们处理这些数据。详见<a href="/zh/privacy-piattaforma.html">平台隐私声明</a>。</p></details>
         <details><summary>可以删除我的账户吗？</summary><p>可以，随时都行：在控制台中操作，或写信到 info@brigaplan.ai。我们会立即删除账户、项目和文件；备份中最多保留 14 天。</p></details>
       </div>
     </section>
@@ -133,11 +139,11 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
   <div class="wrap">
     <span class="logo"><span translate="no">Briga<b>plan</b></span></span>
     <p>用人工智能设计商用厨房和吧台。</p>
+    <p class="foot-link"><a href="/zh/come-funziona.html">使用方法和价格</a> · <a href="/zh/domande.html">常见问题</a> · 指南：<a href="/guide/costo-cucina-professionale.html">厨房要花多少钱</a>、<a href="/guide/regole-cucina-lombardia.html">伦巴第大区 ASL 规定</a>、<a href="/guide/pizzeria-forno-legna.html">柴火披萨店</a>、<a href="/guide/cucina-sushi-ayce.html">寿司</a> · <a href="/zh/professionisti.html">专业人士</a> · <a href="/zh/partner.html">安装商</a> · <a href="/zh/condizioni.html">使用条款</a> · <a href="/zh/privacy-piattaforma.html">隐私</a> · <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
     <p>合作安装商：Italfrigo（伦巴第大区）。</p>
     <p>Brigaplan 是 Italfrigo Service S.r.l. 提供的服务 · Via Serviliano Lattuada 26, 20135 Milano · 米兰-蒙扎布里安扎-洛迪企业登记处登记号 06825390153 · 经济行政登记号 REA MI-1120586 · 税号和增值税号 C.F. e P.IVA 06825390153 · 注册资本 46,800.00 欧元（已全额实缴）· 认证邮箱（PEC）<span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/zh/privacy.html">隐私与 Cookie</a></p>
   </div>
 </footer>
-<script>/* conteggio anonimo delle visite: niente cookie, niente IP salvati (vedi /privacy.html) */
-try{if(navigator.sendBeacon&&navigator.doNotTrack!=='1'&&!navigator.globalPrivacyControl)navigator.sendBeacon('https://app.brigaplan.ai/api/visita',JSON.stringify({p:location.pathname,l:(document.documentElement.lang||'it').slice(0,2),r:document.referrer}))}catch(e){}</script>
+<script src="/js/s-1c50f2db9341.js"></script>
 </body>
 </html>

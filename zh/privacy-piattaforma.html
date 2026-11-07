@@ -2,13 +2,15 @@
 <html lang="zh-Hans">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>平台隐私 · Brigaplan</title>
-<meta name="description" content="Brigaplan 如何处理注册和使用平台的用户数据：账户、项目、上传的平面图、AI 助手以及设计师审核。">
+<meta name="description" content="Brigaplan 如何处理注册和使用平台的用户的数据：账户、项目、上传的平面图、AI 助手，以及您申请的设计师审核。">
 <meta property="og:site_name" content="Brigaplan">
 <meta property="og:type" content="website">
 <meta property="og:title" content="平台隐私 · Brigaplan">
-<meta property="og:description" content="Brigaplan 如何处理注册和使用平台的用户数据：账户、项目、上传的平面图、AI 助手以及设计师审核。">
+<meta property="og:description" content="Brigaplan 如何处理注册和使用平台的用户的数据：账户、项目、上传的平面图、AI 助手，以及您申请的设计师审核。">
 <meta property="og:url" content="https://brigaplan.ai/zh/privacy-piattaforma.html">
 <meta property="og:image" content="https://brigaplan.ai/media/brigaplan_og.jpg">
 <meta property="og:image:width" content="1280">
@@ -67,6 +69,9 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
       <a href="/zh/partner.html">合作安装商</a>
     </nav>
     <div class="top-azioni">
+      <details class="menu-tel"><summary>菜单</summary><nav aria-label="菜单"><a href="/zh/come-funziona.html">使用方法和价格</a><a href="/zh/domande.html">常见问题</a><a href="/zh/professionisti.html">专业人士</a><a href="/zh/partner.html">安装商</a><a href="https://app.brigaplan.ai/accedi?lingua=zh">登录</a><div class="lingue-menu" translate="no"><a href="/privacy-piattaforma.html" lang="it" hreflang="it">IT</a>
+        <a href="/en/privacy-piattaforma.html" lang="en" hreflang="en">EN</a>
+        <a href="/zh/privacy-piattaforma.html" lang="zh-Hans" hreflang="zh-Hans">中文</a></div></nav></details>
       <nav class="lingue" translate="no" aria-label="语言">
         <a href="/privacy-piattaforma.html" lang="it" hreflang="it">IT</a>
         <a href="/en/privacy-piattaforma.html" lang="en" hreflang="en">EN</a>
@@ -83,7 +88,7 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
     <h1>平台隐私</h1>
     <p class="sec-lead">我们如何处理注册和使用 Brigaplan 平台的用户数据：账户、项目、上传的平面图以及与助手的对话。如果您只是访问网站，适用<a href="/zh/privacy.html">网站隐私告知</a>。</p>
     <p class="nota-lingua">本页为译文，如有出入，以意大利语版本为准。如果您是消费者，而某句话含义不清，则按对您最有利的含义理解。</p>
-  <p class="agg">第 3 版 · 2026 年 11 月 5 日 · <a href="/zh/privacy-piattaforma-v2.html">上一版</a></p>
+  <p class="agg">第 4 版 · 2026 年 11 月 7 日 · <a href="/zh/privacy-piattaforma-v3.html">上一版</a></p>
   </div>
 
   <div class="prosa">
@@ -127,12 +132,14 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
     <section aria-labelledby="pp-ia">
       <h2 id="pp-ia">AI 助手和设计师审核</h2>
       <p>预览方案由人工智能助手（Anthropic 的 Claude 模型）与我们的设计引擎共同准备，设计引擎负责检查尺寸和规范。</p>
-      <p>每个预览方案都由我们团队的设计师审核，设计师可以看到项目、上传的文件以及与助手的对话。如果引擎没有发现错误，您会在审核之前就看到自动草稿；设计师随后审核，必要时进行修改。预览方案仅供参考：我们不会做出对您产生法律效力的自动化决定。</p>
+      <p>预览方案由引擎和 AI 制作。除非您申请设计师审核（付费服务）、完整设计方案或需要我们的帮助，我们的工作人员不会打开您的项目，但<a href="#pp-migliorare">我们如何使用项目改进 Brigaplan</a>中所述、对预览方案进行且不显示您个人资料的抽样质量检查（专业账户从不参与）除外。如果您申请审核或完整设计方案，我们团队的设计师会查看项目、上传的文件和您与助手的对话。在法律要求时或为防止滥用服务，工作人员也会打开项目，每次打开都会留下记录。</p>
+      <p>引擎的成果仅供参考，不会作出对您产生法律效力的决定：Brigaplan 为您提供设备功能布局，由您自选的技术人员和顾问批准。</p>
     </section>
 
     <section aria-labelledby="pp-migliorare">
       <h2 id="pp-migliorare">我们如何使用项目改进 Brigaplan</h2>
       <p>为了让助手和引擎工作得更好，我们也会使用在平台上完成的项目：用于检查质量、编写和修正规则、计算统计数据和典型设备配置（例如一家 80 座披萨店通常需要哪些设备），以及保留内部范例，以便更好地设计类似的项目。</p>
+      <p><strong>抽样检查。</strong>为检查质量，我们的工作人员会以只读方式抽样查看部分预览方案：每天最多抽取 3 个项目。专业账户的项目从不参与抽样。查看人能看到预览方案的各个版本（平面图、3D 和引擎检查结果）、您上传的原样文件及其文件名，以及规则所需的店面数据：店面类型、城市、座位数和能源。查看人看不到您的个人资料（姓名、公司、增值税号、地址、电子邮箱和电话）、项目名称、您的请求以及您与助手的对话。不过，您上传的文件及其文件名中可能出现店面名称和其他信息，例如姓名和地址。我们会记录查看人和查看时间；如果查看人为了仔细查看而下载文件，下载也会被记录，我们不会保留副本。如果想少显示一些信息，请上传不带图签、文件名中不含姓名的平面图；如果什么都不想显示，请在账户中提出反对：您的预览方案永远不会被抽中。</p>
       <ul>
         <li><strong>不含您的个人数据。</strong>用于此目的时，我们会从项目中去掉姓名、公司、地址和联系方式。</li>
         <li><strong>您的平面图不会给其他人看。</strong>您上传的平面图和文件（也就是您的店面）以及您的数据，绝不会向其他用户展示。我们可以向其他客户提出的，只是由 Brigaplan 制作、不涉及您的布局方案（功能分区、操作台和设备如何摆放），并根据他们的店面进行调整。</li>
@@ -151,7 +158,7 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
         <li><strong>我们发给 Claude 的内容。</strong>我们助手的提问、项目状态、一段不含品牌、尺寸和型号的简短说明、价格区间，以及网站链接。平面图和 3D 在聊天中的一个窗口里显示，与网站上一样经过缩小并带水印，链接有效期为 10 分钟。</li>
         <li><strong>谁是数据控制者。</strong>您与 Claude 的对话由 Anthropic 作为数据控制者处理，依据其<a href="https://www.anthropic.com/legal/privacy">隐私政策</a>。发送到 Brigaplan 的数据由我们作为数据控制者处理，和平台其他部分一样，用于为您提供服务（条例第 6 条第 1 款 b 项）。</li>
         <li><strong>应用访问。</strong>对于已连接的应用，我们保存其名称、回调地址和连接日期。访问代码只以无法还原的指纹形式保存，并记录有效期、最后使用时间和撤销情况：访问代码有效期 1 小时，续期代码 30 天，最长 90 天后需要重新连接 Claude。</li>
-        <li><strong>在项目中</strong>我们会记录它来自 Claude，用于统计，并提醒我们的团队您正在等待。</li>
+        <li><strong>在项目中</strong>我们会注明它来自 Claude，用于统计。</li>
       </ul>
     </section>
 
@@ -207,7 +214,7 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
 
     <section aria-labelledby="pp-sicurezza">
       <h2 id="pp-sicurezza">我们如何保护数据</h2>
-      <p>加密连接（HTTPS）、加密密码、文件和平面图只有您和授权的团队成员可以查看、限制登录尝试次数，以及在您修改密码时关闭其他会话。</p>
+      <p>加密连接（HTTPS）、加密密码，文件和平面图只有您本人和授权工作人员能看到：工作人员仅在您申请审核、完整设计方案或需要我们帮助时，以及进行抽样质量检查时查看；限制登录尝试次数，修改密码时关闭其他会话。</p>
     </section>
 
     <section aria-labelledby="pp-diritti">
@@ -231,11 +238,11 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
   <div class="wrap">
     <span class="logo"><span translate="no">Briga<b>plan</b></span></span>
     <p>用人工智能设计商用厨房和吧台。</p>
+    <p class="foot-link"><a href="/zh/come-funziona.html">使用方法和价格</a> · <a href="/zh/domande.html">常见问题</a> · 指南：<a href="/guide/costo-cucina-professionale.html">厨房要花多少钱</a>、<a href="/guide/regole-cucina-lombardia.html">伦巴第大区 ASL 规定</a>、<a href="/guide/pizzeria-forno-legna.html">柴火披萨店</a>、<a href="/guide/cucina-sushi-ayce.html">寿司</a> · <a href="/zh/professionisti.html">专业人士</a> · <a href="/zh/partner.html">安装商</a> · <a href="/zh/condizioni.html">使用条款</a> · <a href="/zh/privacy-piattaforma.html">隐私</a> · <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
     <p>合作安装商：Italfrigo（伦巴第大区）。<a href="/zh/partner.html">成为合作伙伴</a></p>
     <p>Brigaplan 是 Italfrigo Service S.r.l. 提供的服务 · Via Serviliano Lattuada 26, 20135 Milano · 米兰-蒙扎布里安扎-洛迪企业登记处登记号 06825390153 · 经济行政登记号 REA MI-1120586 · 税号和增值税号 C.F. e P.IVA 06825390153 · 注册资本 46,800.00 欧元（已全额实缴）· 认证邮箱（PEC）<span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/zh/privacy.html">隐私与 Cookie</a></p>
   </div>
 </footer>
-<script>/* conteggio anonimo delle visite: niente cookie, niente IP salvati (vedi /privacy.html) */
-try{if(navigator.sendBeacon&&navigator.doNotTrack!=='1'&&!navigator.globalPrivacyControl)navigator.sendBeacon('https://app.brigaplan.ai/api/visita',JSON.stringify({p:location.pathname,l:(document.documentElement.lang||'it').slice(0,2),r:document.referrer}))}catch(e){}</script>
+<script src="/js/s-1c50f2db9341.js"></script>
 </body>
 </html>

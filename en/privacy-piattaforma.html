@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Platform privacy · Brigaplan</title>
-<meta name="description" content="How Brigaplan handles the data of people who sign up and use the platform: account, projects, uploaded floor plans, AI assistant and review by a designer.">
+<meta name="description" content="How Brigaplan handles the data of people who sign up and use the platform: account, projects, uploaded floor plans, AI assistant and a designer's check, if you ask for one.">
 <meta property="og:site_name" content="Brigaplan">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Platform privacy · Brigaplan">
-<meta property="og:description" content="How Brigaplan handles the data of people who sign up and use the platform: account, projects, uploaded floor plans, AI assistant and review by a designer.">
+<meta property="og:description" content="How Brigaplan handles the data of people who sign up and use the platform: account, projects, uploaded floor plans, AI assistant and a designer's check, if you ask for one.">
 <meta property="og:url" content="https://brigaplan.ai/en/privacy-piattaforma.html">
 <meta property="og:image" content="https://brigaplan.ai/media/brigaplan_og.jpg">
 <meta property="og:image:width" content="1280">
@@ -44,6 +46,9 @@
       <a href="/en/partner.html">Partner installers</a>
     </nav>
     <div class="top-azioni">
+      <details class="menu-tel"><summary>Menu</summary><nav aria-label="Menu"><a href="/en/come-funziona.html">How it works and prices</a><a href="/en/domande.html">FAQ</a><a href="/en/professionisti.html">Professionals</a><a href="/en/partner.html">Installers</a><a href="https://app.brigaplan.ai/accedi?lingua=en">Log in</a><div class="lingue-menu" translate="no"><a href="/privacy-piattaforma.html" lang="it" hreflang="it">IT</a>
+        <a href="/en/privacy-piattaforma.html" lang="en" hreflang="en">EN</a>
+        <a href="/zh/privacy-piattaforma.html" lang="zh-Hans" hreflang="zh-Hans">中文</a></div></nav></details>
       <nav class="lingue" translate="no" aria-label="Language">
         <a href="/privacy-piattaforma.html" lang="it" hreflang="it">IT</a>
         <a href="/en/privacy-piattaforma.html" lang="en" hreflang="en" aria-current="page">EN</a>
@@ -60,7 +65,7 @@
     <h1>Platform privacy</h1>
     <p class="sec-lead">How we handle the data of people who sign up and use the Brigaplan platform: account, projects, uploaded floor plans and the conversation with the assistant. If you only visit the site, the <a href="/en/privacy.html">site privacy notice</a> applies.</p>
     <p class="nota-lingua">This is a translation. If there is any difference, the Italian version prevails. If you are a consumer and a sentence is unclear, the meaning most favourable to you applies.</p>
-  <p class="agg">Version 3 of 5 November 2026 · <a href="/en/privacy-piattaforma-v2.html">Previous version</a></p>
+  <p class="agg">Version 4 of 7 November 2026 · <a href="/en/privacy-piattaforma-v3.html">Previous version</a></p>
   </div>
 
   <div class="prosa">
@@ -104,12 +109,14 @@
     <section aria-labelledby="pp-ia">
       <h2 id="pp-ia">The AI assistant and verification by a designer</h2>
       <p>The preview is prepared by an artificial intelligence assistant (Claude models by Anthropic) together with our design engine, which checks dimensions and rules.</p>
-      <p>A designer from our staff checks every preview and can see the project, the uploaded files and the conversation with the assistant. If the engine finds no errors, you see the preview right away as an automatic draft, before it is checked; the designer checks it afterwards and corrects it if needed. The preview is indicative: we do not take automated decisions that have legal effects on you.</p>
+      <p>The engine and the AI prepare the preview. Unless you ask for a designer's check (paid service), the full design or our help, no one on our staff opens your project, except for the sample quality check of previews (never for professional accounts), without your profile data, described in <a href="#pp-migliorare">How we use projects to improve Brigaplan</a>. If you ask for the check or the full design, a designer from our staff sees the project, the uploaded files and the conversation with the assistant. Our staff also open a project when the law requires it or to protect the service from abuse, and every opening is logged.</p>
+      <p>The engine's work is indicative and makes no decisions with legal effects on you: Brigaplan gives you a functional equipment layout, which is approved by the qualified professional and consultants you choose.</p>
     </section>
 
     <section aria-labelledby="pp-migliorare">
       <h2 id="pp-migliorare">How we use projects to improve Brigaplan</h2>
       <p>To make the assistant and the engine work better, we also use the projects made on the platform: to check quality, write and correct the rules, calculate statistics and typical equipment (for example which equipment an 80-seat pizzeria usually needs) and keep internal examples to design similar cases better.</p>
+      <p><strong>Sample check.</strong> To check quality, someone from our staff looks at a sample of previews, in read-only mode: at most 3 projects selected per day. Projects of professional accounts never enter the sample. The person checking sees the preview versions (floor plan, 3D and engine checks), the files you uploaded, as you uploaded them and with their file names, and the venue data the rules need: type of venue, city, seats and energy. They do not see your profile data (name, company, VAT number, address, email and phone number), the project name, your requests or the conversation with the assistant. However, the name of the venue and other details, such as names and addresses, may appear in the files you uploaded and in their names. We log who looked and when; if they download a file to look at it more closely, that is logged too, and we do not keep copies. To show less, upload the floor plan without the title block and with a neutral file name; to show nothing, object from your account: your previews are never selected.</p>
       <ul>
         <li><strong>Without your data.</strong> For this use we remove name, company, address and contact details from the project.</li>
         <li><strong>Nobody else sees your floor plans.</strong> The floor plans and files you upload, that is your venue, and your data are never shown to other users. To other clients we may propose, without any reference to you, only layout solutions prepared by Brigaplan (how zones, counters and equipment are arranged), adapted to their venue.</li>
@@ -128,7 +135,7 @@
         <li><strong>What we send to Claude.</strong> Our assistant's questions, the status of the project, a short description without brands, dimensions or codes, the price range and links to the site. The floor plan and the 3D are shown in a window inside the chat, reduced and watermarked as on the site, through links that are valid for 10 minutes.</li>
         <li><strong>Who is the controller.</strong> Anthropic is the controller of your conversation with Claude, under its <a href="https://www.anthropic.com/legal/privacy">privacy policy</a>. We are the controller of the data that reaches Brigaplan, as for the rest of the platform, in order to provide the service (Article 6(1)(b) of the Regulation).</li>
         <li><strong>App access.</strong> For the connected app we store its name, its return addresses and the date it was connected. We store access codes only as a fingerprint that cannot be read back, with their expiry, last use and revocation: an access code is valid for 1 hour, a renewal code for 30 days, and after 90 days at most Claude has to be connected again.</li>
-        <li><strong>In the project</strong> we record that it started in Claude, for statistics and to let our staff know that you are waiting.</li>
+        <li><strong>In the project</strong> we note that it was created from Claude, for statistics.</li>
       </ul>
     </section>
 
@@ -184,7 +191,7 @@
 
     <section aria-labelledby="pp-sicurezza">
       <h2 id="pp-sicurezza">How we protect the data</h2>
-      <p>Encrypted connection (HTTPS), encrypted passwords, files and floor plans visible only to you and to authorised staff, a limit on login attempts, and your other sessions closed when you change your password.</p>
+      <p>Encrypted connection (HTTPS), encrypted passwords, files and floor plans visible only to you and to authorised staff, when you ask for a check, the full design or our help and for the sample quality check, a limit on login attempts, and other sessions closed when you change your password.</p>
     </section>
 
     <section aria-labelledby="pp-diritti">
@@ -208,11 +215,11 @@
   <div class="wrap">
     <span class="logo"><span translate="no">Briga<b>plan</b></span></span>
     <p>Design of commercial kitchens and bars with artificial intelligence.</p>
+    <p class="foot-link"><a href="/en/come-funziona.html">How it works and prices</a> · <a href="/en/domande.html">FAQ</a> · Guides: <a href="/guide/costo-cucina-professionale.html">how much a kitchen costs</a>, <a href="/guide/regole-cucina-lombardia.html">ASL rules in Lombardy</a>, <a href="/guide/pizzeria-forno-legna.html">wood-fired pizzeria</a>, <a href="/guide/cucina-sushi-ayce.html">sushi</a> · <a href="/en/professionisti.html">Professionals</a> · <a href="/en/partner.html">Installers</a> · <a href="/en/condizioni.html">Terms</a> · <a href="/en/privacy-piattaforma.html">Privacy</a> · <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
     <p>Partner installers: Italfrigo (Lombardy). <a href="/en/partner.html">Become a partner</a></p>
     <p>Brigaplan is a service of Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · Companies Register of Milano Monza Brianza Lodi no. 06825390153 · REA MI-1120586 · tax code and VAT no. 06825390153 · Share capital €46,800.00 fully paid · certified email (PEC) <span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/en/privacy.html">Privacy and cookies</a></p>
   </div>
 </footer>
-<script>/* conteggio anonimo delle visite: niente cookie, niente IP salvati (vedi /privacy.html) */
-try{if(navigator.sendBeacon&&navigator.doNotTrack!=='1'&&!navigator.globalPrivacyControl)navigator.sendBeacon('https://app.brigaplan.ai/api/visita',JSON.stringify({p:location.pathname,l:(document.documentElement.lang||'it').slice(0,2),r:document.referrer}))}catch(e){}</script>
+<script src="/js/s-1c50f2db9341.js"></script>
 </body>
 </html>

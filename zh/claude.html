@@ -2,6 +2,8 @@
 <html lang="zh-Hans">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>在 Claude 中使用 Brigaplan · Brigaplan</title>
 <meta name="description" content="如何在 Claude 中使用 Brigaplan：连接器能做什么、如何添加、请求示例、数据和帮助。">
@@ -67,6 +69,9 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
       <a href="/zh/partner.html">合作安装商</a>
     </nav>
     <div class="top-azioni">
+      <details class="menu-tel"><summary>菜单</summary><nav aria-label="菜单"><a href="/zh/come-funziona.html">使用方法和价格</a><a href="/zh/domande.html">常见问题</a><a href="/zh/professionisti.html">专业人士</a><a href="/zh/partner.html">安装商</a><a href="https://app.brigaplan.ai/accedi?lingua=zh">登录</a><div class="lingue-menu" translate="no"><a href="/claude.html" lang="it" hreflang="it">IT</a>
+        <a href="/en/claude.html" lang="en" hreflang="en">EN</a>
+        <a href="/zh/claude.html" lang="zh-Hans" hreflang="zh-Hans">中文</a></div></nav></details>
       <nav class="lingue" translate="no" aria-label="语言">
         <a href="/claude.html" lang="it" hreflang="it">IT</a>
         <a href="/en/claude.html" lang="en" hreflang="en">EN</a>
@@ -83,7 +88,7 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
   <div class="doc-head">
     <span class="eyebrow">Claude 连接器</span>
     <h1>在 Claude 中使用 Brigaplan</h1>
-    <p class="sec-lead">通过 Brigaplan 连接器，您只需与 Anthropic 的助手 Claude 对话，就能为专业厨房或酒吧准备免费预览方案。预览方案由 Brigaplan 引擎绘制，并由设计师审核，与网站上相同。</p>
+    <p class="sec-lead">使用 Brigaplan 连接器，您只需与 Anthropic 的助手 Claude 对话，就能为专业厨房或酒吧制作免费预览方案。预览方案由 Brigaplan 引擎绘制，并像在网站上一样按规则检查。如有需要，也可以在网站上请设计师审核（付费服务）。</p>
   </div>
 
   <div class="prosa">
@@ -128,9 +133,10 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
       <ul>
         <li>与网站上一样，使用您账户的免费预览方案额度：2 个项目，每个项目最多 3 个版本。</li>
         <li>预览方案仅供参考：没有尺寸、品牌和型号，不能用于施工。详见<a href="/zh/condizioni.html#c-limiti">预览方案是什么，不是什么</a>。</li>
-        <li>如果引擎没有发现错误，您会立即看到标明为自动草稿的方案；经设计师审核的版本随后提供。如果引擎发现错误，预览方案会在设计师修正后提供。</li>
+        <li>您会立即看到预览方案，标注为“自动草稿，未经设计师审核”。如果引擎发现问题，会向您指出：助手会免费修正；如果修正不了，会建议您在网站上申请设计师审核。</li>
+        <li><strong>Brigaplan 为您提供设备功能布局。办理 ASL（卫生部门）、HACCP、消防（Vigili del fuoco）和建筑审批，需要由您自选的持证技术人员出具并签署的设计方案，布局还需经您的顾问批准。开工前，由安装商核对尺寸和接口。</strong></li>
         <li>Claude 用自己的话写的内容不是我们写的：以您在 Brigaplan 窗口和网站上看到的内容为准。</li>
-        <li>Brigaplan 是 Italfrigo Service S.r.l. 提供的服务，该公司也是伦巴第大区的<a href="/zh/partner.html">合作安装商</a>。设备和安装的报价只有在您需要时才在网站上申请，您也没有义务向合作伙伴购买。</li>
+        <li>我们按地区与<a href="/zh/partner.html">合作安装商</a>合作：在伦巴第大区是运营 Brigaplan 的公司 Italfrigo Service S.r.l.。设备和安装的报价只有在您需要时才在网站上申请，您也没有义务向合作伙伴购买。</li>
       </ul>
     </section>
 
@@ -150,11 +156,11 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
   <div class="wrap">
     <span class="logo"><span translate="no">Briga<b>plan</b></span></span>
     <p>用人工智能设计商用厨房和吧台。</p>
+    <p class="foot-link"><a href="/zh/come-funziona.html">使用方法和价格</a> · <a href="/zh/domande.html">常见问题</a> · 指南：<a href="/guide/costo-cucina-professionale.html">厨房要花多少钱</a>、<a href="/guide/regole-cucina-lombardia.html">伦巴第大区 ASL 规定</a>、<a href="/guide/pizzeria-forno-legna.html">柴火披萨店</a>、<a href="/guide/cucina-sushi-ayce.html">寿司</a> · <a href="/zh/professionisti.html">专业人士</a> · <a href="/zh/partner.html">安装商</a> · <a href="/zh/condizioni.html">使用条款</a> · <a href="/zh/privacy-piattaforma.html">隐私</a> · <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
     <p>合作安装商：Italfrigo（伦巴第大区）。<a href="/zh/partner.html">成为合作伙伴</a></p>
     <p>Brigaplan 是 Italfrigo Service S.r.l. 提供的服务 · Via Serviliano Lattuada 26, 20135 Milano · 米兰-蒙扎布里安扎-洛迪企业登记处登记号 06825390153 · 经济行政登记号 REA MI-1120586 · 税号和增值税号 C.F. e P.IVA 06825390153 · 注册资本 46,800.00 欧元（已全额实缴）· 认证邮箱（PEC）<span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/zh/privacy.html">隐私与 Cookie</a></p>
   </div>
 </footer>
-<script>/* conteggio anonimo delle visite: niente cookie, niente IP salvati (vedi /privacy.html) */
-try{if(navigator.sendBeacon&&navigator.doNotTrack!=='1'&&!navigator.globalPrivacyControl)navigator.sendBeacon('https://app.brigaplan.ai/api/visita',JSON.stringify({p:location.pathname,l:(document.documentElement.lang||'it').slice(0,2),r:document.referrer}))}catch(e){}</script>
+<script src="/js/s-1c50f2db9341.js"></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Domande frequenti · Brigaplan</title>
 <meta name="description" content="Cosa è gratis e cosa si paga, chi monta la cucina, in quali zone lavoriamo e cosa succede ai tuoi dati e alla pianta che carichi.">
@@ -44,6 +46,9 @@
       <a href="/#per-chi">Per chi</a>
     </nav>
     <div class="top-azioni">
+      <details class="menu-tel"><summary>Menu</summary><nav aria-label="Menu"><a href="/come-funziona.html">Come funziona e prezzi</a><a href="/domande.html">Domande</a><a href="/professionisti.html">Professionisti</a><a href="/partner.html">Installatori</a><a href="https://app.brigaplan.ai/accedi?lingua=it">Accedi</a><div class="lingue-menu" translate="no"><a href="/domande.html" lang="it" hreflang="it">IT</a>
+        <a href="/en/domande.html" lang="en" hreflang="en">EN</a>
+        <a href="/zh/domande.html" lang="zh-Hans" hreflang="zh-Hans">中文</a></div></nav></details>
       <nav class="lingue" translate="no" aria-label="Lingua">
         <a href="/domande.html" lang="it" hreflang="it" aria-current="page">IT</a>
         <a href="/en/domande.html" lang="en" hreflang="en">EN</a>
@@ -65,9 +70,9 @@
     <section aria-labelledby="dq-gratis">
       <h2 id="dq-gratis">Cosa è gratis e cosa si paga</h2>
       <div class="faq">
-        <details><summary>Come posso provarlo?</summary><p>Per ora Brigaplan è in prova e si entra solo su invito: il codice te lo dà Italfrigo, insieme al link per registrarti. Se vuoi provarlo, scrivi a <a href="mailto:info@brigaplan.ai">info@brigaplan.ai</a>.</p></details>
-        <details><summary>Cosa è gratis?</summary><p>L'anteprima: pianta con zone e banchi senza quote, 3D semplificato, attrezzature generiche e stima di spesa a forbice. La prepara l'IA e la verifica un progettista. Ogni account può creare 2 progetti con l'anteprima gratuita, ciascuno con fino a 3 versioni.</p></details>
-        <details><summary>Cosa si paga?</summary><p>Il progetto, con pianta quotata, marche e modelli, 3D completo da girare online, e l'esecutivo, con i disegni da portare in cantiere e gli allacci. Il progetto costa, IVA inclusa, 353,80 € fino a 60 coperti o per un bar, 597,80 € fino a 150 coperti e da 1.085,80 € oltre, con 3 giri di modifica compresi; l'esecutivo costa 841,80 €, 1.451,80 € o su preventivo. Senza IVA sono 290 €, 490 € e da 890 € per il progetto, 690 € e 1.190 € per l'esecutivo. Prima di cominciare ricevi un'offerta con prezzo e tempi: paghi solo se la accetti.</p></details>
+        <details><summary>Come posso provarlo?</summary><p>Per ora si entra con un codice d'invito. Chiedilo a <a href="mailto:info@brigaplan.ai">info@brigaplan.ai</a>, con tipo di locale e città: te lo mandiamo noi, insieme al link per registrarti. Con il codice ti registri in un minuto e carichi la pianta.</p></details>
+        <details><summary>Cosa è gratis?</summary><p>L'anteprima: pianta con zone e banchi senza quote, 3D semplificato, attrezzature generiche e stima di spesa a forbice. La prepara l'IA e il motore la controlla con le regole. Se vuoi, la fa verificare anche un progettista: è a pagamento, con un'offerta. Ogni account può creare 2 progetti con l'anteprima gratuita, ciascuno con fino a 3 versioni.</p></details>
+        <details><summary>Cosa si paga?</summary><p>Il progetto, con pianta quotata, marche e modelli, 3D completo da girare online, e l'esecutivo, con i disegni da portare in cantiere e gli allacci. Il progetto costa, IVA inclusa, 353,80 € fino a 60 coperti o per un bar, 597,80 € fino a 150 coperti e da 1.085,80 € oltre, con 3 giri di modifica compresi; l'esecutivo costa 841,80 €, 1.451,80 € o su preventivo. Senza IVA sono 290 €, 490 € e da 890 € per il progetto, 690 € e 1.190 € per l'esecutivo. Si paga anche la verifica di un progettista, se la chiedi. Prima di cominciare ricevi un'offerta con prezzo e tempi: paghi solo se la accetti.</p></details>
         <details><summary>Se compro le attrezzature, pago comunque il progetto?</summary><p>Se compri da un installatore partner, il costo del progetto ti viene scalato dall'ordine e l'esecutivo è compreso nell'ordine.</p></details>
         <details><summary>Devo comprare per forza da un partner?</summary><p>No. Il progetto è tuo e lo puoi usare con il fornitore che preferisci. Se compri da un installatore partner, il costo del progetto ti viene scalato dall'ordine e l'esecutivo è compreso nell'ordine.</p></details>
       </div>
@@ -76,8 +81,8 @@
     <section aria-labelledby="dq-montaggio">
       <h2 id="dq-montaggio">Montaggio e zone</h2>
       <div class="faq">
-        <details><summary>Chi monta la cucina?</summary><p>Un installatore partner della tua zona. In Lombardia è Italfrigo Service S.r.l., la stessa società che gestisce Brigaplan. Stiamo cercando partner nelle altre regioni.</p></details>
-        <details><summary>In quali zone lavorate?</summary><p>All'inizio seguiamo i progetti in Lombardia, dove il partner è Italfrigo. Stiamo cercando installatori nelle altre regioni: se sei fuori dalla Lombardia, scrivici e ti diciamo quando c'è un partner vicino a te.</p></details>
+        <details><summary>Chi monta la cucina?</summary><p>Un installatore partner della tua zona. In Lombardia è Italfrigo Service S.r.l., la società che gestisce Brigaplan. Stiamo cercando partner in altre zone.</p></details>
+        <details><summary>In quali zone lavorate?</summary><p>Anteprima, progetto ed esecutivo li fai da tutta Italia, online. Il montaggio con un installatore partner per ora c'è in Lombardia; altrove usi il progetto con il fornitore che preferisci. Stiamo cercando installatori in altre zone: se sei fuori dalla Lombardia, scrivici e ti diciamo quando c'è un partner vicino a te.</p></details>
         <details><summary>Le regole che controllate valgono dappertutto?</summary><p>Il motore controlla le regole dell'Unione europea e dell'Italia, con quelle della Lombardia e di Milano. Altrove le regole locali vanno verificate con un tecnico del posto. Per le pratiche (per esempio ASL e SUAP) di solito serve comunque un tecnico abilitato.</p></details>
       </div>
     </section>
@@ -86,19 +91,20 @@
       <h2 id="dq-anteprima">L'anteprima</h2>
       <div class="faq">
         <details><summary>Mi serve per forza la pianta del locale?</summary><p>No. Se non ce l'hai, ti facciamo qualche domanda: misure, porte, finestre e dove sta la sala. Va bene anche una foto o uno schizzo, purché ci sia almeno una misura nota.</p></details>
+        <details><summary>Cosa conviene sapere prima di cominciare?</summary><p>Se ce l'hai, la pianta. Poi, se li sai: l'energia per la cottura (gas, elettrico o misto), la potenza elettrica disponibile in kW, che trovi sulla bolletta o sul contatore, e se c'è già l'allaccio del gas, con la portata. Se non li sai ancora, l'anteprima si fa lo stesso.</p></details>
         <details><summary>Quali file posso caricare?</summary><p>DXF, DWG, PDF o foto, fino a 5 file da 10 MB ciascuno.</p></details>
-        <details><summary>Quanto tempo ci vuole?</summary><p>L'assistente prepara l'anteprima in pochi minuti. Se il motore non trova errori la vedi subito, come bozza automatica; poi la verifica un progettista e ti avvisiamo per email. Se c'è qualcosa da sistemare, la vedi quando è pronta.</p></details>
-        <details><summary>L'anteprima basta per costruire la cucina?</summary><p>No. Serve a capire spazi, ingombri e costi. Per costruire servono il progetto e l'esecutivo, che segue un progettista del nostro staff. Per le pratiche ASL e SUAP, e per il progetto degli impianti quando la legge lo richiede, serve anche un tecnico abilitato.</p></details>
-        <details><summary>Perché l'anteprima non ha quote né marche?</summary><p>Perché è gratis e serve a capire il risultato: la prepara l'IA e la verifica un progettista. Quote, marche e modelli arrivano con il progetto a pagamento.</p></details>
+        <details><summary>Quanto tempo ci vuole?</summary><p>L'assistente prepara l'anteprima in pochi minuti e la vedi subito, come bozza automatica. Se il motore trova dei problemi te li segnala: l'assistente li corregge gratis e, se non ci riesce, puoi chiedere la verifica di un progettista.</p></details>
+        <details><summary>L'anteprima basta per costruire la cucina?</summary><p>No. Serve a capire spazi, ingombri e costi. Per costruire servono il progetto e l'esecutivo, che segue un progettista del nostro staff. Brigaplan ti dà un layout funzionale delle attrezzature. Per ASL, HACCP, Vigili del fuoco e pratiche edilizie servono il progetto e la firma di un tecnico abilitato scelto da te, e il layout va approvato dai tuoi consulenti. Prima del cantiere, misure e allacci li controlla l'installatore.</p></details>
+        <details><summary>Perché l'anteprima non ha quote né marche?</summary><p>Perché è gratis e serve a capire il risultato: la prepara l'IA e il motore la controlla con le regole. Quote, marche e modelli arrivano con il progetto a pagamento.</p></details>
       </div>
     </section>
 
     <section aria-labelledby="dq-dati">
       <h2 id="dq-dati">I tuoi dati e la pianta</h2>
       <div class="faq">
-        <details><summary>Che fine fanno le piante che carico?</summary><p>Restano riservate: le vedono tu, lo staff che segue il tuo progetto e, per preparare l'anteprima, il fornitore dell'IA, che lavora solo per nostro conto. Le condividiamo con un partner solo se lo chiedi tu e non le mostriamo mai ad altri utenti. I progetti, senza nome e contatti, ci aiutano a migliorare Brigaplan; puoi opporti quando vuoi dal tuo account. Quando chiudi l'account le cancelliamo subito; nelle copie di sicurezza restano al massimo 14 giorni.</p></details>
+        <details><summary>Che fine fanno le piante che carico?</summary><p>Restano riservate: le vedono tu e, per preparare l'anteprima, il fornitore dell'IA, che lavora solo per nostro conto. Una persona del nostro staff le apre solo se chiedi la verifica, il progetto completo o il nostro aiuto, e per la qualità può guardare a campione alcune anteprime e la pianta come l'hai caricata, senza i dati del tuo profilo, se non ti opponi. Le condividiamo con un partner solo se lo chiedi tu e non le mostriamo mai ad altri utenti. I progetti, senza nome e contatti, ci aiutano a migliorare Brigaplan; puoi opporti quando vuoi dal tuo account. Quando chiudi l'account le cancelliamo subito; nelle copie di sicurezza restano al massimo 14 giorni.</p></details>
         <details><summary>L'IA usa i miei progetti per imparare?</summary><p>Non li usiamo per addestrare modelli di intelligenza artificiale, e il fornitore dell'IA non può farlo. Li usiamo, senza nome e contatti, per migliorare le regole e gli esempi interni di Brigaplan; puoi opporti quando vuoi dal tuo account.</p></details>
-        <details><summary>Chi vede i miei dati?</summary><p>Tu e lo staff autorizzato di Brigaplan. I fornitori tecnici (server in Germania, servizio di IA, invio delle email) li trattano solo per nostro conto. Trovi tutto nella <a href="/privacy-piattaforma.html">privacy della piattaforma</a>.</p></details>
+        <details><summary>Chi vede i miei dati?</summary><p>Tu e, solo se chiedi la verifica, il progetto completo o il nostro aiuto, lo staff autorizzato di Brigaplan. Per controllare la qualità, lo staff può guardare a campione alcune anteprime e la pianta come l'hai caricata, senza i dati del tuo profilo, se non ti opponi. I fornitori tecnici (server in Germania, servizio di IA, invio delle email) li trattano solo per nostro conto. Trovi tutto nella <a href="/privacy-piattaforma.html">privacy della piattaforma</a>.</p></details>
         <details><summary>Posso cancellare il mio account?</summary><p>Sì, quando vuoi, dalla dashboard o scrivendo a info@brigaplan.ai. Cancelliamo subito account, progetti e file; nelle copie di sicurezza restano al massimo 14 giorni.</p></details>
       </div>
     </section>
@@ -110,11 +116,11 @@
   <div class="wrap">
     <span class="logo"><span translate="no">Briga<b>plan</b></span></span>
     <p>Progettazione di cucine e bar professionali con l'intelligenza artificiale.</p>
+    <p class="foot-link"><a href="/come-funziona.html">Come funziona e prezzi</a> · <a href="/domande.html">Domande</a> · Guide: <a href="/guide/costo-cucina-professionale.html">quanto costa una cucina</a>, <a href="/guide/regole-cucina-lombardia.html">regole ASL in Lombardia</a>, <a href="/guide/pizzeria-forno-legna.html">pizzeria a legna</a>, <a href="/guide/cucina-sushi-ayce.html">sushi</a> · <a href="/professionisti.html">Professionisti</a> · <a href="/partner.html">Installatori</a> · <a href="/condizioni.html">Condizioni</a> · <a href="/privacy-piattaforma.html">Privacy</a> · <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
     <p>Installatori partner: Italfrigo (Lombardia).</p>
     <p>Brigaplan è un servizio di Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · Registro delle imprese di Milano Monza Brianza Lodi n. 06825390153 · REA MI-1120586 · C.F. e P.IVA 06825390153 · Capitale sociale 46.800,00 € i.v. · PEC <span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/privacy.html">Privacy e cookie</a></p>
   </div>
 </footer>
-<script>/* conteggio anonimo delle visite: niente cookie, niente IP salvati (vedi /privacy.html) */
-try{if(navigator.sendBeacon&&navigator.doNotTrack!=='1'&&!navigator.globalPrivacyControl)navigator.sendBeacon('https://app.brigaplan.ai/api/visita',JSON.stringify({p:location.pathname,l:(document.documentElement.lang||'it').slice(0,2),r:document.referrer}))}catch(e){}</script>
+<script src="/js/s-1c50f2db9341.js"></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 <html lang="zh-Hans">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>使用条款 · Brigaplan</title>
 <meta name="description" content="使用 Brigaplan 平台的规则：账户、免费预览方案、上传的文件、合作安装商和责任。">
@@ -67,6 +69,9 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
       <a href="/zh/partner.html">合作安装商</a>
     </nav>
     <div class="top-azioni">
+      <details class="menu-tel"><summary>菜单</summary><nav aria-label="菜单"><a href="/zh/come-funziona.html">使用方法和价格</a><a href="/zh/domande.html">常见问题</a><a href="/zh/professionisti.html">专业人士</a><a href="/zh/partner.html">安装商</a><a href="https://app.brigaplan.ai/accedi?lingua=zh">登录</a><div class="lingue-menu" translate="no"><a href="/condizioni.html" lang="it" hreflang="it">IT</a>
+        <a href="/en/condizioni.html" lang="en" hreflang="en">EN</a>
+        <a href="/zh/condizioni.html" lang="zh-Hans" hreflang="zh-Hans">中文</a></div></nav></details>
       <nav class="lingue" translate="no" aria-label="语言">
         <a href="/condizioni.html" lang="it" hreflang="it">IT</a>
         <a href="/en/condizioni.html" lang="en" hreflang="en">EN</a>
@@ -83,7 +88,7 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
     <h1>使用条款</h1>
     <p class="sec-lead">使用 Brigaplan 平台的规则。您在注册时接受这些规则。我们如何处理您的数据，请见<a href="/zh/privacy-piattaforma.html">平台隐私告知</a>。</p>
     <p class="nota-lingua">本页为译文，如有出入，以意大利语版本为准。如果您是消费者，而某句话含义不清，则按对您最有利的含义理解。</p>
-  <p class="agg">第 3 版 · 2026 年 11 月 5 日 · <a href="/zh/condizioni-v2.html">上一版</a></p>
+  <p class="agg">第 4 版 · 2026 年 11 月 7 日 · <a href="/zh/condizioni-v3.html">上一版</a></p>
   </div>
 
   <div class="prosa">
@@ -95,7 +100,8 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
     <section aria-labelledby="c-cosa">
       <h2 id="c-cosa">平台提供什么</h2>
       <ul>
-        <li><strong>免费预览方案：</strong>您上传平面图或描述店面，就能获得带功能分区和操作台的平面图、简化的 3D 模型和费用估算区间。预览方案由人工智能助手和我们的设计引擎共同完成，并由设计师审核。如果引擎没有发现错误，您马上就能看到它，并标有“自动草稿 · 设计师审核中”；审核后的版本随后提供，我们会发邮件通知您。</li>
+        <li><strong>免费预览方案：</strong>上传平面图或描述店面，即可获得带功能分区和操作台的平面图、简化 3D 模型和费用估算区间。由人工智能助手和我们的设计引擎共同完成，引擎按规则检查。您会立即看到，标注为“自动草稿，未经设计师审核”。</li>
+        <li><strong>设计师审核：</strong>如果您申请，我们团队的工作人员会检查预览方案，必要时进行修正。审核是可选的付费服务：您会先收到写明价格、内容和时间的报价，单独接受后通过银行转账付款。</li>
         <li><strong>设计方案和施工图：</strong>需要付费。开始之前，您会收到一份包含价格、内容和时间的报价，需要您另行接受。</li>
         <li><strong>合作安装商：</strong>如果您提出要求，我们会帮您联系所在地区的安装商。</li>
       </ul>
@@ -122,9 +128,9 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
       <h2 id="c-limiti">预览方案是什么，不是什么</h2>
       <ul>
         <li>预览方案<strong>仅供参考</strong>：用来了解空间、占地和费用。它不是施工图，不能直接用于施工。</li>
-        <li>预览方案和设计方案由人工智能助手和我们的设计引擎制作，并有设计师参与：我们会在平台上向您说明。</li>
-        <li>施工需要设计方案和施工图；办理审批手续（例如卫生部门和市政审批）通常还需要有资质的专业人员。施工图不能代替水电气等设施的设计：法律有要求时（第 37/2008 号部长令），该设计须由在相关职业公会注册的专业人员完成并签字。</li>
-        <li>在标为自动草稿期间，预览方案尚未经过设计师查看：可能包含错误，审核后也可能有改动。</li>
+        <li>预览方案由人工智能助手和我们的设计引擎制作：只有您申请付费的设计师审核时，或者在您不反对的情况下进行抽样质量检查时（专业账户从不参与），才会有人查看。完整设计方案和施工图由设计师根据 AI 的方案制作。</li>
+        <li><strong>Brigaplan 为您提供设备功能布局。办理 ASL（卫生部门）、HACCP、消防（Vigili del fuoco）和建筑审批，需要由您自选的持证技术人员出具并签署的设计方案，布局还需经您的顾问批准。开工前，由安装商核对尺寸和接口。</strong>Brigaplan 不签署合规设计。施工图不能代替设备安装设计：法律要求时（第 37/2008 号部长令），由在册专业人士制作并签署。</li>
+        <li>自动草稿未经设计师查看：可能包含错误。如果引擎发现问题，会向您指出，助手会免费修正。</li>
         <li>费用估算只是参考区间，不是报价：实际价格由销售和安装设备的一方确定。</li>
         <li>设备尺寸取自厂家的技术参数表，但订货前一定要核实。</li>
         <li>我们根据您提供的店面尺寸（平面图、照片、描述）工作，不做现场勘察。因此，店面和接口的所有尺寸都必须在订购设备和开工之前到现场核实：我们也会在图纸上注明这一点。</li>
@@ -139,7 +145,7 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
         <li>您授权我们仅为提供服务而使用您的文件：准备和审核您的项目，以及在您提出要求时与您选择的合作伙伴共享。</li>
         <li>如果您上传客户的平面图或数据，您必须有权这样做，并且必须告知他们您在使用 Brigaplan。对这些数据，Brigaplan 是独立的数据控制者：您的客户可以直接联系我们，详见<a href="/zh/privacy-piattaforma.html#pp-clienti">平台隐私声明</a>。</li>
         <li>我们不会公开您的文件，不会向其他用户展示，也不会用它们训练人工智能模型。</li>
-        <li>我们也会使用去掉姓名、公司、地址和联系方式的项目来改进 Brigaplan：规则、统计、质量检查和内部范例。您可以随时在账户中提出反对；详情请见<a href="/zh/privacy-piattaforma.html#pp-migliorare">平台隐私告知</a>。</li>
+        <li>我们还会使用去掉姓名、公司、地址和联系方式的项目来改进 Brigaplan：规则、统计和内部范例。为检查质量，我们的工作人员会抽样查看部分预览方案和上传的文件，不显示您的个人资料（姓名、公司、地址、联系方式）；您上传的文件按原样显示。您可以随时在账户中提出反对；详见<a href="/zh/privacy-piattaforma.html#pp-migliorare">平台隐私声明</a>。</li>
         <li>请勿上传含有违法内容、病毒或项目不需要的他人数据的文件。</li>
       </ul>
     </section>
@@ -186,12 +192,34 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
       </ul>
     </section>
 
+    <section aria-labelledby="c-professionisti">
+      <h2 id="c-professionisti">如果您将 Brigaplan 用于业务</h2>
+      <p>对于专业人士账户，我们承诺：</p>
+      <ul>
+        <li>任何合作安装商，包括作为安装商的 Italfrigo Service S.r.l.，都不会收到您的项目或您客户的联系方式，您的项目也不会转给 Italfrigo 的销售部门；</li>
+        <li>除非您申请审核、完整设计方案或需要我们的帮助，我们的工作人员不会打开您的项目：项目由引擎和 AI 处理。法律要求时我们也会打开项目，每次打开都会留下记录；</li>
+        <li>您的项目从不参与抽样质量检查。除非您在账户中提出反对，我们可能在去掉姓名和联系方式后将其用于改进服务。</li>
+      </ul>
+    </section>
+
     <section aria-labelledby="c-resp">
       <h2 id="c-resp">责任</h2>
+      <div class="riquadro">
+        <p><strong>请仔细阅读。</strong>Brigaplan 为您提供设备功能布局。办理 ASL（卫生部门）、HACCP、消防（Vigili del fuoco）和建筑审批，需要由您自选的持证技术人员出具并签署的设计方案，布局还需经您的顾问批准。开工前，由安装商核对尺寸和接口。Brigaplan 不签署合规设计。</p>
+        <p>预览方案由引擎和 AI 制作：可能包含错误，只有您申请时才会由设计师审核。因此，在法律允许的最大范围内，Italfrigo Service S.r.l. 对以下事项不承担责任：</p>
+        <ul>
+          <li>预览方案、设计方案和施工图是否符合法规和审批要求（ASL、HACCP、Vigili del fuoco、建筑审批、设备安装）：这些由您自选的持证技术人员和顾问核查并签署；</li>
+          <li>未经上述核查、未在现场核对尺寸和接口就决定的采购、订单和施工；</li>
+          <li>费用估算，它们仅供参考，不是报价；</li>
+          <li>间接损失、利润损失和服务中断。</li>
+        </ul>
+        <p>对于付费服务，如果因我们的过错出现问题，我们的责任以您为该服务支付的金额为限。</p>
+        <p>故意或重大过失责任（意大利民法典第 1229 条）、人身伤害以及法律赋予消费者的权利始终不受影响：如果您是消费者，上述限制仅在意大利消费法典允许的范围内适用。</p>
+        <p>如果您是专业人士，接受报价时，您将专门批准本节内容（意大利民法典第 1341 条和第 1342 条）：我们会在报价中写明。</p>
+      </div>
       <ul>
-        <li>我们会尽力让服务正常运行并保持准确，但无法保证服务始终可用或没有错误。</li>
+        <li>我们会尽力让服务正常运行，但无法保证服务始终可用或没有错误。</li>
         <li>免费预览方案不是设计方案：它只是让您有个概念，不应单凭它来决定采购或施工。</li>
-        <li>因故意或重大过失产生的责任，以及法律赋予消费者的权利，始终不受影响。</li>
       </ul>
     </section>
 
@@ -230,11 +258,11 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
   <div class="wrap">
     <span class="logo"><span translate="no">Briga<b>plan</b></span></span>
     <p>用人工智能设计商用厨房和吧台。</p>
+    <p class="foot-link"><a href="/zh/come-funziona.html">使用方法和价格</a> · <a href="/zh/domande.html">常见问题</a> · 指南：<a href="/guide/costo-cucina-professionale.html">厨房要花多少钱</a>、<a href="/guide/regole-cucina-lombardia.html">伦巴第大区 ASL 规定</a>、<a href="/guide/pizzeria-forno-legna.html">柴火披萨店</a>、<a href="/guide/cucina-sushi-ayce.html">寿司</a> · <a href="/zh/professionisti.html">专业人士</a> · <a href="/zh/partner.html">安装商</a> · <a href="/zh/condizioni.html">使用条款</a> · <a href="/zh/privacy-piattaforma.html">隐私</a> · <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
     <p>合作安装商：Italfrigo（伦巴第大区）。<a href="/zh/partner.html">成为合作伙伴</a></p>
     <p>Brigaplan 是 Italfrigo Service S.r.l. 提供的服务 · Via Serviliano Lattuada 26, 20135 Milano · 米兰-蒙扎布里安扎-洛迪企业登记处登记号 06825390153 · 经济行政登记号 REA MI-1120586 · 税号和增值税号 C.F. e P.IVA 06825390153 · 注册资本 46,800.00 欧元（已全额实缴）· 认证邮箱（PEC）<span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/zh/privacy.html">隐私与 Cookie</a></p>
   </div>
 </footer>
-<script>/* conteggio anonimo delle visite: niente cookie, niente IP salvati (vedi /privacy.html) */
-try{if(navigator.sendBeacon&&navigator.doNotTrack!=='1'&&!navigator.globalPrivacyControl)navigator.sendBeacon('https://app.brigaplan.ai/api/visita',JSON.stringify({p:location.pathname,l:(document.documentElement.lang||'it').slice(0,2),r:document.referrer}))}catch(e){}</script>
+<script src="/js/s-1c50f2db9341.js"></script>
 </body>
 </html>

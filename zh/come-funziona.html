@@ -2,13 +2,15 @@
 <html lang="zh-Hans">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>使用流程 · Brigaplan</title>
-<meta name="description" content="从平面图到经设计师审核的预览方案：操作步骤、五个视频案例（意式餐馆、酒吧、食堂、寿司、披萨店）以及哪些免费、哪些收费。">
+<title>使用方法和价格 · Brigaplan</title>
+<meta name="description" content="从平面图到经引擎检查的预览方案：步骤、五个带视频的示例（餐馆、酒吧、食堂、寿司、披萨店），以及哪些免费、哪些付费。">
 <meta property="og:site_name" content="Brigaplan">
 <meta property="og:type" content="website">
-<meta property="og:title" content="使用流程 · Brigaplan">
-<meta property="og:description" content="从平面图到预览方案，由设计师审核。五个视频案例：意式餐馆、酒吧、食堂、寿司、披萨店。">
+<meta property="og:title" content="使用方法和价格 · Brigaplan">
+<meta property="og:description" content="从平面图到预览方案，经引擎检查。五个带视频的示例：餐馆、酒吧、食堂、寿司、披萨店。">
 <meta property="og:url" content="https://brigaplan.ai/zh/come-funziona.html">
 <meta property="og:image" content="https://brigaplan.ai/media/brigaplan_og.jpg">
 <meta property="og:image:width" content="1280">
@@ -67,6 +69,9 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
       <a href="/zh/#per-chi">适用对象</a>
     </nav>
     <div class="top-azioni">
+      <details class="menu-tel"><summary>菜单</summary><nav aria-label="菜单"><a href="/zh/come-funziona.html">使用方法和价格</a><a href="/zh/domande.html">常见问题</a><a href="/zh/professionisti.html">专业人士</a><a href="/zh/partner.html">安装商</a><a href="https://app.brigaplan.ai/accedi?lingua=zh">登录</a><div class="lingue-menu" translate="no"><a href="/come-funziona.html" lang="it" hreflang="it">IT</a>
+        <a href="/en/come-funziona.html" lang="en" hreflang="en">EN</a>
+        <a href="/zh/come-funziona.html" lang="zh-Hans" hreflang="zh-Hans">中文</a></div></nav></details>
       <nav class="lingue" translate="no" aria-label="语言">
         <a href="/come-funziona.html" lang="it" hreflang="it">IT</a>
         <a href="/en/come-funziona.html" lang="en" hreflang="en">EN</a>
@@ -80,8 +85,8 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
 <main class="wrap doc">
   <div class="doc-head">
     <span class="eyebrow">使用流程</span>
-    <h1>从平面图到预览方案，<wbr>由设计师审核。</h1>
-    <p class="sec-lead">上传平面图或描述店面，告诉我们您的需求，就能免费获得包含平面图、3D 模型和费用估算的预览方案。预览方案由设计师审核：如果引擎没有发现错误，您马上就能看到草稿。</p>
+    <h1>从平面图到预览方案，经引擎检查。</h1>
+    <p class="sec-lead">上传平面图或描述店面，说明您想要的效果，即可免费获得包含平面图、3D 模型和费用估算的预览方案。草稿由 AI 制作，并由引擎（我们的规则自动检查程序）检查。如有需要，也可以请设计师审核（付费服务）。</p>
   </div>
 
   <div class="prosa larga">
@@ -90,7 +95,7 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
       <ol class="passi">
         <li><b>1</b><strong>上传平面图，或描述您的店面</strong><span>DXF、DWG 或 PDF 文件都可以。没有平面图？我们会问您尺寸、门窗位置，以及餐厅区在哪里。</span></li>
         <li><b>2</b><strong>说说您的需求</strong><span>店面类型、座位数、菜单，以及现有设备中哪些想保留。</span></li>
-        <li><b>3</b><strong>收到预览方案</strong><span>带功能分区和操作台的平面图、可以用手指旋转的 3D 模型、费用估算。AI 几分钟就能准备好：如果引擎没有发现错误，您马上就能看到草稿，随后由设计师审核，我们会发邮件通知您。</span></li>
+        <li><b>3</b><strong>收到预览方案</strong><span>带功能分区和操作台的平面图、可用手指旋转的 3D 模型、费用估算。草稿由 AI 制作，引擎按规则检查。如有需要，也可以请设计师审核（付费服务）。</span></li>
         <li><b>4</b><strong>满意再继续</strong><span>标注尺寸的设计方案、由设计师跟进的施工图，再由您所在地区的合作安装商负责安装。</span></li>
       </ol>
     </section>
@@ -187,11 +192,12 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
     </section>
 
     <section aria-labelledby="cf-livelli">
-      <h2 id="cf-livelli">哪些免费，哪些收费</h2>
+      <h2 id="cf-livelli">价格：哪些免费，哪些付费</h2>
       <div class="livelli">
         <div class="livello"><h3>预览方案</h3><p class="prezzo">免费</p>
           <ul><li>带功能分区和操作台的平面图，不标尺寸</li><li>可旋转查看的简化 3D 模型</li><li>通用设备，例如“10 GN 万能蒸烤箱”</li><li>费用估算区间</li></ul>
-          <p class="chi">AI 几分钟生成，设计师审核。</p></div>
+          <p class="chi">设计师审核：按需提供，需付费。价格和时间见报价。</p>
+          <p class="chi">AI 几分钟内完成，引擎负责检查。</p></div>
         <div class="livello"><h3>设计方案</h3><p class="prezzo">353.80 欧元起（含增值税）</p>
           <ul><li>PDF 格式的尺寸标注平面图</li><li>可在线旋转的完整 3D 模型</li><li>选定的品牌和型号</li><li>参考报价</li></ul>
           <p class="chi">含增值税：60 个座位以内或酒吧 353.80 欧元，150 个座位以内 597.80 欧元，更大规模以及食堂、宴会 1,085.80 欧元起。不含增值税：290 欧元、490 欧元、890 欧元起。包含 3 轮修改。</p>
@@ -202,6 +208,7 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
           <p class="chi">由我们团队的设计师和您一起跟进。</p></div>
       </div>
       <p>如果您从合作安装商那里购买设备，设计费会从订单金额中扣除，施工图包含在订单中。</p>
+      <p><strong>Brigaplan 为您提供设备功能布局。办理 ASL（卫生部门）、HACCP、消防（Vigili del fuoco）和建筑审批，需要由您自选的持证技术人员出具并签署的设计方案，布局还需经您的顾问批准。开工前，由安装商核对尺寸和接口。</strong></p>
     </section>
 
     <section class="cf-fine" aria-labelledby="cf-prova">
@@ -211,30 +218,17 @@ h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-s
     </section>
   </div>
 </main>
-<script>
-(function () {
-  var video = document.querySelectorAll(".esempio video");
-  var fermo = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (fermo || !("IntersectionObserver" in window)) return;
-  var oss = new IntersectionObserver(function (voci) {
-    voci.forEach(function (v) {
-      if (v.isIntersecting) { var p = v.target.play(); if (p && p.catch) p.catch(function () {}); }
-      else { v.target.pause(); }
-    });
-  }, { threshold: 0.5 });
-  video.forEach(function (v) { oss.observe(v); });
-})();
-</script>
+<script src="/js/s-e8eccfd1dfc9.js"></script>
 
 <footer class="foot">
   <div class="wrap">
     <span class="logo"><span translate="no">Briga<b>plan</b></span></span>
     <p>用人工智能设计商用厨房和吧台。</p>
+    <p class="foot-link"><a href="/zh/come-funziona.html">使用方法和价格</a> · <a href="/zh/domande.html">常见问题</a> · 指南：<a href="/guide/costo-cucina-professionale.html">厨房要花多少钱</a>、<a href="/guide/regole-cucina-lombardia.html">伦巴第大区 ASL 规定</a>、<a href="/guide/pizzeria-forno-legna.html">柴火披萨店</a>、<a href="/guide/cucina-sushi-ayce.html">寿司</a> · <a href="/zh/professionisti.html">专业人士</a> · <a href="/zh/partner.html">安装商</a> · <a href="/zh/condizioni.html">使用条款</a> · <a href="/zh/privacy-piattaforma.html">隐私</a> · <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
     <p>合作安装商：Italfrigo（伦巴第大区）。</p>
     <p>Brigaplan 是 Italfrigo Service S.r.l. 提供的服务 · Via Serviliano Lattuada 26, 20135 Milano · 米兰-蒙扎布里安扎-洛迪企业登记处登记号 06825390153 · 经济行政登记号 REA MI-1120586 · 税号和增值税号 C.F. e P.IVA 06825390153 · 注册资本 46,800.00 欧元（已全额实缴）· 认证邮箱（PEC）<span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/zh/privacy.html">隐私与 Cookie</a></p>
   </div>
 </footer>
-<script>/* conteggio anonimo delle visite: niente cookie, niente IP salvati (vedi /privacy.html) */
-try{if(navigator.sendBeacon&&navigator.doNotTrack!=='1'&&!navigator.globalPrivacyControl)navigator.sendBeacon('https://app.brigaplan.ai/api/visita',JSON.stringify({p:location.pathname,l:(document.documentElement.lang||'it').slice(0,2),r:document.referrer}))}catch(e){}</script>
+<script src="/js/s-1c50f2db9341.js"></script>
 </body>
 </html>

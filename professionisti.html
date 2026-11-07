@@ -2,6 +2,8 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Per i professionisti · Brigaplan</title>
 <meta name="description" content="Per rivenditori, progettisti di cucine e architetti: la cucina dentro il tuo progetto, con zone, flussi e regole già controllate.">
@@ -44,6 +46,9 @@
       <a href="/#per-chi">Per chi</a>
     </nav>
     <div class="top-azioni">
+      <details class="menu-tel"><summary>Menu</summary><nav aria-label="Menu"><a href="/come-funziona.html">Come funziona e prezzi</a><a href="/domande.html">Domande</a><a href="/professionisti.html">Professionisti</a><a href="/partner.html">Installatori</a><a href="https://app.brigaplan.ai/accedi?lingua=it">Accedi</a><div class="lingue-menu" translate="no"><a href="/professionisti.html" lang="it" hreflang="it">IT</a>
+        <a href="/en/professionisti.html" lang="en" hreflang="en">EN</a>
+        <a href="/zh/professionisti.html" lang="zh-Hans" hreflang="zh-Hans">中文</a></div></nav></details>
       <nav class="lingue" translate="no" aria-label="Lingua">
         <a href="/professionisti.html" lang="it" hreflang="it" aria-current="page">IT</a>
         <a href="/en/professionisti.html" lang="en" hreflang="en">EN</a>
@@ -62,11 +67,28 @@
   </div>
 
   <div class="prosa">
+    <section class="riquadro" aria-labelledby="pr-tuoi">
+      <h2 id="pr-tuoi">Progetti e clienti restano tuoi</h2>
+      <p>I tuoi progetti e i tuoi clienti sono tuoi. Nessun installatore partner, nemmeno Italfrigo come installatore, riceve i tuoi progetti o i contatti dei tuoi clienti. Se non chiedi la verifica, il progetto completo o il nostro aiuto, nessuna persona del nostro staff apre i tuoi progetti: li elaborano il motore e l'IA. I progetti degli account da professionista non entrano mai nel controllo a campione.</p>
+    </section>
+
+    <section aria-labelledby="pr-piante">
+      <h2 id="pr-piante">Chi vede le tue piante</h2>
+      <p>Nessuna persona del nostro staff apre i tuoi progetti se non chiedi la verifica, il progetto completo o il nostro aiuto: li elaborano il motore e l'IA. I progetti degli account da professionista non entrano mai nel controllo a campione.</p>
+      <ul>
+        <li><strong>Chi le vede:</strong> tu. Una persona del nostro staff solo se chiedi la verifica, il progetto completo o il nostro aiuto, e ogni apertura resta registrata. Non le mostriamo mai ad altri utenti e non le diamo a un partner se non lo chiedi tu.</li>
+        <li><strong>Dove stanno:</strong> sui server della piattaforma, in Germania. Per preparare l'anteprima le riceve anche il fornitore dell'IA, che le tratta anche negli Stati Uniti con le clausole contrattuali standard, lavora solo per nostro conto e non può usarle per addestrare i suoi modelli.</li>
+        <li><strong>Quanto restano:</strong> finché tieni l'account. Quando lo chiudi le cancelliamo subito; nelle copie di sicurezza restano al massimo 14 giorni.</li>
+        <li><strong>Come si cancellano:</strong> chiudi l'account dalla dashboard, quando vuoi, o scrivi a info@brigaplan.ai. Dal tuo account puoi anche opporti all'uso dei progetti per migliorare il servizio.</li>
+      </ul>
+      <p>Tutti i dettagli sono nella <a href="/privacy-piattaforma.html">privacy della piattaforma</a>.</p>
+    </section>
+
     <section aria-labelledby="pr-chi">
       <h2 id="pr-chi">Cosa ci guadagni</h2>
       <div class="livelli">
         <div class="livello"><h3>Architetti e interior designer</h3>
-          <p>La cucina dentro il tuo progetto, con zone e flussi già impostati e controllati da un progettista. Con l'esecutivo ricevi il DXF da mettere nelle tue tavole.</p></div>
+          <p>La cucina dentro il tuo progetto, con zone e flussi già impostati e controllati dal motore. Con l'esecutivo ricevi il DXF da mettere nelle tue tavole.</p></div>
         <div class="livello"><h3>Progettisti di cucine</h3>
           <p>Una prima proposta subito, da rifinire con la tua esperienza. Meno ore su ogni revisione, più tempo per i progetti che vanno in porto.</p></div>
         <div class="livello"><h3>Rivenditori e agenti</h3>
@@ -104,6 +126,11 @@
       </ul>
     </section>
 
+    <section class="riquadro" aria-labelledby="pr-limiti">
+      <h2 id="pr-limiti">Cosa fa Brigaplan e cosa no</h2>
+      <p>Brigaplan ti dà un layout funzionale delle attrezzature. Per ASL, HACCP, Vigili del fuoco e pratiche edilizie servono il progetto e la firma di un tecnico abilitato scelto da te, e il layout va approvato dai tuoi consulenti. Prima del cantiere, misure e allacci li controlla l'installatore.</p>
+    </section>
+
     <section aria-labelledby="pr-trasparenza">
       <h2 id="pr-trasparenza">Chi c'è dietro</h2>
       <p>Brigaplan è un servizio di Italfrigo Service S.r.l., che in Lombardia è anche installatore partner. Il cliente resta libero di scegliere da chi comprare: i progetti fatti con Brigaplan li può usare con i fornitori che preferisce.</p>
@@ -121,11 +148,11 @@
   <div class="wrap">
     <span class="logo"><span translate="no">Briga<b>plan</b></span></span>
     <p>Progettazione di cucine e bar professionali con l'intelligenza artificiale.</p>
+    <p class="foot-link"><a href="/come-funziona.html">Come funziona e prezzi</a> · <a href="/domande.html">Domande</a> · Guide: <a href="/guide/costo-cucina-professionale.html">quanto costa una cucina</a>, <a href="/guide/regole-cucina-lombardia.html">regole ASL in Lombardia</a>, <a href="/guide/pizzeria-forno-legna.html">pizzeria a legna</a>, <a href="/guide/cucina-sushi-ayce.html">sushi</a> · <a href="/professionisti.html">Professionisti</a> · <a href="/partner.html">Installatori</a> · <a href="/condizioni.html">Condizioni</a> · <a href="/privacy-piattaforma.html">Privacy</a> · <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
     <p>Installatori partner: Italfrigo (Lombardia).</p>
     <p>Brigaplan è un servizio di Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · Registro delle imprese di Milano Monza Brianza Lodi n. 06825390153 · REA MI-1120586 · C.F. e P.IVA 06825390153 · Capitale sociale 46.800,00 € i.v. · PEC <span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/privacy.html">Privacy e cookie</a></p>
   </div>
 </footer>
-<script>/* conteggio anonimo delle visite: niente cookie, niente IP salvati (vedi /privacy.html) */
-try{if(navigator.sendBeacon&&navigator.doNotTrack!=='1'&&!navigator.globalPrivacyControl)navigator.sendBeacon('https://app.brigaplan.ai/api/visita',JSON.stringify({p:location.pathname,l:(document.documentElement.lang||'it').slice(0,2),r:document.referrer}))}catch(e){}</script>
+<script src="/js/s-1c50f2db9341.js"></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Condizioni d'uso · Brigaplan</title>
 <meta name="description" content="Le regole per usare la piattaforma Brigaplan: account, anteprime gratuite, file caricati, installatori partner e responsabilità.">
@@ -44,6 +46,9 @@
       <a href="/partner.html">Installatori partner</a>
     </nav>
     <div class="top-azioni">
+      <details class="menu-tel"><summary>Menu</summary><nav aria-label="Menu"><a href="/come-funziona.html">Come funziona e prezzi</a><a href="/domande.html">Domande</a><a href="/professionisti.html">Professionisti</a><a href="/partner.html">Installatori</a><a href="https://app.brigaplan.ai/accedi?lingua=it">Accedi</a><div class="lingue-menu" translate="no"><a href="/condizioni.html" lang="it" hreflang="it">IT</a>
+        <a href="/en/condizioni.html" lang="en" hreflang="en">EN</a>
+        <a href="/zh/condizioni.html" lang="zh-Hans" hreflang="zh-Hans">中文</a></div></nav></details>
       <nav class="lingue" translate="no" aria-label="Lingua">
         <a href="/condizioni.html" lang="it" hreflang="it" aria-current="page">IT</a>
         <a href="/en/condizioni.html" lang="en" hreflang="en">EN</a>
@@ -59,7 +64,7 @@
     <span class="eyebrow">Condizioni d'uso della piattaforma</span>
     <h1>Condizioni d'uso</h1>
     <p class="sec-lead">Le regole per usare la piattaforma Brigaplan. Le accetti quando ti registri. Come trattiamo i tuoi dati lo trovi nella <a href="/privacy-piattaforma.html">privacy della piattaforma</a>.</p>
-    <p class="agg">Versione 3 del 5 novembre 2026 · <a href="/condizioni-v2.html">Versione precedente</a></p>
+    <p class="agg">Versione 4 del 7 novembre 2026 · <a href="/condizioni-v3.html">Versione precedente</a></p>
   </div>
 
   <div class="prosa">
@@ -71,7 +76,8 @@
     <section aria-labelledby="c-cosa">
       <h2 id="c-cosa">Cosa offre la piattaforma</h2>
       <ul>
-        <li><strong>Anteprima gratuita:</strong> carichi la pianta o descrivi il locale e ricevi una pianta con zone e banchi, un 3D semplificato e una stima di spesa a forbice. La prepara un assistente di intelligenza artificiale insieme al nostro motore di progettazione, e la verifica un progettista. Se il motore non trova errori la vedi subito, segnata come «bozza automatica, in verifica da un progettista»; la versione verificata arriva dopo e ti avvisiamo per email.</li>
+        <li><strong>Anteprima gratuita:</strong> carichi la pianta o descrivi il locale e ricevi una pianta con zone e banchi, un 3D semplificato e una stima di spesa a forbice. La prepara un assistente di intelligenza artificiale insieme al nostro motore di progettazione, che la controlla con le regole. La vedi subito, segnata come «bozza automatica, non verificata da un progettista».</li>
+        <li><strong>Verifica di un progettista:</strong> se la chiedi, una persona del nostro staff controlla l'anteprima e, se serve, la corregge. È facoltativa e a pagamento: prima ricevi un'offerta con prezzo, contenuti e tempi, che accetti a parte, e paghi con bonifico.</li>
         <li><strong>Progetto ed esecutivo:</strong> sono a pagamento. Prima di cominciare ricevi un'offerta con prezzo, contenuti e tempi, che accetti a parte.</li>
         <li><strong>Installatori partner:</strong> se lo chiedi tu, ti mettiamo in contatto con un installatore della tua zona.</li>
       </ul>
@@ -98,9 +104,9 @@
       <h2 id="c-limiti">Cosa è, e cosa non è, un'anteprima</h2>
       <ul>
         <li>L'anteprima è <strong>indicativa</strong>: serve a capire spazi, ingombri e costi. Non è un progetto esecutivo e non basta per costruire.</li>
-        <li>Anteprime e progetti li preparano un assistente di intelligenza artificiale e il nostro motore di progettazione, con il lavoro di un progettista: te lo indichiamo nella piattaforma.</li>
-        <li>Per costruire servono il progetto e l'esecutivo, e per le pratiche (per esempio ASL e SUAP) di solito anche un tecnico abilitato. L'esecutivo non sostituisce il progetto degli impianti: quando la legge lo richiede (D.M. 37/2008), lo fa e lo firma un professionista iscritto all'albo.</li>
-        <li>Finché è segnata come bozza automatica, l'anteprima non l'ha ancora vista un progettista: può contenere errori e può cambiare dopo la verifica.</li>
+        <li>L'anteprima la preparano un assistente di intelligenza artificiale e il nostro motore di progettazione: una persona la vede solo se chiedi la verifica di un progettista, a pagamento, o per il controllo a campione della qualità, se non ti opponi (mai per gli account da professionista). Progetto completo ed esecutivo li prepara un progettista, partendo dalla proposta dell'IA.</li>
+        <li><strong>Brigaplan ti dà un layout funzionale delle attrezzature. Per ASL, HACCP, Vigili del fuoco e pratiche edilizie servono il progetto e la firma di un tecnico abilitato scelto da te, e il layout va approvato dai tuoi consulenti. Prima del cantiere, misure e allacci li controlla l'installatore.</strong> Brigaplan non firma progetti a norma. L'esecutivo non sostituisce il progetto degli impianti: quando la legge lo richiede (D.M. 37/2008), lo fa e lo firma un professionista iscritto all'albo.</li>
+        <li>Una bozza automatica non l'ha vista un progettista: può contenere errori. Se il motore trova dei problemi te li segnala, e l'assistente li corregge gratis.</li>
         <li>La stima di spesa è una forbice orientativa, non un'offerta: il prezzo vero lo fa chi vende e monta le attrezzature.</li>
         <li>Le misure delle attrezzature vengono dalle schede dei produttori, ma vanno sempre verificate prima di ordinare.</li>
         <li>Lavoriamo con le misure del locale che ci dai tu (pianta, foto, descrizione), senza sopralluogo. Per questo tutte le misure, del locale e degli allacci, vanno verificate sul posto prima di ordinare le attrezzature e di cominciare i lavori: lo scriviamo anche sulle tavole.</li>
@@ -115,7 +121,7 @@
         <li>Ci autorizzi a usare i tuoi file solo per darti il servizio: preparare e controllare il tuo progetto e, se lo chiedi tu, condividerlo con i partner che scegli.</li>
         <li>Se carichi piante o dati dei tuoi clienti, devi avere il diritto di farlo e devi informarli che usi Brigaplan. Per questi dati Brigaplan è titolare autonomo: i tuoi clienti possono rivolgersi direttamente a noi, come spiegato nella <a href="/privacy-piattaforma.html#pp-clienti">privacy della piattaforma</a>.</li>
         <li>Non pubblichiamo i tuoi file, non li mostriamo ad altri utenti e non li usiamo per addestrare modelli di intelligenza artificiale.</li>
-        <li>Usiamo i progetti, senza nome, azienda, indirizzo e contatti, anche per migliorare Brigaplan: regole, statistiche, controlli di qualità ed esempi interni. Ti puoi opporre quando vuoi dal tuo account; i dettagli sono nella <a href="/privacy-piattaforma.html#pp-migliorare">privacy della piattaforma</a>.</li>
+        <li>Usiamo i progetti, senza nome, azienda, indirizzo e contatti, anche per migliorare Brigaplan: regole, statistiche ed esempi interni. Per controllare la qualità, una persona del nostro staff guarda a campione alcune anteprime e i file caricati, senza i dati del tuo profilo (nome, azienda, indirizzo, contatti); i file che hai caricato si vedono come li hai caricati. Ti puoi opporre quando vuoi dal tuo account; i dettagli sono nella <a href="/privacy-piattaforma.html#pp-migliorare">privacy della piattaforma</a>.</li>
         <li>Non caricare file con contenuti illeciti, virus o dati di altre persone che non servono al progetto.</li>
       </ul>
     </section>
@@ -162,12 +168,34 @@
       </ul>
     </section>
 
+    <section aria-labelledby="c-professionisti">
+      <h2 id="c-professionisti">Se usi Brigaplan per la tua attività</h2>
+      <p>Con un account da professionista ci impegniamo a questo:</p>
+      <ul>
+        <li>nessun installatore partner, nemmeno Italfrigo Service S.r.l. come installatore, riceve i tuoi progetti o i contatti dei tuoi clienti, e i tuoi progetti non passano all'ufficio vendite di Italfrigo;</li>
+        <li>se non chiedi la verifica, il progetto completo o il nostro aiuto, nessuna persona del nostro staff apre i tuoi progetti: li elaborano il motore e l'IA. Li apriamo anche se lo impone la legge, e ogni apertura resta registrata;</li>
+        <li>i tuoi progetti non entrano mai nel controllo a campione per la qualità. Possiamo usarli, senza nome e contatti, per migliorare il servizio, se non ti opponi dal tuo account.</li>
+      </ul>
+    </section>
+
     <section aria-labelledby="c-resp">
       <h2 id="c-resp">Responsabilità</h2>
+      <div class="riquadro">
+        <p><strong>Leggi con attenzione.</strong> Brigaplan ti dà un layout funzionale delle attrezzature. Per ASL, HACCP, Vigili del fuoco e pratiche edilizie servono il progetto e la firma di un tecnico abilitato scelto da te, e il layout va approvato dai tuoi consulenti. Prima del cantiere, misure e allacci li controlla l'installatore. Brigaplan non firma progetti a norma.</p>
+        <p>Le anteprime le prepara il motore con l'IA: possono contenere errori, e un progettista le verifica solo se lo chiedi. Per questo, nei limiti più ampi che la legge permette, Italfrigo Service S.r.l. non risponde:</p>
+        <ul>
+          <li>della conformità di anteprime, progetti ed esecutivi alle norme e alle autorizzazioni (ASL, HACCP, Vigili del fuoco, pratiche edilizie, impianti): la verificano e la firmano il tecnico abilitato e i consulenti che scegli tu;</li>
+          <li>di acquisti, ordini e lavori decisi senza quella verifica e senza il controllo di misure e allacci sul posto;</li>
+          <li>delle stime di spesa, che sono indicative e non sono offerte;</li>
+          <li>di danni indiretti, mancati guadagni e interruzioni del servizio.</li>
+        </ul>
+        <p>Per i servizi a pagamento, se qualcosa va storto per colpa nostra, rispondiamo al massimo fino a quanto hai pagato per quel servizio.</p>
+        <p>Restano sempre salvi la responsabilità per dolo o colpa grave (art. 1229 c.c.), i danni alla persona e i diritti che la legge riconosce ai consumatori: se sei un consumatore, queste limitazioni valgono solo dove il Codice del consumo le permette.</p>
+        <p>Se sei un professionista, quando accetti un'offerta approvi in modo specifico questa sezione (artt. 1341 e 1342 c.c.): lo scriviamo nell'offerta.</p>
+      </div>
       <ul>
-        <li>Facciamo il possibile perché il servizio funzioni e sia corretto, ma non possiamo garantire che sia sempre disponibile o senza errori.</li>
+        <li>Facciamo il possibile perché il servizio funzioni, ma non possiamo garantire che sia sempre disponibile o senza errori.</li>
         <li>L'anteprima gratuita non è un progetto: serve a farti un'idea e non va usata da sola per decidere acquisti o lavori.</li>
-        <li>Restano sempre salvi la responsabilità per dolo o colpa grave e i diritti che la legge riconosce ai consumatori.</li>
       </ul>
     </section>
 
@@ -206,11 +234,11 @@
   <div class="wrap">
     <span class="logo"><span translate="no">Briga<b>plan</b></span></span>
     <p>Progettazione di cucine e bar professionali con l'intelligenza artificiale.</p>
+    <p class="foot-link"><a href="/come-funziona.html">Come funziona e prezzi</a> · <a href="/domande.html">Domande</a> · Guide: <a href="/guide/costo-cucina-professionale.html">quanto costa una cucina</a>, <a href="/guide/regole-cucina-lombardia.html">regole ASL in Lombardia</a>, <a href="/guide/pizzeria-forno-legna.html">pizzeria a legna</a>, <a href="/guide/cucina-sushi-ayce.html">sushi</a> · <a href="/professionisti.html">Professionisti</a> · <a href="/partner.html">Installatori</a> · <a href="/condizioni.html">Condizioni</a> · <a href="/privacy-piattaforma.html">Privacy</a> · <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
     <p>Installatori partner: Italfrigo (Lombardia). <a href="/partner.html">Diventa partner</a></p>
     <p>Brigaplan è un servizio di Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · Registro delle imprese di Milano Monza Brianza Lodi n. 06825390153 · REA MI-1120586 · C.F. e P.IVA 06825390153 · Capitale sociale 46.800,00 € i.v. · PEC <span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/privacy.html">Privacy e cookie</a></p>
   </div>
 </footer>
-<script>/* conteggio anonimo delle visite: niente cookie, niente IP salvati (vedi /privacy.html) */
-try{if(navigator.sendBeacon&&navigator.doNotTrack!=='1'&&!navigator.globalPrivacyControl)navigator.sendBeacon('https://app.brigaplan.ai/api/visita',JSON.stringify({p:location.pathname,l:(document.documentElement.lang||'it').slice(0,2),r:document.referrer}))}catch(e){}</script>
+<script src="/js/s-1c50f2db9341.js"></script>
 </body>
 </html>
