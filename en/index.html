@@ -30,6 +30,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect x='1.5' y='1.5' width='23' height='23' fill='%23fff' stroke='%2316191C' stroke-width='2.2'/%3E%3Cpath d='M1.5 11H13V24.5M13 7V1.5' fill='none' stroke='%2316191C' stroke-width='1.6'/%3E%3Crect x='16' y='15' width='6' height='6' fill='%23A63A1F'/%3E%3C/svg%3E">
 <link rel="preload" href="/fonts/Archivo-100_900-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/pagine.css">
+<link rel="stylesheet" href="/pagine.css">
 <style>
 body { background: var(--nero); color: #F4F4EF; }
 .ic { width: 22px; height: 22px; flex: none; }
@@ -40,13 +41,15 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
 .btn-scuro:hover { background: #F4F4EF; color: var(--nero); }
 .top .btn-primary { color: var(--nero); }
 .eroe { min-height: 92vh; display: grid; align-items: end; padding: 70px 0 56px; position: relative; overflow: hidden; }
-.eroe .video { position: absolute; right: 0; top: 0; width: 64%; height: 100%; background: #F7F6F1 url(/media/c/video_poster_720.jpg) center / cover no-repeat; }
+.eroe .video { position: absolute; right: 0; top: 0; width: 64%; height: 100%; background: #F7F6F1 url(/media/c/realistico_poster_720.jpg) center / cover no-repeat; }
 .eroe .video video { width: 100%; height: 100%; object-fit: cover; display: block; }
-.eroe .video { filter: brightness(.62) contrast(1.05); }
+.eroe .video { filter: brightness(.74) contrast(1.05); }
 .eroe .video::after { content: ""; position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(90deg, var(--nero) 0%, rgba(9,9,11,.82) 32%, rgba(9,9,11,.35) 66%, rgba(9,9,11,.25) 100%), linear-gradient(0deg, var(--nero) 0%, rgba(9,9,11,0) 35%); }
-.eroe .render { filter: none; position: absolute; right: 16px; bottom: 14px; z-index: 2; margin: 0; font: 500 .72rem var(--f-mono); letter-spacing: .03em; color: #D9D9D2;
-  background: rgba(9,9,11,.72); padding: 6px 10px; border-radius: 8px; max-width: 30rem; }
+  background: linear-gradient(90deg, var(--nero) 0%, rgba(9,9,11,.8) 30%, rgba(9,9,11,.3) 62%, rgba(9,9,11,.06) 100%), linear-gradient(0deg, var(--nero) 0%, rgba(9,9,11,0) 35%); }
+.eroe .render { position: absolute; right: max(16px, env(safe-area-inset-right, 0px)); top: 18px; z-index: 3; margin: 0; max-width: calc(100% - 32px);
+  font: 600 clamp(.85rem, .7rem + .35vw, 1.02rem)/1.25 var(--f-body); color: #F4F4EF; background: rgba(9,9,11,.82); padding: 9px 14px 9px 12px;
+  border: 1px solid rgba(205,255,58,.55); border-radius: 999px; display: flex; align-items: center; gap: 8px; }
+.eroe .render::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--lime); flex: none; }
 .eroe .wrap { position: relative; z-index: 2; width: 100%; }
 .eroe h1 { font-size: clamp(3rem, .4rem + 8.4vw, 9.5rem); max-width: none; }
 .eroe h1 span { display: block; text-wrap: balance; } :lang(zh) .gigante { line-height: 1.05; letter-spacing: 0; } .gigante .lime, .eroe h1 .lime { color: var(--lime); } .eroe h1 .piccola { font-size: clamp(1.25rem, .6rem + 2.2vw, 2.6rem); line-height: 1.1; letter-spacing: -.01em; margin-top: .55em; }
@@ -148,8 +151,8 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
 @media (prefers-reduced-motion: reduce) { .nastro-box { overflow-x: auto; } }
 @media (max-width: 960px) {
   .eroe { min-height: auto; padding: 0 0 46px; display: block; }
-  .eroe .video { position: relative; width: 100%; height: 50vh; min-height: 260px; margin-bottom: 26px; }
-  .eroe .video::after { background: linear-gradient(0deg, var(--nero) 0%, rgba(9,9,11,0) 40%); }
+  .eroe .video { position: relative; width: 100%; height: 50vh; min-height: 260px; margin-bottom: 26px; filter: brightness(.95) contrast(1.03); }
+  .eroe .video::after { background: linear-gradient(0deg, var(--nero) 0%, rgba(9,9,11,0) 30%); }
   .eroe h1 { font-size: clamp(2.4rem, .5rem + 11vw, 5rem); }
   .palco { grid-template-columns: 1fr; gap: 24px; align-content: center; padding-block: 60px; }
   .numeri .wrap, .livelli, .carte { grid-template-columns: 1fr; } .liv + .liv { border-left: 0; padding-left: 0; border-top: 1px solid #CFCFC8; }
@@ -190,8 +193,8 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
 
 <main>
 <section class="eroe">
-  <div class="video"><video id="pianta3d" muted loop playsinline preload="none" poster="/media/c/video_poster_720.jpg" data-grande="/media/c/pianta_3d_1280.mp4" data-piccolo="/media/c/pianta_3d_720.mp4" aria-label="Video: the floor plan of a kitchen, its stylised 3D and a realistic render"></video>
-    <p class="render">Realistic renders: on request. The free preview is in stylised 3D.</p></div>
+  <div class="video"><video id="pianta3d" muted loop playsinline preload="none" poster="/media/c/realistico_poster_720.jpg" data-grande="/media/c/realistico_1280.mp4" data-piccolo="/media/c/realistico_720.mp4" aria-label="Video: the floor plan of a kitchen and its realistic render"></video></div>
+  <p class="render">Photoreal render · on request</p>
   <div class="wrap">
     <h1 class="gigante"><span>See your</span><span>kitchen.</span><span class="lime">Before you build it.</span><span class="piccola">Free 3D preview, in a few minutes.</span></h1>
     <p class="sotto">Upload the floor plan or describe the venue. The AI draws, the engine checks, you turn it around in 3D.</p>
