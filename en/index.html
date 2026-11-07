@@ -31,6 +31,7 @@
 <link rel="preload" href="/fonts/Archivo-100_900-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/pagine.css">
 <link rel="stylesheet" href="/pagine.css">
+<link rel="stylesheet" href="/pagine.css">
 <style>
 body { background: var(--nero); color: #F4F4EF; }
 .ic { width: 22px; height: 22px; flex: none; }
@@ -56,22 +57,24 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
 .eroe .sotto { font-size: 1.3rem; max-width: 30rem; color: #D6D6D0; margin: 28px 0; }
 .azioni { display: flex; gap: 12px; flex-wrap: wrap; }
 .piccolo { font-size: .85rem; color: #A9A9B1; margin-top: 16px; } .piccolo a { color: var(--lime); }
-.costruisci { position: relative; border-top: 1px solid #26262C; }
-.palco { display: grid; grid-template-columns: .9fr 1.6fr; gap: 40px; align-items: center; padding-block: 80px; }
-.palco h2 em { font-style: normal; color: var(--lime); }
-.fasi { list-style: none; padding: 0; margin: 30px 0 0; display: grid; gap: 10px; counter-reset: f; }
-.fasi li { counter-increment: f; display: flex; gap: 14px; align-items: center; font-weight: 600; }
-.fasi li::before { content: "0" counter(f); font: 500 .78rem var(--f-mono); color: var(--nero); background: var(--lime); border-radius: 6px; padding: 3px 7px; }
-.tavola { position: relative; }
-.pianta { width: 100%; height: auto; overflow: visible; display: block; }
+.costruisci { border-top: 1px solid #26262C; padding-block: 90px; }
+.costruisci h2 { margin-top: 10px; } .costruisci h2 em { font-style: normal; color: var(--lime); }
+/* i 5 passi tutti visibili (Manuel, 7/11): niente sezione appiccicata né animazioni legate allo scorrimento */
+.cinque { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+.cinque li { display: grid; grid-template-rows: auto auto auto 1fr; gap: 6px; padding: 14px; border-radius: 16px; background: #16161A; border: 1px solid #2E2E36; }
+.cinque .figura { aspect-ratio: 1000 / 680; display: grid; place-items: center; border-radius: 10px; overflow: hidden; background: var(--nero); margin-bottom: 8px; }
+.cinque .figura img { width: 100%; height: 100%; object-fit: cover; }
+.cinque b { font: 500 .78rem var(--f-mono); color: var(--nero); background: var(--lime); border-radius: 6px; padding: 3px 7px; justify-self: start; }
+.cinque h3 { font-size: 1.2rem; font-weight: 800; font-stretch: 112%; margin: 4px 0 0; }
+.cinque p { color: #A9A9B1; font-size: .95rem; margin: 0; }
+.pianta { width: 100%; height: auto; display: block; }
 .muri path { fill: none; stroke: #F4F4EF; stroke-width: 14; stroke-linecap: square; }
 .zona { stroke: none; } .z1 { fill: rgba(92,200,255,.22); } .z2 { fill: rgba(124,227,139,.2); } .z3 { fill: rgba(255,138,101,.26); } .z4 { fill: rgba(138,180,255,.2); } .z5 { fill: rgba(255,213,74,.24); }
 .attrezzi * { fill: rgba(244,244,239,.06); stroke: #CFCFC8; stroke-width: 2; }
 .flussi path { fill: none; stroke: var(--lime); stroke-width: 3; }
 .etichette text { font: 500 15px var(--f-mono); letter-spacing: .08em; fill: #E9E9E2; }
-.tre-d { margin: 0; position: absolute; inset: 0; opacity: 0; display: grid; align-content: center; }
-.tre-d img { width: 100%; border-radius: 14px; }
-.tre-d figcaption { font: 500 .78rem var(--f-mono); color: #C9C9C2; margin-top: 10px; letter-spacing: .04em; }
+/* la stessa pianta che si completa: al passo 1 solo i muri, poi zone, attrezzature, flussi */
+.fino-1 .zone, .fino-1 .attrezzi, .fino-1 .etichette, .fino-1 .flussi, .fino-2 .attrezzi, .fino-2 .flussi, .fino-3 .flussi { display: none !important; }   /* !important: pagine.css ha .zone { display: flex !important } per un'altra lista */
 .numeri { background: var(--lime); color: var(--nero); padding-block: 90px; }
 .numeri .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 60px; }
 .numeri b { display: block; font-family: var(--f-display); font-weight: 900; font-stretch: 125%; font-size: clamp(3.2rem, 1.2rem + 7vw, 9rem); line-height: .9; letter-spacing: -.04em; }
@@ -125,28 +128,10 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
   @keyframes sale { from { opacity: 0; transform: translateY(.35em); } }
   .nastro { animation: scorre 52s linear infinite; } .nastro-box:hover .nastro, .nastro-box:focus-within .nastro { animation-play-state: paused; }
   @keyframes scorre { to { transform: translateX(-50%); } }
-  @supports (animation-timeline: view()) {
-    .costruisci { height: 360vh; view-timeline-name: --cantiere; }
-    .palco { position: sticky; top: 0; height: 100vh; padding-block: 0; }
-    .muri path { stroke-dasharray: 1; animation: disegna linear both; animation-timeline: --cantiere; animation-range: contain 0% contain 20%; }
-    .zona { animation: compare linear both; animation-timeline: --cantiere; animation-range: contain 18% contain 38%; transform-box: fill-box; transform-origin: center; }
-    .z2 { animation-range: contain 22% contain 40%; } .z3 { animation-range: contain 26% contain 42%; } .z4 { animation-range: contain 30% contain 44%; } .z5 { animation-range: contain 34% contain 46%; }
-    .attrezzi, .etichette { animation: sale-piano linear both; animation-timeline: --cantiere; animation-range: contain 40% contain 60%; }
-    .flussi { animation: accendi linear both; animation-timeline: --cantiere; animation-range: contain 57% contain 59%; }
-    .flussi path { stroke-dasharray: 1; animation: disegna linear both; animation-timeline: --cantiere; animation-range: contain 58% contain 78%; }
-    .tre-d { animation: tre-d linear both; animation-timeline: --cantiere; animation-range: contain 80% contain 98%; }
-    .fasi li { animation: fase linear both; animation-timeline: --cantiere; }
-    .fasi li:nth-child(1) { animation-range: contain 0% contain 20%; } .fasi li:nth-child(2) { animation-range: contain 18% contain 40%; } .fasi li:nth-child(3) { animation-range: contain 40% contain 60%; }
-    .fasi li:nth-child(4) { animation-range: contain 58% contain 80%; } .fasi li:nth-child(5) { animation-range: contain 80% contain 100%; }
-    .cornice { animation: avvicina linear both; animation-timeline: view(); animation-range: entry 0% cover 40%; }
-  }
-  @keyframes disegna { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
-  @keyframes accendi { from { opacity: 0; } to { opacity: 1; } }
-  @keyframes compare { from { opacity: 0; transform: scale(.85); } to { opacity: 1; transform: none; } }
-  @keyframes sale-piano { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
-  @keyframes tre-d { from { opacity: 0; transform: scale(1.04); } to { opacity: 1; transform: none; background: var(--nero); } }
-  @keyframes fase { 0%, 100% { opacity: .35; } 20%, 80% { opacity: 1; } }
-  @keyframes avvicina { from { transform: scale(.9) translateY(40px); opacity: .4; } to { transform: none; opacity: 1; } }
+  /* i riquadri si accendono uno dopo l'altro, in ciclo; la pagina scorre sempre libera */
+  .cinque li { animation: passo-acceso 10s ease-in-out infinite; }
+  .cinque li:nth-child(2) { animation-delay: 2s; } .cinque li:nth-child(3) { animation-delay: 4s; } .cinque li:nth-child(4) { animation-delay: 6s; } .cinque li:nth-child(5) { animation-delay: 8s; }
+  @keyframes passo-acceso { 0%, 22%, 100% { border-color: #2E2E36; transform: none; } 6%, 16% { border-color: var(--lime); transform: translateY(-4px); } }
 }
 @media (prefers-reduced-motion: reduce) { .nastro-box { overflow-x: auto; } }
 @media (max-width: 960px) {
@@ -154,7 +139,9 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
   .eroe .video { position: relative; width: 100%; height: 50vh; min-height: 260px; margin-bottom: 26px; filter: brightness(.95) contrast(1.03); }
   .eroe .video::after { background: linear-gradient(0deg, var(--nero) 0%, rgba(9,9,11,0) 30%); }
   .eroe h1 { font-size: clamp(2.4rem, .5rem + 11vw, 5rem); }
-  .palco { grid-template-columns: 1fr; gap: 24px; align-content: center; padding-block: 60px; }
+  .costruisci { padding-block: 64px; }
+  .cinque { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 78%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 10px; margin-inline: -4px; }
+  .cinque li { scroll-snap-align: start; }
   .numeri .wrap, .livelli, .carte { grid-template-columns: 1fr; } .liv + .liv { border-left: 0; padding-left: 0; border-top: 1px solid #CFCFC8; }
   .passo-c { grid-template-columns: 90px 1fr; } .passo-c p { grid-column: 2; } .passo-c b { font-size: 3.4rem; }
   .nastro figure { width: 280px; } .dentro, .sez { padding-block: 80px; } .cornice { grid-template-columns: 1fr; padding: 14px; }
@@ -202,16 +189,37 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
     <p class="piccolo">For now you need an invitation code. <a href="mailto:info@brigaplan.ai?subject=Brigaplan%20invitation%20code&amp;body=Type%20of%20venue%3A%0ACity%3A%0ASeats%3A%0AI%20have%20a%20floor%20plan%3A%20yes%20/%20no">Ask for it</a>.</p>
   </div>
 </section>
-<section class="costruisci" id="costruisci"><div class="wrap palco">
-  <div><span class="mono">How a preview is made</span><h2>Scroll. The kitchen <em>draws itself.</em></h2><ol class="fasi"><li>Walls</li><li>Zones</li><li>Equipment</li><li>Flows</li><li>3D</li></ol></div>
-  <div class="tavola"><svg class="pianta" viewBox="0 0 1000 680" role="img" aria-label="Floor plan of a kitchen with zones and flows">
-  <defs><marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#CDFF3A"/></marker></defs>
+<section class="costruisci" id="costruisci"><div class="wrap">
+  <span class="mono">How a preview is made</span><h2>How your preview is made, <em>in 5 steps.</em></h2>
+  <ol class="cinque"><li class="p1"><div class="figura"><svg class="pianta fino-1" viewBox="0 0 1000 680" role="img" aria-label="Walls">
+  <defs><marker id="punta1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#CDFF3A"/></marker></defs>
   <g class="zone"><rect class="zona z1" x="62" y="62" width="176" height="150" rx="6"/><rect class="zona z2" x="262" y="118" width="356" height="220" rx="6"/><rect class="zona z3" x="642" y="62" width="296" height="104" rx="6"/><rect class="zona z4" x="62" y="430" width="270" height="148" rx="6"/><rect class="zona z5" x="642" y="436" width="296" height="142" rx="6"/></g>
   <g class="attrezzi"><rect x="72" y="72" width="88" height="112"/><rect x="170" y="72" width="58" height="58"/><rect x="262" y="62" width="340" height="40"/><rect x="652" y="70" width="276" height="50"/><circle cx="690" cy="95" r="12"/><circle cx="726" cy="95" r="12"/><circle cx="762" cy="95" r="12"/><rect x="800" y="78" width="54" height="34"/><rect x="866" y="78" width="54" height="34"/><rect x="360" y="196" width="200" height="72"/><rect x="72" y="514" width="118" height="56"/><rect x="200" y="514" width="120" height="56"/><rect x="662" y="514" width="266" height="56"/></g>
   <g class="muri"><path pathLength="1" d="M40 40H960V600H560M480 600H330M250 600H40V200M40 124V40"/></g>
-  <g class="flussi"><path pathLength="1" d="M8 162H110V260H300" marker-end="url(#punta)"/><path pathLength="1" d="M560 230H720V176" marker-end="url(#punta)"/><path pathLength="1" d="M860 176V424" marker-end="url(#punta)"/><path pathLength="1" d="M720 586V640H520V664" marker-end="url(#punta)"/><path pathLength="1" d="M290 664V600H200V588" marker-end="url(#punta)"/></g>
+  <g class="flussi"><path pathLength="1" d="M8 162H110V260H300" marker-end="url(#punta1)"/><path pathLength="1" d="M560 230H720V176" marker-end="url(#punta1)"/><path pathLength="1" d="M860 176V424" marker-end="url(#punta1)"/><path pathLength="1" d="M720 586V640H520V664" marker-end="url(#punta1)"/><path pathLength="1" d="M290 664V600H200V588" marker-end="url(#punta1)"/></g>
   <g class="etichette"><text x="78" y="232">COLD</text><text x="380" y="314">PREP</text><text x="652" y="152">COOKING</text><text x="78" y="456">WASHING</text><text x="652" y="462">PASS</text><text x="8" y="150">GOODS IN</text><text x="528" y="660">DINING</text><text x="300" y="660">DIRTY</text></g>
-</svg><figure class="tre-d"><img src="/media/c/anteprima_stilizzata_800.jpg" alt="The stylised 3D of a preview" loading="lazy" width="800" height="375"><figcaption>The preview's stylised 3D</figcaption></figure></div>
+</svg></div><b>01</b><h3>Walls</h3><p>The AI reads the floor plan you upload, or draws it from your description: walls, doors and windows.</p></li><li class="p2"><div class="figura"><svg class="pianta fino-2" viewBox="0 0 1000 680" role="img" aria-label="Zones">
+  <defs><marker id="punta2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#CDFF3A"/></marker></defs>
+  <g class="zone"><rect class="zona z1" x="62" y="62" width="176" height="150" rx="6"/><rect class="zona z2" x="262" y="118" width="356" height="220" rx="6"/><rect class="zona z3" x="642" y="62" width="296" height="104" rx="6"/><rect class="zona z4" x="62" y="430" width="270" height="148" rx="6"/><rect class="zona z5" x="642" y="436" width="296" height="142" rx="6"/></g>
+  <g class="attrezzi"><rect x="72" y="72" width="88" height="112"/><rect x="170" y="72" width="58" height="58"/><rect x="262" y="62" width="340" height="40"/><rect x="652" y="70" width="276" height="50"/><circle cx="690" cy="95" r="12"/><circle cx="726" cy="95" r="12"/><circle cx="762" cy="95" r="12"/><rect x="800" y="78" width="54" height="34"/><rect x="866" y="78" width="54" height="34"/><rect x="360" y="196" width="200" height="72"/><rect x="72" y="514" width="118" height="56"/><rect x="200" y="514" width="120" height="56"/><rect x="662" y="514" width="266" height="56"/></g>
+  <g class="muri"><path pathLength="1" d="M40 40H960V600H560M480 600H330M250 600H40V200M40 124V40"/></g>
+  <g class="flussi"><path pathLength="1" d="M8 162H110V260H300" marker-end="url(#punta2)"/><path pathLength="1" d="M560 230H720V176" marker-end="url(#punta2)"/><path pathLength="1" d="M860 176V424" marker-end="url(#punta2)"/><path pathLength="1" d="M720 586V640H520V664" marker-end="url(#punta2)"/><path pathLength="1" d="M290 664V600H200V588" marker-end="url(#punta2)"/></g>
+  <g class="etichette"><text x="78" y="232">COLD</text><text x="380" y="314">PREP</text><text x="652" y="152">COOKING</text><text x="78" y="456">WASHING</text><text x="652" y="462">PASS</text><text x="8" y="150">GOODS IN</text><text x="528" y="660">DINING</text><text x="300" y="660">DIRTY</text></g>
+</svg></div><b>02</b><h3>Zones</h3><p>It divides the kitchen into zones: cold, preparation, cooking, washing and pass.</p></li><li class="p3"><div class="figura"><svg class="pianta fino-3" viewBox="0 0 1000 680" role="img" aria-label="Equipment">
+  <defs><marker id="punta3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#CDFF3A"/></marker></defs>
+  <g class="zone"><rect class="zona z1" x="62" y="62" width="176" height="150" rx="6"/><rect class="zona z2" x="262" y="118" width="356" height="220" rx="6"/><rect class="zona z3" x="642" y="62" width="296" height="104" rx="6"/><rect class="zona z4" x="62" y="430" width="270" height="148" rx="6"/><rect class="zona z5" x="642" y="436" width="296" height="142" rx="6"/></g>
+  <g class="attrezzi"><rect x="72" y="72" width="88" height="112"/><rect x="170" y="72" width="58" height="58"/><rect x="262" y="62" width="340" height="40"/><rect x="652" y="70" width="276" height="50"/><circle cx="690" cy="95" r="12"/><circle cx="726" cy="95" r="12"/><circle cx="762" cy="95" r="12"/><rect x="800" y="78" width="54" height="34"/><rect x="866" y="78" width="54" height="34"/><rect x="360" y="196" width="200" height="72"/><rect x="72" y="514" width="118" height="56"/><rect x="200" y="514" width="120" height="56"/><rect x="662" y="514" width="266" height="56"/></g>
+  <g class="muri"><path pathLength="1" d="M40 40H960V600H560M480 600H330M250 600H40V200M40 124V40"/></g>
+  <g class="flussi"><path pathLength="1" d="M8 162H110V260H300" marker-end="url(#punta3)"/><path pathLength="1" d="M560 230H720V176" marker-end="url(#punta3)"/><path pathLength="1" d="M860 176V424" marker-end="url(#punta3)"/><path pathLength="1" d="M720 586V640H520V664" marker-end="url(#punta3)"/><path pathLength="1" d="M290 664V600H200V588" marker-end="url(#punta3)"/></g>
+  <g class="etichette"><text x="78" y="232">COLD</text><text x="380" y="314">PREP</text><text x="652" y="152">COOKING</text><text x="78" y="456">WASHING</text><text x="652" y="462">PASS</text><text x="8" y="150">GOODS IN</text><text x="528" y="660">DINING</text><text x="300" y="660">DIRTY</text></g>
+</svg></div><b>03</b><h3>Equipment</h3><p>It places counters and equipment where they are needed.</p></li><li class="p4"><div class="figura"><svg class="pianta fino-4" viewBox="0 0 1000 680" role="img" aria-label="Flows">
+  <defs><marker id="punta4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#CDFF3A"/></marker></defs>
+  <g class="zone"><rect class="zona z1" x="62" y="62" width="176" height="150" rx="6"/><rect class="zona z2" x="262" y="118" width="356" height="220" rx="6"/><rect class="zona z3" x="642" y="62" width="296" height="104" rx="6"/><rect class="zona z4" x="62" y="430" width="270" height="148" rx="6"/><rect class="zona z5" x="642" y="436" width="296" height="142" rx="6"/></g>
+  <g class="attrezzi"><rect x="72" y="72" width="88" height="112"/><rect x="170" y="72" width="58" height="58"/><rect x="262" y="62" width="340" height="40"/><rect x="652" y="70" width="276" height="50"/><circle cx="690" cy="95" r="12"/><circle cx="726" cy="95" r="12"/><circle cx="762" cy="95" r="12"/><rect x="800" y="78" width="54" height="34"/><rect x="866" y="78" width="54" height="34"/><rect x="360" y="196" width="200" height="72"/><rect x="72" y="514" width="118" height="56"/><rect x="200" y="514" width="120" height="56"/><rect x="662" y="514" width="266" height="56"/></g>
+  <g class="muri"><path pathLength="1" d="M40 40H960V600H560M480 600H330M250 600H40V200M40 124V40"/></g>
+  <g class="flussi"><path pathLength="1" d="M8 162H110V260H300" marker-end="url(#punta4)"/><path pathLength="1" d="M560 230H720V176" marker-end="url(#punta4)"/><path pathLength="1" d="M860 176V424" marker-end="url(#punta4)"/><path pathLength="1" d="M720 586V640H520V664" marker-end="url(#punta4)"/><path pathLength="1" d="M290 664V600H200V588" marker-end="url(#punta4)"/></g>
+  <g class="etichette"><text x="78" y="232">COLD</text><text x="380" y="314">PREP</text><text x="652" y="152">COOKING</text><text x="78" y="456">WASHING</text><text x="652" y="462">PASS</text><text x="8" y="150">GOODS IN</text><text x="528" y="660">DINING</text><text x="300" y="660">DIRTY</text></g>
+</svg></div><b>04</b><h3>Flows</h3><p>It traces the routes of goods, dishes and dirty items, and the engine checks the rules.</p></li><li class="p5"><div class="figura"><img src="/media/c/anteprima_stilizzata_800.jpg" alt="3D" loading="lazy" width="800" height="375"></div><b>05</b><h3>3D</h3><p>In a few minutes you can turn it around in stylised 3D.</p></li></ol>
 </div></section>
 <section class="numeri" id="numeri"><div class="wrap"><div><b>27.000+</b><span>pieces of equipment with manufacturers' dimensions</span></div><div><b>80+</b><span>brands</span></div><div><b>40+</b><span>rules measured automatically on every version</span></div><div><b>Free</b><span>the preview</span></div></div></section>
 <section class="dentro"><div class="wrap"><span class="mono">The platform</span><h2>You talk to the assistant. The project takes shape alongside.</h2>
