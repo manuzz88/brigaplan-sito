@@ -44,8 +44,13 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
 .top .btn-primary { color: var(--nero); }
 .eroe { min-height: 92vh; display: grid; align-items: end; padding: 70px 0 56px; position: relative; overflow: hidden; }
 .eroe .video { position: absolute; right: 0; top: 0; width: 64%; height: 100%; background: #F7F6F1 url(/media/c/realistico_poster_720.jpg) center / cover no-repeat; }
-.eroe .video video { width: 100%; height: 100%; object-fit: cover; display: block; }
-.eroe .video { filter: brightness(.74) contrast(1.05); }
+.eroe .video video { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(.74) contrast(1.05); }
+.eroe .guarda { position: absolute; left: 72%; top: 24%; transform: translate(-50%, -50%); z-index: 3; display: inline-flex; align-items: center; gap: 10px;
+  font: 700 1.05rem/1 var(--f-body); color: var(--nero); background: var(--lime); border: 0; border-radius: 999px; padding: 14px 22px 14px 18px;
+  cursor: pointer; box-shadow: 0 6px 24px rgba(0,0,0,.35); white-space: nowrap; }
+.eroe .guarda[hidden] { display: none; }
+.eroe .guarda .ic { width: 20px; height: 20px; flex: none; }
+.eroe .guarda:focus-visible { outline: 3px solid #F4F4EF; outline-offset: 3px; }
 .eroe .video::after { content: ""; position: absolute; inset: 0; pointer-events: none;
   background: linear-gradient(90deg, var(--nero) 0%, rgba(9,9,11,.8) 30%, rgba(9,9,11,.3) 62%, rgba(9,9,11,.06) 100%), linear-gradient(0deg, var(--nero) 0%, rgba(9,9,11,0) 35%); }
 .eroe .render { position: absolute; right: max(16px, env(safe-area-inset-right, 0px)); top: 18px; z-index: 3; margin: 0; max-width: calc(100% - 32px);
@@ -137,7 +142,9 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
 @media (prefers-reduced-motion: reduce) { .nastro-box { overflow-x: auto; } }
 @media (max-width: 960px) {
   .eroe { min-height: auto; padding: 0 0 46px; display: block; }
-  .eroe .video { position: relative; width: 100%; height: 50vh; min-height: 260px; margin-bottom: 26px; filter: brightness(.95) contrast(1.03); }
+  .eroe .video { position: relative; width: 100%; height: 50vh; min-height: 260px; margin-bottom: 26px; }
+  .eroe .video video { filter: brightness(.95) contrast(1.03); }
+  .eroe .guarda { left: 50%; top: 50%; }
   .eroe .video::after { background: linear-gradient(0deg, var(--nero) 0%, rgba(9,9,11,0) 30%); }
   .eroe h1 { font-size: clamp(2.4rem, .5rem + 11vw, 5rem); }
   .costruisci { padding-block: 64px; }
@@ -181,7 +188,7 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
 
 <main>
 <section class="eroe">
-  <div class="video"><video id="pianta3d" muted loop playsinline preload="none" poster="/media/c/realistico_poster_720.jpg" data-grande="/media/c/realistico_1280.mp4" data-piccolo="/media/c/realistico_720.mp4" aria-label="Video: la pianta di una cucina e il suo render realistico"></video></div>
+  <div class="video"><video id="pianta3d" muted loop playsinline preload="none" poster="/media/c/realistico_poster_720.jpg" data-grande="/media/c/realistico_1280.mp4" data-piccolo="/media/c/realistico_720.mp4" aria-label="Video: la pianta di una cucina e il suo render realistico"></video><button type="button" class="guarda" id="guarda-video" hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>Guarda il video</button></div>
   <p class="render">Render realistico · su richiesta</p>
   <div class="wrap">
     <h1 class="gigante"><span>Vedi la tua</span><span>cucina.</span><span class="lime">Prima di farla.</span><span class="piccola">Anteprima gratis in 3D, in pochi minuti.</span></h1>
@@ -267,6 +274,6 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
 </footer>
 
 <script src="/js/s-1c50f2db9341.js"></script>
-<script src="/js/c-video.js"></script>
+<script src="/js/c-video-2.js"></script>
 </body>
 </html>
