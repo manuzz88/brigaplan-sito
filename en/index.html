@@ -32,55 +32,55 @@
 <link rel="stylesheet" href="/pagine.css">
 <link rel="stylesheet" href="/pagine.css">
 <link rel="stylesheet" href="/pagine.css">
-<link rel="stylesheet" href="/pagine.css">
 <style>
 body { background: var(--nero); color: #F4F4EF; }
 .ic { width: 22px; height: 22px; flex: none; }
 .mono { display: block; font: 500 .78rem var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: #A9A9B1; margin-bottom: 14px; }
-.gigante { font-family: var(--f-display); font-weight: 900; font-stretch: 125%; line-height: .86; letter-spacing: -.035em; margin: 0; }
-main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-stretch: 120%; line-height: .95; letter-spacing: -.03em; }
+.gigante { font-family: var(--f-display); font-weight: 900; font-stretch: 125%; line-height: .9; letter-spacing: -.035em; margin: 0; }
+.gigante .lime { color: var(--lime); } :lang(zh) .gigante { line-height: 1.12; letter-spacing: 0; }
+main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-stretch: 120%; line-height: .95; letter-spacing: -.03em; text-wrap: balance; }
 .btn-scuro { color: #F4F4EF; border-color: #4A4A55; background: transparent; }
 .btn-scuro:hover { background: #F4F4EF; color: var(--nero); }
 .top .btn-primary { color: var(--nero); }
-.eroe { min-height: 92vh; display: grid; align-items: end; padding: 70px 0 56px; position: relative; overflow: hidden; }
-.eroe .video { position: absolute; right: 0; top: 0; width: 64%; height: 100%; background: #F7F6F1 url(/media/c/realistico_poster_720.jpg) center / cover no-repeat; }
-.eroe .video video { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(.74) contrast(1.05); }
-.eroe .guarda { position: absolute; left: 72%; top: 24%; transform: translate(-50%, -50%); z-index: 3; display: inline-flex; align-items: center; gap: 10px;
-  font: 700 1.05rem/1 var(--f-body); color: var(--nero); background: var(--lime); border: 0; border-radius: 999px; padding: 14px 22px 14px 18px;
-  cursor: pointer; box-shadow: 0 6px 24px rgba(0,0,0,.35); white-space: nowrap; }
-.eroe .guarda[hidden] { display: none; }
-.eroe .guarda .ic { width: 20px; height: 20px; flex: none; }
-.eroe .guarda:focus-visible { outline: 3px solid #F4F4EF; outline-offset: 3px; }
-.eroe .video::after { content: ""; position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(90deg, var(--nero) 0%, rgba(9,9,11,.8) 30%, rgba(9,9,11,.3) 62%, rgba(9,9,11,.06) 100%), linear-gradient(0deg, var(--nero) 0%, rgba(9,9,11,0) 35%); }
-.eroe .render { position: absolute; right: max(16px, env(safe-area-inset-right, 0px)); top: 18px; z-index: 3; margin: 0; max-width: calc(100% - 32px);
-  font: 600 clamp(.85rem, .7rem + .35vw, 1.02rem)/1.25 var(--f-body); color: #F4F4EF; background: rgba(9,9,11,.82); padding: 9px 14px 9px 12px;
-  border: 1px solid rgba(205,255,58,.55); border-radius: 999px; display: flex; align-items: center; gap: 8px; }
-.eroe .render::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--lime); flex: none; }
-.eroe .wrap { position: relative; z-index: 2; width: 100%; }
-.eroe h1 { font-size: clamp(3rem, .4rem + 8.4vw, 9.5rem); max-width: none; }
-.eroe h1 span { display: block; text-wrap: balance; } :lang(zh) .gigante { line-height: 1.05; letter-spacing: 0; } .gigante .lime, .eroe h1 .lime { color: var(--lime); } .eroe h1 .piccola { font-size: clamp(1.25rem, .6rem + 2.2vw, 2.6rem); line-height: 1.1; letter-spacing: -.01em; margin-top: .55em; }
-.eroe .sotto { font-size: 1.3rem; max-width: 30rem; color: #D6D6D0; margin: 28px 0; }
 .azioni { display: flex; gap: 12px; flex-wrap: wrap; }
 .piccolo { font-size: .85rem; color: #A9A9B1; margin-top: 16px; } .piccolo a { color: var(--lime); }
-.costruisci { border-top: 1px solid #26262C; padding-block: 90px; }
-.costruisci h2 { margin-top: 10px; } .costruisci h2 em { font-style: normal; color: var(--lime); }
-/* i 5 passi tutti visibili (Manuel, 7/11): niente sezione appiccicata né animazioni legate allo scorrimento */
-.cinque { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
-.cinque li { display: grid; grid-template-rows: auto auto auto 1fr; gap: 6px; padding: 14px; border-radius: 16px; background: #16161A; border: 1px solid #2E2E36; }
-.cinque .figura { aspect-ratio: 1000 / 680; display: grid; place-items: center; border-radius: 10px; overflow: hidden; background: var(--nero); margin-bottom: 8px; }
-.cinque .figura img { width: 100%; height: 100%; object-fit: cover; }
-.cinque b { font: 500 .78rem var(--f-mono); color: var(--nero); background: var(--lime); border-radius: 6px; padding: 3px 7px; justify-self: start; }
-.cinque h3 { font-size: 1.2rem; font-weight: 800; font-stretch: 112%; margin: 4px 0 0; }
-.cinque p { color: #A9A9B1; font-size: .95rem; margin: 0; }
-.pianta { width: 100%; height: auto; display: block; }
-.muri path { fill: none; stroke: #F4F4EF; stroke-width: 14; stroke-linecap: square; }
-.zona { stroke: none; } .z1 { fill: rgba(92,200,255,.22); } .z2 { fill: rgba(124,227,139,.2); } .z3 { fill: rgba(255,138,101,.26); } .z4 { fill: rgba(138,180,255,.2); } .z5 { fill: rgba(255,213,74,.24); }
-.attrezzi * { fill: rgba(244,244,239,.06); stroke: #CFCFC8; stroke-width: 2; }
-.flussi path { fill: none; stroke: var(--lime); stroke-width: 3; }
-.etichette text { font: 500 15px var(--f-mono); letter-spacing: .08em; fill: #E9E9E2; }
-/* la stessa pianta che si completa: al passo 1 solo i muri, poi zone, attrezzature, flussi */
-.fino-1 .zone, .fino-1 .attrezzi, .fino-1 .etichette, .fino-1 .flussi, .fino-2 .attrezzi, .fino-2 .flussi, .fino-3 .flussi { display: none !important; }   /* !important: pagine.css ha .zone { display: flex !important } per un'altra lista */
+
+/* prima schermata: testo a sinistra, video intero a destra; sul telefono titolo, bottone e video stanno nello schermo */
+.eroe { padding-block: 64px 80px; position: relative; }
+.eroe-griglia { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); grid-template-areas: "testo schermo" "dopo schermo";
+  column-gap: clamp(28px, 4vw, 64px); row-gap: 0; align-items: start; }
+.eroe .testo { grid-area: testo; align-self: end; }
+.eroe .schermo { grid-area: schermo; align-self: center; min-width: 0; }
+.eroe .dopo { grid-area: dopo; }
+.eroe h1 { font-size: clamp(2.3rem, .3rem + 5.1vw, 5.6rem); max-width: none; }
+.eroe h1 span { display: block; text-wrap: balance; }
+.eroe .piccola { font: 800 clamp(1.1rem, .8rem + 1vw, 1.7rem)/1.2 var(--f-display); font-stretch: 112%; letter-spacing: -.01em; margin: .7em 0 0; color: #F4F4EF; }
+.eroe .azioni.prima { margin-top: 26px; }
+.eroe .sotto { font-size: 1.15rem; max-width: 30rem; color: #D6D6D0; margin: 26px 0 18px; }
+.giro { position: relative; aspect-ratio: 16 / 9; border-radius: 18px; overflow: hidden; background: #FAFAF8 url(/media/giro/giro_16x9_en_poster.jpg) center / cover no-repeat;
+  border: 1px solid #2E2E36; box-shadow: 0 50px 110px -50px rgba(205,255,58,.32); }
+.giro video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.giro .guarda { position: absolute; left: 50%; top: 42%; transform: translate(-50%, -50%); z-index: 3; display: inline-flex; align-items: center; gap: 10px;
+  font: 700 1.05rem/1 var(--f-body); color: var(--nero); background: var(--lime); border: 0; border-radius: 999px; padding: 14px 22px 14px 18px;
+  cursor: pointer; box-shadow: 0 6px 24px rgba(0,0,0,.3); white-space: nowrap; }
+.giro .guarda[hidden] { display: none; }
+.giro .guarda .ic { width: 20px; height: 20px; }
+.giro .guarda:focus-visible { outline: 3px solid var(--nero); outline-offset: 3px; }
+.nota-video { margin: 10px 2px 0; font-size: .82rem; color: #A9A9B1; }
+
+/* per chi è: 4 schede, ognuna porta alla sua pagina */
+.per-chi { border-top: 1px solid #26262C; }
+.schede { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
+.scheda { display: flex; flex-direction: column; gap: 10px; padding: 26px 22px 22px; border-radius: 18px; background: #16161A; border: 1px solid #2E2E36;
+  color: #F4F4EF; text-decoration: none; transition: border-color .2s, transform .2s; min-width: 0; }
+.scheda:hover, .scheda:focus-visible { border-color: var(--lime); transform: translateY(-3px); }
+.scheda > .ic { width: 30px; height: 30px; color: var(--lime); }
+.scheda .chi { font: 500 .78rem var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: #A9A9B1; margin-top: 6px; }
+.scheda h3 { font-size: 1.45rem; font-weight: 800; font-stretch: 112%; line-height: 1.08; margin: 0; text-wrap: balance; }
+.scheda p { color: #B9B9C0; font-size: .97rem; margin: 0; flex: 1; }
+.scheda .vai { display: inline-flex; align-items: center; gap: 8px; color: var(--lime); font-weight: 700; margin-top: 8px; }
+.scheda .vai .ic { width: 18px; height: 18px; }
+
 .numeri { background: var(--lime); color: var(--nero); padding-block: 90px; }
 .numeri .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 60px; }
 .numeri b { display: block; font-family: var(--f-display); font-weight: 900; font-stretch: 125%; font-size: clamp(3.2rem, 1.2rem + 7vw, 9rem); line-height: .9; letter-spacing: -.04em; }
@@ -97,10 +97,6 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
 .cornice figure img { width: 100%; height: auto; border-radius: 14px; display: block; background: #F7F6F1; }
 .cornice figcaption { color: #A9A9B1; font-size: .9rem; margin-top: 4px; } .cornice figcaption b { color: #F4F4EF; }
 .sez { padding-block: 110px; }
-.tre-passi { display: grid; margin-top: 40px; border-top: 1px solid #26262C; }
-.passo-c { display: grid; grid-template-columns: 180px 1fr 1.1fr; gap: 30px; align-items: baseline; padding: 30px 0; border-bottom: 1px solid #26262C; }
-.passo-c b { font-family: var(--f-display); font-weight: 900; font-stretch: 125%; font-size: 5rem; line-height: .8; color: transparent; -webkit-text-stroke: 1.5px var(--lime); }
-.passo-c h3 { font-size: 1.8rem; font-weight: 800; font-stretch: 115%; } .passo-c p { color: #A9A9B1; font-size: 1.1rem; }
 .nota { color: #A9A9B1; font-size: .9rem; margin-top: 14px; }
 .nastro-box { overflow: hidden; margin-top: 40px; }
 .nastro { display: flex; gap: 18px; width: max-content; padding-inline: 20px; }
@@ -116,7 +112,7 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
 .liv .prezzo.si { background: var(--lime); padding: 2px 12px; border-radius: 10px; }
 .sotto-prezzi { margin-top: 28px; color: #3C3C44; }
 .cobalto { background: var(--cobalto); color: #FFFFFF; }
-.carte { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.carte { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
 .carta { border: 1px solid rgba(255,255,255,.4); border-radius: 20px; padding: 30px; }
 .carta h3 { font-size: 1.6rem; font-weight: 800; font-stretch: 115%; margin: 14px 0 10px; } .carta p { color: #E6EAFF; }
 .carta a { color: #FFFFFF; font-weight: 600; }
@@ -130,29 +126,32 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
 .finale .gigante { font-size: clamp(2.8rem, .5rem + 9vw, 10rem); }
 .finale .sotto { color: #A9A9B1; font-size: 1.2rem; margin: 28px 0; }
 @media (prefers-reduced-motion: no-preference) {
-  .eroe h1 span { animation: sale 1.1s cubic-bezier(.2,.7,.2,1) both; } .eroe h1 span:nth-child(2) { animation-delay: .12s; } .eroe h1 span:nth-child(3) { animation-delay: .24s; } .eroe h1 span:nth-child(4) { animation-delay: .36s; }
-  @keyframes sale { from { opacity: 0; transform: translateY(.35em); } }
+  .eroe h1 span, .eroe .piccola { animation: sale 1s cubic-bezier(.2,.7,.2,1) both; } .eroe h1 span:nth-child(2) { animation-delay: .1s; } .eroe .piccola { animation-delay: .2s; }
+  @keyframes sale { from { opacity: 0; transform: translateY(.3em); } }
   .nastro { animation: scorre 52s linear infinite; } .nastro-box:hover .nastro, .nastro-box:focus-within .nastro { animation-play-state: paused; }
   @keyframes scorre { to { transform: translateX(-50%); } }
-  /* i riquadri si accendono uno dopo l'altro, in ciclo; la pagina scorre sempre libera */
-  .cinque li { animation: passo-acceso 10s ease-in-out infinite; }
-  .cinque li:nth-child(2) { animation-delay: 2s; } .cinque li:nth-child(3) { animation-delay: 4s; } .cinque li:nth-child(4) { animation-delay: 6s; } .cinque li:nth-child(5) { animation-delay: 8s; }
-  @keyframes passo-acceso { 0%, 22%, 100% { border-color: #2E2E36; transform: none; } 6%, 16% { border-color: var(--lime); transform: translateY(-4px); } }
 }
-@media (prefers-reduced-motion: reduce) { .nastro-box { overflow-x: auto; } }
+@media (prefers-reduced-motion: reduce) { .nastro-box { overflow-x: auto; } .scheda { transition: none; } .scheda:hover { transform: none; } }
+@media (max-width: 1100px) { .schede { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 960px) {
-  .eroe { min-height: auto; padding: 0 0 46px; display: block; }
-  .eroe .video { position: relative; width: 100%; height: 50vh; min-height: 260px; margin-bottom: 26px; }
-  .eroe .video video { filter: brightness(.95) contrast(1.03); }
-  .eroe .guarda { left: 50%; top: 50%; }
-  .eroe .video::after { background: linear-gradient(0deg, var(--nero) 0%, rgba(9,9,11,0) 30%); }
-  .eroe h1 { font-size: clamp(2.4rem, .5rem + 11vw, 5rem); }
-  .costruisci { padding-block: 64px; }
-  .cinque { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 78%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 10px; margin-inline: -4px; }
-  .cinque li { scroll-snap-align: start; }
+  .eroe-griglia { grid-template-columns: minmax(0, 1fr); grid-template-areas: "testo" "schermo" "dopo"; }
+  .eroe .schermo { margin-top: 26px; }
   .numeri .wrap, .livelli, .carte { grid-template-columns: 1fr; } .liv + .liv { border-left: 0; padding-left: 0; border-top: 1px solid #CFCFC8; }
-  .passo-c { grid-template-columns: 90px 1fr; } .passo-c p { grid-column: 2; } .passo-c b { font-size: 3.4rem; }
   .nastro figure { width: 280px; } .dentro, .sez { padding-block: 80px; } .cornice { grid-template-columns: 1fr; padding: 14px; }
+}
+/* telefono: fascia e testata compatte, titolo su due righe, bottone a tutta larghezza, video quadrato */
+@media (max-width: 760px) {
+  .notice { font-size: .8rem; } .notice .wrap { padding-block: 5px; line-height: 1.3; }
+  .top .wrap { padding-block: 10px; }
+  .eroe { padding-block: 18px 54px; }
+  .eroe h1 { font-size: clamp(1.6rem, 8.1vw, 2.6rem); }       /* «Vedi la tua cucina» su una riga: a 100 px è largo 1073 px */
+  .eroe .piccola { font-size: 1.02rem; margin-top: .55em; }
+  .eroe .azioni.prima { margin-top: 16px; } .eroe .azioni.prima .btn { width: 100%; justify-content: center; }
+  .eroe .schermo { margin-top: 16px; }
+  .giro { aspect-ratio: 1 / 1; border-radius: 14px; background-image: url(/media/giro/giro_1x1_en_poster.jpg); }
+  .eroe .sotto { font-size: 1.05rem; margin-top: 22px; }
+  .schede { grid-template-columns: minmax(0, 1fr); gap: 12px; margin-top: 28px; }
+  .scheda { padding: 20px 18px 18px; } .scheda h3 { font-size: 1.3rem; }
 }
 </style>
 </head>
@@ -166,13 +165,13 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
       <span translate="no">Briga<b>plan</b></span>
     </a>
     <nav class="nav" aria-label="Sections">
-      <a href="#costruisci">How it's made</a>
+      <a href="#per-chi">Who it's for</a>
+      <a href="#esempi">Examples</a>
       <a href="#cosa-si-paga">Prices</a>
       <a href="#domande">FAQ</a>
-      <a href="/en/pro.html">For professionals</a>
     </nav>
     <div class="top-azioni">
-      <details class="menu-tel"><summary>Menu</summary><nav aria-label="Menu"><a href="/en/come-funziona.html">How it works and prices</a><a href="/en/domande.html">FAQ</a><a href="/en/pro.html">For professionals</a><a href="/en/partner.html">Installers</a><a href="https://app.brigaplan.ai/accedi?lingua=en">Log in</a><div class="lingue-menu" translate="no"><a href="/" lang="it" hreflang="it">IT</a>
+      <details class="menu-tel"><summary>Menu</summary><nav aria-label="Menu"><a href="/en/come-funziona.html">How it works and prices</a><a href="/en/domande.html">FAQ</a><a href="/en/ristoratori.html">Restaurant owners</a><a href="/en/rivenditori.html">Dealers and installers</a><a href="/en/architetti.html">Architects and designers</a><a href="/en/produttori.html">Manufacturers</a><a href="https://app.brigaplan.ai/accedi?lingua=en">Log in</a><div class="lingue-menu" translate="no"><a href="/" lang="it" hreflang="it">IT</a>
         <a href="/en/" lang="en" hreflang="en">EN</a>
         <a href="/zh/" lang="zh-Hans" hreflang="zh-Hans">中文</a></div></nav></details>
       <nav class="lingue" translate="no" aria-label="Language">
@@ -188,47 +187,23 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
 
 <main>
 <section class="eroe">
-  <div class="video"><video id="pianta3d" muted loop playsinline preload="none" poster="/media/c/realistico_poster_720.jpg" data-grande="/media/c/realistico_1280.mp4" data-piccolo="/media/c/realistico_720.mp4" aria-label="Video: the floor plan of a kitchen and its realistic render"></video><button type="button" class="guarda" id="guarda-video" hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>Watch the video</button></div>
-  <p class="render">Photoreal render · on request</p>
-  <div class="wrap">
-    <h1 class="gigante"><span>See your</span><span>kitchen.</span><span class="lime">Before you build it.</span><span class="piccola">Free 3D preview, in a few minutes.</span></h1>
-    <p class="sotto">Upload the floor plan or describe the venue. The AI draws, the engine checks, you turn it around in 3D.</p>
-    <div class="azioni"><a class="btn btn-primary" href="https://app.brigaplan.ai/registrati?lingua=en">Create my free preview <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-scuro" href="#costruisci">See how it's made</a></div>
-    <p class="piccolo">For now you need an invitation code. <a href="mailto:info@brigaplan.ai?subject=Brigaplan%20invitation%20code&amp;body=Type%20of%20venue%3A%0ACity%3A%0ASeats%3A%0AI%20have%20a%20floor%20plan%3A%20yes%20/%20no">Ask for it</a>.</p>
+  <div class="wrap eroe-griglia">
+    <div class="testo">
+      <h1 class="gigante"><span>See your kitchen</span><span class="lime">before you build it.</span></h1>
+      <p class="piccola">Free 3D preview, in a few minutes.</p>
+      <div class="azioni prima"><a class="btn btn-primary" href="https://app.brigaplan.ai/registrati?lingua=en">Create my free preview <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </div>
+    <div class="schermo"><div class="giro"><video id="pianta3d" muted loop playsinline preload="none" data-grande="/media/giro/giro_16x9_en.mp4" data-piccolo="/media/giro/giro_1x1_en.mp4" data-locandina-grande="/media/giro/giro_16x9_en_poster.jpg" data-locandina-piccola="/media/giro/giro_1x1_en_poster.jpg" aria-label="Video: a tour of a kitchen, from the floor plan to the render. Captions in the video."></video><button type="button" class="guarda" id="guarda-video" hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>Watch the video</button></div>
+      <p class="nota-video">Sample trattoria, 80 covers. Photoreal render · on request.</p></div>
+    <div class="dopo">
+      <p class="sotto">Upload the floor plan or describe the venue. The AI draws, the engine checks, you turn it around in 3D.</p>
+      <div class="azioni"><a class="btn btn-scuro" href="#per-chi">Who it's for</a></div>
+      <p class="piccolo">For now you need an invitation code. <a href="mailto:info@brigaplan.ai?subject=Brigaplan%20invitation%20code&amp;body=Type%20of%20venue%3A%0ACity%3A%0ASeats%3A%0AI%20have%20a%20floor%20plan%3A%20yes%20/%20no">Ask for it</a>.</p>
+    </div>
   </div>
 </section>
-<section class="costruisci" id="costruisci"><div class="wrap">
-  <span class="mono">How a preview is made</span><h2>How your preview is made, <em>in 5 steps.</em></h2>
-  <ol class="cinque"><li class="p1"><div class="figura"><svg class="pianta fino-1" viewBox="0 0 1000 680" role="img" aria-label="Walls">
-  <defs><marker id="punta1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#CDFF3A"/></marker></defs>
-  <g class="zone"><rect class="zona z1" x="62" y="62" width="176" height="150" rx="6"/><rect class="zona z2" x="262" y="118" width="356" height="220" rx="6"/><rect class="zona z3" x="642" y="62" width="296" height="104" rx="6"/><rect class="zona z4" x="62" y="430" width="270" height="148" rx="6"/><rect class="zona z5" x="642" y="436" width="296" height="142" rx="6"/></g>
-  <g class="attrezzi"><rect x="72" y="72" width="88" height="112"/><rect x="170" y="72" width="58" height="58"/><rect x="262" y="62" width="340" height="40"/><rect x="652" y="70" width="276" height="50"/><circle cx="690" cy="95" r="12"/><circle cx="726" cy="95" r="12"/><circle cx="762" cy="95" r="12"/><rect x="800" y="78" width="54" height="34"/><rect x="866" y="78" width="54" height="34"/><rect x="360" y="196" width="200" height="72"/><rect x="72" y="514" width="118" height="56"/><rect x="200" y="514" width="120" height="56"/><rect x="662" y="514" width="266" height="56"/></g>
-  <g class="muri"><path pathLength="1" d="M40 40H960V600H560M480 600H330M250 600H40V200M40 124V40"/></g>
-  <g class="flussi"><path pathLength="1" d="M8 162H110V260H300" marker-end="url(#punta1)"/><path pathLength="1" d="M560 230H720V176" marker-end="url(#punta1)"/><path pathLength="1" d="M860 176V424" marker-end="url(#punta1)"/><path pathLength="1" d="M720 586V640H520V664" marker-end="url(#punta1)"/><path pathLength="1" d="M290 664V600H200V588" marker-end="url(#punta1)"/></g>
-  <g class="etichette"><text x="78" y="232">COLD</text><text x="380" y="314">PREP</text><text x="652" y="152">COOKING</text><text x="78" y="456">WASHING</text><text x="652" y="462">PASS</text><text x="8" y="150">GOODS IN</text><text x="528" y="660">DINING</text><text x="300" y="660">DIRTY</text></g>
-</svg></div><b>01</b><h3>Walls</h3><p>The AI reads the floor plan you upload, or draws it from your description: walls, doors and windows.</p></li><li class="p2"><div class="figura"><svg class="pianta fino-2" viewBox="0 0 1000 680" role="img" aria-label="Zones">
-  <defs><marker id="punta2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#CDFF3A"/></marker></defs>
-  <g class="zone"><rect class="zona z1" x="62" y="62" width="176" height="150" rx="6"/><rect class="zona z2" x="262" y="118" width="356" height="220" rx="6"/><rect class="zona z3" x="642" y="62" width="296" height="104" rx="6"/><rect class="zona z4" x="62" y="430" width="270" height="148" rx="6"/><rect class="zona z5" x="642" y="436" width="296" height="142" rx="6"/></g>
-  <g class="attrezzi"><rect x="72" y="72" width="88" height="112"/><rect x="170" y="72" width="58" height="58"/><rect x="262" y="62" width="340" height="40"/><rect x="652" y="70" width="276" height="50"/><circle cx="690" cy="95" r="12"/><circle cx="726" cy="95" r="12"/><circle cx="762" cy="95" r="12"/><rect x="800" y="78" width="54" height="34"/><rect x="866" y="78" width="54" height="34"/><rect x="360" y="196" width="200" height="72"/><rect x="72" y="514" width="118" height="56"/><rect x="200" y="514" width="120" height="56"/><rect x="662" y="514" width="266" height="56"/></g>
-  <g class="muri"><path pathLength="1" d="M40 40H960V600H560M480 600H330M250 600H40V200M40 124V40"/></g>
-  <g class="flussi"><path pathLength="1" d="M8 162H110V260H300" marker-end="url(#punta2)"/><path pathLength="1" d="M560 230H720V176" marker-end="url(#punta2)"/><path pathLength="1" d="M860 176V424" marker-end="url(#punta2)"/><path pathLength="1" d="M720 586V640H520V664" marker-end="url(#punta2)"/><path pathLength="1" d="M290 664V600H200V588" marker-end="url(#punta2)"/></g>
-  <g class="etichette"><text x="78" y="232">COLD</text><text x="380" y="314">PREP</text><text x="652" y="152">COOKING</text><text x="78" y="456">WASHING</text><text x="652" y="462">PASS</text><text x="8" y="150">GOODS IN</text><text x="528" y="660">DINING</text><text x="300" y="660">DIRTY</text></g>
-</svg></div><b>02</b><h3>Zones</h3><p>It divides the kitchen into zones: cold, preparation, cooking, washing and pass.</p></li><li class="p3"><div class="figura"><svg class="pianta fino-3" viewBox="0 0 1000 680" role="img" aria-label="Equipment">
-  <defs><marker id="punta3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#CDFF3A"/></marker></defs>
-  <g class="zone"><rect class="zona z1" x="62" y="62" width="176" height="150" rx="6"/><rect class="zona z2" x="262" y="118" width="356" height="220" rx="6"/><rect class="zona z3" x="642" y="62" width="296" height="104" rx="6"/><rect class="zona z4" x="62" y="430" width="270" height="148" rx="6"/><rect class="zona z5" x="642" y="436" width="296" height="142" rx="6"/></g>
-  <g class="attrezzi"><rect x="72" y="72" width="88" height="112"/><rect x="170" y="72" width="58" height="58"/><rect x="262" y="62" width="340" height="40"/><rect x="652" y="70" width="276" height="50"/><circle cx="690" cy="95" r="12"/><circle cx="726" cy="95" r="12"/><circle cx="762" cy="95" r="12"/><rect x="800" y="78" width="54" height="34"/><rect x="866" y="78" width="54" height="34"/><rect x="360" y="196" width="200" height="72"/><rect x="72" y="514" width="118" height="56"/><rect x="200" y="514" width="120" height="56"/><rect x="662" y="514" width="266" height="56"/></g>
-  <g class="muri"><path pathLength="1" d="M40 40H960V600H560M480 600H330M250 600H40V200M40 124V40"/></g>
-  <g class="flussi"><path pathLength="1" d="M8 162H110V260H300" marker-end="url(#punta3)"/><path pathLength="1" d="M560 230H720V176" marker-end="url(#punta3)"/><path pathLength="1" d="M860 176V424" marker-end="url(#punta3)"/><path pathLength="1" d="M720 586V640H520V664" marker-end="url(#punta3)"/><path pathLength="1" d="M290 664V600H200V588" marker-end="url(#punta3)"/></g>
-  <g class="etichette"><text x="78" y="232">COLD</text><text x="380" y="314">PREP</text><text x="652" y="152">COOKING</text><text x="78" y="456">WASHING</text><text x="652" y="462">PASS</text><text x="8" y="150">GOODS IN</text><text x="528" y="660">DINING</text><text x="300" y="660">DIRTY</text></g>
-</svg></div><b>03</b><h3>Equipment</h3><p>It places counters and equipment where they are needed.</p></li><li class="p4"><div class="figura"><svg class="pianta fino-4" viewBox="0 0 1000 680" role="img" aria-label="Flows">
-  <defs><marker id="punta4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#CDFF3A"/></marker></defs>
-  <g class="zone"><rect class="zona z1" x="62" y="62" width="176" height="150" rx="6"/><rect class="zona z2" x="262" y="118" width="356" height="220" rx="6"/><rect class="zona z3" x="642" y="62" width="296" height="104" rx="6"/><rect class="zona z4" x="62" y="430" width="270" height="148" rx="6"/><rect class="zona z5" x="642" y="436" width="296" height="142" rx="6"/></g>
-  <g class="attrezzi"><rect x="72" y="72" width="88" height="112"/><rect x="170" y="72" width="58" height="58"/><rect x="262" y="62" width="340" height="40"/><rect x="652" y="70" width="276" height="50"/><circle cx="690" cy="95" r="12"/><circle cx="726" cy="95" r="12"/><circle cx="762" cy="95" r="12"/><rect x="800" y="78" width="54" height="34"/><rect x="866" y="78" width="54" height="34"/><rect x="360" y="196" width="200" height="72"/><rect x="72" y="514" width="118" height="56"/><rect x="200" y="514" width="120" height="56"/><rect x="662" y="514" width="266" height="56"/></g>
-  <g class="muri"><path pathLength="1" d="M40 40H960V600H560M480 600H330M250 600H40V200M40 124V40"/></g>
-  <g class="flussi"><path pathLength="1" d="M8 162H110V260H300" marker-end="url(#punta4)"/><path pathLength="1" d="M560 230H720V176" marker-end="url(#punta4)"/><path pathLength="1" d="M860 176V424" marker-end="url(#punta4)"/><path pathLength="1" d="M720 586V640H520V664" marker-end="url(#punta4)"/><path pathLength="1" d="M290 664V600H200V588" marker-end="url(#punta4)"/></g>
-  <g class="etichette"><text x="78" y="232">COLD</text><text x="380" y="314">PREP</text><text x="652" y="152">COOKING</text><text x="78" y="456">WASHING</text><text x="652" y="462">PASS</text><text x="8" y="150">GOODS IN</text><text x="528" y="660">DINING</text><text x="300" y="660">DIRTY</text></g>
-</svg></div><b>04</b><h3>Flows</h3><p>It traces the routes of goods, dishes and dirty items, and the engine checks the rules.</p></li><li class="p5"><div class="figura"><img src="/media/c/anteprima_stilizzata_800.jpg" alt="3D" loading="lazy" width="800" height="375"></div><b>05</b><h3>3D</h3><p>In a few minutes you can turn it around in stylised 3D.</p></li></ol>
-</div></section>
+<section class="sez per-chi" id="per-chi"><div class="wrap"><span class="mono">Who it's for</span><h2>A path for every trade.</h2>
+  <div class="schede"><a class="scheda" href="/en/ristoratori.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13h16a8 8 0 0 1-16 0z"/><path d="M12 5v4M8.5 6.5l1 2.5M15.5 6.5l-1 2.5"/></svg><span class="chi">Restaurant owners</span><h3>See the kitchen before you spend.</h3><p>Free 3D preview with a cost estimate for the equipment. If you go ahead, the full design and construction drawings; in Lombardy, installation by a partner installer.</p><span class="vai">What's in it for you <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="scheda" href="/en/rivenditori.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10l9-6 9 6"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg><span class="chi">Dealers and installers</span><h3>Proposals for your clients in minutes.</h3><p>With your logo, and construction drawings with the connections before the job starts. If you install kitchens and bars, you get requests from your area as a partner installer.</p><span class="vai">What's in it for you <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="scheda" href="/en/architetti.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20L20 4"/><path d="M4 20h16V4"/><path d="M14 20v-3M17 20v-6M20 10h-3M20 14h-3"/></svg><span class="chi">Architects and designers</span><h3>The kitchen inside your project.</h3><p>Zones and flows already laid out and checked by the engine. With the construction drawings you get the DXF to drop into your own drawings.</p><span class="vai">What's in it for you <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="scheda" href="/en/produttori.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="1.5"/><path d="M4 9h16M9 14h6M9 17h4"/></svg><span class="chi">Manufacturers</span><h3>Your equipment, with the right dimensions.</h3><p>Over 27,000 pieces of equipment from more than 80 brands in the catalogue, with dimensions from the official data sheets. In the full design your models are in the legend with brand and code.</p><span class="vai">What's in it for you <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div></div></section>
 <section class="numeri" id="numeri"><div class="wrap"><div><b>27.000+</b><span>pieces of equipment with manufacturers' dimensions</span></div><div><b>80+</b><span>brands</span></div><div><b>40+</b><span>rules measured automatically on every version</span></div><div><b>Free</b><span>the preview</span></div></div></section>
 <section class="dentro"><div class="wrap"><span class="mono">The platform</span><h2>You talk to the assistant. The project takes shape alongside.</h2>
   <div class="cornice"><ol class="chat" aria-label="Sample conversation with the assistant">
@@ -241,15 +216,13 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
         <img class="tavola-img" src="/media/tavola_anteprima_en.jpg?v=3" alt="The result: the trattoria preview, a plan without dimensions with zones, counters and flows" width="1600" height="900" loading="lazy">
         <figcaption class="didascalia"><b>The result.</b> The trattoria preview: floor plan with zones, counters and routes, 3D and a cost estimate for the equipment only, checked by the engine.</figcaption>
       </figure></div></div></section>
-<section class="sez" id="come-funziona"><div class="wrap"><span class="mono">Three steps</span><h2>A few minutes. No site visit.</h2><div class="tre-passi"><div class="passo-c"><b>01</b><h3>Upload the floor plan</h3><p>Or describe the venue in words. A photo is fine too.</p></div><div class="passo-c"><b>02</b><h3>The AI designs, the engine checks</h3><p>Zones, counters and flows, with the rules of the trade.</p></div><div class="passo-c"><b>03</b><h3>Get the floor plan, 3D and estimate</h3><p>In a few minutes. You only pay if you go ahead.</p></div></div></div></section>
-<section class="sez" id="esempi" style="padding-top:0"><div class="wrap"><span class="mono">Examples</span><h2>Made with Brigaplan.</h2><p class="nota">The images are renders of the projects; the free preview is in stylised 3D.</p></div>
+<section class="sez" id="esempi"><div class="wrap"><span class="mono">Examples</span><h2>Made with Brigaplan.</h2><p class="nota">The images are renders of the projects; the free preview is in stylised 3D.</p></div>
   <div class="nastro-box" tabindex="0" aria-label="Project examples"><div class="nastro"><figure><img src="/media/galleria/e03_3d.jpg" alt="3D of the project: Restaurant, 120 covers" loading="lazy" width="1200" height="750"><figcaption>Restaurant, 120 covers<span>Kitchen of 10 × 7 m</span></figcaption></figure><figure><img src="/media/galleria/e06_3d.jpg" alt="3D of the project: Pizzeria with electric oven, 60 seats" loading="lazy" width="1200" height="750"><figcaption>Pizzeria with electric oven, 60 seats<span>Kitchen and prep room in 6 × 4.5 m</span></figcaption></figure><figure><img src="/media/galleria/e08_3d.jpg" alt="3D of the project: Bar with kitchen, 60 seats" loading="lazy" width="1200" height="750"><figcaption>Bar with kitchen, 60 seats<span>Kitchen of 5 × 4 m</span></figcaption></figure><figure><img src="/media/galleria/e10_3d.jpg" alt="3D of the project: All-you-can-eat sushi, 260 seats" loading="lazy" width="1200" height="750"><figcaption>All-you-can-eat sushi, 260 seats<span>Hot kitchen and sushi in 10 × 6 m</span></figcaption></figure><figure><img src="/media/galleria/e12_3d.jpg" alt="3D of the project: Trattoria in a corridor, 35 seats" loading="lazy" width="1200" height="750"><figcaption>Trattoria in a corridor, 35 seats<span>Kitchen of 5 × 3.5 m</span></figcaption></figure><figure><img src="/media/galleria/e13_3d.jpg" alt="3D of the project: Restaurant with L-shaped kitchen, 100 covers" loading="lazy" width="1200" height="750"><figcaption>Restaurant with L-shaped kitchen, 100 covers<span>8 × 4 m plus a corner for washing</span></figcaption></figure><figure aria-hidden="true"><img src="/media/galleria/e03_3d.jpg" alt="" loading="lazy" width="1200" height="750"><figcaption>Restaurant, 120 covers<span>Kitchen of 10 × 7 m</span></figcaption></figure><figure aria-hidden="true"><img src="/media/galleria/e06_3d.jpg" alt="" loading="lazy" width="1200" height="750"><figcaption>Pizzeria with electric oven, 60 seats<span>Kitchen and prep room in 6 × 4.5 m</span></figcaption></figure><figure aria-hidden="true"><img src="/media/galleria/e08_3d.jpg" alt="" loading="lazy" width="1200" height="750"><figcaption>Bar with kitchen, 60 seats<span>Kitchen of 5 × 4 m</span></figcaption></figure><figure aria-hidden="true"><img src="/media/galleria/e10_3d.jpg" alt="" loading="lazy" width="1200" height="750"><figcaption>All-you-can-eat sushi, 260 seats<span>Hot kitchen and sushi in 10 × 6 m</span></figcaption></figure><figure aria-hidden="true"><img src="/media/galleria/e12_3d.jpg" alt="" loading="lazy" width="1200" height="750"><figcaption>Trattoria in a corridor, 35 seats<span>Kitchen of 5 × 3.5 m</span></figcaption></figure><figure aria-hidden="true"><img src="/media/galleria/e13_3d.jpg" alt="" loading="lazy" width="1200" height="750"><figcaption>Restaurant with L-shaped kitchen, 100 covers<span>8 × 4 m plus a corner for washing</span></figcaption></figure></div></div></section>
 <section class="sez bianca" id="cosa-si-paga"><div class="wrap"><span class="mono">Prices</span><h2>The preview is free.</h2>
   <div class="livelli"><div class="liv"><span class="prezzo si">Free</span><h3>Preview</h3><p>Floor plan with zones and counters, stylised 3D to rotate, cost estimate as a range for the equipment only, without transport and installation.</p></div><div class="liv"><span class="prezzo">from €181.78</span><h3>Full design</h3><p>Furnished floor plan, legend with brands and product codes, full 3D. With 0 errors you receive it as soon as the bank transfer arrives.</p></div><div class="liv"><span class="prezzo">from €475.80</span><h3>Construction drawings</h3><p>Elevations and connection tables, services plan, DXF and CSV files.</p></div></div><p class="sotto-prezzi">Launch prices including VAT, based on the m² of the work areas. For now you pay with an offer and a bank transfer: online payment is coming soon. Realistic renders: on request. <a href="/en/come-funziona.html#cf-livelli">See all prices</a></p></div></section>
-<section class="sez cobalto" id="per-chi"><div class="wrap carte">
+<section class="sez cobalto" id="fiducia"><div class="wrap carte">
   <div class="carta"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="1.5"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3"/></svg><h3>Your floor plans stay yours.</h3><p>We do not show them to other users or to partners unless you ask. <a href="/en/privacy-piattaforma.html">Who sees them</a></p></div>
   <div class="carta"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l4-4 4 3 3-3 7 6"/><path d="M7 15l3 3 4-1 4 3"/></svg><h3>Partner installers by area.</h3><p>In Lombardy it is Italfrigo Service S.r.l., the company that runs Brigaplan. The project is yours: use it with any supplier you like. <a href="/en/partner.html">Become a partner</a></p></div>
-  <div class="carta"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16v11H4z"/><path d="M9 8V5.5h6V8M4 13h16"/></svg><h3>Are you a professional?</h3><p>Proposals for your clients in a few minutes, with your logo. <a href="/en/pro.html">For professionals</a></p></div>
 </div></section>
 <section class="sez" id="domande"><div class="wrap"><span class="mono">FAQ</span><h2>In short.</h2><div class="faq"><details><summary>Is it really free?</summary><p>Yes. With your account you create 2 projects with the free preview, each with up to 3 versions. You only pay if you want the full design.</p></details>
 <details><summary>Do I have to have the floor plan?</summary><p>No. We ask you a few questions: dimensions, doors, windows. A photo or a sketch with at least one measurement is fine too.</p></details>
@@ -264,7 +237,7 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
   <div class="wrap">
     <span class="logo" translate="no">Briga<b>plan</b></span>
     <p>Design of commercial kitchens and bars with artificial intelligence.</p>
-    <p class="foot-link"><a href="/en/come-funziona.html">How it works and prices</a> · <a href="/en/domande.html">FAQ</a> · Guides: <a href="/guide/costo-cucina-professionale.html">how much a kitchen costs</a>, <a href="/guide/regole-cucina-lombardia.html">ASL rules in Lombardy</a>, <a href="/guide/pizzeria-forno-legna.html">wood-fired pizzeria</a>, <a href="/guide/cucina-sushi-ayce.html">sushi</a> · <a href="/en/pro.html">For professionals</a> · <a href="/en/partner.html">Installers</a> · <a href="/en/condizioni.html">Terms</a> · <a href="/en/privacy-piattaforma.html">Privacy</a> · <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
+    <p class="foot-link"><a href="/en/come-funziona.html">How it works and prices</a> · <a href="/en/domande.html">FAQ</a> · Guides: <a href="/guide/costo-cucina-professionale.html">how much a kitchen costs</a>, <a href="/guide/regole-cucina-lombardia.html">ASL rules in Lombardy</a>, <a href="/guide/pizzeria-forno-legna.html">wood-fired pizzeria</a>, <a href="/guide/cucina-sushi-ayce.html">sushi</a> · <a href="/en/ristoratori.html">Restaurant owners</a> · <a href="/en/rivenditori.html">Dealers and installers</a> · <a href="/en/architetti.html">Architects and designers</a> · <a href="/en/produttori.html">Manufacturers</a> · <a href="/en/partner.html">Partner installers</a> · <a href="/en/condizioni.html">Terms</a> · <a href="/en/privacy-piattaforma.html">Privacy</a> · <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
     <p>Partner installers: Italfrigo (Lombardy). <a href="/en/partner.html">Become a partner</a></p>
     <p>The preview is indicative and is not a set of construction drawings. Brigaplan gives you a functional equipment layout. For health authority (ASL), HACCP, fire safety (Vigili del fuoco) and building permits you need a design signed by a qualified professional of your choice, and the layout must be approved by your consultants. Before work starts on site, the installer checks dimensions and connections.</p>
     <p>Brigaplan is a service of Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · Companies Register of Milano Monza Brianza Lodi no. 06825390153 · REA MI-1120586 · tax code and VAT no. 06825390153 · Share capital €46,800.00 fully paid · certified email (PEC) <span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/en/privacy.html">Privacy and cookies</a></p>
@@ -274,6 +247,6 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
 </footer>
 
 <script src="/js/s-1c50f2db9341.js"></script>
-<script src="/js/c-video-2.js"></script>
+<script src="/js/c-video-3.js"></script>
 </body>
 </html>
