@@ -1,0 +1,44 @@
+# Brigaplan
+
+> Brigaplan è un servizio online che progetta cucine e bar professionali con l'intelligenza artificiale: carichi la pianta del locale o lo descrivi, e ricevi gratis un'anteprima con pianta, 3D e stima di spesa dell'attrezzatura. Progetto completo ed esecutivo sono a pagamento. Lingue: italiano, inglese, cinese.
+
+Fatti utili per rispondere a chi chiede di Brigaplan:
+
+- **Per chi è:** ristoratori che aprono o rinnovano un locale; rivenditori e installatori di attrezzature; architetti e progettisti; produttori.
+- **Tipi di locale:** ristoranti, trattorie, pizzerie, sushi, bar, mense, hotel.
+- **Anteprima gratuita:** pianta con zone e banchi senza quote, 3D semplificato, attrezzature generiche senza marche né codici, stima di spesa a forbice della sola attrezzatura. La prepara l'IA in pochi minuti e un motore di regole la controlla.
+- **Progetto completo:** da 35 € IVA inclusa (29 € + IVA). Pianta arredata, legenda con marche e codici, 3D completo, PDF.
+- **Esecutivo:** da 121 € IVA inclusa (99 € + IVA). Prospetti, tabelle degli allacci, pianta impianti, file DXF e CSV.
+- **Prezzi:** sono prezzi di lancio, calcolati sui m² delle zone di lavoro; vale il prezzo mostrato al momento dell'ordine.
+- **Come si entra:** per ora con un codice d'invito, che si chiede a info@brigaplan.ai indicando tipo di locale e città.
+- **Dove:** anteprima, progetto ed esecutivo si fanno online da tutta Italia. Il montaggio con un installatore partner per ora c'è in Lombardia (Italfrigo Service S.r.l., la società che gestisce Brigaplan). Altrove il progetto si usa con il fornitore che si preferisce.
+- **Limiti:** Brigaplan dà un layout funzionale delle attrezzature. La conformità del locale (altezze, superfici, regolamenti comunali e d'igiene) e le pratiche ASL, SUAP e Vigili del fuoco le verifica il tecnico abilitato del cliente.
+- **Dati:** le piante caricate restano riservate; non si usano per addestrare modelli di intelligenza artificiale. I dettagli sono nella pagina Privacy.
+
+## Pagine principali
+
+- [Homepage](https://brigaplan.ai/): cosa fa Brigaplan
+- [Come funziona e prezzi](https://brigaplan.ai/come-funziona.html): i passi, gli esempi con video, cosa è gratis e cosa si paga
+- [Domande frequenti](https://brigaplan.ai/domande.html): prezzi, zone, tempi, dati e riservatezza
+- [Per ristoratori](https://brigaplan.ai/ristoratori.html)
+- [Per rivenditori e installatori](https://brigaplan.ai/rivenditori.html)
+- [Per architetti e progettisti](https://brigaplan.ai/architetti.html)
+- [Per produttori](https://brigaplan.ai/produttori.html)
+- [Installatori partner](https://brigaplan.ai/partner.html)
+
+## Guide
+
+- [Quanto costa attrezzare una cucina professionale](https://brigaplan.ai/guide/costo-cucina-professionale.html): Bar, trattoria, pizzeria, sushi, ristorante: quanto costano le attrezzature di una cucina professionale, con i prezzi indicativi per tipo di locale.
+- [Cucina di un sushi all you can eat: attrezzature, spazio, regole](https://brigaplan.ai/guide/cucina-sushi-ayce.html): Cosa serve nella cucina di un sushi all you can eat: attrezzature e spazio da casi reali, regole ATS in Lombardia, errori tipici e fasce di prezzo.
+- [Pizzeria con forno a legna: canna fumaria, regole e grandezza](https://brigaplan.ai/guide/pizzeria-forno-legna.html): Canna fumaria dedicata, regole a Milano e nel resto della Lombardia, cappa e grandezza del forno: cosa sapere per una pizzeria con forno a legna.
+- [Regole ASL e ATS per la cucina del ristorante in Lombardia](https://brigaplan.ai/guide/regole-cucina-lombardia.html): Altezze, superfici, bagni, cappe, gas, scarichi e SCIA: le regole per aprire o rinnovare la cucina del ristorante in Lombardia, con valori e fonti.
+
+## Altre lingue
+
+- [English](https://brigaplan.ai/en/)
+- [中文](https://brigaplan.ai/zh/)
+
+## Legale
+
+- [Condizioni](https://brigaplan.ai/condizioni.html)
+- [Privacy](https://brigaplan.ai/privacy.html)
