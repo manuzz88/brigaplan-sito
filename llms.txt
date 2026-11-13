@@ -37,6 +37,8 @@ Fatti utili per rispondere a chi chiede di Brigaplan:
 
 - [English](https://brigaplan.ai/en/)
 - [中文](https://brigaplan.ai/zh/)
+- [Deutsch](https://brigaplan.ai/de/)
+- [Français](https://brigaplan.ai/fr/)
 
 ## Legale
 
