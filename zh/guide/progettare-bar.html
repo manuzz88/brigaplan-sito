@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>咖啡酒吧怎么设计：吧台、后吧台与设备 · Brigaplan</title>
+<meta name="description" content="咖啡酒吧怎么设计：吧台和后吧台、咖啡、冰块、洗杯机、饮料冷柜、水处理、要不要地台，以及要避免的错误。">
+<meta property="og:site_name" content="Brigaplan">
+<meta property="og:type" content="website">
+<meta property="og:title" content="咖啡酒吧怎么设计：吧台、后吧台与设备 · Brigaplan">
+<meta property="og:description" content="咖啡酒吧怎么设计：吧台和后吧台、咖啡、冰块、洗杯机、饮料冷柜、水处理、要不要地台，以及要避免的错误。">
+<meta property="og:url" content="https://brigaplan.ai/zh/guide/progettare-bar.html">
+<meta property="og:image" content="https://brigaplan.ai/media/brigaplan_og.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta property="og:image:alt" content="用 Brigaplan 完成的意式餐馆 3D 设计方案">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://brigaplan.ai/zh/guide/progettare-bar.html">
+<link rel="alternate" hreflang="it" href="https://brigaplan.ai/guide/progettare-bar.html">
+<link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/guide/progettare-bar.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/guide/progettare-bar.html">
+<link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/guide/progettare-bar.html">
+<link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/guide/progettare-bar.html">
+<link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/guide/progettare-bar.html">
+<link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/guide/progettare-bar.html">
+<link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/guide/progettare-bar.html">
+<meta name="theme-color" content="#FAFAF8">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="96x96" href="/icona-96.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/Archivo-100_900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/PublicSans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/pagine.css">
+<style>
+/* Versione cinese: font CJK di sistema, niente spaziature negative né caratteri allargati, interlinea più ampia per gli ideogrammi.
+   Il programma sito/strumenti/lingue.py lo aggiunge in fondo allo stile della pagina cinese. */
+:root {
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+  --f-body: "Archivo", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+  --f-mono: "Archivo", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+}
+body { line-height: 1.7; }
+h1, h2, h3 { font-stretch: 100%; letter-spacing: 0; line-height: 1.3; }
+h1 { line-height: 1.25; font-size: clamp(2rem, 1.1rem + 3.4vw, 3.6rem); } /* più piccolo: gli ideogrammi sono larghi e il 。 finale non deve andare a capo da solo */
+h1, h2 { font-weight: 700; }
+h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su punteggiatura e spazi, non a metà parola */
+.lead { line-height: 1.65; }
+.punch, .thesis { font-stretch: 100%; line-height: 1.5; }
+h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-stretch: 100%; }
+.partner strong { font-stretch: 100%; }
+.eyebrow, .why-k, .notice, .ex b, .cartiglio dt, .compare thead th, .pill, .price, .reel-tag, .reel-btn { letter-spacing: .04em; }
+@media (max-width: 640px) { .compare tbody th, .compare td::before { letter-spacing: .04em; } }
+.plan .zl { letter-spacing: 1px; }
+.plan .fl-l, .plan .hood-t { letter-spacing: .5px; }
+@media (max-width: 360px) { h1, h2, .for { word-break: normal; } }  /* schermi molto stretti: si va a capo anche tra gli ideogrammi */
+</style>
+<script type="application/ld+json" data-seo="articolo">{"@context": "https://schema.org", "@type": "Article", "headline": "咖啡酒吧怎么设计：吧台、后吧台与设备", "description": "咖啡酒吧怎么设计：吧台和后吧台、咖啡、冰块、洗杯机、饮料冷柜、水处理、要不要地台，以及要避免的错误。", "inLanguage": "zh-Hans", "url": "https://brigaplan.ai/zh/guide/progettare-bar.html", "mainEntityOfPage": "https://brigaplan.ai/zh/guide/progettare-bar.html", "author": {"@type": "Organization", "name": "Brigaplan", "url": "https://brigaplan.ai/", "logo": "https://brigaplan.ai/icona-512.png"}, "publisher": {"@type": "Organization", "name": "Brigaplan", "url": "https://brigaplan.ai/", "logo": "https://brigaplan.ai/icona-512.png"}}</script>
+<script type="application/ld+json" data-seo="briciole">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Brigaplan", "item": "https://brigaplan.ai/zh/"}, {"@type": "ListItem", "position": 2, "name": "指南: 咖啡酒吧怎么设计：吧台、后吧台与设备", "item": "https://brigaplan.ai/zh/guide/progettare-bar.html"}]}</script>
+</head>
+<body>
+<div class="notice" role="region" aria-label="通知"><div class="wrap">Brigaplan 试运行中 · 目前只能凭邀请码注册</div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/zh/" aria-label="Brigaplan，返回首页">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><rect class="lm-wall" x="1.5" y="1.5" width="23" height="23"/><path class="lm-line" d="M1.5 11H13V24.5M13 7V1.5"/><rect class="lm-acc" x="16" y="15" width="6" height="6"/></svg>
+      <span translate="no">Briga<b>plan</b></span>
+    </a>
+    <nav class="nav" aria-label="页面栏目">
+      <a href="/zh/come-funziona.html">使用流程</a>
+      <a href="/zh/#cosa-si-paga">收费方式</a>
+      <a href="/zh/#per-chi">适用对象</a>
+    </nav>
+    <div class="top-azioni">
+      <details class="menu-tel"><summary>菜单</summary><nav aria-label="菜单"><a href="/zh/come-funziona.html">使用方法和价格</a><a href="/zh/domande.html">常见问题</a><a href="/zh/ristoratori.html">餐厅老板</a><a href="/zh/rivenditori.html">经销商和安装商</a><a href="/zh/architetti.html">建筑师和设计师</a><a href="/zh/produttori.html">设备厂家</a><a href="https://app.brigaplan.ai/accedi?lingua=zh">登录</a><div class="lingue-menu" translate="no"><a href="/domande.html" lang="it" hreflang="it">IT</a>
+        <a href="/en/domande.html" lang="en" hreflang="en">EN</a>
+        <a href="/zh/domande.html" lang="zh-Hans" hreflang="zh-Hans">中文</a>
+        <a href="/de/" lang="de" hreflang="de">DE</a>
+        <a href="/fr/" lang="fr" hreflang="fr">FR</a>
+        <a href="/es/" lang="es" hreflang="es">ES</a>
+        <a href="/nl/" lang="nl" hreflang="nl">NL</a></div></nav></details>
+      <nav class="lingue" translate="no" aria-label="语言">
+        <a href="/guide/progettare-bar.html" lang="it" hreflang="it">IT</a>
+        <a href="/en/guide/progettare-bar.html" lang="en" hreflang="en">EN</a>
+        <a href="/zh/guide/progettare-bar.html" lang="zh-Hans" hreflang="zh-Hans" aria-current="page">中文</a>
+        <a href="/de/guide/progettare-bar.html" lang="de" hreflang="de">DE</a>
+        <a href="/fr/guide/progettare-bar.html" lang="fr" hreflang="fr">FR</a>
+        <a href="/es/guide/progettare-bar.html" lang="es" hreflang="es">ES</a>
+        <a href="/nl/guide/progettare-bar.html" lang="nl" hreflang="nl">NL</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="https://app.brigaplan.ai/registrati?lingua=zh">免费试用</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap doc">
+  <div class="doc-head">
+    <span class="eyebrow">指南</span>
+    <h1>咖啡酒吧怎么设计：吧台、后吧台与设备</h1>
+    <p class="sec-lead">咖啡酒吧的设计，围绕吧台后面工作人员的动作展开：做一杯咖啡、调一杯鸡尾酒、洗杯子，都不用多走一步。本文说明吧台、后吧台和设备怎样布置，独立的咖啡酒吧和餐厅里的咖啡酒吧都适用。</p>
+  </div>
+  <div class="prosa guida">
+    <h2>从哪里开始</h2>
+    <ul><li><strong>您卖什么</strong>：咖啡、鸡尾酒、葡萄酒、冷食或热食。每一样都需要相应的设备。展示柜、扒炉、开胃小食台和生啤要在一开始就说明：它们需要自己的空间和接口。</li><li><strong>高峰时段有多少人在吧台后面工作。</strong></li><li><strong>店面</strong>：尺寸、入口、客座区在哪里、进水和排水在哪里。</li><li><strong>能源</strong>：可用电力（kW），可在电费单或电表上找到。</li></ul>
+    <h2>吧台和后吧台</h2>
+    <ul><li><strong>吧台</strong>面向顾客：工作时面朝客座区。</li><li><strong>后吧台</strong>在身后：酒瓶、冷柜，有时还有咖啡机。</li><li><strong>水槽设在吧台的工作台上，不设在后吧台</strong>：工作时要面向顾客。</li><li><strong>吧台和后吧台之间的通道</strong>要让工作人员走动方便；如果吧台后面有两个人工作，两人要能错身通过。</li><li><strong>垃圾和空瓶</strong>：要留出放垃圾和空瓶的地方。</li></ul>
+    <h2>咖啡</h2>
+    <ul><li><strong>咖啡机旁边放磨豆机，</strong>下面是咖啡渣抽屉：一个动作就能完成。</li><li><strong>咖啡柜</strong>还带一个备用抽屉，以及一个放咖啡机软水器的设备仓。</li><li><strong>磨豆机要远离热源和潮气</strong>：不放在冷柜压缩机上方，也不挨着洗杯机的蒸汽。</li></ul>
+    <h2>杯子和清洗</h2>
+    <ul><li><strong>洗杯机放在吧台下面，</strong>靠近脏杯子送回来的地方。</li><li><strong>水处理</strong>：要杯子不留水渍，在洗杯机旁边装一台专用的反渗透净水装置；只要洗得干净，一台软水器就够了。水处理设备放在可以打开的柜体里，因为要加料和更换。</li><li><strong>洗手池</strong>设在工作区内，使用非手动开关。</li></ul>
+    <h2>冰块和冷藏</h2>
+    <ul><li><strong>制冰机放在调鸡尾酒的人旁边，</strong>不放在厨房里。</li><li><strong>饮料冷柜</strong>放在后吧台或吧台下面，不要放在门正对着顾客打开的位置。</li><li><strong>一台冷冻柜</strong>放冰淇淋、甜点和苦味利口酒，如果您供应这些的话。</li><li><strong>压缩机要通风</strong>：制冰机和冷柜都有会发热的压缩机。散热格栅要保持通畅，不能封在吧台里面。</li><li><strong>进水和排水</strong>：制冰机和洗杯机需要进水和排水；有些冷柜需要冷凝水排水。这些要在安装吧台之前确定。</li></ul>
+    <h2>要不要地台</h2>
+    <p>过去咖啡酒吧都做在木地台上。现在有两种更干净的做法。</p>
+    <ul><li><strong>用支脚，</strong>和店面其他地方在同一标高。</li><li><strong>用砌筑底座，</strong>柜体直接放在上面。</li><li><strong>木地台</strong>现在仍然可以做，但我们不建议：下面会积脏东西。有了地台，柜体的高度会不同：要在一开始就确定。</li></ul>
+    <h2>餐厅里的吧台</h2>
+    <ul><li><strong>明吧</strong>：大多数餐厅的吧台设在餐厅里，配有洗杯机、咖啡、冰块和饮料冷柜。</li><li><strong>暗吧</strong>：高档餐厅的吧台往往是一个封闭的服务间，靠近餐厅，配置相同。</li><li><strong>甜点</strong>：很多餐厅由吧台负责甜点，吧台有自己放甜点和冰淇淋的冷柜；出品量大的餐厅，甜点放在厨房做。</li></ul>
+    <h2>带厨房的咖啡酒吧</h2>
+    <p>如果您也做热食，烹饪要遵守所有厨房的规则：烹饪设备都要在排烟罩下面，餐具清洗要和吧台分开。请看<a href="/zh/guide/progettare-cucina-ristorante.html">餐厅厨房怎么设计</a>。</p>
+    <h2>最常见的错误</h2>
+    <ul><li><strong>水槽设在后吧台</strong>：工作时背对顾客。</li><li><strong>制冰机离</strong>调鸡尾酒的人太远。</li><li><strong>磨豆机放在压缩机上方，</strong>或挨着蒸汽。</li><li><strong>制冰机或冷柜被封住，</strong>压缩机不通风。</li><li><strong>洗杯机离</strong>杯子送回来的地方太远。</li><li><strong>选好吧台之后</strong>才确定进水和排水。</li><li><strong>地台最后才决定，</strong>柜体的高度不对。</li><li><strong>饮料冷柜的门朝顾客打开。</strong></li></ul>
+    <h2>您的技术人员核实什么</h2>
+    <p>面积、层高、卫生间和当地法规，每个国家都不同，往往每个城市也不同。由您的技术人员核实：设备设计方案不能证明店面合规。</p>
+    <h2>其他指南</h2>
+    <ul><li><a href="/zh/guide/progettare-cucina-ristorante.html">餐厅厨房怎么设计</a></li><li><a href="/zh/guide/cucina-ristorante-piccola.html">小餐厅的厨房</a></li><li><a href="/zh/guide/gas-o-elettrico-cucina-professionale.html">专业厨房用燃气还是用电</a></li></ul>
+    <h2>用您的店面试一试：预览方案免费</h2>
+    <p>在 Brigaplan 上传平面图或描述店面，就能免费获得一份预览方案：带功能分区和操作台的平面图、3D 模型和设备费用估算。请说明您卖什么，以及有多少人在吧台后面工作。目前需要邀请码才能进入：请写信到 info@brigaplan.ai 索取，并说明店面类型和所在城市。</p>
+    <p>设计方案在线完成。当地规定需要请当地的技术人员核实。</p>
+    <p>本指南不是技术意见，也不是法律意见：实际项目由持证技术人员和当地主管部门决定。</p>
+  </div>
+</main>
+
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="logo"><span translate="no">Briga<b>plan</b></span></span>
+    <p>用人工智能设计商用厨房和吧台。</p>
+    <p class="foot-link"><a href="/zh/come-funziona.html">使用方法和价格</a> · <a href="/zh/domande.html">常见问题</a> · 指南：<a href="/guide/costo-cucina-professionale.html">厨房要花多少钱</a>、<a href="/guide/regole-cucina-lombardia.html">伦巴第大区 ASL 规定</a>、<a href="/guide/pizzeria-forno-legna.html">柴火披萨店</a>、<a href="/guide/cucina-sushi-ayce.html">寿司</a> · <a href="/zh/ristoratori.html">餐厅老板</a> · <a href="/zh/rivenditori.html">经销商和安装商</a> · <a href="/zh/architetti.html">建筑师和设计师</a> · <a href="/zh/produttori.html">设备厂家</a> · <a href="/zh/partner.html">合作安装商</a> · <a href="/zh/condizioni.html">使用条款</a> · <a href="/zh/privacy-piattaforma.html">隐私</a> · <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
+    <p>合作安装商：Italfrigo（伦巴第大区）。</p>
+    <p>Brigaplan 是 Italfrigo Service S.r.l. 提供的服务 · Via Serviliano Lattuada 26, 20135 Milano · 米兰-蒙扎布里安扎-洛迪企业登记处登记号 06825390153 · 经济行政登记号 REA MI-1120586 · 税号和增值税号 C.F. e P.IVA 06825390153 · 注册资本 46,800.00 欧元（已全额实缴）· 认证邮箱（PEC）<span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/zh/privacy.html">隐私与 Cookie</a></p>
+  </div>
+</footer>
+<script src="/js/s-1c50f2db9341.js"></script>
+</body>
+</html>
