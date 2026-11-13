@@ -29,8 +29,11 @@ Fatti utili per rispondere a chi chiede di Brigaplan:
 ## Guide
 
 - [Quanto costa attrezzare una cucina professionale](https://brigaplan.ai/guide/costo-cucina-professionale.html): Bar, trattoria, pizzeria, sushi, ristorante: quanto costano le attrezzature di una cucina professionale, con i prezzi indicativi per tipo di locale.
+- [Cucina di un ristorante piccolo: come organizzarla in pochi metri](https://brigaplan.ai/guide/cucina-ristorante-piccola.html): Come organizzare la cucina di un ristorante piccolo: cosa tenere, cosa unire, dove mettere freddo, forno e lavaggio, e gli errori che rubano spazio.
 - [Cucina di un sushi all you can eat: attrezzature, spazio, regole](https://brigaplan.ai/guide/cucina-sushi-ayce.html): Cosa serve nella cucina di un sushi all you can eat: attrezzature e spazio da casi reali, regole ATS in Lombardia, errori tipici e fasce di prezzo.
+- [Cucina professionale a gas o elettrica: come scegliere](https://brigaplan.ai/guide/gas-o-elettrico-cucina-professionale.html): Gas, elettrico o misto nella cucina di un ristorante: da cosa dipende la scelta, cosa guardare nel locale e cosa cambia per cappa, impianti e progetto.
 - [Pizzeria con forno a legna: canna fumaria, regole e grandezza](https://brigaplan.ai/guide/pizzeria-forno-legna.html): Canna fumaria dedicata, regole a Milano e nel resto della Lombardia, cappa e grandezza del forno: cosa sapere per una pizzeria con forno a legna.
+- [Come progettare la cucina di un ristorante: zone e percorsi](https://brigaplan.ai/guide/progettare-cucina-ristorante.html): Come si progetta la cucina di un ristorante: le zone, il percorso degli alimenti, sporco e pulito separati, le partite, gas o elettrico e gli errori da evitare.
 - [Regole ASL e ATS per la cucina del ristorante in Lombardia](https://brigaplan.ai/guide/regole-cucina-lombardia.html): Altezze, superfici, bagni, cappe, gas, scarichi e SCIA: le regole per aprire o rinnovare la cucina del ristorante in Lombardia, con valori e fonti.
 
 ## Altre lingue
