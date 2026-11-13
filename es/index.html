@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brigaplan · Cocinas y bares profesionales diseñados con IA</title>
+<meta name="description" content="Sube el plano o describe tu local: Brigaplan te prepara gratis una vista previa de tu cocina o de tu bar profesional. Después, proyecto, proyecto de ejecución y montaje con un instalador asociado, por ahora solo en Lombardía (Italia).">
+<meta property="og:site_name" content="Brigaplan">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Brigaplan · Cocinas y bares profesionales diseñados con IA">
+<meta property="og:description" content="Del plano de tu local al proyecto completo. Primera vista previa gratis, preparada por la IA y comprobada por el motor.">
+<meta property="og:url" content="https://brigaplan.ai/es/">
+<meta property="og:image" content="https://brigaplan.ai/media/brigaplan_og.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta property="og:image:alt" content="El proyecto en 3D de una trattoria hecho con Brigaplan">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://brigaplan.ai/es/">
+<link rel="alternate" hreflang="it" href="https://brigaplan.ai/">
+<link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/">
+<link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/">
+<link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/">
+<link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/">
+<link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/">
+<link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/">
+<link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Brigaplan", "logo": "https://brigaplan.ai/icona-512.png", "url": "https://brigaplan.ai/", "email": "info@brigaplan.ai", "parentOrganization": {"@type": "Organization", "name": "Italfrigo Service S.r.l.", "vatID": "IT06825390153", "address": {"@type": "PostalAddress", "streetAddress": "Via Serviliano Lattuada 26", "postalCode": "20135", "addressLocality": "Milano", "addressCountry": "IT"}}}</script>
+<meta name="theme-color" content="#09090B">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="96x96" href="/icona-96.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/Archivo-100_900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/pagine.css">
+<style>
+body { background: var(--nero); color: #F4F4EF; }
+.ic { width: 22px; height: 22px; flex: none; }
+.mono { display: block; font: 500 .78rem var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: #A9A9B1; margin-bottom: 14px; }
+.gigante { font-family: var(--f-display); font-weight: 900; font-stretch: 125%; line-height: .9; letter-spacing: -.035em; margin: 0; }
+.gigante .lime { color: var(--lime); } :lang(zh) .gigante { line-height: 1.12; letter-spacing: 0; }
+main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-stretch: 120%; line-height: .95; letter-spacing: -.03em; text-wrap: balance; }
+.btn-scuro { color: #F4F4EF; border-color: #4A4A55; background: transparent; }
+.btn-scuro:hover { background: #F4F4EF; color: var(--nero); }
+.top .btn-primary { color: var(--nero); }
+.azioni { display: flex; gap: 12px; flex-wrap: wrap; }
+.piccolo { font-size: .85rem; color: #A9A9B1; margin-top: 16px; } .piccolo a { color: var(--lime); }
+
+/* prima schermata: testo a sinistra, video intero a destra; sul telefono titolo, bottone e video stanno nello schermo */
+.eroe { padding-block: 64px 80px; position: relative; }
+.eroe-griglia { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); grid-template-areas: "testo schermo" "dopo schermo";
+  column-gap: clamp(28px, 4vw, 64px); row-gap: 0; align-items: start; }
+.eroe .testo { grid-area: testo; align-self: end; }
+.eroe .schermo { grid-area: schermo; align-self: center; min-width: 0; }
+.eroe .dopo { grid-area: dopo; }
+.eroe h1 { font-size: clamp(2.3rem, .3rem + 5.1vw, 5.6rem); max-width: none; }
+.eroe h1 span { display: block; text-wrap: balance; }
+.eroe .piccola { font: 800 clamp(1.1rem, .8rem + 1vw, 1.7rem)/1.2 var(--f-display); font-stretch: 112%; letter-spacing: -.01em; margin: .7em 0 0; color: #F4F4EF; }
+.eroe .azioni.prima { margin-top: 26px; }
+.eroe .sotto { font-size: 1.15rem; max-width: 30rem; color: #D6D6D0; margin: 26px 0 18px; }
+.giro { position: relative; aspect-ratio: 16 / 9; border-radius: 18px; overflow: hidden; background: #FAFAF8 url(/media/giro/giro_16x9_en_poster.jpg) center / cover no-repeat;
+  border: 1px solid #2E2E36; box-shadow: 0 50px 110px -50px rgba(205,255,58,.32); }
+.giro video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.giro .guarda { position: absolute; left: 50%; top: 42%; transform: translate(-50%, -50%); z-index: 3; display: inline-flex; align-items: center; gap: 10px;
+  font: 700 1.05rem/1 var(--f-body); color: var(--nero); background: var(--lime); border: 0; border-radius: 999px; padding: 14px 22px 14px 18px;
+  cursor: pointer; box-shadow: 0 6px 24px rgba(0,0,0,.3); white-space: nowrap; }
+.giro .guarda[hidden] { display: none; }
+.giro .guarda .ic { width: 20px; height: 20px; }
+.giro .guarda:focus-visible { outline: 3px solid var(--nero); outline-offset: 3px; }
+.nota-video { margin: 10px 2px 0; font-size: .82rem; color: #A9A9B1; }
+/* comandi del giro (versione 2): sotto il video, grandi abbastanza per il dito */
+.comandi { margin-top: 12px; display: grid; gap: 10px; }
+.comandi .riga { display: flex; align-items: center; gap: 8px; }
+.tasto { width: 44px; height: 44px; flex: none; display: grid; place-items: center; padding: 0; border-radius: 50%; border: 1px solid #3A3A44;
+  background: #16161A; color: #F4F4EF; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.tasto .ic { width: 20px; height: 20px; }
+.tasto:hover { border-color: var(--lime); }
+.tasto.grande { width: 52px; height: 52px; background: var(--lime); border-color: var(--lime); color: var(--nero); }
+.tasto.grande .ic { width: 24px; height: 24px; }
+#giro-pausa .ic-play, #giro-pausa.fermo .ic-pausa { display: none; }
+#giro-pausa.fermo .ic-play { display: block; }
+.barra { position: relative; flex: 1; min-width: 0; height: 44px; margin-left: 6px; cursor: pointer; touch-action: pan-y;
+  user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }
+.barra .binario { position: absolute; left: 0; right: 0; top: 50%; height: 6px; margin-top: -3px; border-radius: 3px; background: #33333C; overflow: hidden; }
+.barra .pieno { position: absolute; inset: 0; transform-origin: 0 50%; transform: scaleX(0); background: var(--lime); }
+.barra .segno { position: absolute; top: 0; bottom: 0; width: 3px; margin-left: -1.5px; background: var(--nero); }
+.barra .pomo { position: absolute; top: 50%; left: 0; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; background: #F4F4EF;
+  box-shadow: 0 0 0 4px rgba(205,255,58,.28); pointer-events: none; }
+.barra:hover .pomo { box-shadow: 0 0 0 6px rgba(205,255,58,.4); }
+.tasto:focus-visible, .barra:focus-visible, .tappe button:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
+.tappe { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; }
+.tappe button { width: 100%; min-height: 48px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  padding: 6px 4px; border-radius: 12px; border: 1px solid #2E2E36; background: #16161A; color: #A9A9B1; font: 600 .78rem/1.1 var(--f-body);
+  cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.tappe button b { font: 600 1rem/1 var(--f-mono); color: #F4F4EF; }
+.tappe button span { max-width: 100%; text-align: center; overflow-wrap: anywhere; text-wrap: balance; }
+.tappe button:hover { border-color: #5A5A66; }
+.tappe button[aria-current="step"] { background: var(--lime); border-color: var(--lime); color: var(--nero); }
+.tappe button[aria-current="step"] b { color: var(--nero); }
+
+/* per chi è: 4 schede, ognuna porta alla sua pagina */
+.per-chi { border-top: 1px solid #26262C; }
+.schede { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
+.scheda { display: flex; flex-direction: column; gap: 10px; padding: 26px 22px 22px; border-radius: 18px; background: #16161A; border: 1px solid #2E2E36;
+  color: #F4F4EF; text-decoration: none; transition: border-color .2s, transform .2s; min-width: 0; }
+.scheda:hover, .scheda:focus-visible { border-color: var(--lime); transform: translateY(-3px); }
+.scheda > .ic { width: 30px; height: 30px; color: var(--lime); }
+.scheda .chi { font: 500 .78rem var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: #A9A9B1; margin-top: 6px; }
+.scheda h3 { font-size: 1.45rem; font-weight: 800; font-stretch: 112%; line-height: 1.08; margin: 0; text-wrap: balance; }
+.scheda p { color: #B9B9C0; font-size: .97rem; margin: 0; flex: 1; }
+.scheda .vai { display: inline-flex; align-items: center; gap: 8px; color: var(--lime); font-weight: 700; margin-top: 8px; }
+.scheda .vai .ic { width: 18px; height: 18px; }
+
+.numeri { background: var(--lime); color: var(--nero); padding-block: 90px; }
+.numeri .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 60px; }
+.numeri b { display: block; font-family: var(--f-display); font-weight: 900; font-stretch: 125%; font-size: clamp(3.2rem, 1.2rem + 7vw, 9rem); line-height: .9; letter-spacing: -.04em; }
+.numeri span { font-weight: 600; font-size: 1.15rem; }
+.dentro { padding-block: 110px; border-top: 1px solid #26262C; }
+.dentro h2 { max-width: 18ch; }
+.cornice { margin-top: 44px; border-radius: 22px; padding: 22px; background: #16161A; border: 1px solid #2E2E36; box-shadow: 0 60px 120px -60px rgba(205,255,58,.35);
+  display: grid; grid-template-columns: 1fr 1.25fr; gap: 26px; align-items: start; }
+.cornice .chat { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; font-size: .95rem; }
+.cornice .msg { padding: 12px 14px; border-radius: 14px; line-height: 1.5; }
+.cornice .msg .chi { display: block; font: 500 .72rem var(--f-mono); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 4px; }
+.cornice .cliente { background: #26262C; color: #F4F4EF; margin-left: 12%; } .cornice .cliente .chi { color: #A9A9B1; }
+.cornice .assistente { background: #0F0F12; color: #E4E4DD; border: 1px solid #2E2E36; border-left: 3px solid var(--lime); margin-right: 6%; } .cornice .assistente .chi { color: var(--lime); }
+.cornice figure img { width: 100%; height: auto; border-radius: 14px; display: block; background: #F7F6F1; }
+.cornice figcaption { color: #A9A9B1; font-size: .9rem; margin-top: 4px; } .cornice figcaption b { color: #F4F4EF; }
+.sez { padding-block: 110px; }
+.nota { color: #A9A9B1; font-size: .9rem; margin-top: 14px; }
+.nastro-box { overflow: hidden; margin-top: 40px; }
+.nastro { display: flex; gap: 18px; width: max-content; padding-inline: 20px; }
+.nastro figure { margin: 0; width: 380px; flex: none; }
+.nastro img { aspect-ratio: 16/10; object-fit: cover; border-radius: 14px; width: 100%; height: auto; }
+.nastro figcaption { margin-top: 10px; font-weight: 600; } .nastro figcaption span { display: block; color: #A9A9B1; font-weight: 400; font-size: .92rem; }
+.bianca { background: var(--paper); color: var(--nero); }
+.bianca .mono { color: #55555E; } .bianca a { color: var(--cobalto); }
+.livelli { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 46px; border-top: 2px solid var(--nero); }
+.liv { padding: 26px 26px 6px 0; } .liv + .liv { padding-left: 26px; border-left: 1px solid #CFCFC8; }
+.liv h3 { font-size: 1.5rem; font-weight: 800; font-stretch: 112%; margin: 0 0 12px; } .liv p { color: #3C3C44; }
+.liv .prezzo { display: inline-block; font-family: var(--f-display); font-weight: 900; font-stretch: 120%; font-size: 2rem; margin: 0 0 14px; }
+.liv .prezzo.si { background: var(--lime); padding: 2px 12px; border-radius: 10px; }
+.sotto-prezzi { margin-top: 28px; color: #3C3C44; }
+.cobalto { background: var(--cobalto); color: #FFFFFF; }
+.carte { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.carta { border: 1px solid rgba(255,255,255,.4); border-radius: 20px; padding: 30px; }
+.carta h3 { font-size: 1.6rem; font-weight: 800; font-stretch: 115%; margin: 14px 0 10px; } .carta p { color: #E6EAFF; }
+.carta a { color: #FFFFFF; font-weight: 600; }
+.faq { margin-top: 30px; border-top: 1px solid #26262C; }
+.faq details { border-bottom: 1px solid #26262C; }
+.faq summary { color: #F4F4EF; font-size: 1.4rem; padding: 22px 40px 22px 0; }
+.faq summary::after { color: var(--lime); top: 18px; }
+.faq details p { color: #A9A9B1; font-size: 1.1rem; max-width: 50rem; }
+.faq details p a { color: var(--lime); }
+.finale { padding-block: 130px 110px; text-align: center; border-top: 1px solid #26262C; }
+.finale .gigante { font-size: clamp(2.8rem, .5rem + 9vw, 10rem); }
+.finale .sotto { color: #A9A9B1; font-size: 1.2rem; margin: 28px 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .eroe h1 span, .eroe .piccola { animation: sale 1s cubic-bezier(.2,.7,.2,1) both; } .eroe h1 span:nth-child(2) { animation-delay: .1s; } .eroe .piccola { animation-delay: .2s; }
+  @keyframes sale { from { opacity: 0; transform: translateY(.3em); } }
+  .nastro { animation: scorre 52s linear infinite; } .nastro-box:hover .nastro, .nastro-box:focus-within .nastro { animation-play-state: paused; }
+  @keyframes scorre { to { transform: translateX(-50%); } }
+}
+@media (prefers-reduced-motion: reduce) { .nastro-box { overflow-x: auto; } .scheda { transition: none; } .scheda:hover { transform: none; } }
+@media (max-width: 1100px) { .schede { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 960px) {
+  .eroe-griglia { grid-template-columns: minmax(0, 1fr); grid-template-areas: "testo" "schermo" "dopo"; }
+  .eroe .schermo { margin-top: 26px; }
+  .numeri .wrap, .livelli, .carte { grid-template-columns: 1fr; } .liv + .liv { border-left: 0; padding-left: 0; border-top: 1px solid #CFCFC8; }
+  .nastro figure { width: 280px; } .dentro, .sez { padding-block: 80px; } .cornice { grid-template-columns: 1fr; padding: 14px; }
+}
+/* telefono: fascia e testata compatte, titolo su due righe, bottone a tutta larghezza, video quadrato */
+@media (max-width: 760px) {
+  .notice { font-size: .8rem; } .notice .wrap { padding-block: 5px; line-height: 1.3; }
+  .top .wrap { padding-block: 10px; }
+  .eroe { padding-block: 18px 54px; }
+  .eroe h1 { font-size: clamp(1.6rem, 8.1vw, 2.6rem); }       /* «Vedi la tua cucina» su una riga: a 100 px è largo 1073 px */
+  .eroe .piccola { font-size: 1.02rem; margin-top: .55em; }
+  .eroe .azioni.prima { margin-top: 16px; } .eroe .azioni.prima .btn { width: 100%; justify-content: center; }
+  .eroe .schermo { margin-top: 16px; }
+  .giro { aspect-ratio: 1 / 1; border-radius: 14px; background-image: url(/media/giro/giro_1x1_en_poster.jpg); }
+  .comandi { margin-top: 10px; gap: 8px; }
+  .tappe { gap: 5px; } .tappe button { min-height: 44px; padding: 4px 2px; } .tappe button b { font-size: 1.05rem; }
+  .tappe button span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .eroe .sotto { font-size: 1.05rem; margin-top: 22px; }
+  .schede { grid-template-columns: minmax(0, 1fr); gap: 12px; margin-top: 28px; }
+  .scheda { padding: 20px 18px 18px; } .scheda h3 { font-size: 1.3rem; }
+}
+</style>
+<script type="application/ld+json" data-seo="sito">{"@context": "https://schema.org", "@type": "WebSite", "name": "Brigaplan", "url": "https://brigaplan.ai/", "inLanguage": "es", "description": "Sube el plano o describe tu local: Brigaplan te prepara gratis una vista previa de tu cocina o de tu bar profesional. Después, proyecto, proyecto de ejecución y montaje con un instalador asociado, por ahora solo en Lombardía (Italia).", "publisher": {"@type": "Organization", "name": "Brigaplan", "url": "https://brigaplan.ai/", "logo": "https://brigaplan.ai/icona-512.png"}}</script>
+</head>
+<body>
+<div class="notice" role="region" aria-label="Aviso"><div class="wrap">Brigaplan está en pruebas · por ahora solo se accede con un código de invitación</div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Brigaplan, inicio de la página">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><rect class="lm-wall" x="1.5" y="1.5" width="23" height="23"/><path class="lm-line" d="M1.5 11H13V24.5M13 7V1.5"/><rect class="lm-acc" x="16" y="15" width="6" height="6"/></svg>
+      <span translate="no">Briga<b>plan</b></span>
+    </a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#per-chi">Para quién</a>
+      <a href="#esempi">Ejemplos</a>
+      <a href="#cosa-si-paga">Precios</a>
+      <a href="#domande">Preguntas</a>
+    </nav>
+    <div class="top-azioni">
+      <details class="menu-tel"><summary>Menú</summary><nav aria-label="Menú"><a href="/es/come-funziona.html">Cómo funciona y precios</a><a href="/en/domande.html">Preguntas</a><a href="/en/ristoratori.html">Hosteleros</a><a href="/en/rivenditori.html">Distribuidores e instaladores</a><a href="/en/architetti.html">Arquitectos y proyectistas</a><a href="/en/produttori.html">Fabricantes</a><a href="https://app.brigaplan.ai/accedi?lingua=en">Acceder</a><div class="lingue-menu" translate="no"><a href="/" lang="it" hreflang="it">IT</a>
+        <a href="/en/" lang="en" hreflang="en">EN</a>
+        <a href="/zh/" lang="zh-Hans" hreflang="zh-Hans">中文</a>
+        <a href="/de/" lang="de" hreflang="de">DE</a>
+        <a href="/fr/" lang="fr" hreflang="fr">FR</a>
+        <a href="/es/" lang="es" hreflang="es">ES</a>
+        <a href="/nl/" lang="nl" hreflang="nl">NL</a></div></nav></details>
+      <nav class="lingue" translate="no" aria-label="Idioma">
+        <a href="/" lang="it" hreflang="it">IT</a>
+        <a href="/en/" lang="en" hreflang="en">EN</a>
+        <a href="/zh/" lang="zh-Hans" hreflang="zh-Hans">中文</a>
+        <a href="/de/" lang="de" hreflang="de">DE</a>
+        <a href="/fr/" lang="fr" hreflang="fr">FR</a>
+        <a href="/es/" lang="es" hreflang="es" aria-current="page">ES</a>
+        <a href="/nl/" lang="nl" hreflang="nl">NL</a>
+      </nav>
+      <a class="accedi" href="https://app.brigaplan.ai/accedi?lingua=en">Acceder</a>
+      <a class="btn btn-primary btn-sm" href="https://app.brigaplan.ai/registrati?lingua=en">Prueba gratis</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="eroe">
+  <div class="wrap eroe-griglia">
+    <div class="testo">
+      <h1 class="gigante"><span>Mira tu cocina</span><span class="lime">antes de construirla.</span></h1>
+      <p class="piccola">Vista previa gratis en 3D, en pocos minutos.</p>
+      <div class="azioni prima"><a class="btn btn-primary" href="https://app.brigaplan.ai/registrati?lingua=en">Crea la vista previa gratis <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </div>
+    <div class="schermo"><div class="giro"><video id="pianta3d" muted loop playsinline preload="none" data-grande="/media/giro/giro_16x9_en.mp4" data-piccolo="/media/giro/giro_1x1_en.mp4" data-locandina-grande="/media/giro/giro_16x9_en_poster.jpg" data-locandina-piccola="/media/giro/giro_1x1_en_poster.jpg" data-tappe="0,9.7,15.2,23.2,34.2,41.7" data-durata="50.2" aria-label="Vídeo: el recorrido por una cocina, del plano al render. Subtítulos en el vídeo."></video><button type="button" class="guarda" id="guarda-video" hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>Ver el vídeo</button></div><div class="comandi" id="comandi-giro" data-txt-pausa="Pausa" data-txt-avvia="Reproducir"><div class="riga"><button type="button" class="tasto" id="giro-indietro" aria-label="Etapa anterior"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h2.2v14H6zM19 5.6v12.8L9.6 12z" fill="currentColor"/></svg></button><button type="button" class="tasto grande fermo" id="giro-pausa" aria-label="Reproducir"><svg class="ic ic-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg><svg class="ic ic-pausa" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z" fill="currentColor"/></svg></button><button type="button" class="tasto" id="giro-avanti" aria-label="Etapa siguiente"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.8 5H18v14h-2.2zM5 5.6v12.8l9.4-6.4z" fill="currentColor"/></svg></button><div class="barra" id="giro-barra" role="slider" tabindex="0" aria-label="Posición en el vídeo" aria-valuemin="0" aria-valuemax="50" aria-valuenow="0"><div class="binario"><div class="pieno"></div></div><div class="pomo"></div></div></div><ol class="tappe" aria-label="Etapas del vídeo"><li><button type="button"><b>1</b><span>Plano</span></button></li><li><button type="button"><b>2</b><span>Zonas</span></button></li><li><button type="button"><b>3</b><span>Equipos</span></button></li><li><button type="button"><b>4</b><span>3D</span></button></li><li><button type="button"><b>5</b><span>Proyecto de ejecución</span></button></li><li><button type="button"><b>6</b><span>Render</span></button></li></ol></div>
+      <p class="nota-video">Trattoria de ejemplo, 80 cubiertos. Render realista · a petición.</p></div>
+    <div class="dopo">
+      <p class="sotto">Sube el plano o describe tu local. La IA dibuja, el motor comprueba y tú giras la cocina en 3D.</p>
+      <p class="nota-lingua">El servicio está en inglés, el asistente habla tu idioma. Normas locales por verificar con un técnico de la zona. Montaje con un instalador asociado: por ahora solo en Lombardía (Italia).</p>
+      <div class="azioni"><a class="btn btn-scuro" href="#per-chi">Para quién</a></div>
+      <p class="piccolo">Por ahora se accede con un código de invitación. <a href="mailto:info@brigaplan.ai?subject=C%C3%B3digo%20de%20invitaci%C3%B3n%20Brigaplan&amp;body=Tipo%20de%20local%3A%0ACiudad%3A%0ACubiertos%3A%0ATengo%20el%20plano%3A%20s%C3%AD%20/%20no">Pídelo</a>.</p>
+    </div>
+  </div>
+</section>
+<section class="sez per-chi" id="per-chi"><div class="wrap"><span class="mono">Para quién</span><h2>Un camino para cada profesión.</h2>
+  <div class="schede"><a class="scheda" href="/en/ristoratori.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13h16a8 8 0 0 1-16 0z"/><path d="M12 5v4M8.5 6.5l1 2.5M15.5 6.5l-1 2.5"/></svg><span class="chi">Hosteleros</span><h3>Mira la cocina antes de gastar.</h3><p>Vista previa gratis en 3D con la estimación de costes de los equipos. Si sigues adelante, proyecto completo y proyecto de ejecución; en Lombardía (Italia), el montaje con un instalador asociado.</p><span class="vai">Qué hay para ti <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="scheda" href="/en/rivenditori.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10l9-6 9 6"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg><span class="chi">Distribuidores e instaladores</span><h3>Propuestas para tus clientes en pocos minutos.</h3><p>Con tu logotipo, y el proyecto de ejecución con las acometidas antes de la obra. Si montas cocinas y bares en Italia, recibes las solicitudes de tu zona como instalador asociado.</p><span class="vai">Qué hay para ti <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="scheda" href="/en/architetti.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20L20 4"/><path d="M4 20h16V4"/><path d="M14 20v-3M17 20v-6M20 10h-3M20 14h-3"/></svg><span class="chi">Arquitectos y proyectistas</span><h3>La cocina dentro de tu proyecto.</h3><p>Zonas y flujos ya definidos y comprobados por el motor. Con el proyecto de ejecución recibes el DXF para incluirlo en tus láminas.</p><span class="vai">Qué hay para ti <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="scheda" href="/en/produttori.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="1.5"/><path d="M4 9h16M9 14h6M9 17h4"/></svg><span class="chi">Fabricantes</span><h3>Tus equipos, con las medidas correctas.</h3><p>En el catálogo, más de 27.000 equipos de más de 80 marcas, con las medidas de las fichas oficiales. En el proyecto completo, tus modelos aparecen en la leyenda con marca y referencia.</p><span class="vai">Qué hay para ti <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div></div></section>
+<section class="numeri" id="numeri"><div class="wrap"><div><b>27.000+</b><span>equipos con las medidas de los fabricantes</span></div><div><b>80+</b><span>marcas</span></div><div><b>40+</b><span>reglas comprobadas automáticamente en cada versión</span></div><div><b>Gratis</b><span>la vista previa</span></div></div></section>
+<section class="dentro"><div class="wrap"><span class="mono">La plataforma</span><h2>Hablas con el asistente. El proyecto toma forma al lado.</h2>
+  <div class="cornice"><ol class="chat" aria-label="Ejemplo de conversación con el asistente">
+        <li class="msg cliente"><span class="chi">Tú</span>Abro una trattoria de 80 cubiertos en Milán, cocina lombarda. Te envío el plano del local.</li>
+        <li class="msg assistente"><span class="chi">Asistente Brigaplan</span>He recibido el plano: cocina de 9,20 x 5,60 m, puerta hacia la sala de 80 cm, puerta de servicio de 90 cm.<br>Antes de dibujar necesito unas pocas respuestas:<br>1. ¿Cada cuántos días llegan las entregas?<br>2. ¿La cocina es de gas o eléctrica?<br>3. ¿Conducto de humos hasta el tejado o filtros de carbón?<br>4. ¿Frío con motor incorporado o remoto?<br>Si hay algo que no sabes, uso valores estándar y te digo cuáles he elegido.</li>
+        <li class="msg cliente"><span class="chi">Tú</span>Entregas tres veces por semana, cocina toda de inducción, campana con salida al tejado, frío con motor incorporado.</li>
+        <li class="msg assistente"><span class="chi">Asistente Brigaplan</span>La versión 1 está lista como borrador automático: el motor la ha comprobado con las reglas, sin errores, y la tienes aquí al lado. Es una distribución funcional de los equipos: para sanidad (ASL), HACCP y bomberos hacen falta el proyecto y la firma de un técnico habilitado elegido por ti. Si quieres, uno de nuestros proyectistas puede revisarla (servicio de pago).</li>
+      </ol>
+      <figure style="margin:0;display:grid;gap:10px">
+        <img class="tavola-img" src="/media/tavola_anteprima_b5_en.jpg" alt="El resultado: la vista previa de la trattoria, plano sin cotas con zonas, mesas de trabajo y recorridos" width="1600" height="900" loading="lazy">
+        <figcaption class="didascalia"><b>El resultado.</b> La vista previa de la trattoria: plano con zonas, mesas de trabajo y recorridos, 3D y estimación de costes solo de los equipos, comprobados por el motor.</figcaption>
+      </figure></div></div></section>
+<section class="sez" id="esempi"><div class="wrap"><span class="mono">Ejemplos</span><h2>Hechas con Brigaplan.</h2><p class="nota">Las imágenes son renders de los proyectos; la vista previa gratis está en 3D estilizado.</p></div>
+  <div class="nastro-box" tabindex="0" aria-label="Ejemplos de proyectos"><div class="nastro"><figure><img src="/media/galleria/h03_3d.jpg" alt="3D del proyecto: Restaurante, 120 cubiertos" loading="lazy" width="1200" height="750"><figcaption>Restaurante, 120 cubiertos<span>Cocina de 10 × 7 m con isla · inducción</span></figcaption></figure><figure><img src="/media/galleria/e06_3d.jpg" alt="3D del proyecto: Pizzería con horno eléctrico, 60 plazas" loading="lazy" width="1200" height="750"><figcaption>Pizzería con horno eléctrico, 60 plazas<span>Cocina y obrador en 6 × 4,5 m</span></figcaption></figure><figure><img src="/media/galleria/h08_3d.jpg" alt="3D del proyecto: Bar con cocina, 60 plazas" loading="lazy" width="1200" height="750"><figcaption>Bar con cocina, 60 plazas<span>Cocina de 5 × 4 m · gas</span></figcaption></figure><figure><img src="/media/galleria/e10_3d.jpg" alt="3D del proyecto: Sushi libre, 260 plazas" loading="lazy" width="1200" height="750"><figcaption>Sushi libre, 260 plazas<span>Cocina caliente y sushi en 10 × 6 m</span></figcaption></figure><figure><img src="/media/galleria/e12_3d.jpg" alt="3D del proyecto: Trattoria en un pasillo, 35 plazas" loading="lazy" width="1200" height="750"><figcaption>Trattoria en un pasillo, 35 plazas<span>Cocina de 5 × 3,5 m</span></figcaption></figure><figure><img src="/media/galleria/e13_3d.jpg" alt="3D del proyecto: Restaurante con cocina en L, 100 cubiertos" loading="lazy" width="1200" height="750"><figcaption>Restaurante con cocina en L, 100 cubiertos<span>8 × 4 m más un rincón para el lavado</span></figcaption></figure><figure aria-hidden="true"><img src="/media/galleria/h03_3d.jpg" alt="" loading="lazy" width="1200" height="750"><figcaption>Restaurante, 120 cubiertos<span>Cocina de 10 × 7 m con isla · inducción</span></figcaption></figure><figure aria-hidden="true"><img src="/media/galleria/e06_3d.jpg" alt="" loading="lazy" width="1200" height="750"><figcaption>Pizzería con horno eléctrico, 60 plazas<span>Cocina y obrador en 6 × 4,5 m</span></figcaption></figure><figure aria-hidden="true"><img src="/media/galleria/h08_3d.jpg" alt="" loading="lazy" width="1200" height="750"><figcaption>Bar con cocina, 60 plazas<span>Cocina de 5 × 4 m · gas</span></figcaption></figure><figure aria-hidden="true"><img src="/media/galleria/e10_3d.jpg" alt="" loading="lazy" width="1200" height="750"><figcaption>Sushi libre, 260 plazas<span>Cocina caliente y sushi en 10 × 6 m</span></figcaption></figure><figure aria-hidden="true"><img src="/media/galleria/e12_3d.jpg" alt="" loading="lazy" width="1200" height="750"><figcaption>Trattoria en un pasillo, 35 plazas<span>Cocina de 5 × 3,5 m</span></figcaption></figure><figure aria-hidden="true"><img src="/media/galleria/e13_3d.jpg" alt="" loading="lazy" width="1200" height="750"><figcaption>Restaurante con cocina en L, 100 cubiertos<span>8 × 4 m más un rincón para el lavado</span></figcaption></figure></div></div></section>
+<section class="sez bianca" id="cosa-si-paga"><div class="wrap"><span class="mono">Precios</span><h2>La vista previa es gratis.</h2>
+  <div class="livelli"><div class="liv"><span class="prezzo si">Gratis</span><h3>Vista previa</h3><p>Plano con zonas y mesas de trabajo, 3D estilizado para girar, estimación de costes en horquilla solo de los equipos, sin transporte ni montaje.</p></div><div class="liv"><span class="prezzo">desde 35 €</span><h3>Proyecto completo</h3><p>Plano de implantación, leyenda con marcas y referencias, 3D completo. Con 0 errores lo recibes en cuanto llega la transferencia.</p></div><div class="liv"><span class="prezzo">desde 121 €</span><h3>Proyecto de ejecución</h3><p>Alzados y tablas de acometidas, plano de instalaciones, archivos DXF y CSV.</p></div></div><p class="sotto-prezzi">Precios de lanzamiento IVA incluido, según los m² de las zonas de trabajo. Por ahora se paga con presupuesto y transferencia: el pago online llegará pronto. Renders realistas: a petición. Para profesionales, suscripciones desde 39 € + IVA al mes. <a href="/es/come-funziona.html#cf-livelli">Ver todos los precios</a></p></div></section>
+<section class="sez cobalto" id="fiducia"><div class="wrap carte">
+  <div class="carta"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="1.5"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3"/></svg><h3>Tus planos siguen siendo tuyos.</h3><p>No se los mostramos a otros usuarios ni a los instaladores asociados, salvo que tú lo pidas. <a href="/en/privacy-piattaforma.html">Quién los ve</a></p></div>
+  <div class="carta"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l4-4 4 3 3-3 7 6"/><path d="M7 15l3 3 4-1 4 3"/></svg><h3>Instaladores asociados por zona.</h3><p>En Lombardía (Italia) es Italfrigo Service S.r.l., la empresa que gestiona Brigaplan. El proyecto es tuyo: lo usas con el proveedor que quieras. <a href="/en/partner.html">Hazte instalador asociado</a></p></div>
+</div></section>
+<section class="sez" id="domande"><div class="wrap"><span class="mono">Preguntas</span><h2>En resumen.</h2><div class="faq"><details><summary>¿De verdad es gratis?</summary><p>Sí. Con tu cuenta creas 2 proyectos con la vista previa gratuita, cada uno con hasta 3 versiones. Solo pagas si quieres el proyecto completo.</p></details>
+<details><summary>¿Necesito sí o sí el plano?</summary><p>No. Te hacemos algunas preguntas: medidas, puertas, ventanas. También vale una foto o un boceto con al menos una medida.</p></details>
+<details><summary>¿La vista previa basta para construir?</summary><p>No: sirve para entender espacios, dimensiones y costes. Para sanidad (ASL), HACCP, bomberos y licencias de obra hacen falta el proyecto y la firma de un técnico habilitado elegido por ti.</p></details>
+<details><summary>¿Quién ve mis planos?</summary><p>Tú. Nuestro equipo solo los abre si pides la revisión, el proyecto completo o nuestra ayuda, o para un control de calidad por muestreo, al que puedes oponerte. Todo está en la <a href="/en/privacy-piattaforma.html">política de privacidad de la plataforma</a>.</p></details>
+</div><p class="piccolo"><a href="/en/domande.html">Todas las preguntas</a></p></div></section>
+<section class="finale" id="prova"><div class="wrap"><p class="gigante">Prueba con<br><span class="lime">tu local.</span></p>
+  <p class="sotto">Cinco minutos y, si lo tienes, el plano.</p><a class="btn btn-primary" href="https://app.brigaplan.ai/registrati?lingua=en">Crea la vista previa gratis <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="logo" translate="no">Briga<b>plan</b></span>
+    <p>Diseño de cocinas y bares profesionales con inteligencia artificial.</p>
+    <p class="nota-lingua">Las condiciones y la política de privacidad están en italiano y en inglés.</p>
+    <p class="foot-link"><a href="/es/come-funziona.html">Cómo funciona y precios</a> · <a href="/en/domande.html">Preguntas</a> · Guías: <a href="/guide/costo-cucina-professionale.html">cuánto cuesta una cocina</a>, <a href="/guide/regole-cucina-lombardia.html">normas sanitarias (ASL) en Lombardía</a>, <a href="/en/guide/pizzeria-forno-legna.html">pizzería con horno de leña</a>, <a href="/en/guide/cucina-sushi-ayce.html">sushi</a> · <a href="/en/ristoratori.html">Hosteleros</a> · <a href="/en/rivenditori.html">Distribuidores e instaladores</a> · <a href="/en/architetti.html">Arquitectos y proyectistas</a> · <a href="/en/produttori.html">Fabricantes</a> · <a href="/en/partner.html">Instaladores asociados</a> · <a href="/en/condizioni.html">Condiciones</a> · <a href="/en/privacy-piattaforma.html">Privacidad</a> · <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
+    <p>Instaladores asociados: Italfrigo, en Lombardía (Italia). <a href="/en/partner.html">Hazte instalador asociado</a></p>
+    <p>La vista previa es orientativa y no es un proyecto de ejecución. Brigaplan te da una distribución funcional de los equipos. Para sanidad (ASL), HACCP, bomberos y licencias de obra hacen falta el proyecto y la firma de un técnico habilitado elegido por ti, y tus asesores tienen que aprobar la distribución. Antes de la obra, las medidas y las acometidas las comprueba el instalador.</p>
+    <p>Brigaplan es un servicio de Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · Registro de empresas de Milano Monza Brianza Lodi n.º 06825390153 · REA MI-1120586 · Código fiscal y n.º de IVA 06825390153 · Capital social 46.800,00 € íntegramente desembolsado · PEC <span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/en/privacy.html">Privacidad y cookies</a></p>
+    <p>Contacto: <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
+    <p id="privacy"><strong>Privacidad y cookies.</strong> Este sitio no usa cookies ni herramientas de seguimiento. Contamos las visitas con un contador propio y anónimo: solo los totales por página, idioma y procedencia. El servicio que aloja el sitio registra por seguridad las direcciones IP de las visitas. Para quien se registra, se aplican la <a href="/en/privacy-piattaforma.html">política de privacidad de la plataforma</a> y las <a href="/en/condizioni.html">condiciones de uso</a>.</p>
+  </div>
+</footer>
+
+<script src="/js/s-1c50f2db9341.js"></script>
+<script src="/js/c-video-4.js"></script>
+</body>
+</html>
