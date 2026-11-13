@@ -373,6 +373,20 @@
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/claude.html"/>
  </url>
  <url>
+  <loc>https://brigaplan.ai/confronto.html</loc>
+  <lastmod>2026-11-13</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/confronto.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/confronto.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/confronto.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/en/confronto.html</loc>
+  <lastmod>2026-11-13</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/confronto.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/confronto.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/confronto.html"/>
+ </url>
+ <url>
   <loc>https://brigaplan.ai/de/</loc>
   <lastmod>2026-11-13</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/"/>
