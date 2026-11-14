@@ -212,3 +212,11 @@ section[id] { scroll-margin-top: 12px; }
 .scheda a { display: block; }
 .scheda figcaption { font-size: .875rem; color: var(--muted); }
 .scheda figcaption strong { color: var(--ink); display: block; }
+/* telefono (14/11/2026): nessuna pagina scorre di lato */
+@media (max-width: 520px) {
+  h1 { font-size: min(2.4rem, 9vw); }
+  :lang(zh) :is(h1, h2, h3) { overflow-wrap: anywhere; }
+  .carte > * { min-width: 0; }
+  :lang(de) .foot-link a { white-space: normal; }
+}
+@media (max-width: 360px) { :is(h2, h3) { overflow-wrap: anywhere; } }
