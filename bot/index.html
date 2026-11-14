@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BrigaplanBot, il lettore di schede tecniche di Brigaplan · Brigaplan</title>
+<meta name="description" content="BrigaplanBot legge solo schede tecniche e disegni pubblici dei produttori di attrezzature, rispetta robots.txt e si esclude con «User-agent: BrigaplanBot».">
+<meta property="og:site_name" content="Brigaplan">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BrigaplanBot, il lettore di schede tecniche di Brigaplan · Brigaplan">
+<meta property="og:description" content="BrigaplanBot legge solo schede tecniche e disegni pubblici dei produttori di attrezzature, rispetta robots.txt e si esclude con «User-agent: BrigaplanBot».">
+<meta property="og:url" content="https://brigaplan.ai/bot/">
+<meta property="og:image" content="https://brigaplan.ai/media/brigaplan_og.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta property="og:image:alt" content="Il progetto in 3D di una trattoria fatto con Brigaplan">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="it" href="https://brigaplan.ai/bot/">
+<link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/bot/">
+<link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/en/bot/">
+<link rel="canonical" href="https://brigaplan.ai/bot/">
+<meta name="theme-color" content="#FAFAF8">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="96x96" href="/icona-96.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/Archivo-100_900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/PublicSans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/pagine.css">
+<style>.robots-esempio{background:var(--sheet);border:1px solid var(--line);border-radius:12px;padding:14px 18px;overflow-x:auto}</style>
+</head>
+<body>
+<div class="notice" role="region" aria-label="Avviso"><div class="wrap">Brigaplan è in prova · per ora si entra solo con un codice di invito</div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="Brigaplan, torna alla homepage">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><rect class="lm-wall" x="1.5" y="1.5" width="23" height="23"/><path class="lm-line" d="M1.5 11H13V24.5M13 7V1.5"/><rect class="lm-acc" x="16" y="15" width="6" height="6"/></svg>
+      <span translate="no">Briga<b>plan</b></span>
+    </a>
+    <nav class="nav" aria-label="Sezioni">
+      <a href="/come-funziona.html">Come funziona</a>
+      <a href="/#cosa-si-paga">Cosa si paga</a>
+      <a href="/#per-chi">Per chi è</a>
+    </nav>
+    <div class="top-azioni">
+      <details class="menu-tel"><summary>Menu</summary><nav aria-label="Menu"><a href="/come-funziona.html">Come funziona e prezzi</a><a href="/domande.html">Domande</a><a href="/ristoratori.html">Ristoratori</a><a href="/rivenditori.html">Rivenditori e installatori</a><a href="/architetti.html">Architetti e progettisti</a><a href="/produttori.html">Produttori</a><a href="https://app.brigaplan.ai/accedi?lingua=it">Accedi</a><div class="lingue-menu" translate="no"><a href="/bot/" lang="it" hreflang="it">IT</a>
+        <a href="/en/bot/" lang="en" hreflang="en">EN</a>
+        <a href="/zh/" lang="zh-Hans" hreflang="zh-Hans">中文</a>
+        <a href="/de/" lang="de" hreflang="de">DE</a>
+        <a href="/fr/" lang="fr" hreflang="fr">FR</a>
+        <a href="/es/" lang="es" hreflang="es">ES</a>
+        <a href="/nl/" lang="nl" hreflang="nl">NL</a></div></nav></details>
+      <nav class="lingue" translate="no" aria-label="Lingua">
+        <a href="/bot/" lang="it" hreflang="it" aria-current="page">IT</a>
+        <a href="/en/bot/" lang="en" hreflang="en">EN</a>
+        <a href="/zh/" lang="zh-Hans" hreflang="zh-Hans">中文</a>
+        <a href="/de/" lang="de" hreflang="de">DE</a>
+        <a href="/fr/" lang="fr" hreflang="fr">FR</a>
+        <a href="/es/" lang="es" hreflang="es">ES</a>
+        <a href="/nl/" lang="nl" hreflang="nl">NL</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="https://app.brigaplan.ai/registrati?lingua=it">Prova gratis</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap doc">
+  <div class="doc-head">
+    <span class="eyebrow">Per i produttori e i gestori di siti</span>
+    <h1 translate="no">BrigaplanBot</h1>
+    <p class="sec-lead">BrigaplanBot è il programma con cui Brigaplan legge le schede tecniche e i disegni pubblici dei produttori di attrezzature per la ristorazione. Si presenta con l'agente <code>BrigaplanBot/1.0 (+https://brigaplan.ai/bot)</code>.</p>
+  </div>
+
+  <div class="prosa">
+    <section>
+      <h2>Cosa legge</h2>
+      <p>Solo schede tecniche e disegni pubblicati dai produttori sui loro siti ufficiali, per prendere le misure delle attrezzature e la posizione degli allacci (elettricità, acqua, scarico, gas). Legge soltanto i siti di una nostra lista di produttori, controllata a mano, solo in https: niente moduli, niente login, niente cookie.</p>
+    </section>
+    <section>
+      <h2>Cosa non fa</h2>
+      <p>Non raccoglie dati personali. Non legge né salva prezzi o listini. Non ripubblica i vostri file: conserviamo solo i dati tecnici letti, con l&#x27;indirizzo e la data della pagina, l&#x27;impronta del file e una breve frase di prova.</p>
+    </section>
+    <section>
+      <h2>Come si comporta</h2>
+      <p>Rispetta il vostro robots.txt, che rilegge ogni 24 ore, e le condizioni d&#x27;uso del sito: se vietano la lettura automatica, il sito non viene letto. Fa al massimo una richiesta ogni 5 secondi e 200 al giorno per sito; se il sito risponde 429 o 503, si ferma per quel giorno.</p>
+    </section>
+    <section>
+      <h2>Come escluderlo</h2>
+      <p>Aggiungete al vostro robots.txt queste righe:</p>
+      <pre class="robots-esempio" translate="no"><code>User-agent: BrigaplanBot
+Disallow: /</code></pre>
+      <p>Oppure scriveteci a <a href="mailto:info@brigaplan.ai">info@brigaplan.ai</a> e togliamo il vostro sito dalla lista.</p>
+    </section>
+    <p class="nota-lingua">Brigaplan è un servizio di Italfrigo Service S.r.l., Milano.</p>
+  </div>
+</main>
+<script src="/js/s-e8eccfd1dfc9.js"></script>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="logo"><span translate="no">Briga<b>plan</b></span></span>
+    <p>Progettazione di cucine e bar professionali con l'intelligenza artificiale.</p>
+    <p class="foot-link"><a href="/come-funziona.html">Come funziona e prezzi</a> · <a href="/domande.html">Domande</a> · Guide: <a href="/guide/costo-cucina-professionale.html">quanto costa una cucina</a>, <a href="/guide/regole-cucina-lombardia.html">regole ASL in Lombardia</a>, <a href="/guide/pizzeria-forno-legna.html">pizzeria a legna</a>, <a href="/guide/cucina-sushi-ayce.html">sushi</a> · <a href="/ristoratori.html">Ristoratori</a> · <a href="/rivenditori.html">Rivenditori e installatori</a> · <a href="/architetti.html">Architetti e progettisti</a> · <a href="/produttori.html">Produttori</a> · <a href="/partner.html">Installatori partner</a> · <a href="/condizioni.html">Condizioni</a> · <a href="/privacy-piattaforma.html">Privacy</a> · <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a></p>
+    <p>Installatori partner: Italfrigo (Lombardia).</p>
+    <p>Brigaplan è un servizio di Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · Registro delle imprese di Milano Monza Brianza Lodi n. 06825390153 · REA MI-1120586 · C.F. e P.IVA 06825390153 · Capitale sociale 46.800,00 € i.v. · PEC <span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/privacy.html">Privacy e cookie</a></p>
+  </div>
+</footer>
+<script src="/js/s-1c50f2db9341.js"></script>
+</body>
+</html>
