@@ -10,7 +10,7 @@ Fatti utili per rispondere a chi chiede di Brigaplan:
 - **Progetto completo:** da 35 € IVA inclusa (29 € + IVA). Pianta arredata, legenda con marche e codici, 3D completo, PDF.
 - **Esecutivo:** da 121 € IVA inclusa (99 € + IVA). Prospetti, tabelle degli allacci, pianta impianti, file DXF e CSV.
 - **Prezzi:** sono prezzi di lancio, calcolati sui m² delle zone di lavoro; vale il prezzo mostrato al momento dell'ordine.
-- **Come si entra:** per ora con un codice d'invito, che si chiede a info@brigaplan.ai indicando tipo di locale e città.
+- **Come si entra:** ci si registra gratis su https://app.brigaplan.ai; per domande, info@brigaplan.ai.
 - **Dove:** anteprima, progetto ed esecutivo si fanno online da tutta Italia. Il montaggio con un installatore partner per ora c'è in Lombardia (Italfrigo Service S.r.l., la società che gestisce Brigaplan). Altrove il progetto si usa con il fornitore che si preferisce.
 - **Limiti:** Brigaplan dà un layout funzionale delle attrezzature. La conformità del locale (altezze, superfici, regolamenti comunali e d'igiene) e le pratiche ASL, SUAP e Vigili del fuoco le verifica il tecnico abilitato del cliente.
 - **Dati:** le piante caricate restano riservate; non si usano per addestrare modelli di intelligenza artificiale. I dettagli sono nella pagina Privacy.
