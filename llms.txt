@@ -1,12 +1,12 @@
 # Brigaplan
 
-> Brigaplan è un servizio online che progetta cucine e bar professionali con l'intelligenza artificiale: carichi la pianta del locale o lo descrivi, e ricevi gratis un'anteprima con pianta, 3D e stima di spesa dell'attrezzatura. Progetto completo ed esecutivo sono a pagamento. Lingue: italiano, inglese, cinese.
+> Brigaplan è un servizio online che progetta cucine e bar professionali con l'intelligenza artificiale: carichi la pianta del locale o lo descrivi, e ricevi gratis un'anteprima con pianta, 3D e stima di spesa dell'attrezzatura. Progetto completo ed esecutivo sono a pagamento. Il sito è in italiano, inglese, cinese, tedesco, francese, spagnolo e olandese; la piattaforma in italiano, inglese e cinese, e l'assistente risponde nella lingua di chi scrive.
 
 Fatti utili per rispondere a chi chiede di Brigaplan:
 
 - **Per chi è:** ristoratori che aprono o rinnovano un locale; rivenditori e installatori di attrezzature; architetti e progettisti; produttori.
 - **Tipi di locale:** ristoranti, trattorie, pizzerie, sushi, bar, mense, hotel.
-- **Anteprima gratuita:** pianta con zone e banchi senza quote, 3D semplificato, attrezzature generiche senza marche né codici, stima di spesa a forbice della sola attrezzatura. La prepara l'IA in pochi minuti e un motore di regole la controlla.
+- **Anteprima gratuita:** pianta con zone e banchi senza quote, 3D semplificato, attrezzature generiche senza marche né codici, stima dell'attrezzatura in tre fasce (economica, media, alta), a prezzi di listino pieni e indicativi, per totale e per zona: trasporto, montaggio, allacci, impianti e IVA esclusi. La prepara l'IA in pochi minuti e un motore di regole la controlla.
 - **Progetto completo:** da 35 € IVA inclusa (29 € + IVA). Pianta arredata, legenda con marche e codici, 3D completo, PDF.
 - **Esecutivo:** da 121 € IVA inclusa (99 € + IVA). Prospetti, tabelle degli allacci, pianta impianti, file DXF e CSV.
 - **Prezzi:** sono prezzi di lancio, calcolati sui m² delle zone di lavoro; vale il prezzo mostrato al momento dell'ordine.
