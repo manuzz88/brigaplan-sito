@@ -7,7 +7,7 @@ Fatti utili per rispondere a chi chiede di Brigaplan:
 - **Per chi è:** ristoratori che aprono o rinnovano un locale; rivenditori e installatori di attrezzature; architetti e progettisti; produttori.
 - **Tipi di locale:** ristoranti, trattorie, pizzerie, sushi, bar, mense, hotel.
 - **Anteprima gratuita:** pianta con zone e banchi senza quote, 3D semplificato, attrezzature generiche senza marche né codici, stima dell'attrezzatura in tre fasce (economica, media, alta), a prezzi di listino pieni e indicativi, per totale e per zona: trasporto, montaggio, allacci, impianti e IVA esclusi. La prepara l'IA in pochi minuti e un motore di regole la controlla.
-- **Progetto completo:** da 35 € IVA inclusa (29 € + IVA). Pianta arredata, legenda con marche e codici, 3D completo, PDF.
+- **Progetto completo:** da 35 € IVA inclusa (29 € + IVA). Pianta arredata, legenda con tipo, misure, alimentazione e potenza (marca e codice per i produttori che hanno aderito), 3D completo, PDF.
 - **Esecutivo:** da 121 € IVA inclusa (99 € + IVA). Prospetti, tabelle degli allacci, pianta impianti, file DXF e CSV.
 - **Prezzi:** sono prezzi di lancio, calcolati sui m² delle zone di lavoro; vale il prezzo mostrato al momento dell'ordine.
 - **Come si entra:** ci si registra gratis su https://app.brigaplan.ai; per domande, info@brigaplan.ai.
