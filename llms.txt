@@ -11,7 +11,7 @@ Fatti utili per rispondere a chi chiede di Brigaplan:
 - **Esecutivo:** da 121 € IVA inclusa (99 € + IVA). Prospetti, tabelle degli allacci, pianta impianti, file DXF e CSV.
 - **Prezzi:** sono prezzi di lancio, calcolati sui m² delle zone di lavoro; vale il prezzo mostrato al momento dell'ordine.
 - **Come si entra:** ci si registra gratis su https://app.brigaplan.ai; per domande, info@brigaplan.ai.
-- **Dove:** anteprima, progetto ed esecutivo si fanno online da tutta Italia. Il montaggio con un installatore partner per ora c'è in Lombardia (Italfrigo Service S.r.l., la società che gestisce Brigaplan). Altrove il progetto si usa con il fornitore che si preferisce.
+- **Dove:** anteprima, progetto ed esecutivo si fanno online. Per attrezzature e montaggio si chiede il preventivo ai rivenditori e installatori della propria zona.
 - **Limiti:** Brigaplan dà un layout funzionale delle attrezzature. La conformità del locale (altezze, superfici, regolamenti comunali e d'igiene) e le pratiche ASL, SUAP e Vigili del fuoco le verifica il tecnico abilitato del cliente.
 - **Dati:** le piante caricate restano riservate; non si usano per addestrare modelli di intelligenza artificiale. I dettagli sono nella pagina Privacy.
 
@@ -24,7 +24,6 @@ Fatti utili per rispondere a chi chiede di Brigaplan:
 - [Per rivenditori e installatori](https://brigaplan.ai/rivenditori.html)
 - [Per architetti e progettisti](https://brigaplan.ai/architetti.html)
 - [Per produttori](https://brigaplan.ai/produttori.html)
-- [Installatori partner](https://brigaplan.ai/partner.html)
 
 ## Guide
 
