@@ -46,7 +46,7 @@
  </url>
  <url>
   <loc>https://brigaplan.ai/en/privacy.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/privacy.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/privacy.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/privacy.html"/>
@@ -54,7 +54,7 @@
  </url>
  <url>
   <loc>https://brigaplan.ai/zh/privacy.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/privacy.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/privacy.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/privacy.html"/>
@@ -62,18 +62,26 @@
  </url>
  <url>
   <loc>https://brigaplan.ai/partner.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/partner.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/partner.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/partner.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/partner.html"/>
  </url>
  <url>
   <loc>https://brigaplan.ai/en/partner.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/partner.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/partner.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/partner.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/partner.html"/>
  </url>
  <url>
@@ -82,6 +90,10 @@
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/partner.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/partner.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/partner.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/partner.html"/>
  </url>
  <url>
@@ -174,6 +186,10 @@
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/domande.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/domande.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/domande.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/domande.html"/>
  </url>
  <url>
@@ -182,6 +198,10 @@
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/domande.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/domande.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/domande.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/domande.html"/>
  </url>
  <url>
@@ -190,6 +210,10 @@
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/domande.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/domande.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/domande.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/domande.html"/>
  </url>
  <url>
@@ -198,6 +222,10 @@
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/ristoratori.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/ristoratori.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/ristoratori.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/ristoratori.html"/>
  </url>
  <url>
@@ -206,6 +234,10 @@
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/ristoratori.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/ristoratori.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/ristoratori.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/ristoratori.html"/>
  </url>
  <url>
@@ -214,6 +246,10 @@
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/ristoratori.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/ristoratori.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/ristoratori.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/ristoratori.html"/>
  </url>
  <url>
@@ -222,6 +258,10 @@
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/rivenditori.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/rivenditori.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/rivenditori.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/rivenditori.html"/>
  </url>
  <url>
@@ -230,6 +270,10 @@
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/rivenditori.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/rivenditori.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/rivenditori.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/rivenditori.html"/>
  </url>
  <url>
@@ -238,6 +282,10 @@
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/rivenditori.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/rivenditori.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/rivenditori.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/rivenditori.html"/>
  </url>
  <url>
@@ -246,6 +294,10 @@
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/architetti.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/architetti.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/architetti.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/architetti.html"/>
  </url>
  <url>
@@ -254,6 +306,10 @@
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/architetti.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/architetti.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/architetti.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/architetti.html"/>
  </url>
  <url>
@@ -262,6 +318,10 @@
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/architetti.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/architetti.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/architetti.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/architetti.html"/>
  </url>
  <url>
@@ -354,7 +414,7 @@
  </url>
  <url>
   <loc>https://brigaplan.ai/guide/regole-cucina-lombardia.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
  </url>
  <url>
   <loc>https://brigaplan.ai/zh/sushi.html</loc>
@@ -362,26 +422,38 @@
  </url>
  <url>
   <loc>https://brigaplan.ai/claude.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/claude.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/claude.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/claude.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/claude.html"/>
  </url>
  <url>
   <loc>https://brigaplan.ai/en/claude.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/claude.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/claude.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/claude.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/claude.html"/>
  </url>
  <url>
   <loc>https://brigaplan.ai/zh/claude.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/claude.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/claude.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/claude.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/claude.html"/>
  </url>
  <url>
@@ -613,6 +685,294 @@
   <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/produttori.html"/>
  </url>
  <url>
+  <loc>https://brigaplan.ai/de/domande.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/domande.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/fr/domande.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/domande.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/es/domande.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/domande.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/nl/domande.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/domande.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/domande.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/de/ristoratori.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/ristoratori.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/fr/ristoratori.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/ristoratori.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/es/ristoratori.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/ristoratori.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/nl/ristoratori.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/ristoratori.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/ristoratori.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/de/rivenditori.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/rivenditori.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/fr/rivenditori.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/rivenditori.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/es/rivenditori.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/rivenditori.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/nl/rivenditori.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/rivenditori.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/rivenditori.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/de/architetti.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/architetti.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/fr/architetti.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/architetti.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/es/architetti.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/architetti.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/nl/architetti.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/architetti.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/architetti.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/de/claude.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/claude.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/fr/claude.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/claude.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/es/claude.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/claude.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/nl/claude.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/claude.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/claude.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/de/partner.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/partner.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/fr/partner.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/partner.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/es/partner.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/partner.html"/>
+ </url>
+ <url>
+  <loc>https://brigaplan.ai/nl/partner.html</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/partner.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/partner.html"/>
+ </url>
+ <url>
   <loc>https://brigaplan.ai/de/guide/costo-cucina-professionale.html</loc>
   <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/guide/costo-cucina-professionale.html"/>
@@ -722,7 +1082,7 @@
  </url>
  <url>
   <loc>https://brigaplan.ai/en/guide/cucina-pizzeria.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/guide/cucina-pizzeria.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/guide/cucina-pizzeria.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/guide/cucina-pizzeria.html"/>
@@ -734,7 +1094,7 @@
  </url>
  <url>
   <loc>https://brigaplan.ai/en/guide/cucina-ristorante-piccola.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/guide/cucina-ristorante-piccola.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/guide/cucina-ristorante-piccola.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/guide/cucina-ristorante-piccola.html"/>
@@ -746,7 +1106,7 @@
  </url>
  <url>
   <loc>https://brigaplan.ai/en/guide/gas-o-elettrico-cucina-professionale.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/guide/gas-o-elettrico-cucina-professionale.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/guide/gas-o-elettrico-cucina-professionale.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/guide/gas-o-elettrico-cucina-professionale.html"/>
@@ -758,7 +1118,7 @@
  </url>
  <url>
   <loc>https://brigaplan.ai/en/guide/progettare-bar.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/guide/progettare-bar.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/guide/progettare-bar.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/guide/progettare-bar.html"/>
@@ -770,7 +1130,7 @@
  </url>
  <url>
   <loc>https://brigaplan.ai/en/guide/progettare-cucina-ristorante.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/guide/progettare-cucina-ristorante.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/guide/progettare-cucina-ristorante.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/guide/progettare-cucina-ristorante.html"/>
@@ -974,7 +1334,7 @@
  </url>
  <url>
   <loc>https://brigaplan.ai/guide/cucina-pizzeria.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/guide/cucina-pizzeria.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/guide/cucina-pizzeria.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/guide/cucina-pizzeria.html"/>
@@ -986,7 +1346,7 @@
  </url>
  <url>
   <loc>https://brigaplan.ai/guide/cucina-ristorante-piccola.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/guide/cucina-ristorante-piccola.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/guide/cucina-ristorante-piccola.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/guide/cucina-ristorante-piccola.html"/>
@@ -998,7 +1358,7 @@
  </url>
  <url>
   <loc>https://brigaplan.ai/guide/gas-o-elettrico-cucina-professionale.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/guide/gas-o-elettrico-cucina-professionale.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/guide/gas-o-elettrico-cucina-professionale.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/guide/gas-o-elettrico-cucina-professionale.html"/>
@@ -1010,7 +1370,7 @@
  </url>
  <url>
   <loc>https://brigaplan.ai/guide/progettare-bar.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/guide/progettare-bar.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/guide/progettare-bar.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/guide/progettare-bar.html"/>
@@ -1022,7 +1382,7 @@
  </url>
  <url>
   <loc>https://brigaplan.ai/guide/progettare-cucina-ristorante.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/guide/progettare-cucina-ristorante.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/guide/progettare-cucina-ristorante.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/guide/progettare-cucina-ristorante.html"/>
@@ -1142,7 +1502,7 @@
  </url>
  <url>
   <loc>https://brigaplan.ai/zh/guide/cucina-pizzeria.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/guide/cucina-pizzeria.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/guide/cucina-pizzeria.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/guide/cucina-pizzeria.html"/>
@@ -1154,7 +1514,7 @@
  </url>
  <url>
   <loc>https://brigaplan.ai/zh/guide/cucina-ristorante-piccola.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/guide/cucina-ristorante-piccola.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/guide/cucina-ristorante-piccola.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/guide/cucina-ristorante-piccola.html"/>
@@ -1166,7 +1526,7 @@
  </url>
  <url>
   <loc>https://brigaplan.ai/zh/guide/gas-o-elettrico-cucina-professionale.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/guide/gas-o-elettrico-cucina-professionale.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/guide/gas-o-elettrico-cucina-professionale.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/guide/gas-o-elettrico-cucina-professionale.html"/>
@@ -1178,7 +1538,7 @@
  </url>
  <url>
   <loc>https://brigaplan.ai/zh/guide/progettare-bar.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/guide/progettare-bar.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/guide/progettare-bar.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/guide/progettare-bar.html"/>
@@ -1190,7 +1550,7 @@
  </url>
  <url>
   <loc>https://brigaplan.ai/zh/guide/progettare-cucina-ristorante.html</loc>
-  <lastmod>2026-11-14</lastmod>
+  <lastmod>2026-11-15</lastmod>
   <xhtml:link rel="alternate" hreflang="it" href="https://brigaplan.ai/guide/progettare-cucina-ristorante.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/guide/progettare-cucina-ristorante.html"/>
   <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/guide/progettare-cucina-ristorante.html"/>

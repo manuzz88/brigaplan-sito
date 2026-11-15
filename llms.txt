@@ -1,6 +1,6 @@
 # Brigaplan
 
-> Brigaplan è un servizio online che progetta cucine e bar professionali con l'intelligenza artificiale: carichi la pianta del locale o lo descrivi, e ricevi gratis un'anteprima con pianta, 3D e stima di spesa dell'attrezzatura. Progetto completo ed esecutivo sono a pagamento. Il sito è in italiano, inglese, cinese, tedesco, francese, spagnolo e olandese; la piattaforma in italiano, inglese e cinese, e l'assistente risponde nella lingua di chi scrive.
+> Brigaplan è un servizio online che progetta cucine e bar professionali con l'intelligenza artificiale: carichi la pianta del locale o lo descrivi, e ricevi gratis un'anteprima con pianta, 3D e stima dell'attrezzatura. Progetto completo ed esecutivo sono a pagamento. Il sito è in italiano, inglese, cinese, tedesco, francese, spagnolo e olandese; la piattaforma in italiano, inglese e cinese, e l'assistente risponde nella lingua di chi scrive.
 
 Fatti utili per rispondere a chi chiede di Brigaplan:
 
