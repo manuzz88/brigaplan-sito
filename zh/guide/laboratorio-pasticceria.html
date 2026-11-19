@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>糕点烘焙间怎么设计：空间、设备与规定 · Brigaplan</title>
+<meta name="description" content="糕点烘焙间怎么布置：按顺序排列的功能分区、最小面积（以意大利为例）、常用设备、冷藏、面粉和热量，以及更衣室。">
+<meta property="og:site_name" content="Brigaplan">
+<meta property="og:type" content="website">
+<meta property="og:title" content="糕点烘焙间怎么设计：空间、设备与规定 · Brigaplan">
+<meta property="og:description" content="糕点烘焙间怎么布置：按顺序排列的功能分区、最小面积（以意大利为例）、常用设备、冷藏、面粉和热量，以及更衣室。">
+<meta property="og:url" content="https://brigaplan.ai/zh/guide/laboratorio-pasticceria.html">
+<meta property="og:image" content="https://brigaplan.ai/media/brigaplan_og.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta property="og:image:alt" content="用 Brigaplan 完成的意式餐馆 3D 设计方案">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://brigaplan.ai/zh/guide/laboratorio-pasticceria.html">
+<link rel="alternate" hreflang="it" href="https://brigaplan.ai/guide/laboratorio-pasticceria.html">
+<link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/guide/laboratorio-pasticceria.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/guide/laboratorio-pasticceria.html">
+<link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/guide/laboratorio-pasticceria.html">
+<link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/guide/laboratorio-pasticceria.html">
+<link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/guide/laboratorio-pasticceria.html">
+<link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/guide/laboratorio-pasticceria.html">
+<link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/guide/laboratorio-pasticceria.html">
+<meta name="theme-color" content="#FAFAF8">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="96x96" href="/icona-96.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/Archivo-100_900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/PublicSans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/pagine.css">
+<style>
+/* Versione cinese: font CJK di sistema, niente spaziature negative né caratteri allargati, interlinea più ampia per gli ideogrammi.
+   Il programma sito/strumenti/lingue.py lo aggiunge in fondo allo stile della pagina cinese. */
+:root {
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+  --f-body: "Archivo", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+  --f-mono: "Archivo", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+}
+body { line-height: 1.7; }
+h1, h2, h3 { font-stretch: 100%; letter-spacing: 0; line-height: 1.3; }
+h1 { line-height: 1.25; font-size: clamp(2rem, 1.1rem + 3.4vw, 3.6rem); } /* più piccolo: gli ideogrammi sono larghi e il 。 finale non deve andare a capo da solo */
+h1, h2 { font-weight: 700; }
+h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su punteggiatura e spazi, non a metà parola */
+.lead { line-height: 1.65; }
+.punch, .thesis { font-stretch: 100%; line-height: 1.5; }
+h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-stretch: 100%; }
+.partner strong { font-stretch: 100%; }
+.eyebrow, .why-k, .notice, .ex b, .cartiglio dt, .compare thead th, .pill, .price, .reel-tag, .reel-btn { letter-spacing: .04em; }
+@media (max-width: 640px) { .compare tbody th, .compare td::before { letter-spacing: .04em; } }
+.plan .zl { letter-spacing: 1px; }
+.plan .fl-l, .plan .hood-t { letter-spacing: .5px; }
+@media (max-width: 360px) { h1, h2, .for { word-break: normal; } }  /* schermi molto stretti: si va a capo anche tra gli ideogrammi */
+</style>
+<script type="application/ld+json" data-seo="articolo">{"@context": "https://schema.org", "@type": "Article", "headline": "糕点烘焙间怎么设计：空间、设备与规定", "description": "糕点烘焙间怎么布置：按顺序排列的功能分区、最小面积（以意大利为例）、常用设备、冷藏、面粉和热量，以及更衣室。", "inLanguage": "zh-Hans", "url": "https://brigaplan.ai/zh/guide/laboratorio-pasticceria.html", "mainEntityOfPage": "https://brigaplan.ai/zh/guide/laboratorio-pasticceria.html", "author": {"@type": "Organization", "name": "Brigaplan", "url": "https://brigaplan.ai/", "logo": "https://brigaplan.ai/icona-512.png"}, "publisher": {"@type": "Organization", "name": "Brigaplan", "url": "https://brigaplan.ai/", "logo": "https://brigaplan.ai/icona-512.png"}}</script>
+<script type="application/ld+json" data-seo="briciole">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Brigaplan", "item": "https://brigaplan.ai/zh/"}, {"@type": "ListItem", "position": 2, "name": "指南: 糕点烘焙间怎么设计：空间、设备与规定", "item": "https://brigaplan.ai/zh/guide/laboratorio-pasticceria.html"}]}</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/zh/" aria-label="Brigaplan，返回首页">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><rect class="lm-wall" x="1.5" y="1.5" width="23" height="23"/><path class="lm-line" d="M1.5 11H13V24.5M13 7V1.5"/><rect class="lm-acc" x="16" y="15" width="6" height="6"/></svg>
+      <span translate="no">Briga<b>plan</b></span>
+    </a>
+    <nav class="nav" aria-label="页面栏目">
+      <a href="/zh/come-funziona.html">使用流程</a>
+      <a href="/zh/#cosa-si-paga">收费方式</a>
+      <a href="/zh/#per-chi">适用对象</a>
+    </nav>
+    <div class="top-azioni">
+      <details class="menu-tel"><summary>菜单</summary><nav aria-label="菜单"><a href="/zh/come-funziona.html">使用方法和价格</a><a href="/zh/domande.html">常见问题</a><a href="/zh/ristoratori.html">餐厅老板</a><a href="/zh/rivenditori.html">经销商和安装商</a><a href="/zh/architetti.html">建筑师和设计师</a><a href="/zh/produttori.html">设备厂家</a><a href="https://app.brigaplan.ai/accedi?lingua=zh">登录</a><div class="lingue-menu" translate="no"><a href="/domande.html" lang="it" hreflang="it">IT</a>
+        <a href="/en/domande.html" lang="en" hreflang="en">EN</a>
+        <a href="/zh/domande.html" lang="zh-Hans" hreflang="zh-Hans">中文</a>
+        <a href="/de/domande.html" lang="de" hreflang="de">DE</a>
+        <a href="/fr/domande.html" lang="fr" hreflang="fr">FR</a>
+        <a href="/es/domande.html" lang="es" hreflang="es">ES</a>
+        <a href="/nl/domande.html" lang="nl" hreflang="nl">NL</a></div></nav></details>
+      <nav class="lingue" translate="no" aria-label="语言">
+        <a href="/guide/laboratorio-pasticceria.html" lang="it" hreflang="it">IT</a>
+        <a href="/en/guide/laboratorio-pasticceria.html" lang="en" hreflang="en">EN</a>
+        <a href="/zh/guide/laboratorio-pasticceria.html" lang="zh-Hans" hreflang="zh-Hans" aria-current="page">中文</a>
+        <a href="/de/guide/laboratorio-pasticceria.html" lang="de" hreflang="de">DE</a>
+        <a href="/fr/guide/laboratorio-pasticceria.html" lang="fr" hreflang="fr">FR</a>
+        <a href="/es/guide/laboratorio-pasticceria.html" lang="es" hreflang="es">ES</a>
+        <a href="/nl/guide/laboratorio-pasticceria.html" lang="nl" hreflang="nl">NL</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="https://app.brigaplan.ai/registrati?lingua=zh">免费试用</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap doc">
+  <div class="doc-head">
+    <span class="eyebrow">指南</span>
+    <h1>糕点烘焙间怎么设计：空间、设备与规定</h1>
+    <p class="sec-lead">糕点烘焙间要好用，产品就要一直往前走：从原料到展示柜，不走回头路，也不和脏的东西交叉。本文介绍功能分区、意大利一些大区的法定最低要求（作为例子）、常用设备，以及要避免的错误。</p>
+  </div>
+  <div class="prosa guida">
+    <h2>功能分区，依次排列</h2>
+    <p>在意大利伦巴第大区，卫生条例范本要求生产线按照产品的加工顺序排列，不能把不按顺序的操作混在一起（<a href="https://www.apilombardia.it/wp-content/uploads/2013/03/regolamento_locale_tipo.pdf">伦巴第地方卫生条例范本，第 4.2.7 条</a>，意大利语）。</p>
+    <ul><li><strong>收货和仓储</strong>：面粉、糖和干货放在一边；牛奶、奶油、鸡蛋和黄油冷藏存放。</li><li><strong>称量和搅拌</strong>：秤、和面机和行星搅拌机靠近面粉仓库。</li><li><strong>加工和成型</strong>：工作台、开酥机，以及做面团和巧克力用的冷台面。</li><li><strong>醒发</strong>：醒发柜或醒发间，如果您做发酵类产品。</li><li><strong>熟制</strong>：烤箱，以及煮奶油馅和糖浆用的灶具。</li><li><strong>冷却</strong>：烤盘车和急速冷却柜，在填馅或储存之前使用。</li><li><strong>填馅和装饰</strong>：最需要小心的区域，要用到奶油馅和鲜奶油。这里要保持清洁，并远离面粉。</li><li><strong>成品</strong>：冷柜和仓储，然后送到店面销售或餐厅。</li><li><strong>清洗</strong>：烤盘、模具和用具在单独的区域清洗，不穿过填馅区。</li></ul>
+    <h2>需要多大空间</h2>
+    <p>最低要求各大区不同。这些是意大利的例子。您所在国家的规定不同：请向当地的技术人员和当地主管部门核实。下面是意大利的几个例子。</p>
+    <ul><li><strong>伦巴第大区</strong>：生产间按每名员工至少 2 平方米净面积计算，总面积至少 8 平方米。还需要单独存放原料和成品的仓库、带前室的卫生间，以及更衣室（<a href="https://www.apilombardia.it/wp-content/uploads/2013/03/regolamento_locale_tipo.pdf">伦巴第地方卫生条例范本，第 4.2.4 条</a>，意大利语）。</li><li><strong>科莫，原 ASL（当地卫生局）的做法</strong>：房间层高至少 3 米时为 8 平方米，层高在 2.70 到 3 米之间时为 9 平方米（<a href="https://www.halleyweb.com/c013097/zf/index.php/servizi-aggiuntivi/index/index/idtesto/183">原科莫 ASL 指南</a>，意大利语）。</li><li><strong>罗马，ASL Roma 1 的做法</strong>：新鲜糕点至少 20 平方米，干点至少 10 平方米。使用半成品或成品时，由 ASL 逐案评估（<a href="https://www.aslroma1.it/uploads/files/31_55_Linee_Guida_UOC_SIAN.pdf">ASL Roma 1，2021 年指南，第 7 页</a>，意大利语）。</li><li><strong>里米尼，市镇条例</strong>：附属于商店的生产间至少 20 平方米，平均层高 3 米（<a href="https://www.comune.rimini.it/sites/default/files/2021-06/tabella1.pdf">里米尼市，表 1</a>，意大利语）。</li><li><strong>您所在的城市</strong>：签租约之前，请向当地卫生主管部门核实。8 平方米和 20 平方米的差别，会改变店面的选择。</li></ul>
+    <h2>常用设备</h2>
+    <ul><li><strong>烤箱</strong>：热风对流烤箱或层炉（静态）。两种也可以都配。</li><li><strong>搅拌</strong>：和面机用于发酵面团，行星搅拌机用于奶油馅、打发类和软面团。</li><li><strong>开酥机</strong>：用于千层酥皮、擀开的甜酥面团和可颂。</li><li><strong>冷藏</strong>：冷藏柜和冷藏工作台、急速冷却柜、冷冻柜。糕点行业的标准是 60×40 cm 的烤盘：烤箱、冷柜和烤盘车都要选能放下这种烤盘的。</li><li><strong>醒发</strong>：可控的醒发柜或醒发间，便于安排发酵类产品的生产时间。</li><li><strong>工作台面</strong>：用不锈钢；做巧克力和糖艺，有时还要一块石材台面。</li><li><strong>真正的尺寸以技术规格表为准</strong>：确定平面布置之前，要从所选型号的技术规格表上取尺寸。</li></ul>
+    <h2>冷藏和温度</h2>
+    <ul><li><strong>奶油馅和鲜奶油要冷藏</strong>：在意大利，ASL 仍然参照 DPR 327/1980 第 31 条的数值：用鲜奶油或以鸡蛋和牛奶为基础的奶油馅填馅的产品，最高 +4 °C。这项法令在 2021 年已大部分废止：请向 ASL 确认采用哪些数值（<a href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:1980-03-26;327~art31">DPR 327/1980，第 31 条</a>，意大利语）。</li><li><strong>快速冷却</strong>：熟制后，奶油馅和底坯要马上冷却，例如放进急速冷却柜，然后再进冷柜。</li><li><strong>温度计看得清</strong>：冷柜和展示柜的温度计要从外面就能读数。</li><li><strong>在您的国家</strong>：规定不同，请向当地的技术人员核实。</li></ul>
+    <h2>面粉、热量和空气</h2>
+    <ul><li><strong>淋浴间</strong>：在意大利伦巴第大区，地方条例要求：粉尘或高温让淋浴变得可取的地方，要设置淋浴间，数量和员工人数相适应（<a href="https://www.apilombardia.it/wp-content/uploads/2013/03/regolamento_locale_tipo.pdf">伦巴第地方卫生条例范本，第 4.2.4 条</a>，意大利语）。</li><li><strong>排放</strong>：在意大利，每天用面粉不超过 300 公斤的面包店和糕点店属于“影响很小”的活动，不需要申请排放许可；超过这个用量就需要（第 152/2006 号立法令，第 V 部分，附件 IV，引自<a href="https://www.provinciasondrio.it/sites/default/files/contents/modulistica_procedimenti/129/attivita-scarsamente-rilevanti.pdf">伦巴第大区的一份通知</a>，意大利语）。请核实现行版本。</li><li><strong>排烟罩</strong>：烤箱和灶具会产生热量和蒸汽。要问技术人员什么，见指南<a href="/zh/guide/cappa-cucina-professionale.html">商用厨房排烟罩：尺寸、风量与烟道</a>。</li><li><strong>在您的国家</strong>：规定不同，请向当地的技术人员核实。</li></ul>
+    <h2>要避免的错误</h2>
+    <ul><li><strong>填馅区挨着搅拌区</strong>：面粉会飞起来，落进奶油馅里。</li><li><strong>清洗路线穿过烘焙间</strong>：脏烤盘和成品不能交叉。</li><li><strong>冷藏容量不够</strong>：奶油馅、底坯和成品需要的冷柜空间，比看上去要多。</li><li><strong>选店面时不知道所在大区的最低要求。</strong></li></ul>
+    <h2>怎样获得免费预览方案</h2>
+    <p>Brigaplan 用 AI 生成糕点烘焙间或厨房的预览方案，并由引擎按规则检查。请准备好以下资料：</p>
+    <ul><li><strong>平面图或描述</strong>：上传店面的平面图，或者用文字描述店面并写明尺寸。</li><li><strong>您生产什么</strong>：新鲜糕点、干点、发酵类产品、巧克力，以及是否有咖啡吧台或门店销售。</li><li><strong>烘焙间里同时工作的人数。</strong></li><li><strong>能源和接口</strong>：燃气、电还是两者都用；可用电力（kW），可在电费单或电表上找到。如果还不知道，也没关系。</li><li><strong>所在城市</strong>：最低要求各地不同。</li><li><strong>您会收到</strong>：一份不含尺寸、品牌和型号的预览方案，附有引擎给出的提示。</li></ul>
+    <p>设计方案在线完成。当地规定需要请当地的技术人员核实。</p>
+    <p>本指南不是技术意见，也不是法律意见：实际项目由设计师、持证技术人员和当地主管部门决定。</p>
+  </div>
+</main>
+
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="logo"><span translate="no">Briga<b>plan</b></span></span>
+    <p>用人工智能设计商用厨房和吧台。</p>
+    <p class="foot-link"><a href="/zh/come-funziona.html">使用方法和价格</a> · <a href="/zh/domande.html">常见问题</a> · <a href="/zh/perche.html">为什么选择 Brigaplan</a> · 指南：<a href="/zh/guide/costo-cucina-professionale.html">厨房要花多少钱</a>、<a href="/guide/regole-cucina-lombardia.html">伦巴第大区 ASL 规定</a>、<a href="/zh/guide/pizzeria-forno-legna.html">柴火披萨店</a>、<a href="/zh/guide/cucina-sushi-ayce.html">寿司</a> · <a href="/zh/ristoratori.html">餐厅老板</a> · <a href="/zh/rivenditori.html">经销商和安装商</a> · <a href="/zh/architetti.html">建筑师和设计师</a> · <a href="/zh/produttori.html">设备厂家</a> · <a href="/zh/condizioni.html">使用条款</a> · <a href="/zh/privacy-piattaforma.html">隐私</a> · <a href="https://app.brigaplan.ai/aiuto?lingua=zh">帮助</a> · <!--email_off--><a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a><!--/email_off--></p>
+    <p>Brigaplan · Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · 电话 <span translate="no">+39 348 4096847</span> · 米兰-蒙扎布里安扎-洛迪企业登记处登记号 06825390153 · 经济行政登记号 REA MI-1120586 · 税号和增值税号 C.F. e P.IVA 06825390153 · 注册资本 46,800.00 欧元（已全额实缴）· 认证邮箱（PEC）<span translate="no"><!--email_off-->italfrigo@pec.italfrigo.com<!--/email_off--></span> · <a href="/zh/privacy.html">隐私与 Cookie</a></p>
+  </div>
+</footer>
+<script src="/js/s-04772de1eb57.js"></script>
+</body>
+</html>
