@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>餐厅厨房需要多大面积？ · Brigaplan</title>
+<meta name="description" content="餐厅厨房需要多少平方米：法定最低要求（以意大利为例）、每个座位的大致面积、设备尺寸，以及怎样计算。">
+<meta property="og:site_name" content="Brigaplan">
+<meta property="og:type" content="website">
+<meta property="og:title" content="餐厅厨房需要多大面积？ · Brigaplan">
+<meta property="og:description" content="餐厅厨房需要多少平方米：法定最低要求（以意大利为例）、每个座位的大致面积、设备尺寸，以及怎样计算。">
+<meta property="og:url" content="https://brigaplan.ai/zh/guide/spazio-cucina-ristorante.html">
+<meta property="og:image" content="https://brigaplan.ai/media/brigaplan_og.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta property="og:image:alt" content="用 Brigaplan 完成的意式餐馆 3D 设计方案">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://brigaplan.ai/zh/guide/spazio-cucina-ristorante.html">
+<link rel="alternate" hreflang="it" href="https://brigaplan.ai/guide/spazio-cucina-ristorante.html">
+<link rel="alternate" hreflang="en" href="https://brigaplan.ai/en/guide/spazio-cucina-ristorante.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://brigaplan.ai/zh/guide/spazio-cucina-ristorante.html">
+<link rel="alternate" hreflang="de" href="https://brigaplan.ai/de/guide/spazio-cucina-ristorante.html">
+<link rel="alternate" hreflang="fr" href="https://brigaplan.ai/fr/guide/spazio-cucina-ristorante.html">
+<link rel="alternate" hreflang="es" href="https://brigaplan.ai/es/guide/spazio-cucina-ristorante.html">
+<link rel="alternate" hreflang="nl" href="https://brigaplan.ai/nl/guide/spazio-cucina-ristorante.html">
+<link rel="alternate" hreflang="x-default" href="https://brigaplan.ai/guide/spazio-cucina-ristorante.html">
+<meta name="theme-color" content="#FAFAF8">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="96x96" href="/icona-96.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/Archivo-100_900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/PublicSans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/pagine.css">
+<style>
+/* Versione cinese: font CJK di sistema, niente spaziature negative né caratteri allargati, interlinea più ampia per gli ideogrammi.
+   Il programma sito/strumenti/lingue.py lo aggiunge in fondo allo stile della pagina cinese. */
+:root {
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+  --f-body: "Archivo", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+  --f-mono: "Archivo", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+}
+body { line-height: 1.7; }
+h1, h2, h3 { font-stretch: 100%; letter-spacing: 0; line-height: 1.3; }
+h1 { line-height: 1.25; font-size: clamp(2rem, 1.1rem + 3.4vw, 3.6rem); } /* più piccolo: gli ideogrammi sono larghi e il 。 finale non deve andare a capo da solo */
+h1, h2 { font-weight: 700; }
+h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su punteggiatura e spazi, non a metà parola */
+.lead { line-height: 1.65; }
+.punch, .thesis { font-stretch: 100%; line-height: 1.5; }
+h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-stretch: 100%; }
+.partner strong { font-stretch: 100%; }
+.eyebrow, .why-k, .notice, .ex b, .cartiglio dt, .compare thead th, .pill, .price, .reel-tag, .reel-btn { letter-spacing: .04em; }
+@media (max-width: 640px) { .compare tbody th, .compare td::before { letter-spacing: .04em; } }
+.plan .zl { letter-spacing: 1px; }
+.plan .fl-l, .plan .hood-t { letter-spacing: .5px; }
+@media (max-width: 360px) { h1, h2, .for { word-break: normal; } }  /* schermi molto stretti: si va a capo anche tra gli ideogrammi */
+</style>
+<script type="application/ld+json" data-seo="articolo">{"@context": "https://schema.org", "@type": "Article", "headline": "餐厅厨房需要多大面积？", "description": "餐厅厨房需要多少平方米：法定最低要求（以意大利为例）、每个座位的大致面积、设备尺寸，以及怎样计算。", "inLanguage": "zh-Hans", "url": "https://brigaplan.ai/zh/guide/spazio-cucina-ristorante.html", "mainEntityOfPage": "https://brigaplan.ai/zh/guide/spazio-cucina-ristorante.html", "author": {"@type": "Organization", "name": "Brigaplan", "url": "https://brigaplan.ai/", "logo": "https://brigaplan.ai/icona-512.png"}, "publisher": {"@type": "Organization", "name": "Brigaplan", "url": "https://brigaplan.ai/", "logo": "https://brigaplan.ai/icona-512.png"}}</script>
+<script type="application/ld+json" data-seo="briciole">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Brigaplan", "item": "https://brigaplan.ai/zh/"}, {"@type": "ListItem", "position": 2, "name": "指南: 餐厅厨房需要多大面积？", "item": "https://brigaplan.ai/zh/guide/spazio-cucina-ristorante.html"}]}</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/zh/" aria-label="Brigaplan，返回首页">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><rect class="lm-wall" x="1.5" y="1.5" width="23" height="23"/><path class="lm-line" d="M1.5 11H13V24.5M13 7V1.5"/><rect class="lm-acc" x="16" y="15" width="6" height="6"/></svg>
+      <span translate="no">Briga<b>plan</b></span>
+    </a>
+    <nav class="nav" aria-label="页面栏目">
+      <a href="/zh/come-funziona.html">使用流程</a>
+      <a href="/zh/#cosa-si-paga">收费方式</a>
+      <a href="/zh/#per-chi">适用对象</a>
+    </nav>
+    <div class="top-azioni">
+      <details class="menu-tel"><summary>菜单</summary><nav aria-label="菜单"><a href="/zh/come-funziona.html">使用方法和价格</a><a href="/zh/domande.html">常见问题</a><a href="/zh/ristoratori.html">餐厅老板</a><a href="/zh/rivenditori.html">经销商和安装商</a><a href="/zh/architetti.html">建筑师和设计师</a><a href="/zh/produttori.html">设备厂家</a><a href="https://app.brigaplan.ai/accedi?lingua=zh">登录</a><div class="lingue-menu" translate="no"><a href="/domande.html" lang="it" hreflang="it">IT</a>
+        <a href="/en/domande.html" lang="en" hreflang="en">EN</a>
+        <a href="/zh/domande.html" lang="zh-Hans" hreflang="zh-Hans">中文</a>
+        <a href="/de/domande.html" lang="de" hreflang="de">DE</a>
+        <a href="/fr/domande.html" lang="fr" hreflang="fr">FR</a>
+        <a href="/es/domande.html" lang="es" hreflang="es">ES</a>
+        <a href="/nl/domande.html" lang="nl" hreflang="nl">NL</a></div></nav></details>
+      <nav class="lingue" translate="no" aria-label="语言">
+        <a href="/guide/spazio-cucina-ristorante.html" lang="it" hreflang="it">IT</a>
+        <a href="/en/guide/spazio-cucina-ristorante.html" lang="en" hreflang="en">EN</a>
+        <a href="/zh/guide/spazio-cucina-ristorante.html" lang="zh-Hans" hreflang="zh-Hans" aria-current="page">中文</a>
+        <a href="/de/guide/spazio-cucina-ristorante.html" lang="de" hreflang="de">DE</a>
+        <a href="/fr/guide/spazio-cucina-ristorante.html" lang="fr" hreflang="fr">FR</a>
+        <a href="/es/guide/spazio-cucina-ristorante.html" lang="es" hreflang="es">ES</a>
+        <a href="/nl/guide/spazio-cucina-ristorante.html" lang="nl" hreflang="nl">NL</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="https://app.brigaplan.ai/registrati?lingua=zh">免费试用</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap doc">
+  <div class="doc-head">
+    <span class="eyebrow">指南</span>
+    <h1>餐厅厨房需要多大面积？</h1>
+    <p class="sec-lead">厨房需要多少平方米，取决于您做什么菜、接待多少位客人，以及有多少东西是做好之后送来的。这里有法定最低要求、一本行业手册给出的大致数值、设备的标准尺寸，以及一个在您自己的店面上计算的方法。</p>
+  </div>
+  <div class="prosa guida">
+    <h2>先看法定最低要求</h2>
+    <p>最低要求由大区和市镇的卫生规定确定。下面以伦巴第大区为例。这些是意大利伦巴第大区的规定。您所在国家的规定不同：请向当地的技术人员和当地主管部门核实。完整的规定见指南<a href="/guide/regole-cucina-lombardia.html">伦巴第大区餐厅厨房的 ASL 和 ATS 规定</a>（意大利语）。</p>
+    <ul><li><strong>面积</strong>：厨房、仓库、冷库和洗碗区加起来，每个座位至少 0.5 平方米，且不少于 20 平方米，除非 ATS（当地卫生局）另有规定（<a href="https://www.apilombardia.it/wp-content/uploads/2013/03/regolamento_locale_tipo.pdf">伦巴第地方卫生条例范本</a>，意大利语）。</li><li><strong>层高</strong>：对餐厅来说，通常以市镇条例规定的高度为准：请向市镇和 ATS 确认。</li><li><strong>更衣室</strong>：伦巴第大区按同时在场的员工每人 1 平方米，米兰每人 1.5 平方米且至少 5 平方米：请向 ATS 确认。</li><li><strong>这是最低要求，不是目标</strong>：法定最低要求说明厨房什么时候太小，而不是说明它什么时候适合您的菜单。</li></ul>
+    <h2>手册给出的大致数值</h2>
+    <p>一本美国餐饮设计手册给出了每个座位的参考数值（Thomas、Norman 和 Katsigris，*Design and Equipment for Restaurants and Foodservice*，第 4 版，Wiley，第 96 页）。这些是美国的数值，已换算成平方米并取整。</p>
+    <div class="tabella" tabindex="0" role="region" aria-label="店面类型"><table><thead><tr><th scope="col">店面类型</th><th scope="col">用餐区，每个座位</th><th scope="col">厨房，每个座位</th></tr></thead><tbody><tr><td>高档餐饮</td><td>1.4-1.9 平方米（15-20 sq ft）</td><td>0.7-0.9 平方米（7-10 sq ft）</td></tr><tr><td>中档餐厅</td><td>1.1-1.7 平方米（12-18 sq ft）</td><td>0.5-0.8 平方米（5-9 sq ft）</td></tr><tr><td>宴会</td><td>0.9-1.4 平方米（10-15 sq ft）</td><td>0.3-0.5 平方米（3-5 sq ft）</td></tr></tbody></table></div>
+    <ul><li><strong>不按比例增长</strong>：同一本手册提醒，厨房面积不会随客人数量按比例增长。座位翻一倍，不等于厨房也要翻一倍（第 94 页）。</li><li><strong>厨房占店面多少</strong>：按照这本手册，传统厨房约占店面的 40-50%；如果大量使用半成品、送货又频繁，可以降到 25-35%（第 95 页）。</li><li><strong>这些只是大致数值</strong>：用来判断一个店面是否合适，而不是用来做设计。无论如何，都要遵守您所在国家或地区的法定最低要求。</li></ul>
+    <h2>设备的尺寸</h2>
+    <p>专业设备有标准尺寸，可以在生产商的产品目录里找到。</p>
+    <ul><li><strong>烹饪线的深度</strong>：模块化烹饪线通常有约 60、70 和 90 厘米几种深度。</li><li><strong>按模块计算的宽度</strong>：炉灶、扒炉、炸炉和煮面炉按模块宽度出售，例如 40、80 或 120 厘米。整条烹饪线就是各个模块加起来的长度。</li><li><strong>真正的尺寸以技术规格表为准</strong>：确定平面布置之前，要从所选型号的技术规格表上取尺寸，包括生产商要求在设备周围留出的空间。</li><li><strong>设备要能搬进来</strong>：检查门、楼梯和电梯。烤箱、急速冷却柜和冷藏柜都必须能通过。</li></ul>
+    <h2>通道</h2>
+    <ul><li><strong>一条宽敞的主通道</strong>，通到厨房的每个区域。</li><li><strong>次要通道可以窄一些</strong>：只是偶尔有一个人经过的地方，可以更窄。</li><li><strong>洁污分开</strong>：脏餐具的路线和出品菜肴的路线不交叉。功能分区和动线在指南<a href="/zh/guide/progettare-cucina-ristorante.html">餐厅厨房怎么设计：功能分区与动线</a>里有说明。</li></ul>
+    <h2>怎样为您的店面计算</h2>
+    <ol><li><strong>从菜单和客人数量出发</strong>：高峰时段要出多少道菜，需要哪些烹饪方式。</li><li><strong>选择设备</strong>：烹饪、冷藏、洗碗和切配设备，尺寸以技术规格表为准。</li><li><strong>布置功能分区</strong>：收货、仓储、切配、烹饪、出餐、洗碗。</li><li><strong>加上通道</strong>：主通道和次要通道。</li><li><strong>加上卫生间和更衣室</strong>：当地规定要求的员工卫生间和更衣室。</li><li><strong>和法定最低要求比较</strong>：如果总面积低于最低要求，就要扩大厨房，或者简化菜单。</li></ol>
+    <h2>要避免的错误</h2>
+    <ul><li><strong>只算烹饪区</strong>：仓库、冷库和洗碗区都计入法定最低要求，更衣室另有自己的最低要求。这些都实实在在要占地方。</li><li><strong>只满足法定最低要求</strong>，却没有确认菜单需要的设备放得下。</li><li><strong>凭记忆用尺寸</strong>，而不是用技术规格表上的尺寸。</li><li><strong>画烹饪线时忘了柱子、立柱、门和窗。</strong></li><li><strong>太晚才发现</strong>某台设备进不了门。</li></ul>
+    <h2>怎样获得免费预览方案</h2>
+    <p>Brigaplan 用 AI 生成厨房的预览方案，并由引擎按规则检查。请准备好以下资料：</p>
+    <ul><li><strong>平面图或描述</strong>：上传店面的平面图，或者用文字描述店面并写明尺寸。</li><li><strong>座位和营业餐段</strong>：有多少座位，做午餐、晚餐还是两者都做。</li><li><strong>您做什么菜</strong>：店面类型和主要菜品。</li><li><strong>能源和接口</strong>：烹饪用燃气、电还是两者都用；可用电力（kW），可在电费单或电表上找到；是否已有燃气接口。如果还不知道，也没关系。</li><li><strong>所在城市</strong>：卫生规定因地而异。</li><li><strong>您会收到</strong>：一份不含尺寸、品牌和型号的预览方案，附有引擎给出的提示。</li></ul>
+    <p>设计方案在线完成。当地规定需要请当地的技术人员核实。</p>
+    <p>本指南不是技术意见，也不是法律意见：实际项目由设计师、持证技术人员和当地主管部门决定。</p>
+  </div>
+</main>
+
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="logo"><span translate="no">Briga<b>plan</b></span></span>
+    <p>用人工智能设计商用厨房和吧台。</p>
+    <p class="foot-link"><a href="/zh/come-funziona.html">使用方法和价格</a> · <a href="/zh/domande.html">常见问题</a> · <a href="/zh/perche.html">为什么选择 Brigaplan</a> · 指南：<a href="/zh/guide/costo-cucina-professionale.html">厨房要花多少钱</a>、<a href="/guide/regole-cucina-lombardia.html">伦巴第大区 ASL 规定</a>、<a href="/zh/guide/pizzeria-forno-legna.html">柴火披萨店</a>、<a href="/zh/guide/cucina-sushi-ayce.html">寿司</a> · <a href="/zh/ristoratori.html">餐厅老板</a> · <a href="/zh/rivenditori.html">经销商和安装商</a> · <a href="/zh/architetti.html">建筑师和设计师</a> · <a href="/zh/produttori.html">设备厂家</a> · <a href="/zh/condizioni.html">使用条款</a> · <a href="/zh/privacy-piattaforma.html">隐私</a> · <a href="https://app.brigaplan.ai/aiuto?lingua=zh">帮助</a> · <!--email_off--><a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a><!--/email_off--></p>
+    <p>Brigaplan · Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · 电话 <span translate="no">+39 348 4096847</span> · 米兰-蒙扎布里安扎-洛迪企业登记处登记号 06825390153 · 经济行政登记号 REA MI-1120586 · 税号和增值税号 C.F. e P.IVA 06825390153 · 注册资本 46,800.00 欧元（已全额实缴）· 认证邮箱（PEC）<span translate="no"><!--email_off-->italfrigo@pec.italfrigo.com<!--/email_off--></span> · <a href="/zh/privacy.html">隐私与 Cookie</a></p>
+  </div>
+</footer>
+<script src="/js/s-04772de1eb57.js"></script>
+</body>
+</html>
