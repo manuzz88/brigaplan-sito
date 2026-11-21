@@ -217,6 +217,12 @@ section[id] { scroll-margin-top: 12px; }
 .video-impara { margin: 1.5rem auto; max-width: 360px; }
 .video-impara video { width: 100%; height: auto; aspect-ratio: 9 / 16; max-height: 640px; display: block; background: var(--paper-2); border-radius: 14px; }
 .video-impara figcaption { font-size: .9rem; color: var(--ink-2, #5B6369); text-align: center; margin-top: .5rem; }
+
+/* logo nuovo, 9.2 «Nastro pulito» (decisioni_logo.py, --logo-9) */
+.logo { font-stretch: 125%; font-weight: 900; letter-spacing: -.03em; gap: 9px; }
+.logo b { font-weight: 900; color: var(--lime); }
+.logo svg.lg9 { width: 21px; height: 26px; flex: none; }
+@media (max-width: 520px) { .top .logo { font-size: 1.08rem; gap: 7px; } .top .logo svg.lg9 { width: 18px; height: 22px; } }
 /* telefono (14/11/2026): nessuna pagina scorre di lato */
 @media (max-width: 520px) {
   h1 { font-size: min(2.4rem, 9vw); }
