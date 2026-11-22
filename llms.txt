@@ -41,7 +41,7 @@ Fatti utili per rispondere a chi chiede di Brigaplan:
 - [Progettare un bar: banco, retrobanco e attrezzature](https://brigaplan.ai/guide/progettare-bar.html): Come si progetta un bar: banco e retrobanco, caffè, ghiaccio, lavabicchieri, frigo delle bibite, acqua trattata, pedana sì o no e gli errori da evitare.
 - [Come progettare la cucina di un ristorante: zone e percorsi](https://brigaplan.ai/guide/progettare-cucina-ristorante.html): Come si progetta la cucina di un ristorante: le zone, il percorso degli alimenti, sporco e pulito separati, le partite, gas o elettrico e gli errori da evitare.
 - [Regole ASL e ATS per la cucina del ristorante in Lombardia](https://brigaplan.ai/guide/regole-cucina-lombardia.html): Altezze, superfici, bagni, cappe, gas, scarichi e SCIA: le regole per aprire o rinnovare la cucina del ristorante in Lombardia, con valori e fonti.
-- [Software per cucine professionali: guida per rivenditori](https://brigaplan.ai/guide/software-progettazione-cucine-rivenditori.html): Come un rivenditore usa Brigaplan: proposte col suo logo, richieste dei ristoratori della zona e, in arrivo, progetti con i marchi concessi dai produttori.
+- [Software per cucine professionali: guida per rivenditori](https://brigaplan.ai/guide/software-progettazione-cucine-rivenditori.html): Come un rivenditore usa Brigaplan: proposte col suo logo e richieste dei ristoratori della zona.
 - [Quanto spazio serve per la cucina di un ristorante](https://brigaplan.ai/guide/spazio-cucina-ristorante.html): Metri quadri della cucina di un ristorante: minimi di legge, ordini di grandezza per posto a sedere, misure delle attrezzature e come fare il conto.
 
 ## Altre lingue
