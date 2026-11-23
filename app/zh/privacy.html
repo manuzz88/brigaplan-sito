@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>隐私与 Cookie · Brigaplan</title>
+<meta name="description" content="Brigaplan 如何处理网站访客的数据：不使用 Cookie，不做跟踪，只有匿名的访问计数，以及托管网站的服务记录的技术数据。">
+<meta property="og:site_name" content="Brigaplan">
+<meta property="og:type" content="website">
+<meta property="og:title" content="隐私与 Cookie · Brigaplan">
+<meta property="og:description" content="Brigaplan 如何处理网站访客的数据：不使用 Cookie，不做跟踪，只有匿名的访问计数，以及托管网站的服务记录的技术数据。">
+<meta property="og:url" content="https://brigaplan.ai/zh/privacy.html">
+<meta property="og:image" content="https://brigaplan.ai/media/brigaplan_og.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta property="og:image:alt" content="用 Brigaplan 完成的意式餐馆 3D 设计方案">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FAFAF8">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="96x96" href="/icona-96.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/Archivo-100_900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/PublicSans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/pagine.css">
+<style>
+/* Versione cinese: font CJK di sistema, niente spaziature negative né caratteri allargati, interlinea più ampia per gli ideogrammi.
+   Il programma sito/strumenti/lingue.py lo aggiunge in fondo allo stile della pagina cinese. */
+:root {
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+  --f-body: "Archivo", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+  --f-mono: "Archivo", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+}
+body { line-height: 1.7; }
+h1, h2, h3 { font-stretch: 100%; letter-spacing: 0; line-height: 1.3; }
+h1 { line-height: 1.25; font-size: clamp(2rem, 1.1rem + 3.4vw, 3.6rem); } /* più piccolo: gli ideogrammi sono larghi e il 。 finale non deve andare a capo da solo */
+h1, h2 { font-weight: 700; }
+h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su punteggiatura e spazi, non a metà parola */
+.lead { line-height: 1.65; }
+.punch, .thesis { font-stretch: 100%; line-height: 1.5; }
+h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-stretch: 100%; }
+.partner strong { font-stretch: 100%; }
+.eyebrow, .why-k, .notice, .ex b, .cartiglio dt, .compare thead th, .pill, .price, .reel-tag, .reel-btn { letter-spacing: .04em; }
+@media (max-width: 640px) { .compare tbody th, .compare td::before { letter-spacing: .04em; } }
+.plan .zl { letter-spacing: 1px; }
+.plan .fl-l, .plan .hood-t { letter-spacing: .5px; }
+@media (max-width: 360px) { h1, h2, .for { word-break: normal; } }  /* schermi molto stretti: si va a capo anche tra gli ideogrammi */
+</style>
+</head>
+<body>
+
+<header class="top top-app">
+  <div class="wrap">
+    <span class="logo">
+      <svg class="lg9" viewBox="8 4 32 40" aria-hidden="true"><path fill="#CDFF3A" d="M8 12L16 4L32 4L32 12L16 12L16 20L32 20L32 28L16 28L16 36L32 36L32 44L8 44Z"/><path fill="#8FB51F" d="M32 4L32 4L40 12L40 17L33 24L40 31L40 36L32 44L32 44Z"/></svg>
+      <span translate="no">Briga<b>plan</b></span>
+    </span>
+    <div class="top-azioni">
+      <nav class="lingue" translate="no" aria-label="语言">
+        <a href="/app/privacy.html" lang="it" hreflang="it">IT</a>
+        <a href="/app/en/privacy.html" lang="en" hreflang="en">EN</a>
+        <a href="/app/zh/privacy.html" lang="zh-Hans" hreflang="zh-Hans" aria-current="page">中文</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="wrap doc">
+  <div class="doc-head">
+    <span class="eyebrow">根据欧盟第 2016/679 号条例第 13 条提供的隐私告知</span>
+    <h1>隐私与 Cookie</h1>
+    <p class="sec-lead">我们如何处理本网站访客的数据。简而言之：不使用 Cookie，不做跟踪；我们只以匿名、汇总的方式统计访问量。</p>
+    <p class="nota-lingua">本页为译文，如有出入，以意大利语版本为准。</p>
+  <p class="agg">2026 年 11 月 5 日版</p>
+    <p class="agg agg-contatore">2026 年 11 月 20 日更新：访问计数器也统计国家和设备类型。</p>
+  </div>
+
+  <div class="prosa">
+    <section aria-labelledby="p-titolare">
+      <h2 id="p-titolare">谁是数据控制者</h2>
+      <dl>
+        <dt>控制者</dt><dd>Italfrigo Service S.r.l.，Via Serviliano Lattuada 26, 20135 Milano · 米兰-蒙扎布里安扎-洛迪企业登记处登记号 06825390153 · 经济行政登记号 REA MI-1120586 · 税号和增值税号 C.F. e P.IVA 06825390153</dd>
+        <dt>联系方式</dt><dd><!--email_off--><a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a><!--/email_off--> · 认证邮箱（PEC）<span translate="no"><!--email_off-->italfrigo@pec.italfrigo.com<!--/email_off--></span></dd>
+      </dl>
+      <p>Brigaplan 是 Italfrigo Service S.r.l. 提供的服务。</p>
+    </section>
+
+    <section aria-labelledby="p-dati">
+      <h2 id="p-dati">我们目前处理哪些数据</h2>
+      <p>本网站不使用 Cookie，不使用其他公司的统计或广告工具，也不加载其他网站的内容：字体和视频都在我们自己的服务器上。</p>
+      <p>注册平台的用户适用<a href="/app/zh/privacy-piattaforma.html">平台隐私告知</a>。</p>
+      <p>唯一的处理涉及每次访问的技术数据，托管网站的服务为了发送页面会自动处理这些数据：IP 地址、日期和时间、请求的页面、浏览器类型。我们不保存单次访问的记录。</p>
+      <p>我们用自己的计数器统计访问量，它运行在 Brigaplan 平台（app.brigaplan.ai）上，不使用 Cookie。您打开页面时，浏览器向它发送页面、语言和您来自的网站。我们只在当下从 IP 地址得出国家，不保存该地址；从浏览器只得出设备类型（手机、平板电脑、电脑）。我们只保存按日期、页面、语言、来源网站、国家和设备类型汇总的总数：没有标识符、IP 地址或浏览器类型。IP 地址也只在片刻之间用于拦截发送过多请求的来源，不会被保存。如果您的浏览器要求不被跟踪（Do Not Track 或 Global Privacy Control），这次访问不会被计入。</p>
+    </section>
+
+    <section aria-labelledby="p-perche">
+      <h2 id="p-perche">目的和法律依据</h2>
+      <p>技术数据用于让网站正常运行，并保护网站免受滥用和攻击。法律依据是控制者维护服务安全的正当利益（条例第 6 条第 1 款 f 项）。我们不会用这些数据对您进行画像，也不会用于其他目的。</p>
+      <p>访问计数同样基于正当利益：它帮助我们了解哪些页面有用、访客从哪里来，以便改进网站。这些总数无法识别您的身份。</p>
+    </section>
+
+    <section aria-labelledby="p-chi">
+      <h2 id="p-chi">谁代我们处理数据</h2>
+      <p>本网站由 DigitalOcean LLC 托管（App Platform 服务，德国法兰克福区域），并通过 DigitalOcean 使用的内容分发网络（CDN）送达访客，该网络在欧盟以外也有节点。DigitalOcean 作为处理者，代表我们处理技术数据。它是一家美国公司，已加入欧美数据隐私框架（EU-U.S. Data Privacy Framework，欧盟委员会 2023 年 7 月 10 日决定）；如果该框架失效，则适用标准合同条款。您可以写信到 <!--email_off--><a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a><!--/email_off--> 索取这些保障措施的副本。</p>
+      <p>访问计数器运行在 Brigaplan 平台上，该平台同样由 DigitalOcean 托管，位于法兰克福区域。</p>
+    </section>
+
+    <section aria-labelledby="p-tempo">
+      <h2 id="p-tempo">保存多久</h2>
+      <p>我们不保存单次访问的技术数据。计数器的总数在 13 个月后删除。托管网站的服务只在发送页面和防止滥用所需的时间内保留技术数据，具体见其<a href="https://www.digitalocean.com/legal/privacy-policy">隐私政策</a>，之后予以删除。</p>
+    </section>
+
+    <section aria-labelledby="p-diritti">
+      <h2 id="p-diritti">您的权利</h2>
+      <p>您可以随时要求访问、更正或删除您的数据，限制处理或提出反对，以及行使数据可携带权（条例第 15 至 22 条）。只需写信给上面的联系方式。</p>
+      <p>如果您认为处理不当，可以向意大利个人数据保护局（Garante per la protezione dei dati personali）投诉（<a href="https://www.garanteprivacy.it">garanteprivacy.it</a>）。</p>
+    </section>
+
+    <section aria-labelledby="p-cookie">
+      <h2 id="p-cookie">Cookie</h2>
+      <p>没有，既没有技术性 Cookie，也没有第三方 Cookie。所以本网站不会请您同意使用 Cookie。</p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="logo"><span translate="no">Briga<b>plan</b></span></span>
+    <p>用人工智能设计商用厨房和吧台。</p>
+    <p>Brigaplan · Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · 电话 <span translate="no">+39 348 4096847</span> · 米兰-蒙扎布里安扎-洛迪企业登记处登记号 06825390153 · 经济行政登记号 REA MI-1120586 · 税号和增值税号 C.F. e P.IVA 06825390153 · 注册资本 46,800.00 欧元（已全额实缴）· 认证邮箱（PEC）<span translate="no"><!--email_off-->italfrigo@pec.italfrigo.com<!--/email_off--></span> · <a href="/app/zh/privacy.html">隐私与 Cookie</a></p>
+  </div>
+</footer>
+</body>
+</html>

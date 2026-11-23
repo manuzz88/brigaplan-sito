@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://app.brigaplan.ai; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>平台隐私 · Brigaplan</title>
+<meta name="description" content="Brigaplan 如何处理注册和使用平台的用户的数据：账户、项目、上传的平面图、AI 助手、报价请求和公司。">
+<meta property="og:site_name" content="Brigaplan">
+<meta property="og:type" content="website">
+<meta property="og:title" content="平台隐私 · Brigaplan">
+<meta property="og:description" content="Brigaplan 如何处理注册和使用平台的用户的数据：账户、项目、上传的平面图、AI 助手、报价请求和公司。">
+<meta property="og:url" content="https://brigaplan.ai/zh/privacy-piattaforma-v12.html">
+<meta property="og:image" content="https://brigaplan.ai/media/brigaplan_og.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta property="og:image:alt" content="用 Brigaplan 完成的意式餐馆 3D 设计方案">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FAFAF8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect x='1.5' y='1.5' width='23' height='23' fill='%23fff' stroke='%2316191C' stroke-width='2.2'/%3E%3Cpath d='M1.5 11H13V24.5M13 7V1.5' fill='none' stroke='%2316191C' stroke-width='1.4'/%3E%3Crect x='16' y='15' width='6' height='6' fill='%23A63A1F'/%3E%3C/svg%3E">
+<link rel="preload" href="/fonts/Archivo-100_900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/PublicSans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/pagine.css">
+<style>
+/* Versione cinese: font CJK di sistema, niente spaziature negative né caratteri allargati, interlinea più ampia per gli ideogrammi.
+   Il programma sito/strumenti/lingue.py lo aggiunge in fondo allo stile della pagina cinese. */
+:root {
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+  --f-body: "Archivo", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+  --f-mono: "Archivo", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+}
+body { line-height: 1.7; }
+h1, h2, h3 { font-stretch: 100%; letter-spacing: 0; line-height: 1.3; }
+h1 { line-height: 1.25; font-size: clamp(2rem, 1.1rem + 3.4vw, 3.6rem); } /* più piccolo: gli ideogrammi sono larghi e il 。 finale non deve andare a capo da solo */
+h1, h2 { font-weight: 700; }
+h1, h2, .for { word-break: keep-all; overflow-wrap: break-word; } /* a capo su punteggiatura e spazi, non a metà parola */
+.lead { line-height: 1.65; }
+.punch, .thesis { font-stretch: 100%; line-height: 1.5; }
+h3, .fatti b, .price, .faq summary, .giro li::before, .steps li::before { font-stretch: 100%; }
+.partner strong { font-stretch: 100%; }
+.eyebrow, .why-k, .notice, .ex b, .cartiglio dt, .compare thead th, .pill, .price, .reel-tag, .reel-btn { letter-spacing: .04em; }
+@media (max-width: 640px) { .compare tbody th, .compare td::before { letter-spacing: .04em; } }
+.plan .zl { letter-spacing: 1px; }
+.plan .fl-l, .plan .hood-t { letter-spacing: .5px; }
+@media (max-width: 360px) { h1, h2, .for { word-break: normal; } }  /* schermi molto stretti: si va a capo anche tra gli ideogrammi */
+</style>
+</head>
+<body>
+
+<header class="top top-app">
+  <div class="wrap">
+    <span class="logo">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><rect class="lm-wall" x="1.5" y="1.5" width="23" height="23"/><path class="lm-line" d="M1.5 11H13V24.5M13 7V1.5"/><rect class="lm-acc" x="16" y="15" width="6" height="6"/></svg>
+      <span translate="no">Briga<b>plan</b></span>
+    </span>
+    <div class="top-azioni">
+      <nav class="lingue" translate="no" aria-label="语言">
+        <a href="/app/privacy-piattaforma-v12.html" lang="it" hreflang="it">IT</a>
+        <a href="/app/en/privacy-piattaforma-v12.html" lang="en" hreflang="en">EN</a>
+        <a href="/app/zh/privacy-piattaforma-v12.html" lang="zh-Hans" hreflang="zh-Hans" aria-current="page">中文</a>
+        <a href="/app/de/privacy-piattaforma-v12.html" lang="de" hreflang="de">DE</a>
+        <a href="/app/fr/privacy-piattaforma-v12.html" lang="fr" hreflang="fr">FR</a>
+        <a href="/app/es/privacy-piattaforma-v12.html" lang="es" hreflang="es">ES</a>
+        <a href="/app/nl/privacy-piattaforma-v12.html" lang="nl" hreflang="nl">NL</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="wrap doc">
+  <div class="doc-head">
+    <span class="eyebrow">根据欧盟第 2016/679 号条例第 13 条和第 14 条提供的隐私告知</span>
+    <h1>平台隐私</h1>
+    <p class="sec-lead">我们如何处理注册和使用 Brigaplan 平台的用户数据：账户、项目、上传的平面图以及与助手的对话。如果您只是访问网站，适用<a href="/app/zh/privacy.html">网站隐私告知</a>。</p>
+    <p class="nota-lingua">本页为译文，如有出入，以意大利语版本为准。如果您是消费者，而某句话含义不清，则按对您最有利的含义理解。</p>
+  <p class="agg archivio">本页为第 12 版的固定副本。现行版本请始终以<a href="/app/zh/privacy-piattaforma.html">此处</a>为准。</p>
+    <p class="agg">第 12 版 · 2026 年 11 月 16 日 · <a href="/app/zh/privacy-piattaforma-v11.html">上一版</a></p>
+  </div>
+
+  <div class="prosa">
+    <section aria-labelledby="pp-titolare">
+      <h2 id="pp-titolare">谁是数据控制者</h2>
+      <dl>
+        <dt>控制者</dt><dd>Italfrigo Service S.r.l.，Via Serviliano Lattuada 26, 20135 Milano · 米兰-蒙扎布里安扎-洛迪企业登记处登记号 06825390153 · 经济行政登记号 REA MI-1120586 · 税号和增值税号 C.F. e P.IVA 06825390153</dd>
+        <dt>联系方式</dt><dd><a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a> · 认证邮箱（PEC）<span translate="no">italfrigo@pec.italfrigo.com</span></dd>
+      </dl>
+      <p>Brigaplan 是 Italfrigo Service S.r.l. 提供的服务。这家公司同时也是经销商和安装商，与其他经销商遵守相同的规则：只有您本人发送时，它才会收到您的项目。</p>
+    </section>
+
+    <section aria-labelledby="pp-dati">
+      <h2 id="pp-dati">我们处理哪些数据</h2>
+      <ul>
+        <li><strong>账户：</strong>电子邮箱、姓名、账户类型（个人或专业）和身份、国家、城市和语言。专业用户还包括公司名称和增值税号。我们还会保存我们向您展示的隐私告知的日期和版本，以及您最后一次登录的日期。</li>
+        <li><strong>密码：</strong>我们只保存加密后的密码（Argon2），所以连我们也无法读取。</li>
+        <li><strong>使用 Google 登录：</strong>如果您选择“使用 Google 登录”，Google 会向我们提供您的姓名、电子邮箱以及识别您 Google 账户的代码。我们不会获得您的 Google 密码。</li>
+        <li><strong>项目：</strong>项目名称、店面类型、城市、座位数、您的需求、您上传的平面图和文件，以及您对引擎所指出问题作出的声明（选择、文字、位置和日期）。</li>
+        <li><strong>分享的项目：</strong>如果您通过链接分享项目，持有链接的人可以看到预览方案的 3D，只有您选择时才能看到店名；他们看不到聊天、文件、平面图和价格。链接在 30 天后或您关闭时失效。我们只统计链接被打开的次数。</li>
+        <li><strong>您账户的规则：</strong>您让助手记住的选择。我们只把它们用于您的项目，不用于其他用户，也不用于改进 Brigaplan，其他人也看不到。</li>
+        <li><strong>与助手的对话：</strong>您写给助手的消息、助手的回复以及它准备的预览方案（平面图、3D、检查结果）。</li>
+        <li><strong>麦克风：</strong>如果您在聊天中使用麦克风，语音转文字由您的浏览器使用其厂商的服务完成（例如 Google、Apple 或 Microsoft），并适用其条款：音频不会传给 Brigaplan。我们只收到您决定发送的文字，就像书面消息一样。</li>
+        <li><strong>预览方案 3D 的使用情况：</strong>每个项目的 3D 显示了多长时间，以及您在新标签页中打开它的次数。</li>
+        <li><strong>免费项目的指纹：</strong>平面图和店面的数字指纹（尺寸和形状）、城市以及描述的指纹，用于防止滥用免费服务。</li>
+        <li><strong>完整设计方案申请：</strong>您选择的级别、备注，以及您提供的电话号码（如有）。</li>
+        <li><strong>报价请求：</strong>您把项目发给了哪些经销商、发送时间、收到的报价以及您接受的报价。</li>
+        <li><strong>公司和团队：</strong>如果您为在 Brigaplan 注册的公司（经销商、厂家或代理机构）工作，包括公司的名称和资料、您在团队中的角色以及邀请您的人；对于经销商，还包括公开名单中的资料、与厂家之间的授权以及面板中的数据。</li>
+        <li><strong>企业核实：</strong>如果您自动核实您的企业，包括您上传的商会登记摘录、我们从中读取的数据（其中包括企业名称、增值税号、总部和企业的认证邮箱（PEC））以及核实结果。</li>
+        <li><strong>付款和发票：</strong>您购买的内容、金额、付款日期和结果、Stripe 用来识别该笔付款的代码，以及开票信息（姓名或公司名称、地址、意大利税号或增值税号、收件代码或认证电子邮箱 PEC）。我们看不到银行卡号：只有 Stripe 处理。如果您撤销合同，我们还会保存撤销记录及其日期和时间。</li>
+        <li><strong>客户支持：</strong>您在“帮助”聊天中写的消息和 AI 助手的回复；如果您写信到 info@brigaplan.ai，则包括您的消息和您的邮箱。</li>
+        <li><strong>已连接的应用</strong>（例如 Claude）：您连接了哪个应用、相关日期和访问代码，访问代码只以无法还原的指纹形式保存。详见<a href="#pp-claude">在 Claude 中使用 Brigaplan</a>。</li>
+        <li><strong>技术数据：</strong>为了限制登录尝试次数，我们只在内存中使用您的 IP 地址几分钟，不会保存。托管平台的服务会按照<a href="/app/zh/privacy.html">网站隐私告知</a>中的说明记录访问的技术数据。</li>
+      </ul>
+      <p>平面图可能包含其他人的数据，例如图签中设计师的姓名。请只在您有权上传时才上传。我们把它们用于您的项目，绝不会向其他用户展示。</p>
+      <p id="pp-clienti"><strong>如果您是专业人士，上传了客户的平面图或数据</strong>，对这些数据我们是独立的数据控制者，并按本声明的说明处理，但您保存在经销商面板中的数据除外（见<a href="#pp-pannello">经销商面板</a>）。您必须有权上传这些数据，并且必须告知您的客户，例如：“为了准备设计方案，我使用 Brigaplan，这是 Italfrigo Service S.r.l. 提供的服务：它如何处理数据，详见 brigaplan.ai/privacy-piattaforma.html”。您的客户可以写信到 <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a>，直接向我们行使自己的权利。</p>
+    </section>
+
+    <section aria-labelledby="pp-perche">
+      <h2 id="pp-perche">目的和法律依据</h2>
+      <ul>
+        <li><strong>为您提供服务</strong>（账户、项目、预览方案、确认和通知邮件）：这是履行您注册时接受的合同所必需的（条例第 6 条第 1 款 b 项）。没有电子邮箱、密码和账户类型，我们无法开通账户。</li>
+        <li><strong>保护平台</strong>免受滥用和未经授权的访问：控制者的正当利益（第 6 条第 1 款 f 项）。</li>
+        <li><strong>把项目发送给您选择的经销商</strong>以获取报价：依据您的同意，每次请求都通过勾选框给出（第 6 条第 1 款 a 项）。详见<a href="#pp-preventivi">向经销商请求报价</a>。</li>
+        <li><strong>改进 Brigaplan</strong>（规则、典型设备配置、统计、质量检查和内部范例），使用去掉姓名、公司、地址和联系方式的项目：控制者的正当利益（第 6 条第 1 款 f 项）。您可以随时提出反对：详见<a href="#pp-migliorare">我们如何使用项目改进 Brigaplan</a>。专业账户只有在您开启后才会使用。</li>
+        <li><strong>了解 3D 视图是否有助于您做选择</strong>：统计您预览方案中的 3D 显示了多长时间，以及您在新标签页中打开它的次数。依据：控制者的正当利益（第 6 条第 1 款 f 项）。我们只看所有客户的总数，绝不用于向您发送优惠或消息。我们不会在您的设备上写入任何内容。如果您已反对将您的项目用于改进 Brigaplan，我们不做任何统计。专业账户不做任何统计。</li>
+        <li><strong>防止滥用免费服务。</strong>为避免同一店面被不同账户多次免费设计，我们会将免费项目与过去 90 天内的项目进行比对。我们只使用平面图和店面的数字指纹（尺寸和形状）、城市以及描述的指纹，不使用文字或图片。如果某个项目与另一个项目非常相似，该项目的免费预览方案会暂停，由我们的工作人员检查。您随时可以联系我们或改用付费服务，我们不会告诉任何人涉及的是哪个账户。依据：我们防止滥用和欺诈的正当利益（GDPR 第 6 条第 1 款 f 项及序言第 47 条）。指纹在 90 天后删除，即使您在此期间删除项目或注销账户也是如此：指纹只是数字，不含文件或平面图，用于防止通过删除项目或注册新账户重复使用免费试用。如果您注销账户，剩余的指纹将不再与您关联：不含账户，也不含项目编号。您可以写信给我们提出反对：我们会删除该指纹，除非该店面已被确认存在滥用。您也可以要求由人工复核暂停决定。</li>
+        <li><strong>回复支持请求：</strong>对注册用户，这是履行合同所必需的（第 6 条第 1 款 b 项）；对未注册的用户，基于我们回复的合法利益（第 6 条第 1 款 f 项）。</li>
+        <li><strong>邀请您在 Trustpilot 上留下评价</strong>，在付费服务交付之后：基于我们收集客户意见的合法利益（第 6 条第 1 款 f 项），并遵守意大利隐私法第 130 条第 4 款的规定。您可以在购买时、在账户中或通过每封邀请中的链接拒绝。</li>
+        <li><strong>遵守法律</strong>，例如配合主管机关的要求，或履行与付款相关的税务义务（如电子发票）：法定义务（第 6 条第 1 款 c 项）。</li>
+      </ul>
+      <p>我们不会把您的数据用于广告，不会出售，也不会在没有单独同意的情况下给您发送新闻通讯。</p>
+    </section>
+
+    <section aria-labelledby="pp-ia">
+      <h2 id="pp-ia">AI 助手</h2>
+      <p>预览方案由人工智能助手（Anthropic 的 Claude 模型）与我们的设计引擎共同准备，设计引擎负责检查尺寸和规范。</p>
+      <p>预览方案、设计方案和施工图由引擎和 AI 制作。除非您需要我们的帮助，我们的工作人员不会打开您的项目，但<a href="#pp-migliorare">我们如何使用项目改进 Brigaplan</a>中所述、对预览方案进行且不显示您个人资料的抽样质量检查（专业账户从不参与）除外。如果您请求我们帮助，我们团队的工作人员会查看项目、上传的文件和您与助手的对话。在法律要求时或为防止滥用服务，工作人员也会打开项目，每次打开都会留下记录。</p>
+      <p>引擎的成果仅供参考，不会作出对您产生法律效力的决定：Brigaplan 为您提供设备功能布局，由您自选的技术人员和顾问批准。</p>
+    </section>
+
+    <section aria-labelledby="pp-migliorare">
+      <h2 id="pp-migliorare">我们如何使用项目改进 Brigaplan</h2>
+      <p>为了让助手和引擎工作得更好，我们也会使用在平台上完成的项目：用于检查质量、编写和修正规则、计算统计数据和典型设备配置（例如一家 80 座披萨店通常需要哪些设备），以及保留内部范例，以便更好地设计类似的项目。</p>
+      <p><strong>抽样检查。</strong>为检查质量，我们的工作人员会以只读方式抽样查看部分预览方案：每天最多抽取 3 个项目。专业账户的项目从不参与抽样。查看人能看到预览方案的各个版本（平面图、3D 和引擎检查结果）、您上传的原样文件及其文件名，以及规则所需的店面数据：店面类型、城市、座位数和能源。查看人看不到您的个人资料（姓名、公司、增值税号、地址、电子邮箱和电话）、项目名称、您的请求以及您与助手的对话。不过，您上传的文件及其文件名中可能出现店面名称和其他信息，例如姓名和地址。我们会记录查看人和查看时间；如果查看人为了仔细查看而下载文件，下载也会被记录，我们不会保留副本。如果想少显示一些信息，请上传不带图签、文件名中不含姓名的平面图；如果什么都不想显示，请在账户中提出反对：您的预览方案永远不会被抽中。</p>
+      <ul>
+        <li><strong>不含您的个人数据。</strong>用于此目的时，我们会从项目中去掉姓名、公司、地址和联系方式。</li>
+        <li><strong>您的平面图不会给其他人看。</strong>您上传的平面图和文件（也就是您的店面）以及您的数据，绝不会向其他用户展示。我们可以向其他客户提出的，只是由 Brigaplan 制作、不涉及您的布局方案（功能分区、操作台和设备如何摆放），并根据他们的店面进行调整。</li>
+        <li><strong>法律依据：</strong>我们改进服务的正当利益（条例第 6 条第 1 款 f 项）。</li>
+        <li><strong>您可以随时提出反对</strong>，无需说明理由：您的账户中有“不要使用我的项目改进 Brigaplan”选项，或者写信到 <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a>。从那时起，我们不再为此目的使用您的项目，并会删除这些项目去掉姓名的副本；只保留已经汇总的数据（统计和规则），它们已与您无关。</li>
+        <li><strong>专业账户：</strong>情况正好相反。“使用我的项目改进 Brigaplan”选项默认关闭：在您开启之前，我们不会为此目的使用您的项目；您也可以随时关闭。</li>
+      </ul>
+      <p>我们不会用您的项目训练人工智能模型，AI 供应商也不得这样做。</p>
+    </section>
+
+    <section aria-labelledby="pp-claude">
+      <h2 id="pp-claude">在 Claude 中使用 Brigaplan</h2>
+      <p>您也可以在 Anthropic 的助手 Claude 中使用 Brigaplan：只需把 Brigaplan 连接器添加到您的 Claude 账户。在这种情况下：</p>
+      <ul>
+        <li><strong>访问。</strong>您用 Brigaplan 账户登录，并授权 Claude 查看和创建您的项目。您可以随时在账户的“已连接的应用”部分撤销授权。如果您修改或重置密码，已连接的应用会立即断开。</li>
+        <li><strong>我们收到的内容。</strong>只有 Claude 为项目发给我们的内容：店面信息，以及对我们助手提问的回答，有时由 Claude 概括。我们像保存网站上的消息一样保存这些内容。您与 Claude 的其他对话我们看不到。平面图只能通过我们自己的页面上传，不能从聊天中上传。</li>
+        <li><strong>我们发给 Claude 的内容。</strong>我们助手的提问、项目状态、一段不含品牌、尺寸和型号的简短说明、三档价格估算，以及网站链接。平面图和 3D 在聊天中的一个窗口里显示，与网站上一样经过缩小并带水印，链接有效期为 10 分钟。</li>
+        <li><strong>谁是数据控制者。</strong>您与 Claude 的对话由 Anthropic 作为数据控制者处理，依据其<a href="https://www.anthropic.com/legal/privacy">隐私政策</a>。发送到 Brigaplan 的数据由我们作为数据控制者处理，和平台其他部分一样，用于为您提供服务（条例第 6 条第 1 款 b 项）。</li>
+        <li><strong>应用访问。</strong>对于已连接的应用，我们保存其名称、回调地址和连接日期。访问代码只以无法还原的指纹形式保存，并记录有效期、最后使用时间和撤销情况：访问代码有效期 1 小时，续期代码 30 天，最长 90 天后需要重新连接 Claude。</li>
+        <li><strong>在项目中</strong>我们会注明它来自 Claude，用于统计。</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="pp-assistenza">
+      <h2 id="pp-assistenza">帮助</h2>
+      <p>在“帮助”聊天中，由 AI 助手回复，使用与预览方案相同的服务商。如需与真人交流，请写信到 info@brigaplan.ai：我们会通过邮件回复。支持消息保存 12 个月。</p>
+    </section>
+
+    <section aria-labelledby="pp-chi">
+      <h2 id="pp-chi">谁代我们处理数据</h2>
+      <p>我们把以下供应商作为处理者，并通过合同（DPA）要求他们只代表我们使用数据：</p>
+      <ul>
+        <li><strong>DigitalOcean, LLC</strong>（美国）：平台的服务器、数据库和文件，位于法兰克福区域（德国）。在备份和传送网页的网络（Cloudflare）方面，DigitalOcean 也使用位于美国的供应商。DigitalOcean 已加入欧美数据隐私框架（EU-U.S. Data Privacy Framework）。</li>
+        <li><strong>写实渲染：</strong>目前我们在米兰自己的电脑上制作。需要更多算力时，使用 DigitalOcean, LLC 在欧盟境内（德国法兰克福）的服务器，服务器为任务创建、任务结束后即销毁：平面图和 3D 模型只在渲染期间保存在那里。欧盟以外（加拿大多伦多）带 GPU 的机器只有在我们启用时才会使用；届时我们会先更新本页面。</li>
+        <li><strong>Anthropic Ireland, Limited</strong>（爱尔兰都柏林）：提供 Claude 人工智能模型。它会收到您与助手对话的消息，以及准备预览方案所需的项目数据和图片。这些数据也会在美国处理，适用欧盟委员会批准的标准合同条款。Anthropic 会在 30 天内删除这些数据；如果其自动检查发现违反使用政策的情况，最多可保存 2 年。Anthropic 不得用这些数据训练其模型。</li>
+        <li><strong>Brevo SAS</strong>（法国巴黎）：发送自动邮件（邮箱确认、通知、回复），服务器位于法国和比利时。其部分供应商位于美国或印度，适用数据隐私框架或标准合同条款。</li>
+        <li><strong>Zoho Corporation B.V.</strong>（荷兰乌得勒支）：管理 info@brigaplan.ai 邮箱，服务器位于欧盟。为提供技术支持，Zoho 在印度的员工可能会访问该邮箱，适用标准合同条款。</li>
+        <li><strong>Openapi S.p.A.</strong>（意大利）：如果企业核实是自动进行的，它从企业登记处为我们提供企业的认证邮箱（PEC）。它只收到增值税号。</li>
+        <li><strong>Stripe Payments Europe, Limited</strong>（爱尔兰），负责付款：银行卡信息只由 Stripe 处理。为防范欺诈并履行其自身的法定义务（例如反洗钱），Stripe 会作为独立控制者使用部分数据，具体见其<a href="https://stripe.com/it/privacy">隐私政策</a>。对于传输到欧盟以外的数据，Stripe 依据欧盟-美国数据隐私框架和标准合同条款。</li>
+        <li><strong>Trustpilot A/S</strong>（丹麦哥本哈根）：在付费服务交付后，除非您已拒绝，会向您发送留下评价的邀请。它会以密送方式收到订单确认邮件（不含文件及其下载链接），并从中获取您的姓名、邮箱和订单编号。如果您写评价，还适用 Trustpilot 的条款和隐私声明。</li>
+        <li><strong>电子发票：</strong>由 Italfrigo Service S.r.l. 通过其电子发票系统开具，并发送至意大利交换系统（Sistema di interscambio）。</li>
+      </ul>
+      <p>我们也会在自己位于米兰办公室的一台电脑上处理数据：助手就在那里准备预览方案。这台电脑从网站接收平面图、对话和项目，并在账户存续期间保存。</p>
+      <p><strong>使用 Google 登录。</strong>如果您选择“使用 Google 登录”，Google 会向我们确认您的身份，并提供您的姓名、邮箱和一个识别您账户的代码。这部分由 Google 作为独立的数据控制者，按照其<a href="https://policies.google.com/privacy">隐私政策</a>处理数据。</p>
+      <p><strong>向欧盟以外传输。</strong>上文已为每家供应商注明所适用的保障措施：数据隐私框架（欧盟委员会 2023 年 7 月 10 日决定）或标准合同条款。您可以写信到 <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a> 索取这些保障措施的副本。</p>
+      <p><strong>效果图链接。</strong>如果您通过链接分享效果图，收到链接的人只能看到效果图，看不到项目、文件或您的个人资料。链接 30 天后失效，您也可以随时提前关闭。</p>
+    </section>
+
+    <section aria-labelledby="pp-partner">
+      <h2 id="pp-partner">经销商和安装商</h2>
+      <p>只有在您要求时，我们才会与经销商和安装商共享您的项目，而且只与您选择的对象共享。</p>
+      <p id="pp-preventivi"><strong>向经销商请求报价。</strong>如果您在项目页面请求报价并为该请求勾选同意框，我们会把项目名称、场所类型、城市、座位数、描述、所发送版本的平面图和 3D 以及您的姓名发送给您选择的经销商（最多 3 家，均经审核：由我们的工作人员审核，或通过企业的商会登记摘录和认证邮箱（PEC）审核）。他们不会收到您的邮箱或电话。每家经销商只将这些数据用于为您准备报价，并作为独立控制者处理。如果您接受其报价，我们会把您的邮箱发给对方，以便联系您。如果您拒绝，或请求在 14 天后过期，对方将无法再查看平面图和 3D。经销商接收您的请求无需向 Brigaplan 付费：发给谁由您决定。</p>
+      <p id="pp-canali"><strong>厂家专属通道。</strong>如果您通过某家设备厂家的链接进入 Brigaplan，您的账户会与该厂家的专属通道关联，设计方案会优先使用其产品，或在某些类别中只使用其产品。在您提出要求之前，我们不会向厂家发送任何内容。如果您在项目页面索取报价并勾选相应选项，我们会通过电子邮件向该厂家发送项目名称和编号、您的姓名、电子邮箱、电话（如您填写）、所在地区以及您的备注。我们不会发送平面图、3D 或项目说明。厂家可以把请求转给其在您所在地区的经销商，由经销商为您报价；自收到请求起，厂家（以及从厂家处收到请求的一方）作为独立的数据控制者处理这些数据，仅用于报价，并适用其自身的隐私告知。我们只在您同意的情况下这样做（条例第 6 条第 1 款 a 项），您可以随时在账户的“您的同意设置”部分，或写信到 <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a> 撤回同意：从那时起我们不会再发送任何数据，并会要求已经收到数据的一方删除这些数据。对于已经发送的数据，您也可以联系该厂家。专业账户不提供此项请求。</p>
+      <p id="pp-produttori"><strong>已注册的厂家。</strong>如果您注册为厂家，我们会处理您的联系方式（姓名、电子邮箱、职务、公司）、您给予和撤回的许可（哪些许可、针对哪些品牌，以及确切文本、版本、语言和日期），以及工作人员关于如何核实您身份的记录。这些数据用于管理厂家通道，并证明您许可了哪些内容。依据：与贵公司的合同，以及我们能够证明许可的正当利益（GDPR 第 6 条第 1 款 b 项和 f 项）。我们会在合作关系结束后将许可及其证明保存最长 10 年，即可能产生争议的期限；其余数据保存到您关闭账户为止。我们不会向客户展示您的联系方式。</p>
+      <p id="pp-caricamenti"><strong>厂家上传。</strong>如果您批量上传图库中的文件，我们会将其保存在网站数据库中，以及 DigitalOcean 位于法兰克福的私有文件存储空间中。Brigaplan 的工作电脑会在封闭且不联网的环境中打开这些文件，从中提取尺寸和数据。价目表始终加密保存。</p>
+      <p id="pp-elenco"><strong>公开经销商名单。</strong>如果您开启“出现在公开经销商名单中”，名单条目中的数据即为公开数据，任何人都能看到，即使没有账户也能看到：公司名称、总部所在的市镇和国家、服务地区、描述、语言、网站、技术人员人数和成立年份。我们不显示邮箱、电话或个人姓名；如果公司名称中包含您的姓名，您的姓名也会公开。名单条目不会被搜索引擎收录。法律依据：合同，即您通过开启该选项所选择的服务（GDPR 第 6 条第 1 款 b 项）。只要该选项保持开启，名单条目就是公开的；关闭后条目将不再可见，数据只保留在您的资料页中。</p>
+      <p id="pp-concessioni"><strong>厂家和授权。</strong>如果您申请开通某个品牌资料的访问权限，或选择让您所在地区的厂家找到您，厂家能看到您的公司名称、公司是否经过核实、您服务的地区以及您与该厂家之间的授权状态。厂家看不到您经营的其他品牌、您的客户或您的项目。</p>
+      <p id="pp-pannello"><strong>经销商面板。</strong>经销商在其面板中保存的、关于自身业务和客户的状态、文件夹、标签、备注和文档都属于该经销商：对这些数据，控制者是经销商，Brigaplan 仅代表经销商、作为处理者（GDPR 第 28 条）处理这些数据，具体见使用条款。如果您是某经销商的客户，有关这些数据请联系该经销商；如果您写信给我们，我们会将请求转给该经销商。如果经销商向您发送文档，您可以在自己的账户中下载：经销商能看到您何时下载其发送给您的文档（哪份文档、何时下载，不含 IP 地址）。</p>
+      <p id="pp-squadra"><strong>公司团队。</strong>如果您通过邀请加入某公司的团队，负责人能看到您的姓名和邮箱，同事能看到您的姓名和角色。如果公司使用面板，您从加入之时起用此账户创建的项目，同事也能看到。加入、退出和角色变更都会保留在公司的记录中：如果您关闭账户，您的姓名会由一个代号取代，我们像保存权限证明一样保存该代号，最长 10 年。法律依据：合同，以及我们能够证明谁做了什么的正当利益（GDPR 第 6 条第 1 款 b 项和 f 项）。</p>
+      <p id="pp-agenti"><strong>代理商代码。</strong>如果您的经销商使用代理商的代码，代理商能看到不含可识别您身份数据的项目摘要：场所类型、省份、月份以及其所代表品牌的设备。</p>
+      <p id="pp-visura"><strong>通过商会登记摘录核实。</strong>企业核实也可以自动进行：您上传商会登记摘录，由我们的系统自动读取（也会借助 AI 供应商），读取后我们会立即删除，即使读取未成功也是如此。我们保存读取的数据和核实结果：工作人员可以查看，这些数据随账户一起删除。我们在欧洲 VIES 系统中核对增值税号，只向其发送增值税号。为了确认您属于该企业，我们会向企业的认证邮箱（PEC）发送一个验证码，有效期 30 分钟。我们也可能通过 Openapi S.p.A. 在企业登记处读取企业的认证邮箱（PEC），只向其发送增值税号。法律依据：合同（GDPR 第 6 条第 1 款 b 项）。</p>
+    </section>
+
+    <section aria-labelledby="pp-email">
+      <h2 id="pp-email">邮件</h2>
+      <p>自动邮件由 Brevo 发送。和许多邮件发送服务一样，Brevo 会在邮件中放入一张小图片，用来显示邮件是否被打开。我们不会把这些信息用于广告或对您进行画像。如果您愿意，可以把邮件程序设置为不加载图片：邮件内容仍然可以正常阅读。</p>
+    </section>
+
+    <section aria-labelledby="pp-tempo">
+      <h2 id="pp-tempo">保存多久</h2>
+      <ul>
+        <li><strong>账户、项目、文件和对话：</strong>在账户存续期间保存。您关闭账户后，我们会立即从平台以及准备预览方案的办公室电脑上删除账户、项目、文件和对话。这些数据只会留在备份中，备份会在 14 天内自动删除。AI 供应商会按照其自身规则删除收到的数据，通常在 30 天内。</li>
+        <li><strong>已删除的项目：</strong>您删除项目后，付款、点数和收据会依法保留，同时保留一条不含内容的最少记录（项目编号、日期和用量），用于免费服务的限额（正当利益）。</li>
+        <li><strong>去掉姓名的项目副本</strong>（用于改进 Brigaplan）：在账户存续期间且您未提出反对时保存；之后我们会删除。已经汇总的数据（统计和规则）会保留，因为它们已与您无关。</li>
+        <li><strong>预览方案 3D 的使用情况：</strong>随项目保存；删除项目或注销账户时一并删除。</li>
+        <li><strong>免费项目的指纹：</strong>90 天，即使您在此期间删除项目或注销账户也是如此；如果您注销账户，指纹将不再与您关联。</li>
+        <li><strong>您账户的规则：</strong>保留到您关闭账户为止。您可以随时在“我的规则”页面导出或删除；关闭账户时，规则会随账户一起删除。</li>
+        <li><strong>已发送的自动邮件：</strong>保存 90 天，用于确认邮件已送达。</li>
+        <li><strong>已连接的应用：</strong>过期或已撤销的访问代码在 30 天后删除，没有访问代码的应用在 90 天后删除；关闭账户时全部删除。</li>
+        <li><strong>邀请：</strong>受邀人的邮箱地址保存到其注册为止；如果未注册，则保存到邀请过期后 90 天。</li>
+        <li><strong>商会登记摘录：</strong>读取后我们立即删除；读取的数据在您保留账户期间一直保存。</li>
+        <li><strong>经销商面板：</strong>在经销商使用期间保存；关系结束时（公司关闭或没有负责人），文档和备注会在 30 天内删除。</li>
+        <li><strong>文档下载记录：</strong>12 个月；如果文档提前删除，则保存期更短。</li>
+        <li><strong>公司团队记录：</strong>自关系结束起最长 10 年，与权限证明相同；已关闭账户者的姓名以代号取代。</li>
+        <li><strong>授权记录：</strong>自授权结束起最长 10 年，因为它是商业协议的证明；已关闭账户者的姓名以代号取代。</li>
+        <li><strong>从未确认的账户：</strong>30 天后删除。</li>
+        <li><strong>不活跃的账户：</strong>连续 24 个月没有登录时我们会给您写信；如果您在 30 天内没有回复，我们会删除账户。</li>
+        <li><strong>分享的效果图链接：</strong>30 天，提前关闭则更短。</li>
+        <li><strong>报价请求和收到的报价：</strong>随项目保存，直到您关闭账户。经销商只能在请求未关闭时查看平面图和 3D；其保留的内容（项目名称、城市和其报价）由其作为独立控制者处理。</li>
+        <li><strong>已付费的设计方案：</strong>如果您关闭账户，我们会把已交付的设计方案（已接受的报价、图纸、最终版本以及对问题的声明）保存一份锁定副本，保存 10 年，只用于在发生争议时为自己辩护或履行法律义务（条例第 17 条第 3 款 e 项）。之后将其删除。</li>
+        <li><strong>支持消息：</strong>12 个月。</li>
+        <li><strong>法律要求我们保存的数据</strong>，例如发票：按法律规定的期限保存，通常为 10 年。</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="pp-cookie">
+      <h2 id="pp-cookie">Cookie</h2>
+      <p>平台只使用两个技术性 Cookie，这是正常运行所必需的，因此不需要您的同意：</p>
+      <ul>
+        <li><strong translate="no">bp_sessione</strong>：登录后保持您的账户登录状态，并防止表单被伪造提交；在登录之前也会创建。有效期 30 天。</li>
+        <li><strong translate="no">lingua</strong>：记住您选择的语言。有效期 1 年。</li>
+      </ul>
+      <p>没有统计、广告或画像类 Cookie。</p>
+    </section>
+
+    <section aria-labelledby="pp-sicurezza">
+      <h2 id="pp-sicurezza">我们如何保护数据</h2>
+      <p>加密连接（HTTPS）、加密密码，文件和平面图只有您本人和授权工作人员能看到：工作人员仅在您需要我们帮助时，以及进行抽样质量检查时查看；限制登录尝试次数，修改密码时关闭其他会话。</p>
+    </section>
+
+    <section aria-labelledby="pp-diritti">
+      <h2 id="pp-diritti">您的权利</h2>
+      <p>您可以随时要求访问、更正或删除您的数据，限制处理或提出反对，以及以可读格式获取您的数据（可携带权），这些权利规定在条例第 15 至 22 条。您可以在自己的控制台中操作，也可以写信到 <a href="mailto:info@brigaplan.ai" translate="no">info@brigaplan.ai</a>。我们会在一个月内答复。</p>
+      <p>在账户的“下载您的数据”文件中，您上传的所有内容都是完整的原件。Brigaplan 制作的免费预览方案（平面图和 3D）与网站上看到的一样：平面图经过缩小，3D 带有“不可用于报价或施工”的字样。购买完整设计方案后，您会得到完整版。</p>
+      <p>如果您认为处理不当，可以向意大利个人数据保护局（Garante per la protezione dei dati personali）投诉（<a href="https://www.garanteprivacy.it">garanteprivacy.it</a>）。</p>
+    </section>
+
+    <section aria-labelledby="pp-altro">
+      <h2 id="pp-altro">其他须知</h2>
+      <ul>
+        <li>本平台面向年满 18 岁的用户：行业专业人士、开设或翻新店面的人，以及个人用户。</li>
+        <li>如果我们对本告知做出重要修改，会先通过邮件通知您。您阅读过的版本会一直记录在您的账户中。</li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="logo"><span translate="no">Briga<b>plan</b></span></span>
+    <p>用人工智能设计商用厨房和吧台。</p>
+    <p>Brigaplan · Italfrigo Service S.r.l. · Via Serviliano Lattuada 26, 20135 Milano · 电话 <span translate="no">+39 348 4096847</span> · 米兰-蒙扎布里安扎-洛迪企业登记处登记号 06825390153 · 经济行政登记号 REA MI-1120586 · 税号和增值税号 C.F. e P.IVA 06825390153 · 注册资本 46,800.00 欧元（已全额实缴）· 认证邮箱（PEC）<span translate="no">italfrigo@pec.italfrigo.com</span> · <a href="/app/zh/privacy.html">隐私与 Cookie</a></p>
+  </div>
+</footer>
+</body>
+</html>
