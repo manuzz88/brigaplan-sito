@@ -197,6 +197,155 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
   .scheda { padding: 20px 18px 18px; } .scheda h3 { font-size: 1.3rem; }
 }
 .riga-perche{padding-block:56px}.riga-perche .wrap{display:flex;flex-wrap:wrap;gap:18px 28px;align-items:center;justify-content:space-between}.riga-perche .grande{font-size:1.35rem;font-weight:700;max-width:46ch;margin:0}
+/* home «wow» (decisioni_home_wow.py) */
+/* Home «wow» (schizzo della Chat sito, 26/11/2026): palco 360° in cima alla home, punti, schede, zone sotto. */
+.wow { position: relative; background: var(--nero); }
+.wow-palco {
+  position: relative; overflow: hidden; height: min(78svh, 680px); min-height: 440px;
+  background: #1A1A1E; touch-action: pan-y; cursor: grab; user-select: none; -webkit-user-select: none;
+}
+.wow-palco:active { cursor: grabbing; }
+.wow-palco:focus-visible { outline: 3px solid var(--lime); outline-offset: -3px; }
+.wow-ferma, .wow-tela { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.wow-ferma { object-fit: cover; }
+.wow-tela { opacity: 0; transition: opacity .5s ease; }
+.wow-palco.vivo .wow-tela { opacity: 1; }
+.wow-palco::after {                       /* velo scuro in basso, per leggere il titolo */
+  content: ""; position: absolute; inset: auto 0 0 0; height: 58%; pointer-events: none;
+  background: linear-gradient(to top, rgba(9,9,11,.92) 0%, rgba(9,9,11,.55) 45%, rgba(9,9,11,0) 100%);
+}
+.wow-in-alto {
+  position: absolute; z-index: 3; top: 14px; left: 0; right: 0; display: flex; flex-direction: column; gap: 8px;
+  align-items: flex-start; pointer-events: none;
+}
+.wow-etichetta { white-space: nowrap; }
+.wow-aiuto { transition: opacity .4s ease; }
+.toccato .wow-aiuto { opacity: 0; }
+.wow-aiuto-tocco { display: none; }                         /* col dito: «di lato gira, su e giù scorre» */
+@media (pointer: coarse) { .wow-aiuto-mouse { display: none; } .wow-aiuto-tocco { display: block; } }
+
+@media (min-width: 900px) { .wow-in-alto { flex-direction: row; justify-content: space-between; } }
+.wow-etichetta, .wow-aiuto {
+  font: 500 .72rem/1.3 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; margin: 0;
+  background: rgba(9,9,11,.72); color: #F4F4EF; border-radius: 999px; padding: 7px 12px; backdrop-filter: blur(6px);
+}
+.wow-aiuto { text-transform: none; letter-spacing: 0; font: 600 .82rem/1.3 var(--f-body); max-width: 22rem; }
+:lang(zh) .wow-etichetta { letter-spacing: 0; }
+
+.wow-testo { position: absolute; z-index: 2; left: 0; right: 0; bottom: 26px; pointer-events: none; }
+.wow-testo .wrap > * { pointer-events: none; }                 /* il testo non blocca i punti né il dito */
+.wow-testo a, .wow-testo button { pointer-events: auto; }
+.wow-testo h1 { font-size: clamp(2.2rem, .4rem + 5.6vw, 5.4rem); max-width: 14ch; text-shadow: 0 2px 24px rgba(0,0,0,.45); }
+:lang(zh) .wow-testo h1 { max-width: none; }
+.wow-testo h1 span { display: block; text-wrap: balance; }
+.wow-testo .piccola { font: 800 clamp(1.05rem, .8rem + .9vw, 1.6rem)/1.2 var(--f-display); font-stretch: 112%; margin: .55em 0 0; color: #F4F4EF; }
+.wow-testo .azioni { margin-top: 20px; }
+.wow-nota { font: 500 1rem/1.4 var(--f-body); color: #EDEDE6; max-width: 34rem; margin: .55em 0 0; text-shadow: 0 1px 12px rgba(0,0,0,.5); }
+
+/* punti: bottoni veri, area da 44 px */
+.wow-punti { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.wow-punto {
+  position: absolute; left: 0; top: 0; width: 44px; height: 44px; margin: -22px 0 0 -22px; padding: 0; border: 0;
+  background: transparent; cursor: pointer; pointer-events: auto; display: grid; place-items: center; color: var(--nero);
+  transition: opacity .25s ease;
+}
+.wow-punto.fuori { opacity: 0; pointer-events: none; }
+.wow-punto.fuori:focus-visible { opacity: 1; }
+.wow-punto .anello {
+  width: 26px; height: 26px; border-radius: 50%; background: var(--lime); border: 3px solid var(--nero);
+  box-shadow: 0 0 0 2px rgba(205,255,58,.55), 0 4px 14px rgba(0,0,0,.4); display: grid; place-items: center;
+  font: 700 .72rem/1 var(--f-mono);
+}
+.wow-punto .anello::before {
+  content: ""; position: absolute; width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--lime);
+  animation: wow-onda 2.4s ease-out infinite;
+}
+.wow-punto.a-sinistra .nome { left: auto; right: 36px; }
+.wow-punto .nome {
+  position: absolute; left: 36px; top: 50%; transform: translateY(-50%); white-space: nowrap;
+  font: 700 .8rem/1 var(--f-body); color: #F4F4EF; background: rgba(9,9,11,.78); padding: 6px 9px; border-radius: 999px;
+}
+.wow-punto[aria-expanded="true"] .anello { background: #F4F4EF; box-shadow: 0 0 0 3px var(--lime), 0 4px 14px rgba(0,0,0,.4); }
+.wow-punto:focus-visible { outline: none; }
+.wow-punto:focus-visible .anello { outline: 3px solid #F4F4EF; outline-offset: 3px; }
+@keyframes wow-onda { from { transform: scale(1); opacity: .9; } to { transform: scale(2.3); opacity: 0; } }
+.senza-3d .wow-punti, .senza-3d .wow-aiuto { display: none; }
+.wow-palco:not(.vivo) .wow-punti { visibility: hidden; }   /* i punti solo sul panorama vero, non sull'immagine ferma */
+
+/* schede: sul telefono un foglio dal basso dentro il palco, sul PC un riquadro a destra */
+.wow-schede { position: absolute; z-index: 4; left: 0; right: 0; bottom: 0; pointer-events: none; }
+.wow-scheda {
+  pointer-events: auto; background: #F4F4EF; color: var(--nero); border-radius: 20px 20px 0 0; padding: 20px 20px 22px;
+  box-shadow: 0 -10px 40px rgba(0,0,0,.35); max-height: 62svh; overflow: auto; position: relative;
+  animation: wow-sale .28s ease-out;
+}
+.wow-scheda .zona { display: block; font: 500 .72rem var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: #55555E; }
+:lang(zh) .wow-scheda .zona { letter-spacing: 0; }
+.wow-scheda h2 { font-size: 1.45rem; line-height: 1.08; margin: 8px 44px 10px 0; outline: none; }
+.wow-scheda p { font-size: 1rem; line-height: 1.5; color: #2A2A30; }
+.wow-scheda .vai { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-weight: 700; color: var(--cobalto);
+  min-height: 44px; }
+.wow-chiudi {
+  position: absolute; top: 12px; right: 12px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid #C9C9C0;
+  background: transparent; color: var(--nero); display: grid; place-items: center; cursor: pointer;
+}
+.wow-chiudi svg { width: 20px; height: 20px; }
+.wow-chiudi:focus-visible { outline: 3px solid var(--cobalto); outline-offset: 2px; }
+@keyframes wow-sale { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (min-width: 900px) {
+  .wow-palco { height: min(86vh, 860px); }
+  .wow-schede { left: auto; right: 28px; top: 50%; bottom: auto; transform: translateY(-50%); width: 380px; }
+  .wow-scheda { border-radius: 20px; padding: 26px; box-shadow: 0 20px 60px rgba(0,0,0,.4); max-height: none; }
+  .wow-scheda h2 { font-size: 1.7rem; }
+  .wow-testo { bottom: 44px; }
+  .wow-testo h1 { font-size: clamp(2.6rem, 1rem + 3.6vw, 4.6rem); }
+  .wow-palco::after { height: 100%; width: 62%; inset: 0 auto 0 0;
+    background: linear-gradient(to right, rgba(9,9,11,.85) 0%, rgba(9,9,11,.5) 55%, rgba(9,9,11,0) 100%); }
+}
+
+/* zone sotto il palco: per chi non trascina, per la tastiera, per chi ha poco tempo */
+.wow-zone { padding-block: 18px 6px; }
+.wow-zone .mono { margin-bottom: 10px; }
+.wow-zone-testa { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.wow-zone-testa .mono { margin-bottom: 0; }
+.wow-muovi {
+  flex: none; min-height: 44px; padding: 8px 14px; border-radius: 999px; border: 1px solid #3A3A44; background: transparent;
+  color: #F4F4EF; font: 600 .88rem/1 var(--f-body); display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+}
+.wow-muovi svg { width: 18px; height: 18px; }
+.wow-muovi[aria-pressed="true"] { background: var(--lime); border-color: var(--lime); color: var(--nero); }
+.wow-muovi:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
+.wow-zone-testa + .wow-chips { margin-top: 10px; }
+.wow-chips { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 10px; scrollbar-width: none; }
+.wow-chip {
+  flex: none; min-height: 44px; padding: 10px 16px; border-radius: 999px; border: 1px solid #3A3A44; background: #16161A;
+  color: #F4F4EF; font: 600 .95rem/1 var(--f-body); cursor: pointer; display: inline-flex; align-items: center; gap: 8px;
+}
+.wow-chip b { font: 600 .8rem/1 var(--f-mono); color: var(--lime); }
+.wow-chip[aria-expanded="true"] { background: var(--lime); border-color: var(--lime); color: var(--nero); }
+.wow-chip[aria-expanded="true"] b { color: var(--nero); }
+.wow-chip:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .wow-tela, .wow-punto { transition: none; }
+  .wow-punto .anello::before { animation: none; display: none; }
+  .wow-scheda { animation: none; }
+  .wow-aiuto { transition: none; }
+}
+
+/* telefono girato: la cucina non supera lo schermo, sotto c'è sempre la pagina; niente pillola d'aiuto */
+@media (orientation: landscape) and (max-height: 500px) {
+  .wow-palco { height: calc(100svh - 64px); min-height: 0; }
+  .wow-in-alto .wow-aiuto { display: none; }
+  .wow-testo { bottom: 14px; }
+  .wow-testo h1 { font-size: clamp(1.6rem, 1rem + 2.4vw, 2.4rem); max-width: none; }
+  .wow-testo .piccola { display: none; }
+  .wow-nota { font-size: .85rem; max-width: 30rem; }
+  .wow-testo .azioni { margin-top: 10px; }
+  .wow-scheda { max-height: 78svh; }
+}
+.eroe-dopo { padding-block: 48px 64px; } .eroe-dopo .eroe-griglia { grid-template-areas: "dopo schermo"; }
+@media (max-width: 960px) { .eroe-dopo .eroe-griglia { grid-template-areas: "schermo" "dopo"; } }
 </style>
 <script type="application/ld+json" data-seo="sito">{"@context": "https://schema.org", "@type": "WebSite", "name": "Brigaplan", "url": "https://brigaplan.ai/", "inLanguage": "en", "description": "Upload your floor plan or describe your space: Brigaplan prepares a free preview of your commercial kitchen or bar. Then the all-in design and a quote from the dealers and installers in your area.", "publisher": {"@type": "Organization", "name": "Brigaplan", "url": "https://brigaplan.ai/", "logo": "https://brigaplan.ai/icona-512.png"}}</script>
 </head>
@@ -238,13 +387,20 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
 </header>
 
 <main>
-<section class="eroe">
+<section class="wow" aria-label="Sample trattoria · 360° render">
+  <div class="wow-palco" id="wow-palco" tabindex="0" role="group" aria-roledescription="360°" aria-label="360° view of the sample kitchen. Use the arrow keys to look around."
+       data-pano-pc="/media/home360/cucina_360_pc" data-pano-telefono="/media/home360/cucina_360_telefono" data-pano-segnaposto="/media/home360/cucina_360_segnaposto">
+    <picture><source media="(min-width: 900px)" srcset="/media/home360/ferma_pc.jpg"><img class="wow-ferma" src="/media/home360/ferma_tel.jpg" alt="Kitchen of a sample trattoria in a realistic render: cooking line against the wall with oven and hood, prep island and counters, cold room, washing area with its own hood and a pass to the dining room." fetchpriority="high" decoding="async"></picture>
+    <canvas class="wow-tela" aria-hidden="true"></canvas>
+    <div class="wow-in-alto wrap"><p class="wow-etichetta">Sample trattoria · 360° render</p><p class="wow-aiuto wow-aiuto-mouse wow-js" hidden>Drag to look around. Tap a point to see why.</p><p class="wow-aiuto wow-aiuto-tocco wow-js" hidden>Swipe sideways to turn the kitchen, up or down to scroll the page.</p></div>
+    <div class="wow-punti wow-js" hidden><button type="button" class="wow-punto" data-zona="cottura" data-yaw="0.0" data-pitch="6.0" aria-label="Cooking: why it is here" aria-expanded="false" aria-controls="wow-s-cottura"><span class="anello">1</span><span class="nome" aria-hidden="true">Cooking</span></button><button type="button" class="wow-punto" data-zona="preparazione" data-yaw="-67.8" data-pitch="-19.0" aria-label="Prep: why it is here" aria-expanded="false" aria-controls="wow-s-preparazione"><span class="anello">2</span><span class="nome" aria-hidden="true">Prep</span></button><button type="button" class="wow-punto" data-zona="celle" data-yaw="-107.5" data-pitch="-1.1" aria-label="Cold room: why it is here" aria-expanded="false" aria-controls="wow-s-celle"><span class="anello">3</span><span class="nome" aria-hidden="true">Cold room</span></button><button type="button" class="wow-punto" data-zona="lavaggio" data-yaw="-153.3" data-pitch="-8.8" aria-label="Washing: why it is here" aria-expanded="false" aria-controls="wow-s-lavaggio"><span class="anello">4</span><span class="nome" aria-hidden="true">Washing</span></button><button type="button" class="wow-punto" data-zona="pass" data-yaw="90.4" data-pitch="5.0" aria-label="Pass: why it is here" aria-expanded="false" aria-controls="wow-s-pass"><span class="anello">5</span><span class="nome" aria-hidden="true">Pass</span></button></div>
+    <div class="wow-testo"><div class="wrap"><h1 class="gigante"><span>See your kitchen</span><span class="lime">before you build it.</span></h1><p class="piccola">Your first 3D preview is free, in a few minutes.</p><p class="wow-nota">This is a realistic render: a separately paid service, not available. The free preview is in stylised 3D.</p><div class="azioni prima"><a class="btn btn-primary" href="https://app.brigaplan.ai/registrati?lingua=en">Create my free preview <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></div>
+    <div class="wow-schede"><article class="wow-scheda" id="wow-s-cottura" role="dialog" aria-labelledby="wow-t-cottura" hidden><span class="zona">1 · Cooking</span><h2 id="wow-t-cottura" tabindex="-1">The cooking line against the wall, under its hood</h2><p>Burners and oven stand in a row along the wall, under the same hood: smoke and steam are extracted where they form. The oven sits on its stand, at the right height to load it without bending.</p><a class="vai" href="/en/come-funziona.html">How the design is made <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button type="button" class="wow-chiudi" aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article><article class="wow-scheda" id="wow-s-preparazione" role="dialog" aria-labelledby="wow-t-preparazione" hidden><span class="zona">2 · Prep</span><h2 id="wow-t-preparazione" tabindex="-1">Ingredients within the cook&#x27;s reach</h2><p>Facing the cooking line there is a support island with refrigerators under the worktop: the cook turns round and has everything at hand. The other prep areas are alongside, along the wall and on the large island.</p><a class="vai" href="/en/come-funziona.html#cf-esempi">More kitchen examples <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button type="button" class="wow-chiudi" aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article><article class="wow-scheda" id="wow-s-celle" role="dialog" aria-labelledby="wow-t-celle" hidden><span class="zona">3 · Cold room</span><h2 id="wow-t-celle" tabindex="-1">The cold room close to prep</h2><p>Stock is kept in the cold room, a few steps from the prep counters: you take what you need for service and the door stays open as little as possible.</p><a class="vai" href="#cosa-si-paga">What you pay for <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button type="button" class="wow-chiudi" aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article><article class="wow-scheda" id="wow-s-lavaggio" role="dialog" aria-labelledby="wow-t-lavaggio" hidden><span class="zona">4 · Washing</span><h2 id="wow-t-lavaggio" tabindex="-1">The dishwasher with its own hood</h2><p>A hood-type dishwasher releases steam when it opens: that is why it has a hood of its own, separate from the cooking one. Washing is at the other end of the kitchen from the pass, near the door where dirty dishes come back in: dirty never crosses the finished plates.</p><a class="vai" href="/en/domande.html">Frequently asked questions <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button type="button" class="wow-chiudi" aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article><article class="wow-scheda" id="wow-s-pass" role="dialog" aria-labelledby="wow-t-pass" hidden><span class="zona">5 · Pass</span><h2 id="wow-t-pass" tabindex="-1">The pass to the dining room</h2><p>The pass opens onto the dining room: waiters take the finished plates from their side, without entering the kitchen. The cook sets them on the pass the moment they are done, under the hanging lamps that keep them warm.</p><a class="vai" href="/en/come-funziona.html#cf-livelli">What each level includes <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button type="button" class="wow-chiudi" aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article></div>
+  </div>
+  <div class="wow-zone wrap wow-js" hidden><div class="wow-zone-testa"><span class="mono">The choices in this kitchen</span><button type="button" class="wow-muovi" aria-pressed="false" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 9c-1.3 2-1.3 4 0 6M21 9c1.3 2 1.3 4 0 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Move your phone</button></div><div class="wow-chips"><button type="button" class="wow-chip" data-zona="cottura" aria-expanded="false" aria-controls="wow-s-cottura"><b>1</b>Cooking</button><button type="button" class="wow-chip" data-zona="preparazione" aria-expanded="false" aria-controls="wow-s-preparazione"><b>2</b>Prep</button><button type="button" class="wow-chip" data-zona="celle" aria-expanded="false" aria-controls="wow-s-celle"><b>3</b>Cold room</button><button type="button" class="wow-chip" data-zona="lavaggio" aria-expanded="false" aria-controls="wow-s-lavaggio"><b>4</b>Washing</button><button type="button" class="wow-chip" data-zona="pass" aria-expanded="false" aria-controls="wow-s-pass"><b>5</b>Pass</button></div></div>
+</section>
+<section class="eroe eroe-dopo">
   <div class="wrap eroe-griglia">
-    <div class="testo">
-      <h1 class="gigante"><span>See your kitchen</span><span class="lime">before you build it.</span></h1>
-      <p class="piccola">Free 3D preview, in a few minutes.</p>
-      <div class="azioni prima"><a class="btn btn-primary" href="https://app.brigaplan.ai/registrati?lingua=en">Create my free preview <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-    </div>
     <div class="schermo"><div class="giro"><video id="pianta3d" muted loop playsinline preload="none" data-grande="/media/giro/giro_16x9_en.mp4" data-piccolo="/media/giro/giro_1x1_en.mp4" data-locandina-grande="/media/giro/giro_16x9_en_poster.jpg" data-locandina-piccola="/media/giro/giro_1x1_en_poster.jpg" data-tappe="0,9.7,15.2,23.2,34.2,41.7" data-durata="50.2" aria-label="Video: a tour of a kitchen, from the floor plan to the render. Captions in the video."></video><button type="button" class="guarda" id="guarda-video" hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>Watch the video</button></div><div class="comandi" id="comandi-giro" data-txt-pausa="Pause" data-txt-avvia="Play"><div class="riga"><button type="button" class="tasto" id="giro-indietro" aria-label="Previous step"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h2.2v14H6zM19 5.6v12.8L9.6 12z" fill="currentColor"/></svg></button><button type="button" class="tasto grande fermo" id="giro-pausa" aria-label="Play"><svg class="ic ic-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg><svg class="ic ic-pausa" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z" fill="currentColor"/></svg></button><button type="button" class="tasto" id="giro-avanti" aria-label="Next step"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.8 5H18v14h-2.2zM5 5.6v12.8l9.4-6.4z" fill="currentColor"/></svg></button><div class="barra" id="giro-barra" role="slider" tabindex="0" aria-label="Position in the video" aria-valuemin="0" aria-valuemax="50" aria-valuenow="0"><div class="binario"><div class="pieno"></div></div><div class="pomo"></div></div></div><ol class="tappe" aria-label="Video steps"><li><button type="button"><b>1</b><span>Floor plan</span></button></li><li><button type="button"><b>2</b><span>Zones</span></button></li><li><button type="button"><b>3</b><span>Equipment</span></button></li><li><button type="button"><b>4</b><span>3D</span></button></li><li><button type="button"><b>5</b><span>Construction drawings</span></button></li><li><button type="button"><b>6</b><span>Render</span></button></li></ol></div>
       <p class="nota-video">Sample trattoria, 80 covers. Photoreal render.</p></div>
     <div class="dopo">
@@ -269,7 +425,7 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
       </figure></div></div></section>
 <section class="sez" id="esempi"><div class="wrap"><span class="mono">Examples</span><h2>Made with Brigaplan.</h2><p class="nota">The images are renders of the projects; the free preview is in stylised 3D.</p></div>
   <div class="nastro-box" tabindex="0" aria-label="Project examples"><div class="nastro"><figure><img src="/media/galleria/h03_3d.jpg" alt="3D of the project: Restaurant, 120 covers" loading="lazy" width="1200" height="750"><figcaption>Restaurant, 120 covers<span>Island kitchen of 10 × 7 m · induction</span></figcaption></figure><figure><img src="/media/galleria/e06_3d.jpg" alt="3D of the project: Pizzeria with electric oven, 60 seats" loading="lazy" width="1200" height="750"><figcaption>Pizzeria with electric oven, 60 seats<span>Kitchen and prep room in 6 × 4.5 m</span></figcaption></figure><figure><img src="/media/galleria/h08_3d.jpg" alt="3D of the project: Bar with kitchen, 60 seats" loading="lazy" width="1200" height="750"><figcaption>Bar with kitchen, 60 seats<span>Kitchen of 5 × 4 m · gas</span></figcaption></figure><figure><img src="/media/galleria/e10_3d.jpg" alt="3D of the project: All-you-can-eat sushi, 260 seats" loading="lazy" width="1200" height="750"><figcaption>All-you-can-eat sushi, 260 seats<span>Hot kitchen and sushi in 10 × 6 m</span></figcaption></figure><figure><img src="/media/galleria/e12_3d.jpg" alt="3D of the project: Trattoria in a corridor, 35 seats" loading="lazy" width="1200" height="750"><figcaption>Trattoria in a corridor, 35 seats<span>Kitchen of 5 × 3.5 m</span></figcaption></figure><figure><img src="/media/galleria/e13_3d.jpg" alt="3D of the project: Restaurant with L-shaped kitchen, 100 covers" loading="lazy" width="1200" height="750"><figcaption>Restaurant with L-shaped kitchen, 100 covers<span>8 × 4 m plus a corner for washing</span></figcaption></figure><figure aria-hidden="true"><img src="/media/galleria/h03_3d.jpg" alt="" loading="lazy" width="1200" height="750"><figcaption>Restaurant, 120 covers<span>Island kitchen of 10 × 7 m · induction</span></figcaption></figure><figure aria-hidden="true"><img src="/media/galleria/e06_3d.jpg" alt="" loading="lazy" width="1200" height="750"><figcaption>Pizzeria with electric oven, 60 seats<span>Kitchen and prep room in 6 × 4.5 m</span></figcaption></figure><figure aria-hidden="true"><img src="/media/galleria/h08_3d.jpg" alt="" loading="lazy" width="1200" height="750"><figcaption>Bar with kitchen, 60 seats<span>Kitchen of 5 × 4 m · gas</span></figcaption></figure><figure aria-hidden="true"><img src="/media/galleria/e10_3d.jpg" alt="" loading="lazy" width="1200" height="750"><figcaption>All-you-can-eat sushi, 260 seats<span>Hot kitchen and sushi in 10 × 6 m</span></figcaption></figure><figure aria-hidden="true"><img src="/media/galleria/e12_3d.jpg" alt="" loading="lazy" width="1200" height="750"><figcaption>Trattoria in a corridor, 35 seats<span>Kitchen of 5 × 3.5 m</span></figcaption></figure><figure aria-hidden="true"><img src="/media/galleria/e13_3d.jpg" alt="" loading="lazy" width="1200" height="750"><figcaption>Restaurant with L-shaped kitchen, 100 covers<span>8 × 4 m plus a corner for washing</span></figcaption></figure></div></div></section>
-<section class="sez bianca" id="cosa-si-paga"><div class="wrap"><span class="mono">Prices</span><h2>The preview is free.</h2>
+<section class="sez bianca" id="cosa-si-paga"><div class="wrap"><span class="mono">Prices</span><h2>Your first preview is free.</h2>
   <div class="livelli"><div class="liv"><span class="prezzo si">Free</span><h3>Preview</h3><p>Floor plan with zones and counters, stylised 3D to rotate, equipment estimate in three ranges (budget, mid-range, premium) at list prices, in total and by zone, excluding transport, installation, connections, building services and VAT.</p></div><div class="liv"><span class="prezzo">from €39<small class="lancio">launch price</small></span><h3>The all-in design</h3><p>Dimensioned floor plan, legend with type, dimensions, power supply and power rating (brand and code for manufacturers who have joined), full 3D, elevations and connection tables, services plan, DXF and CSV files. €39 up to 150 m² of work areas, €79 from 150 to 200 m², with 3 updates. With 0 errors you receive it right after online payment.</p></div></div><p class="sotto-prezzi">Prices including VAT, based on the m² of the work areas. You pay online by card or, where your phone allows it, with Apple Pay or Google Pay; for very large venues the all-in design is not automatic. Changes to the preview are paid with credits: 10 credits €10, 30 credits €25. For professionals, subscriptions from €39 + VAT a month (€47.58 including VAT), with the all-in design paid in credits. Realistic renders are not available. <a href="/en/come-funziona.html#cf-livelli">See all prices</a></p></div></section>
 <section class="sez cobalto" id="fiducia"><div class="wrap carte">
   <div class="carta"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="1.5"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3"/></svg><h3>Your floor plans stay yours.</h3><p>We do not show them to other users or to dealers unless you ask us to. <a href="/en/privacy-piattaforma.html">Who sees them</a></p></div>
@@ -299,5 +455,7 @@ main h2 { font-size: clamp(2.1rem, .9rem + 4.4vw, 5rem); font-weight: 850; font-
 
 <script src="/js/s-04772de1eb57.js"></script>
 <script src="/js/c-video-4.js"></script>
+<script src="/js/home-wow-e5d50e089c0f.js" defer></script>
+<script src="/js/lingua-barra-5f5e7fa6b192.js" defer></script>
 </body>
 </html>
