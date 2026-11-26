@@ -1,6 +1,8 @@
 /* Home «wow» (schizzo della Chat sito, 26/11/2026): visore 360° nostro, in WebGL, senza librerie né servizi esterni.
    Prima l'immagine ferma; il panorama si carica dopo il load, solo quando il palco è visibile. Punti = <button> veri
-   (tastiera), frecce per girarsi, «riduci movimento» rispettato (niente giro da solo, niente animazioni). */
+   (tastiera), frecce per girarsi, «riduci movimento» rispettato (niente giro da solo, niente animazioni).
+   Manuel 26/11: giro lento da solo appena il panorama è carico (un giro in 100 s), fermo per tutta la visita alla prima azione
+   (tocco, trascinamento, punto, tasto, scheda, frecce, giroscopio); frecce ‹ › sul palco: 30° a tocco, di continuo tenendo premuto. */
 (function () {
   'use strict';
   var palco = document.getElementById('wow-palco');
@@ -14,6 +16,15 @@
   var R = Math.PI / 180;
   var vista = { yaw: 0, pitch: -8 }, meta = null, aperta = null, apriDa = null;
   var gl, webgl2 = false, prog, loc = {}, pronto = false, sporco = true, visibile = true, ultimoTocco = 0, inGiro = false;
+  var fermo = false, partito = 0, tieni = null;          // fermo: il giro da solo non riparte più in questa visita
+  var frecce = [].slice.call(palco.querySelectorAll('.wow-freccia'));
+  var pausa = palco.querySelector('.wow-pausa');
+  function segnaPausa() {
+    if (!pausa) return;
+    var t = fermo ? pausa.dataset.riprendi : pausa.dataset.ferma;
+    pausa.setAttribute('aria-label', t); pausa.title = t; pausa.classList.toggle('fermo', fermo);
+  }
+  function basta() { if (!fermo) { fermo = true; segnaPausa(); } }
 
   function fov() {                 // stessa regola delle immagini ferme (prepara_media.py)
     var a = palco.clientWidth / Math.max(1, palco.clientHeight);
@@ -42,6 +53,8 @@
       [].push.apply(out, [].slice.call(rg.getClientRects()));
     }
     [].forEach.call(testo.querySelectorAll('.btn'), function (b) { out.push(b.getBoundingClientRect()); });
+    if (pausa && !pausa.hidden) out.push(pausa.getBoundingClientRect());
+    frecce.forEach(function (f) { if (f.offsetWidth) out.push(f.getBoundingClientRect()); });   // i punti non vanno sotto le frecce
     return out.filter(function (c) { return c.width > 0; });
   }
   function sottoIlTesto(s, b) {      // il cerchio o l'etichetta del punto toccano il testo del titolo o il bottone
@@ -57,8 +70,13 @@
     punti.forEach(function (b) {
       var s = aSchermo(+b.dataset.yaw, +b.dataset.pitch);
       if (!s) { b.classList.add('fuori'); return; }
-      b.classList.toggle('a-sinistra', s.x > W - 150);
-      b.classList.toggle('fuori', !s.dentro || (b.getAttribute('aria-expanded') !== 'true' && sottoIlTesto(s, b)));
+      var sx = s.x > W - 150, aperto = b.getAttribute('aria-expanded') === 'true', sotto = false;
+      b.classList.toggle('a-sinistra', sx);
+      if (s.dentro && !aperto && sottoIlTesto(s, b)) {          // l'etichetta tocca testo o frecce: prima la si gira dall'altra parte
+        b.classList.toggle('a-sinistra', !sx);
+        if (sottoIlTesto(s, b)) { b.classList.toggle('a-sinistra', sx); sotto = true; }
+      }
+      b.classList.toggle('fuori', !s.dentro || sotto);
       b.style.transform = 'translate(' + s.x.toFixed(1) + 'px,' + s.y.toFixed(1) + 'px)';
     });
   }
@@ -106,7 +124,8 @@
         pronto = false; palco.classList.add('senza-3d'); return;
       }
       palco.classList.add('vivo');                 // la tela compare sopra l'immagine ferma
-      ultimoTocco = performance.now();
+      if (pausa && !calmo) { pausa.hidden = false; segnaPausa(); }   // con «riduci movimento» non gira: niente bottone
+      ultimoTocco = partito = performance.now(); sporco = true;
     };
     img.src = base + tipi[0];
   }
@@ -147,8 +166,11 @@
       var d = ((meta.yaw - vista.yaw + 540) % 360) - 180, k = calmo ? 1 : Math.min(1, dt * 6);
       vista.yaw += d * k; vista.pitch += (meta.pitch - vista.pitch) * k; limita();
       if (Math.abs(d) < 0.2 && Math.abs(meta.pitch - vista.pitch) < 0.2) meta = null;
-    } else if (!calmo && pronto && !aperta && !inGiro && !giro && t - ultimoTocco > 2500) {
-      vista.yaw += dt * 3; limita();                  // 3° al secondo
+    }
+    if (tieni && t - tieni.da > 350) {               // freccia tenuta premuta: gira di continuo
+      tieni.lungo = true; meta = null; vista.yaw += tieni.dir * 45 * dt; limita();
+    } else if (!calmo && pronto && !fermo && !meta && !aperta && !inGiro && !giro && t - partito > 600) {
+      vista.yaw += dt * 3.6; limita();                // 3,6° al secondo: un giro in 100 s, sempre verso destra
     }
     disegna();
     if (visibile && !document.hidden) requestAnimationFrame(ciclo); else ultimo = 0;
@@ -156,6 +178,13 @@
   function riparti() { if (visibile && !document.hidden) { ultimo = 0; requestAnimationFrame(ciclo); } }
 
   var giu = null;
+  function bastaFuori(e) { if (!(pausa && pausa.contains(e.target))) basta(); }   // il bottone pausa decide da sé
+  palco.addEventListener('pointerdown', bastaFuori, true);   // qualunque tocco sul palco ferma il giro da solo
+  palco.addEventListener('keydown', bastaFuori, true);
+  if (pausa) pausa.addEventListener('click', function () {
+    fermo = !fermo; segnaPausa();
+    if (!fermo) { partito = performance.now() - 600; meta = null; if (aperta) chiudi(false); }
+  });
   palco.addEventListener('pointerdown', function (e) {
     if (e.target.closest('button, a, .wow-scheda')) return;
     giu = { x: e.clientX, y: e.clientY, yaw: vista.yaw, pitch: vista.pitch, id: e.pointerId, tipo: e.pointerType };
@@ -187,7 +216,7 @@
     var s = document.getElementById('wow-s-' + zona), b = palco.querySelector('.wow-punto[data-zona="' + zona + '"]');
     if (!s) return;
     if (aperta && aperta !== s) aperta.hidden = true;
-    aperta = s; apriDa = da || b; s.hidden = false; schede.classList.add('su');
+    basta(); aperta = s; apriDa = da || b; s.hidden = false; schede.classList.add('su');
     punti.concat(chips).forEach(function (x) { x.setAttribute('aria-expanded', x.dataset.zona === zona ? 'true' : 'false'); });
     if (b) guarda(b);
     var h = s.querySelector('h2'); if (h) h.focus({ preventScroll: true });
@@ -212,6 +241,30 @@
   [].forEach.call(palco.querySelectorAll('.wow-chiudi'), function (x) { x.addEventListener('click', function () { chiudi(); }); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && aperta) chiudi(); });
 
+  // ---------- frecce ‹ ›: un passo di 30° con un tocco o con Invio/Spazio, di continuo tenendo premuto
+  function passo(dir) {
+    var da = meta ? meta.yaw : vista.yaw, d = ((da - vista.yaw + 540) % 360) - 180;
+    if (Math.abs(d) > 120) da = vista.yaw;           // tocchi molto veloci: mai oltre mezzo giro, mai al contrario
+    meta = { yaw: da + dir * 30, pitch: vista.pitch }; ultimoTocco = performance.now(); palco.classList.add('toccato');
+  }
+  frecce.forEach(function (f) {
+    var dir = f.classList.contains('sx') ? -1 : 1;
+    f.addEventListener('pointerdown', function (e) {
+      if (e.button) return;
+      e.preventDefault(); basta(); tieni = { dir: dir, da: performance.now(), lungo: false };
+      try { f.setPointerCapture(e.pointerId); } catch (er) { }
+    });
+    function lascia(conta) {
+      if (tieni && !tieni.lungo && conta) passo(dir);
+      tieni = null; ultimoTocco = performance.now();
+    }
+    f.addEventListener('pointerup', function () { lascia(true); });
+    f.addEventListener('pointercancel', function () { lascia(false); });
+    f.addEventListener('lostpointercapture', function () { if (tieni) lascia(false); });
+    f.addEventListener('click', function (e) { if (e.detail === 0) { basta(); passo(dir); } });   // tastiera
+    f.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+  });
+
   // ---------- «Muovi il telefono»: solo col giroscopio, permesso di iOS chiesto SOLO al tocco, mai con «riduci movimento»
   var muovi = document.querySelector('.wow-muovi'), giro = null;
   function suOrientamento(e) {
@@ -222,7 +275,7 @@
     vista.yaw = giro.yaw - da; vista.pitch = giro.pitch + (girato ? -db : db) * 0.8; limita(); ultimoTocco = performance.now();
   }
   function accendiGiro() {
-    giro = { a0: null }; muovi.setAttribute('aria-pressed', 'true');
+    basta(); giro = { a0: null }; muovi.setAttribute('aria-pressed', 'true');
     window.addEventListener('deviceorientation', suOrientamento);
   }
   function spegniGiro() {
